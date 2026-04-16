@@ -32,6 +32,7 @@ SEARCH_KEYWORDS = [
     "員警 貪污",
     "警察 涉貪",
     "員警 涉貪",
+    "副所長 涉貪",
     "警察 圖利",
     "員警 圖利",
     "警察 改單",
@@ -93,6 +94,17 @@ TAG_RULES = {
 RSS_TEMPLATE = (
     "https://news.google.com/rss/search"
     "?q={query}+when:{lookback_days}d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+)
+
+IRRELEVANT_ARTICLE_PATTERNS = (
+    "花蓮縣府主任遭爆刁難基層員警",
+    "花縣府主任違停嗆警",
+    "花蓮縣府官員遭檢舉違停",
+    "違停開單警控遭刁難",
+    "交通糾紛警察不開單",
+    "北市警未開單遭檢舉圖利",
+    "檢舉達人不爽警沒開單",
+    "調查官超速扣牌銷單",
 )
 
 
@@ -170,6 +182,15 @@ def clean_summary(summary: str, title: str, source: str) -> str:
     return compact
 
 
+def is_relevant_article(
+    title: str,
+    summary: str = "",
+    matched_keywords: Iterable[str] = (),
+) -> bool:
+    haystack = " ".join([title, summary, *matched_keywords])
+    return not any(pattern in haystack for pattern in IRRELEVANT_ARTICLE_PATTERNS)
+
+
 def classify_tags(chunks: Iterable[str]) -> list[str]:
     haystack = " ".join(chunks)
     tags: list[str] = []
@@ -240,6 +261,9 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
             title,
             source,
         )
+        if not is_relevant_article(title, description, [query]):
+            continue
+
         published_at, published_label = parse_datetime(item.findtext("pubDate") or "")
         tags = classify_tags([title, description, query])
 
@@ -267,7 +291,19 @@ def load_existing_articles(output_path: Path = OUTPUT_PATH) -> list[dict]:
     payload = json.loads(output_path.read_text(encoding="utf-8"))
     generated_at = payload.get("generated_at")
     articles = payload.get("articles") or []
-    return [hydrate_article(article, default_seen_at=generated_at) for article in articles]
+    hydrated = [
+        hydrate_article(article, default_seen_at=generated_at)
+        for article in articles
+    ]
+    return [
+        article
+        for article in hydrated
+        if is_relevant_article(
+            article["title"],
+            article["summary"],
+            article["matched_keywords"],
+        )
+    ]
 
 
 def merge_articles(
