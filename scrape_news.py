@@ -30,6 +30,15 @@ SEARCH_KEYWORDS = [
     "警察 收賄",
     "警察 警紀",
     "員警 貪污",
+    "警察 涉貪",
+    "員警 涉貪",
+    "警察 圖利",
+    "員警 圖利",
+    "警察 改單",
+    "員警 改單",
+    "警察 銷單",
+    "警察 貪瀆",
+    "巡佐 涉貪",
     "警察 包庇",
     "警察 洩密",
     "員警 酒駕",
@@ -62,8 +71,17 @@ TRUSTED_SOURCES = {
     "風傳媒",
 }
 
+TRUSTED_SOURCE_ALIASES = {
+    "三立新聞網 Setn.com": {
+        "三立新聞網",
+        "setn",
+        "setn.com",
+        "三立",
+    },
+}
+
 TAG_RULES = {
-    "收賄": ["收賄", "賄選", "賄賂", "貪瀆", "貪污"],
+    "收賄": ["收賄", "賄選", "賄賂", "貪瀆", "貪污", "涉貪", "圖利", "索賄"],
     "性紀律": ["性騷", "性侵", "猥褻", "護膚店", "不當場所"],
     "酒駕": ["酒駕"],
     "包庇": ["包庇", "關說"],
@@ -84,6 +102,26 @@ def iso_utc_now() -> str:
 
 def build_request(url: str) -> Request:
     return Request(url, headers={"User-Agent": USER_AGENT})
+
+
+def normalize_source_name(value: str) -> str:
+    return re.sub(r"[\s._-]+", "", value).lower()
+
+
+def canonicalize_source(source: str) -> str:
+    if source in TRUSTED_SOURCES:
+        return source
+
+    normalized_source = normalize_source_name(source)
+    for canonical, aliases in TRUSTED_SOURCE_ALIASES.items():
+        alias_candidates = {canonical, *aliases}
+        if any(
+            normalize_source_name(alias) in normalized_source
+            for alias in alias_candidates
+        ):
+            return canonical
+
+    return ""
 
 
 def fetch_feed(query: str) -> bytes:
@@ -189,8 +227,9 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
     entries: list[dict] = []
 
     for item in root.findall("./channel/item")[:MAX_ITEMS_PER_QUERY]:
-        source = (item.findtext("source") or "").strip()
-        if not source or source not in TRUSTED_SOURCES:
+        raw_source = (item.findtext("source") or "").strip()
+        source = canonicalize_source(raw_source)
+        if not source:
             continue
 
         raw_title = (item.findtext("title") or "").strip()
