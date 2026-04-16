@@ -78,6 +78,10 @@ RSS_TEMPLATE = (
 )
 
 
+def iso_utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
 def build_request(url: str) -> Request:
     return Request(url, headers={"User-Agent": USER_AGENT})
 
@@ -142,6 +146,44 @@ def article_id(source: str, title: str, published_at: str) -> str:
     return hashlib.sha1(seed.encode("utf-8")).hexdigest()[:12]
 
 
+def article_key(article: dict) -> str:
+    return article.get("link") or article["id"]
+
+
+def build_search_text(article: dict) -> str:
+    return " ".join(
+        [
+            article["title"],
+            article["source"],
+            article["summary"],
+            " ".join(article["matched_keywords"]),
+            " ".join(article["tags"]),
+        ]
+    ).lower()
+
+
+def format_published_label(value: str) -> str:
+    dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    return dt.astimezone().strftime("%Y-%m-%d %H:%M")
+
+
+def hydrate_article(article: dict, default_seen_at: str | None = None) -> dict:
+    item = dict(article)
+    item["matched_keywords"] = sorted(set(item.get("matched_keywords") or []))
+    item["tags"] = sorted(set(item.get("tags") or []))
+    item["summary"] = item.get("summary") or ""
+    item["source"] = item.get("source") or ""
+    item["title"] = item.get("title") or ""
+    item["link"] = item.get("link") or ""
+    item["published_label"] = item.get("published_label") or format_published_label(
+        item["published_at"]
+    )
+    item["first_seen_at"] = item.get("first_seen_at") or default_seen_at or item["published_at"]
+    item["last_seen_at"] = item.get("last_seen_at") or item["first_seen_at"]
+    item["search_text"] = build_search_text(item)
+    return item
+
+
 def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
     root = ET.fromstring(xml_bytes)
     entries: list[dict] = []
@@ -179,22 +221,36 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
     return entries
 
 
-def merge_articles(articles: Iterable[dict]) -> list[dict]:
+def load_existing_articles(output_path: Path = OUTPUT_PATH) -> list[dict]:
+    if not output_path.exists():
+        return []
+
+    payload = json.loads(output_path.read_text(encoding="utf-8"))
+    generated_at = payload.get("generated_at")
+    articles = payload.get("articles") or []
+    return [hydrate_article(article, default_seen_at=generated_at) for article in articles]
+
+
+def merge_articles(
+    existing_articles: Iterable[dict],
+    fresh_articles: Iterable[dict],
+    refreshed_at: str,
+) -> list[dict]:
     merged: dict[str, dict] = {}
 
-    for item in articles:
-        key = item["link"] or item["id"]
+    for article in existing_articles:
+        item = hydrate_article(article, default_seen_at=refreshed_at)
+        merged[article_key(item)] = item
+
+    for article in fresh_articles:
+        item = hydrate_article(article, default_seen_at=refreshed_at)
+        item["last_seen_at"] = refreshed_at
+        key = article_key(item)
         existing = merged.get(key)
+
         if existing is None:
-            item["search_text"] = " ".join(
-                [
-                    item["title"],
-                    item["source"],
-                    item["summary"],
-                    " ".join(item["matched_keywords"]),
-                    " ".join(item["tags"]),
-                ]
-            ).lower()
+            item["first_seen_at"] = item.get("first_seen_at") or refreshed_at
+            item["search_text"] = build_search_text(item)
             merged[key] = item
             continue
 
@@ -202,15 +258,14 @@ def merge_articles(articles: Iterable[dict]) -> list[dict]:
             set(existing["matched_keywords"]) | set(item["matched_keywords"])
         )
         existing["tags"] = sorted(set(existing["tags"]) | set(item["tags"]))
-        existing["search_text"] = " ".join(
-            [
-                existing["title"],
-                existing["source"],
-                existing["summary"],
-                " ".join(existing["matched_keywords"]),
-                " ".join(existing["tags"]),
-            ]
-        ).lower()
+        existing["summary"] = existing["summary"] or item["summary"]
+        existing["source"] = existing["source"] or item["source"]
+        existing["title"] = existing["title"] or item["title"]
+        existing["link"] = existing["link"] or item["link"]
+        existing["published_label"] = existing["published_label"] or item["published_label"]
+        existing["first_seen_at"] = existing.get("first_seen_at") or item["first_seen_at"]
+        existing["last_seen_at"] = refreshed_at
+        existing["search_text"] = build_search_text(existing)
 
     return sorted(
         merged.values(),
@@ -219,10 +274,15 @@ def merge_articles(articles: Iterable[dict]) -> list[dict]:
     )
 
 
-def build_payload(articles: list[dict]) -> dict:
+def build_payload(
+    articles: list[dict],
+    *,
+    generated_at: str,
+    fetched_articles: int,
+    new_articles: int,
+) -> dict:
     sources = sorted({article["source"] for article in articles})
     tags = sorted({tag for article in articles for tag in article["tags"]})
-    generated_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     return {
         "project": PROJECT_NAME,
         "generated_at": generated_at,
@@ -231,12 +291,20 @@ def build_payload(articles: list[dict]) -> dict:
         "trusted_sources": sorted(TRUSTED_SOURCES),
         "available_sources": sources,
         "available_tags": tags,
+        "fetched_articles": fetched_articles,
+        "new_articles": new_articles,
         "total_articles": len(articles),
         "articles": articles,
     }
 
 
-def main() -> int:
+def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
+    refreshed_at = iso_utc_now()
+    existing_articles = merge_articles(
+        load_existing_articles(output_path),
+        [],
+        refreshed_at,
+    )
     collected: list[dict] = []
 
     for query in SEARCH_KEYWORDS:
@@ -246,16 +314,35 @@ def main() -> int:
         except Exception as exc:  # pragma: no cover - operational fallback
             print(f"[warn] failed to fetch '{query}': {exc}", file=sys.stderr)
 
-    articles = merge_articles(collected)
-    payload = build_payload(articles)
+    fresh_articles = merge_articles([], collected, refreshed_at)
+    existing_keys = {article_key(article) for article in existing_articles}
+    new_articles = sum(
+        1 for article in fresh_articles if article_key(article) not in existing_keys
+    )
+    articles = merge_articles(existing_articles, fresh_articles, refreshed_at)
+    payload = build_payload(
+        articles,
+        generated_at=refreshed_at,
+        fetched_articles=len(fresh_articles),
+        new_articles=new_articles,
+    )
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    return payload
 
-    print(f"Wrote {payload['total_articles']} articles to {OUTPUT_PATH}")
+
+def main() -> int:
+    payload = refresh_news_index()
+    print(
+        "Wrote "
+        f"{payload['total_articles']} stored articles "
+        f"({payload['new_articles']} new, {payload['fetched_articles']} fetched)"
+        f" to {OUTPUT_PATH}"
+    )
     return 0
 
 

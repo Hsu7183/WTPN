@@ -3,18 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>台灣警政風紀輿情蒐報整理系統</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <title>台灣警政「風紀類」輿情蒐報系統</title>
     <meta
       name="description"
-      content="台灣警政風紀輿情蒐報整理系統，提供警政風紀新聞搜尋、分類與條列瀏覽。"
+      content="台灣警政「風紀類」輿情蒐報系統，提供風紀類輿情新聞搜尋、分類與條列瀏覽。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="page-shell">
+  <body class="is-locked">
+    <div id="auth-overlay" class="auth-overlay" role="dialog" aria-modal="true" aria-label="登入">
+      <section class="auth-card">
+        <form id="auth-form" class="auth-form" autocomplete="off">
+          <input
+            id="auth-password"
+            name="password"
+            type="password"
+            inputmode="numeric"
+            placeholder="請輸入密碼"
+            autocomplete="current-password"
+            aria-label="登入密碼"
+            required
+          />
+          <button id="auth-submit" class="auth-button" type="submit">進入系統</button>
+        </form>
+        <p id="auth-message" class="auth-message" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <noscript>
+      <div class="noscript-banner">本系統需啟用 JavaScript 才能完成登入驗證與內容保護。</div>
+    </noscript>
+
+    <div id="protected-app" class="page-shell protected-shell">
       <header class="site-header">
-        <h1 class="site-title">台灣警政風紀輿情蒐報整理系統</h1>
-        <p class="ownership">版權所有: 北市警督察室風紀股</p>
+        <h1 class="site-title">台灣警政「風紀類」輿情蒐報系統</h1>
+        <p class="ownership">北市警局督察室風紀股余股長製</p>
         <p class="header-meta">
           <span>已收錄 <strong id="article-count">0</strong> 則</span>
           <span>最近更新 <strong id="last-updated">載入中</strong></span>
@@ -65,7 +91,7 @@
           <div class="results-head">
             <h2>新聞列表</h2>
             <p id="results-summary">讀取資料中...</p>
-          </div >
+          </div>
           <div id="results" class="results-grid"></div>
         </section>
       </main>

@@ -1,6 +1,20 @@
 const DATA_URL = new URL("./data/news.json", window.location.href);
+const REFRESH_URL = new URL("../api/refresh-news", window.location.href);
+
+const SECURITY = Object.freeze({
+  passwordHash: "2a6dda3118910de47066df2ef71acd693ae7bb48dcba8eaea86cd75d4813863d",
+  guardKey: "wtpn-auth-guard",
+  maxAttempts: 5,
+  lockoutMs: 5 * 60 * 1000,
+});
 
 const elements = {
+  authOverlay: document.querySelector("#auth-overlay"),
+  authForm: document.querySelector("#auth-form"),
+  authPassword: document.querySelector("#auth-password"),
+  authSubmit: document.querySelector("#auth-submit"),
+  authMessage: document.querySelector("#auth-message"),
+  protectedApp: document.querySelector("#protected-app"),
   count: document.querySelector("#article-count"),
   lastUpdated: document.querySelector("#last-updated"),
   searchInput: document.querySelector("#search-input"),
@@ -16,6 +30,8 @@ const state = {
   sources: [],
   tags: [],
   activeTag: "all",
+  eventsBound: false,
+  guardTimer: null,
 };
 
 
@@ -59,7 +75,151 @@ function formatRocMonth(value) {
 }
 
 
+function setAuthMessage(message, tone = "info") {
+  elements.authMessage.textContent = message;
+  if (message) {
+    elements.authMessage.dataset.tone = tone;
+    return;
+  }
+
+  delete elements.authMessage.dataset.tone;
+}
+
+
+function setAuthBusy(isBusy) {
+  elements.authPassword.disabled = isBusy;
+  elements.authSubmit.disabled = isBusy;
+  elements.authSubmit.textContent = isBusy ? "更新中..." : "進入系統";
+}
+
+
+function isEditableTarget(target) {
+  return target instanceof HTMLElement &&
+    Boolean(target.closest("input, textarea, [contenteditable='true']"));
+}
+
+
+function getGuardState() {
+  try {
+    const raw = localStorage.getItem(SECURITY.guardKey);
+    if (!raw) {
+      return { attempts: 0, lockUntil: 0 };
+    }
+
+    const parsed = JSON.parse(raw);
+    return {
+      attempts: Number(parsed.attempts ?? 0),
+      lockUntil: Number(parsed.lockUntil ?? 0),
+    };
+  } catch {
+    return { attempts: 0, lockUntil: 0 };
+  }
+}
+
+
+function saveGuardState(guard) {
+  localStorage.setItem(SECURITY.guardKey, JSON.stringify(guard));
+}
+
+
+function clearGuardState() {
+  localStorage.removeItem(SECURITY.guardKey);
+}
+
+
+function getRemainingLockMs() {
+  const guard = getGuardState();
+  return Math.max(0, guard.lockUntil - Date.now());
+}
+
+
+function formatRemainingLock(ms) {
+  const totalSeconds = Math.ceil(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  if (minutes > 0) {
+    return `${minutes}分${String(seconds).padStart(2, "0")}秒`;
+  }
+  return `${seconds}秒`;
+}
+
+
+function syncGuardUi({ resetMessage = false } = {}) {
+  const remaining = getRemainingLockMs();
+  const lockedOut = remaining > 0;
+
+  if (lockedOut) {
+    elements.authPassword.disabled = true;
+    elements.authSubmit.disabled = true;
+    elements.authSubmit.textContent = "進入系統";
+    setAuthMessage(`輸入錯誤次數過多，請於 ${formatRemainingLock(remaining)} 後再試。`, "error");
+    return true;
+  }
+
+  if (resetMessage) {
+    setAuthMessage("");
+  }
+
+  setAuthBusy(false);
+  return false;
+}
+
+
+function startGuardTimer() {
+  window.clearInterval(state.guardTimer);
+  state.guardTimer = window.setInterval(() => {
+    const lockedOut = syncGuardUi();
+    if (!lockedOut) {
+      window.clearInterval(state.guardTimer);
+      state.guardTimer = null;
+      clearGuardState();
+      setAuthMessage("");
+    }
+  }, 1000);
+}
+
+
+function stopGuardTimer() {
+  window.clearInterval(state.guardTimer);
+  state.guardTimer = null;
+}
+
+
+function setLocked(locked) {
+  document.body.classList.toggle("is-locked", locked);
+  elements.authOverlay.hidden = !locked;
+  elements.protectedApp.setAttribute("aria-hidden", String(locked));
+
+  if (locked) {
+    syncGuardUi({ resetMessage: true });
+    if (getRemainingLockMs() > 0) {
+      startGuardTimer();
+    }
+    elements.authPassword.focus();
+    return;
+  }
+
+  stopGuardTimer();
+  elements.authPassword.value = "";
+}
+
+
+async function digestText(value) {
+  const encoded = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", encoded);
+  return [...new Uint8Array(digest)]
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+
 function buildSourceOptions(sources) {
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "all";
+  defaultOption.textContent = "全部來源";
+  elements.sourceFilter.replaceChildren(defaultOption);
+
   for (const source of sources) {
     const option = document.createElement("option");
     option.value = source;
@@ -70,6 +230,8 @@ function buildSourceOptions(sources) {
 
 
 function buildTagButtons(tags) {
+  elements.tagFilters.replaceChildren();
+
   const allButton = document.createElement("button");
   allButton.type = "button";
   allButton.textContent = "全部";
@@ -85,6 +247,29 @@ function buildTagButtons(tags) {
     button.className = "tag-chip";
     elements.tagFilters.append(button);
   }
+}
+
+
+function applyPayload(payload) {
+  state.articles = payload.articles ?? [];
+  state.sources = payload.available_sources ?? [];
+  state.tags = payload.available_tags ?? [];
+  state.activeTag = "all";
+
+  elements.count.textContent = String(payload.total_articles ?? state.articles.length);
+  elements.lastUpdated.textContent = payload.generated_at
+    ? formatUpdatedAt(payload.generated_at)
+    : "未知";
+
+  buildSourceOptions(state.sources);
+  buildTagButtons(state.tags);
+
+  if (!state.eventsBound) {
+    bindEvents();
+    state.eventsBound = true;
+  }
+
+  updateView();
 }
 
 
@@ -148,7 +333,6 @@ function renderArticles(articles) {
   }
 
   const fragment = document.createDocumentFragment();
-
   const orderedGroupKeys = [...groups.keys()].sort((a, b) => b.localeCompare(a));
 
   for (const key of orderedGroupKeys) {
@@ -251,30 +435,65 @@ function bindEvents() {
 }
 
 
-async function loadNews() {
-  const response = await fetch(DATA_URL);
+async function fetchStoredNews() {
+  const response = await fetch(DATA_URL, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Failed to load ${DATA_URL}`);
   }
-
-  const payload = await response.json();
-  state.articles = payload.articles ?? [];
-  state.sources = payload.available_sources ?? [];
-  state.tags = payload.available_tags ?? [];
-
-  elements.count.textContent = String(payload.total_articles ?? state.articles.length);
-  elements.lastUpdated.textContent = payload.generated_at
-    ? formatUpdatedAt(payload.generated_at)
-    : "未知";
-
-  buildSourceOptions(state.sources);
-  buildTagButtons(state.tags);
-  bindEvents();
-  updateView();
+  return response.json();
 }
 
 
-loadNews().catch((error) => {
+async function refreshNewsOnLogin(password) {
+  try {
+    const response = await fetch(REFRESH_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "no-store",
+      body: JSON.stringify({ password }),
+    });
+
+    if (response.ok) {
+      return response.json();
+    }
+
+    if ([404, 405, 501].includes(response.status)) {
+      return null;
+    }
+
+    const errorPayload = await response.json().catch(() => null);
+    throw new Error(errorPayload?.error ?? `refresh failed (${response.status})`);
+  } catch (error) {
+    if (error instanceof TypeError) {
+      return null;
+    }
+    throw error;
+  }
+}
+
+
+async function loadNews(password = null) {
+  let payload = null;
+
+  if (password) {
+    try {
+      payload = await refreshNewsOnLogin(password);
+    } catch (error) {
+      console.warn("Latest refresh failed, falling back to stored news.", error);
+    }
+  }
+
+  if (!payload) {
+    payload = await fetchStoredNews();
+  }
+
+  applyPayload(payload);
+}
+
+
+function handleLoadFailure(error) {
   elements.resultsSummary.textContent = "資料載入失敗";
 
   const errorBox = document.createElement("div");
@@ -284,4 +503,153 @@ loadNews().catch((error) => {
     <p>${error.message}</p>
   `;
   elements.results.replaceChildren(errorBox);
-});
+}
+
+
+async function unlockApp(password) {
+  setLocked(false);
+  setAuthMessage("");
+  await loadNews(password);
+}
+
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+
+  if (syncGuardUi()) {
+    startGuardTimer();
+    return;
+  }
+
+  const password = elements.authPassword.value.trim();
+  if (!password) {
+    setAuthMessage("請輸入登入密碼。", "error");
+    return;
+  }
+
+  setAuthBusy(true);
+
+  try {
+    const digest = await digestText(password);
+    if (digest === SECURITY.passwordHash) {
+      clearGuardState();
+      setAuthMessage("");
+      await unlockApp(password);
+      return;
+    }
+
+    const guard = getGuardState();
+    const nextAttempts = guard.attempts + 1;
+    const remainingAttempts = Math.max(SECURITY.maxAttempts - nextAttempts, 0);
+    const nextGuard = {
+      attempts: nextAttempts,
+      lockUntil: nextAttempts >= SECURITY.maxAttempts
+        ? Date.now() + SECURITY.lockoutMs
+        : 0,
+    };
+    saveGuardState(nextGuard);
+    elements.authPassword.value = "";
+
+    if (nextGuard.lockUntil > 0) {
+      syncGuardUi();
+      startGuardTimer();
+      return;
+    }
+
+    setAuthMessage(`密碼錯誤，尚可再嘗試 ${remainingAttempts} 次。`, "error");
+  } catch (error) {
+    handleLoadFailure(error);
+    setAuthMessage(`驗證失敗：${error.message}`, "error");
+  } finally {
+    if (!document.body.classList.contains("is-locked")) {
+      setAuthBusy(false);
+      return;
+    }
+
+    if (getRemainingLockMs() === 0) {
+      setAuthBusy(false);
+    }
+  }
+}
+
+
+function protectInteractions() {
+  document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+
+  document.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+  });
+
+  document.addEventListener("copy", (event) => {
+    if (isEditableTarget(event.target)) {
+      return;
+    }
+    event.preventDefault();
+  });
+
+  document.addEventListener("cut", (event) => {
+    if (isEditableTarget(event.target)) {
+      return;
+    }
+    event.preventDefault();
+  });
+
+  document.addEventListener("selectstart", (event) => {
+    if (isEditableTarget(event.target)) {
+      return;
+    }
+    event.preventDefault();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    const ctrlOrMeta = event.ctrlKey || event.metaKey;
+    const editable = isEditableTarget(event.target);
+
+    const blockedShortcuts = ctrlOrMeta && (
+      key === "u" ||
+      key === "s" ||
+      key === "p" ||
+      (!editable && (key === "a" || key === "c" || key === "x")) ||
+      (event.shiftKey && ["i", "j", "c"].includes(key))
+    );
+    const blockedFunctionKey = event.key === "F12" || event.key === "ContextMenu";
+
+    if (!blockedShortcuts && !blockedFunctionKey) {
+      return;
+    }
+
+    event.preventDefault();
+  });
+
+  window.addEventListener("beforeprint", (event) => {
+    event.preventDefault();
+  });
+}
+
+
+function bindAuthEvents() {
+  elements.authForm.addEventListener("submit", (event) => {
+    handleAuthSubmit(event).catch((error) => {
+      setAuthMessage(`驗證失敗：${error.message}`, "error");
+      setAuthBusy(false);
+    });
+  });
+}
+
+
+function bootstrap() {
+  protectInteractions();
+  bindAuthEvents();
+  setLocked(true);
+
+  if (getRemainingLockMs() > 0) {
+    syncGuardUi();
+    startGuardTimer();
+  }
+}
+
+
+bootstrap();
