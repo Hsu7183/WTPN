@@ -1,6 +1,11 @@
 const DATA_URL = new URL("./data/news.json", window.location.href);
 const REFRESH_URL = new URL("../api/refresh-news", window.location.href);
 
+const VIEWPORT = Object.freeze({
+  locked: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
+  unlocked: "width=device-width, initial-scale=1, viewport-fit=cover",
+});
+
 const SECURITY = Object.freeze({
   passwordHash: "2a6dda3118910de47066df2ef71acd693ae7bb48dcba8eaea86cd75d4813863d",
   guardKey: "wtpn-auth-guard",
@@ -9,6 +14,7 @@ const SECURITY = Object.freeze({
 });
 
 const elements = {
+  viewportMeta: document.querySelector("#viewport-meta"),
   authOverlay: document.querySelector("#auth-overlay"),
   authForm: document.querySelector("#auth-form"),
   authPassword: document.querySelector("#auth-password"),
@@ -202,6 +208,10 @@ function stopGuardTimer() {
 
 
 function setLocked(locked) {
+  if (elements.viewportMeta) {
+    elements.viewportMeta.setAttribute("content", locked ? VIEWPORT.locked : VIEWPORT.unlocked);
+  }
+
   document.body.classList.toggle("is-locked", locked);
   elements.authOverlay.hidden = !locked;
   elements.protectedApp.setAttribute("aria-hidden", String(locked));
