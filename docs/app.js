@@ -306,6 +306,7 @@ function applyPayload(payload) {
   state.sources = payload.available_sources ?? [];
   state.tags = payload.available_tags ?? [];
   state.activeTag = "all";
+  setSearchPanelOpen(false);
 
   elements.count.textContent = String(payload.total_articles ?? state.articles.length);
   elements.lastUpdated.textContent = payload.generated_at
