@@ -1,6 +1,6 @@
 {
   "project": "WTPN",
-  "generated_at": "2026-04-16T05:54:18.081530Z",
+  "generated_at": "2026-04-16T19:06:00.158045Z",
   "lookback_days": 365,
   "keywords": [
     "台灣警察風紀",
@@ -51,6 +51,7 @@
     "CTWANT",
     "ETtoday新聞雲",
     "MSN",
+    "NOWnews今日新聞",
     "TVBS新聞網",
     "Yahoo新聞",
     "yesmedia.com.tw",
@@ -77,10 +78,118 @@
     "酒駕",
     "風紀"
   ],
-  "fetched_articles": 239,
-  "new_articles": 26,
-  "total_articles": 262,
+  "fetched_articles": 243,
+  "new_articles": 20,
+  "total_articles": 282,
   "articles": [
+    {
+      "id": "a16fed1ff701",
+      "title": "幫「鮑魚大亨」鍾文智偽造簽名95次! 涉貪副所長李俊良遭起訴、求刑8年",
+      "source": "MSN",
+      "link": "https://news.google.com/rss/articles/CBMirwNBVV95cUxPbHNFZTVUaWd2eS1NUjlGZk9XZUhKOFk5RmdPdFZaYVdOSVdTVGtSMzZWX05Gd3RZOC13c3FvaktaT3VVTVptWnF3clVpMlpGTUFEejRvM0phV2hQQlA5ZE42LUt0VjlYSUIwSEM4TFVxTXNrZksxai1FT2Jpc3h5TlhHUDVsOXJOUngtV0lJalVNUFVBd0ZuSUtIY3NJTDl5cVNoTGpGUFlGbHU4Ui13YUZPR000Z0t4MllGdXY3dTZQMzk3b1l2bHB4aHV5OU5CZExjUERUT1BVeUt3a3R3SldMajJ5dVRKTDB5bTF6OTRPSWxOTk85SFp4N1N4Yl9yM05GZlF1Q0g2Z1U0TW9XQTdoTFVrYjlMVWQzVGhfdHFoMGNjZFRXYjlOTXRUSEVOM1dSZEF1dWo5WVdsS3drcjFZOENLQUNleXBZanFiUGpPNm9ISjdpRHZhVi1VbE1SaGpJMGI0WVUybHFKNEhvaTF4aGNmT0NBcExJLVFWQm5rT1pXUlF3M1lQd0J0VDlaRHRpdUV0MGptRE9fM3lZcGdoVzdvSTBoN0g1Nms4QQ?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T14:15:45Z",
+      "published_label": "2026-04-16 14:15",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "幫「鮑魚大亨」鍾文智偽造簽名95次! 涉貪副所長李俊良遭起訴、求刑8年 msn  副所長 涉貪 收賄"
+    },
+    {
+      "id": "a3116be565b9",
+      "title": "協助富商鍾文智判刑定讞後潛逃 副所長李俊良80萬交保",
+      "source": "聯合新聞網",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoWUNIczh4UEI3WGZZc19vc3JCWGdjLXRBVWlwLU40UWd0NVdvVmptbUJQUHFNSzZjRFlWa0hWQjhRaVhIcGFNckhwN2lGU2RnbEZRZEJB0gFWQVVfeXFMUGhZQ0hzOHhQQjdYZllzX29zckJYZ2MtdEFVaXAtTjRRZ3Q1V29Wam1tQlBQcU1LNmNEWVZrSFZCOFFpWEhwYU1ySHA3aUZTZGdsRlFkQkE?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T13:31:35Z",
+      "published_label": "2026-04-16 13:31",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "協助富商鍾文智判刑定讞後潛逃 副所長李俊良80萬交保 聯合新聞網  副所長 涉貪 收賄"
+    },
+    {
+      "id": "ff2f70647de1",
+      "title": "涉偽造「鮑魚大亨」鍾文智不實報到紀錄 前副所長李俊良交保科技監控",
+      "source": "自由時報",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ZNXpGSEpCMlNWMHJ1WVhtTDY3eUpacUprS0pWNW0zaHhXZnhWaTBDR25BSTU2MW13YlBLd2VSTE5NdjBXTEFNbjZwOV9US2JZV3U5MzEtNGFWdjNZaUpVT01ZTEpKeGJu0gFuQVVfeXFMUEhfMmJhNUxORUhIWXM5cGplOEpuZDhoMm9ya1psa3ljbUJwblVsS0x4N2xwdUZyaTFteUxVRmstb2hFaUhhdFdUUmpHaFMzUGVoNVd6dm9nWE9WT29GUTdVSVZ5dzN1TXprLW5DQlE?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T12:54:10Z",
+      "published_label": "2026-04-16 12:54",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "涉偽造「鮑魚大亨」鍾文智不實報到紀錄 前副所長李俊良交保科技監控 自由時報  副所長 涉貪 收賄"
+    },
+    {
+      "id": "ccb4fe3fc549",
+      "title": "護航鮑魚大亨逃亡！前副所長求刑8年求交保...被虧只能出80萬 - 三立新聞網SETN.com",
+      "source": "三立新聞網 Setn.com",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE16eTFGcEZ3ZFNyZk9rYmh4Ukg5Mlo5TjNLaTZtX2R5d213blpXRUhCeEdoSmZYUlBYRTdRODk3QzFCVXVSSm10Skp4N3N3M2V6SFEwbzU3QmjSAV9BVV95cUxNUlZMbEZWQ09KVTZPXzRydXlmVXZKYTdfWDE1MEFULTVpVGxxT1hVRHNPTnd0bk9nbzJSc2tFMXFqTS1tTWJFbW01ZVd4TzVha1F3RXp3WGlCeVJJVEIxSQ?oc=5",
+      "summary": "護航鮑魚大亨逃亡！前副所長求刑8年求交保...被虧只能出80萬 三立新聞網SETN.com",
+      "published_at": "2026-04-16T12:21:00Z",
+      "published_label": "2026-04-16 12:21",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "護航鮑魚大亨逃亡！前副所長求刑8年求交保...被虧只能出80萬 - 三立新聞網setn.com 三立新聞網 setn.com 護航鮑魚大亨逃亡！前副所長求刑8年求交保...被虧只能出80萬 三立新聞網setn.com 副所長 涉貪 收賄"
+    },
+    {
+      "id": "729ece452d1a",
+      "title": "涉偽造「鮑魚大亨」鍾文智不實報到紀錄 副所長李俊良移審交保電子監控",
+      "source": "自由時報",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE55UmVMZ3NDN3BOUG90c2tWVk5MUm05T2RPUzlKdDNPbnhXaWcyUzBEeTRmdUNiSzdLNExXb0VKcUZhWTk5cHpwQmxWWjJjdGhZY0lORTBaTndUbTIwTGtxOEt0UVVrZklw0gFuQVVfeXFMTnV5dk41QjdUazJGZ0Frak9rRnE2VzVISkhuOWN3eW5rdDdfa0JOSjdrRjlaT0R0ckZVT0ZHT0Q1QS1rVkJPRzFvX281R2IybVEyeG9xZDBaTllUbUF2cDdiTUloa0RNLUpNVGtRd3c?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T11:54:22Z",
+      "published_label": "2026-04-16 11:54",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "涉偽造「鮑魚大亨」鍾文智不實報到紀錄 副所長李俊良移審交保電子監控 自由時報  副所長 涉貪 收賄"
+    },
+    {
+      "id": "967e0a161612",
+      "title": "協助「鮑魚達人」鍾文智偽造簽名 派出所副所長李俊良80萬交保",
+      "source": "聯合新聞網",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBPa2owVG95aVlFQ0R5STZGcFlEU0dyQlpOSUt1cEJpbTljR0VrQThQRzJKdXNtU2FLV2kzOVBpRkFmNFhtNFNWdjRTQ1hDWFFMUGFnZUNR0gFWQVVfeXFMUE9rajBUb3lpWUVDRHlJNkZwWURTR3JCWk5JS3VwQmltOWNHRWtBOFBHMkp1c21TYUtXaTM5UGlGQWY0WG00U1Z2NFNDWENYUUxQYWdlQ1E?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T11:30:41Z",
+      "published_label": "2026-04-16 11:30",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "協助「鮑魚達人」鍾文智偽造簽名 派出所副所長李俊良80萬交保 聯合新聞網  副所長 涉貪 收賄"
+    },
     {
       "id": "55c9cce410cd",
       "title": "幫「鮑魚大亨」鍾文智偽造簽名95次！涉貪副所長李俊良遭起訴、求刑8年 - 三立新聞網SETN.com",
@@ -114,8 +223,26 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "涉偽造報到紀錄助「鮑魚大亨」潛逃 警副所長涉貪遭訴求刑8年 yahoo新聞  副所長 涉貪 收賄"
+    },
+    {
+      "id": "011dea03c406",
+      "title": "幫鍾文智簽到95次助其順利潛逃 副所長李俊良涉貪被起訴求刑8年",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMinANBVV95cUxOZ2JQcWMyQWFHVTI5RU5ZM2pER0tZWC16dVR3ZXNVRUh0dVRfc2R0Z3pHMXYyWFVCMWVXY200TWdoZUtVSmRzSk9zbFlKb0VXbkl1eEM3bE1nUWZEUkRIS0FtRTJYc0dVWWdOZ1FWa1lXQlpqM0dQak9Uenlta2UxYjFGZVJBVWhjNkNjaEg2SjM5X2xyM3pTemFKQWhxRUl0QVBzMVJmeUpsWFFlMUlxeGZUc0ZQdFpWWl93RVZLbUJKU0lpcG9tOEw5dTVjVU1KUzVrQVVTUDNnU2tkd2FkZ3Z4eWFma0hKR2RHTFNtdEVHYzY1aW1YMjNMUmozaDNDNHVoRS00NHAzSjdpM3NOVVgyTVludEhncFItMG85TnpBYVVCRlRmeDZHOURoQzREbWkyUVBPWmpIZVpQQjVZVGh0YVNOZG1BV3VnRTNCWFBfUTBpU1p2Q0NoS3NvOHl5czQ5U0Q2VGVCTDgyN1F1Q05zMnkyRGpqOFZZXzFGcF9IaFZmRUhfakt3Uy1tV3lVb1pyNEhZenQ4d2tN?oc=5",
+      "summary": "",
+      "published_at": "2026-04-16T02:52:42Z",
+      "published_label": "2026-04-16 02:52",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "幫鍾文智簽到95次助其順利潛逃 副所長李俊良涉貪被起訴求刑8年 yahoo新聞  副所長 涉貪 收賄"
     },
     {
       "id": "553eb185fcd9",
@@ -133,7 +260,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "包庇「鮑魚大亨」鍾文智免報到近百次！涉貪副所長被起訴、求刑8年 自由時報  副所長 涉貪 包庇 收賄"
     },
     {
@@ -171,7 +298,7 @@
       ],
       "search_text": "警紀潰堤?羅東警下班未繳槍塞抽屜兩天 網轟：整個派出所都在睡? msn  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "55cb9d513b13",
@@ -208,7 +335,7 @@
       ],
       "search_text": "知法犯法！荒唐國道警酒駕　拒檢反蒐證拔腿逃辯：想去廁所 ettoday新聞雲 知法犯法！荒唐國道警酒駕 拒檢反蒐證拔腿逃辯：想去廁所 ettoday新聞雲 員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a77cd22d06fc",
@@ -226,7 +353,7 @@
       ],
       "search_text": "下場慘了！國道警酒駕拒測逃給警察追 喊「學長」求饒也沒用 yahoo新聞  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "9954e93e3df0",
@@ -261,7 +388,7 @@
         "酒駕"
       ],
       "first_seen_at": "2026-04-16T04:23:43.440310Z",
-      "last_seen_at": "2026-04-16T05:29:44.235587Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "警涉酒駕拒檢逃被逮還反蒐證嗆聲！ 遭罰21萬.吊銷駕照 華視新聞網  員警 酒駕 酒駕"
     },
     {
@@ -280,7 +407,7 @@
       ],
       "search_text": "洩密黑幫、刑求犯嫌 新北5警起訴 聯合新聞網  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "664be65a59ec",
@@ -299,7 +426,7 @@
       ],
       "search_text": "老婆才剛生！竹東色警上班到護膚店「桑一下」 自家人查到下場慘了 msn  台灣警察風紀 性紀律 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "b535ca684af8",
@@ -317,7 +444,7 @@
       ],
       "search_text": "新北 警洩密換餐敘 凌虐囚犯為樂 yahoo新聞  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "fd1d83faec4f",
@@ -337,7 +464,7 @@
       ],
       "search_text": "新北警洩偵辦進度換宴飲 涉洩密貪汙被起訴 中時新聞網  警察 洩密 警察 貪瀆 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "895e6535f33c",
@@ -355,7 +482,7 @@
       ],
       "search_text": "羅東分局員警械彈管理疏失 依規定議處並從嚴究責 中時新聞網  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "aea601fe20cc",
@@ -373,7 +500,7 @@
       ],
       "search_text": "警槍「放抽屜」2天！宜縣警局督勤發現派出所員警未繳回 從嚴議處 聯合新聞網  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "437c5e04cc1c",
@@ -392,7 +519,7 @@
       ],
       "search_text": "北市保大組長開會失聯在三溫暖尋獲 涉足不當場所將記過調職 自由時報  台灣警察風紀 性紀律 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2e65fff79c58",
@@ -447,7 +574,7 @@
       ],
       "search_text": "國門管制哨竟成走私門！航警收賄上百萬包庇加熱菸入境 一審判決出爐 聯合新聞網  警察 收賄 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "daf5f3548f82",
@@ -465,7 +592,7 @@
       ],
       "search_text": "花蓮員警酒駕衝撞釀3傷 遭記1大過調職 yahoo新聞  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "82944f83573d",
@@ -520,7 +647,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "屏東巡佐竊占國有地養雞被判刑 記過1次打行政訴訟吞敗 聯合新聞網  巡佐 涉貪 收賄 風紀"
     },
     {
@@ -540,7 +667,7 @@
       ],
       "search_text": "警界彭于晏包庇酒駕妹! 只罰男友 下班「滑進旅館5小時」 被停職 msn  警察 包庇 包庇 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "8c475a89ada6",
@@ -558,7 +685,7 @@
       ],
       "search_text": "4年破千支嘉獎！「警界彭于晏」升官無望 最慘恐失警察身分 yahoo新聞  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "50625a9efd54",
@@ -575,7 +702,7 @@
         "包庇"
       ],
       "first_seen_at": "2026-04-16T04:25:57.243038Z",
-      "last_seen_at": "2026-04-16T05:29:44.235587Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台南彭于晏正面照曝光！昔日戰神翻車淪「包庇正妹色警」 從警6年喊卡 yahoo新聞  警察 包庇 包庇"
     },
     {
@@ -595,7 +722,7 @@
       ],
       "search_text": "有關員警涉嫌洩密案 南港分局秉持 警紀警辦 從重究責 展決心 yesmedia.com.tw  警察 警紀 洩密 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c9aafba2dccd",
@@ -617,7 +744,7 @@
       ],
       "search_text": "鍾文智炒股案外案 北市督察組長與巡佐涉洩密遭拔官 自由時報  台灣警察風紀 巡佐 涉貪 警察 洩密 收賄 洩密 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "467cb4a666e0",
@@ -654,7 +781,7 @@
       ],
       "search_text": "獨家／把女警當酒家女使喚還要「穿辣點」 前南投縣警局刑大大隊長遭拔官內幕 yahoo新聞  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "89bc811ded3d",
@@ -692,7 +819,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "誇張！宜蘭警察偽造敘獎還違法查個資 疑涉貪羈押禁見 自由時報  員警 涉貪 警察 涉貪 收賄 洩密"
     },
     {
@@ -711,7 +838,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "宜蘭警方自檢自清...警員詐獎金又被查出違法查洩個資 遭收押禁見 聯合新聞網  員警 涉貪 收賄 洩密"
     },
     {
@@ -730,7 +857,7 @@
       ],
       "search_text": "督察員遭爆與已婚女職代「車震」 宜縣警局：記2小過調職 自由時報  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "ec990b946fce",
@@ -748,7 +875,7 @@
       ],
       "search_text": "綠帽夫氣炸！宜蘭警督察「狂睡已婚女同事」 遭加重記過兩次、調整職務 yahoo新聞  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "d0171d9a7e51",
@@ -764,7 +891,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "獨／闖紅燈竟變行人違規　新北警開假紅單還辯：可依程序申訴 ettoday新聞雲 獨／闖紅燈竟變行人違規 新北警開假紅單還辯：可依程序申訴 ettoday新聞雲 員警 改單 警察 改單 "
     },
     {
@@ -788,7 +915,7 @@
       ],
       "search_text": "員警涉收賄千萬包庇賭博電玩 監院糾正警政署、竹市警局 聯合新聞網  台灣警察風紀 員警 涉貪 警察 包庇 警察 收賄 包庇 收賄 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "20b6d4f16677",
@@ -808,7 +935,7 @@
       ],
       "search_text": "影／台中偵查佐私查民眾個資涉洩密 警局自檢送辦...檢5萬交保 聯合新聞網  台灣警察風紀 警察 洩密 洩密 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "32973b647e1f",
@@ -844,7 +971,7 @@
       ],
       "search_text": "航空警察局長林建宏上任 副署長監交盼強化緝毒、嚴管風紀 聯合新聞網  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "54ded6ec4894",
@@ -863,7 +990,7 @@
       ],
       "search_text": "快訊／三重警涉洩密！幫詐團車手查「通緝資料」分局：已報請停職處分 yahoo新聞  警察 洩密 洩密 詐欺",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "6f9d2059231f",
@@ -918,7 +1045,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "警涉開假單圖利業者被起訴　永和警方證實已停職 ettoday新聞雲 警涉開假單圖利業者被起訴 永和警方證實已停職 ettoday新聞雲 員警 圖利 員警 改單 收賄"
     },
     {
@@ -937,7 +1064,7 @@
       ],
       "search_text": "偵查隊長涉霸凌暴力言語「喝農藥死一死」 屏東縣警局：霸凌不成立 聯合新聞網  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "61d0e16cfb07",
@@ -954,7 +1081,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "警未開罰單遭辦貪汙獲無罪！　律師曝檢察官嗆：筆錄我愛怎麼寫就怎麼寫 | 社會 | ctwant ctwant 警未開罰單遭辦貪汙獲無罪！ 律師曝檢察官嗆：筆錄我愛怎麼寫就怎麼寫 | 社會 | ctwant ctwant 警察 貪瀆 收賄"
     },
     {
@@ -973,7 +1100,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "新北近2年公務員疑涉貪21案 已有6案遭提公訴 自由時報  警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -992,7 +1119,7 @@
       ],
       "search_text": "去年全國29警酒駕 3人遭免職 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c4debc01357d",
@@ -1010,7 +1137,23 @@
       ],
       "search_text": "警察酒駕嚴懲／連坐、重懲 仍有害群之馬 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
+    },
+    {
+      "id": "8eec957cb07e",
+      "title": "獨家》台南市民注意! 開罰單交通助理員明重現街頭 小心這三項違規",
+      "source": "MSN",
+      "link": "https://news.google.com/rss/articles/CBMizARBVV95cUxOMUE1TDRaaTZYV2lWUU9RVmlXc1o3UDlNeWhoV2NkUUJ5alQ4bDNFTGxwbGdwZGJNd3NDcVZwenA5YzNUWW1aMHdObFFHVmRTZldnNXpJekpYNmpwcTlnNnBRdGdFeDltY25qZHd2Y0VHakhWRm5zLVB2ckdhY0FNWVgwY0xIZFAwdG5UTEZvdWhzaHpEcFZzSTU0a2ozUi1KcmtHRU94N1RFLUJSS2N5enI2UnJDQTZxLXFqVTg4X3Rvd3U4M2ZWSUZ5dVNXakY3VlhiOUFZOC1Xb28xVUR1S2VYa3lfSGFyT25uX0xsLVNZbUVEcFFKaXIyZ2k1VHVCTjY1MEhBd0pjZHJpVm5FMWh1T3JFdzl5ZTVRSGFCM2Z5ZjcxLThKa1FvdTRBU015cm9FNjN1MFBzMEFjRW9sZE4tNmlIcXNIa2cyNC1SazB5VFNLVG5WSHBUS19LMnE2OHRubF9HSndBQ3FkNzBmeEJUSXVXZU51ZmotVS1aRXhwb2hKNFhPTHp2ampBTjdiOWVGc0ZFN2pUZHJpckdzRVoyNXJFV1NNcnZZMkNJaV9vaHNOeFpoNmZwdno1cFp4ZXBLYU5WMzdIYUhLUDlVOW5pMzNDYm4yM0tIa1dreHd1eTJoQTFQN3NpUjRpYVBESUdPRXpVbFpfeXEwcnZLbXdkVXB6b0dYQmo2a0NJYldtRnZUa3d3SVZlWWJ5SnU0bUkwY3RHVVJ6NS1hN3dqX1JCeHFpSjA5NXM4dWt4RU83ZWhBTnM0Yl9jeHQ?oc=5",
+      "summary": "",
+      "published_at": "2026-01-01T14:51:05Z",
+      "published_label": "2026-01-01 14:51",
+      "matched_keywords": [
+        "警察 改單"
+      ],
+      "tags": [],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "獨家》台南市民注意! 開罰單交通助理員明重現街頭 小心這三項違規 msn  警察 改單 "
     },
     {
       "id": "41e8e88d4c9e",
@@ -1044,7 +1187,7 @@
       ],
       "search_text": "偵查隊小隊長酒駕「私開偵防車」 祭2大過恐將免職 華視新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2d7fbed7a89e",
@@ -1059,7 +1202,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台中女警喊「開槍盧秀燕」遭羈押 警局：即刻停職、擬記兩大過免職 華視新聞網  警察 改單 "
     },
     {
@@ -1078,7 +1221,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "包庇炒股犯 副所長涉貪千萬羈押 中時新聞網  副所長 涉貪 包庇 收賄"
     },
     {
@@ -1097,7 +1240,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "3副所長涉助鮑魚達人鍾文智潛逃 遭火速拔官調到警備隊 聯合新聞網  副所長 涉貪 警察 涉貪 收賄"
     },
     {
@@ -1117,7 +1260,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "信義分局護航鍾文智偽簽報到紀錄 副所長涉貪交保 北檢上演全武行 聯合新聞網  副所長 涉貪 警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -1135,7 +1278,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "北檢全武行！信義分局副所長涉貪「小兒子推記者」　背景有來頭 ettoday新聞雲 北檢全武行！信義分局副所長涉貪「小兒子推記者」 背景有來頭 ettoday新聞雲 副所長 涉貪 收賄"
     },
     {
@@ -1153,7 +1296,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "阿志頭兒「背景超硬」北檢肉搏！副所長爹「護航鍾文智涉貪」父子超反差 民視新聞網  副所長 涉貪 收賄"
     },
     {
@@ -1172,7 +1315,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑包庇鍾文智偽造簽到記錄 信義分局副所長涉收賄700萬 白手套聲押 聯合新聞網  副所長 涉貪 包庇 收賄"
     },
     {
@@ -1191,7 +1334,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "造假鍾文智簽到紀錄協查個資 副所長李俊良疑涉貪700萬遭聲押禁見 中時新聞網  副所長 涉貪 收賄 洩密"
     },
     {
@@ -1209,7 +1352,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑不明財產700萬助鍾文智免簽到 三張犂副所長與白手套聲押禁見 聯合新聞網  副所長 涉貪 收賄"
     },
     {
@@ -1245,7 +1388,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "協助鍾文智棄保潛逃 派出所前副所長深夜羈押禁見 聯合新聞網  副所長 涉貪 收賄"
     },
     {
@@ -1263,7 +1406,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "信義分局副所長收鍾文智5次「博奕」金流逾千萬 聲押獲准 依法停職 聯合新聞網  副所長 涉貪 收賄"
     },
     {
@@ -1281,7 +1424,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "集體代簽讓鮑魚聞人鍾文智潛逃北市警3副所長火速拔官- 社會 中時新聞網  副所長 涉貪 收賄"
     },
     {
@@ -1336,7 +1479,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑被買通…幫忙「偽造簽到」暗助鍾文智潛逃! 信義分局副所長涉貪遭聲押 msn  副所長 涉貪 收賄"
     },
     {
@@ -1356,7 +1499,7 @@
       ],
       "search_text": "涉協助富商鍾文智偽造簽名潛逃 李姓派出所副所長貪污罪聲押 yahoo新聞  員警 貪污 警察 貪瀆 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "84381303e5f2",
@@ -1374,7 +1517,7 @@
       ],
       "search_text": "新北警遭檢舉包庇麻將賭場！檢察官搜索蘆洲分局 6警遭檢證人身分約談 聯合新聞網  警察 包庇 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "be6ba81daf85",
@@ -1391,7 +1534,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "影/涉貪副所長背景起底！小兒子「槓記者」北檢上演全武行 yahoo新聞  副所長 涉貪 收賄"
     },
     {
@@ -1410,8 +1553,44 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "「鮑魚大王」鍾文智判30年逃亡 北市信義分局副所長涉包庇收賄700萬 白手套聲押 中時新聞網  副所長 涉貪 包庇 收賄"
+    },
+    {
+      "id": "5494df1fa586",
+      "title": "【更新】疑幫鍾文智簽到助其潛逃 副所長李俊良不明金流逾千萬遭聲押禁見",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMijANBVV95cUxOSElVbC1odWJZSlJEMmIwRzF1YXJuNmpPajZ4dWF0QU5QbERxcnZMRXdVSnhidV96eW5CSmJTZXBNdkY3QXlTSDZoU1JrckN4bTFnWGpoTWxzVU4xakJ5SXl6eHMweWNVYV9yVDJHc3hsWGg2RHpRUlR5bEdUMnFwOFEzdXlPRkptR1VmUllEX1I5YWdtS0h2ZUphT3FPUzhDSlY5ZUkza3NiTXlrVVpzN2dDLXlIYVpvRDFtQ0JvQkVJREdaOWdnV05ueF9pLV9MM1dtcDZ1clJfM0pjTkZQYllXVW1ndEoyUi0xMFBIVmVDWnFrMENablBEV3lZeDkzTXdiUjIwcy02Z2lvcldsdnlCWnRvTVlwMzBLY1lKbEpVUEZqSGxKM2t3NzhSQ0J1aVRrTmxhVTlPUTdyeHI2OHV1cU5PWjQyMGJBR0oteUJDYjlkMWdCaDlpb0xfdXlFel84NmV0ZGJHZHRQOHZPbmVsaU5veWVHb1MtNG5UQi0wMGRMU3luR05adUY?oc=5",
+      "summary": "",
+      "published_at": "2025-12-18T08:00:00Z",
+      "published_label": "2025-12-18 08:00",
+      "matched_keywords": [
+        "副所長 涉貪"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "【更新】疑幫鍾文智簽到助其潛逃 副所長李俊良不明金流逾千萬遭聲押禁見 yahoo新聞  副所長 涉貪 收賄"
+    },
+    {
+      "id": "cdc900347c80",
+      "title": "福德所副所長疑包庇鍾文智潛逃 信義分局長證實「筆跡異常」主動報檢調偵辦",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxONGdBZko3LUpmMUMxRjVCMVp0VkJ4TUIzUU1xTDM0LTRwYlctNFB5Ym5FUzREVmU1SFRCVjJXUGY1UXBIYkZLVURxOFZYdW9wQ3RaZzJKUUNaazE0N1lramgxMjZCemx5b3JTRXM1RmYySmRYMWhxakZlbGxyRVZGdmtjQkFzcDlLOFNkWnl2cGd4c1RCczJuVWxKRlJWbTBiazhKNzUycmc1X3BUU3hYTEw2VHJ2cFJ6WlZMS2hQMUF1NU00RE9NRVRmYXpQWHhWdXdfUzZNMlhQZV9DQ2dubmlGR2RrQWtTNmUtTDlBQi1PanhiVElTbl93eHBjbzVSQ3RWYlFvSlhyakZRVUNmMnNhTkd0SzhFYWRNaEpHUi1kY3dWeVhBbHBUWFhxdmE1bFdDVmxEYVo4UW5JeEl1SGZNZHh2TG8zbXB5b3h4T1JIWTBCYktNdmJNNEZRQ280dlRybW1TSDZpQzZQeDY0U0hubFhZM1lJYnBGWEs3bDBpTW9jSXctdnpHZUVHTnBjVzBrNGJVeTRUY1FMM21aV2lEMmhRb3l4bS1oRzJMWnFoME5iQWx2QUlyaEZJbGpxNFhPUkhqZmVGU2VRTlZEY1lQYU80b1U?oc=5",
+      "summary": "",
+      "published_at": "2025-12-18T08:00:00Z",
+      "published_label": "2025-12-18 08:00",
+      "matched_keywords": [
+        "警察 包庇"
+      ],
+      "tags": [
+        "包庇"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "福德所副所長疑包庇鍾文智潛逃 信義分局長證實「筆跡異常」主動報檢調偵辦 yahoo新聞  警察 包庇 包庇"
     },
     {
       "id": "817266ab69d0",
@@ -1431,7 +1610,7 @@
       ],
       "search_text": "獨／淡水2警被告發「縱放違規攤販」　指涉貪污圖利重罪結局曝 ettoday新聞雲 獨／淡水2警被告發「縱放違規攤販」 指涉貪污圖利重罪結局曝 ettoday新聞雲 員警 圖利 員警 貪污 警察 圖利 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "88d6fa6c9f8f",
@@ -1448,7 +1627,7 @@
         "酒駕"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "斷了15年警涯…高雄員警酒駕0.65mg/l「削人畫面曝」！身份遭起底 - 三立新聞網setn.com 三立新聞網 setn.com 斷了15年警涯…高雄員警酒駕0.65mg/l「削人畫面曝」！身份遭起底 三立新聞網setn.com 員警 酒駕 酒駕"
     },
     {
@@ -1468,7 +1647,7 @@
       ],
       "search_text": "離譜至極！高雄警一天連爆酒駕、偷拍醜聞 警紀徹底崩盤 yahoo新聞  警察 警紀 酒駕 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "016c8abe9608",
@@ -1486,7 +1665,7 @@
       ],
       "search_text": "高雄警零酒駕破功！副所長、基層連爆　內部憂「破窗效應」擴散 ettoday新聞雲 高雄警零酒駕破功！副所長、基層連爆 內部憂「破窗效應」擴散 ettoday新聞雲 員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "dfccdf33fc82",
@@ -1504,7 +1683,7 @@
       ],
       "search_text": "才涉洩密遭押又爆案外案 警手機疑存「私刑」畫面 華視新聞網  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "39f4fdf146fe",
@@ -1522,7 +1701,7 @@
       ],
       "search_text": "追撞前車「被揪出酒駕」 警記2大過免職 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "47b18d247faa",
@@ -1562,7 +1741,7 @@
       ],
       "search_text": "金山警巡佐涉索賄、包庇賭場 犯圖利罪判刑4年半 自由時報  巡佐 涉貪 警察 包庇 警察 圖利 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "ad679bec93de",
@@ -1580,7 +1759,7 @@
       ],
       "search_text": "新北刑大代理副隊長凌晨聲押禁見　飲宴黑道堂主洩密 ettoday新聞雲 新北刑大代理副隊長凌晨聲押禁見 飲宴黑道堂主洩密 ettoday新聞雲 警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "d125a880e8dc",
@@ -1598,7 +1777,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "新北市刑大洩密案「偵查佐15萬交保」　代理副隊長凌晨抵達地檢署 ettoday新聞雲 新北市刑大洩密案「偵查佐15萬交保」 代理副隊長凌晨抵達地檢署 ettoday新聞雲 巡佐 涉貪 收賄 洩密"
     },
     {
@@ -1617,7 +1796,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "涉受黑道飲宴洩密 新北刑大副隊長羈押禁見 台視新聞網  巡佐 涉貪 收賄 洩密"
     },
     {
@@ -1635,7 +1814,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑涉收賄縱放線民 新北刑大代理副隊長收押禁見 自由時報  巡佐 涉貪 收賄"
     },
     {
@@ -1653,7 +1832,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑與黑幫飲宴洩漏偵查機密 新北市刑大副隊長遭收押禁見 聯合新聞網  巡佐 涉貪 收賄"
     },
     {
@@ -1672,8 +1851,27 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "「1天給1萬」換不取締 金山警索賄、包庇賭場圖利罪判4年半 聯合新聞網  巡佐 涉貪 包庇 收賄"
+    },
+    {
+      "id": "0046dd08e1d5",
+      "title": "新北警洩密案升級！ 疑辦案交換情資涉縱放線民 代理副隊長遭聲押",
+      "source": "自由時報",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE43QWlpQW9UOXNPZjRhWFlFY0o0b3huODlrZHlDR2dtLXRIQUY2bnl2MGg4SGRuWXp3Q1JmYzZfdFZXQS1aZEc5cFJJRHl2YTIySkhUbmhjeWFCa3c2Q0JGeFB5b29QN1cx0gFuQVVfeXFMUE1DajUwWXJWQlk2WHdDcE1zWlRLY3JQV2h0R0NFbUV3clVvcmFJRTN5WlVzaFBQYjNTSWVBTGVnVm12Z0Nac1pqV0FjYzVMa25lYV9HNDNlMWhfcEdJbHlLTXk2M3hIRVdZSjlteGc?oc=5",
+      "summary": "",
+      "published_at": "2025-12-10T08:00:00Z",
+      "published_label": "2025-12-10 08:00",
+      "matched_keywords": [
+        "巡佐 涉貪"
+      ],
+      "tags": [
+        "收賄",
+        "洩密"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "新北警洩密案升級！ 疑辦案交換情資涉縱放線民 代理副隊長遭聲押 自由時報  巡佐 涉貪 收賄 洩密"
     },
     {
       "id": "a69d40f30484",
@@ -1693,7 +1891,7 @@
       ],
       "search_text": "新北警涉貪污洩密 刑大代理副隊長涉收賄重罪羈押禁見 三警交保 yahoo新聞  員警 貪污 警察 貪瀆 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c8b84596af7b",
@@ -1704,14 +1902,16 @@
       "published_at": "2025-12-09T08:00:00Z",
       "published_label": "2025-12-09 16:00",
       "matched_keywords": [
+        "台灣警察風紀",
         "警察 洩密"
       ],
       "tags": [
-        "洩密"
+        "洩密",
+        "風紀"
       ],
-      "search_text": "黑道飲宴洩密！新北刑大副隊長遭聲押 4警涉案震撼警界 yahoo新聞  警察 洩密 洩密",
+      "search_text": "黑道飲宴洩密！新北刑大副隊長遭聲押 4警涉案震撼警界 yahoo新聞  台灣警察風紀 警察 洩密 洩密 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "0498d7a8618f",
@@ -1729,7 +1929,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "疑洩密給黑幫 新北市警局巡佐、偵查員移送新北檢複訊 聯合新聞網  巡佐 涉貪 收賄 洩密"
     },
     {
@@ -1748,7 +1948,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "涉案第四警 中和警分局偵查佐才涉洩密撤銷羈押又遭拘提 聯合新聞網  巡佐 涉貪 收賄 洩密"
     },
     {
@@ -1770,7 +1970,7 @@
       ],
       "search_text": "台中爆12警「吊扣變吊銷」圖利4400萬 警： 收到起訴書立即停職 msn  員警 圖利 警察 圖利 警察 警紀 收賄 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "50157ff00cfb",
@@ -1788,7 +1988,7 @@
       ],
       "search_text": "二線四星「考績優異」警務參洩密給詐犯 判刑4月 聯合新聞網  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2b8600b9db01",
@@ -1806,7 +2006,7 @@
       ],
       "search_text": "新店警紀出包！民眾辦良民證「百元規費」遭私吞 2警調職 tvbs新聞網  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "5dbb07733c8b",
@@ -1824,7 +2024,7 @@
       ],
       "search_text": "新北新店警方良民證帳目不清2警疑涉案遭調職| 社會萬象| 社會 聯合新聞網  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "3250e99a7e4d",
@@ -1842,7 +2042,7 @@
       ],
       "search_text": "獨／高雄警零酒駕破功！副所長0.95醉茫慘摔　恐記2大過免職 ettoday新聞雲 獨／高雄警零酒駕破功！副所長0.95醉茫慘摔 恐記2大過免職 ettoday新聞雲 員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "fcba27c26349",
@@ -1862,7 +2062,7 @@
       ],
       "search_text": "開假單助「吊扣」牌照變「吊銷」 台中12員警、17業者貪汙起訴 自由時報  員警 改單 員警 貪污 警察 改單 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "41f375b68111",
@@ -1883,7 +2083,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "影／台中12警開假吊銷罰單 圖利車主4400萬 市警局：全部停職 聯合新聞網  員警 圖利 員警 改單 警察 圖利 警察 改單 警察 銷單 收賄"
     },
     {
@@ -1902,7 +2102,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "快訊／台中12警配合鑽漏洞！「車牌吊銷變吊扣」圖利逾4400萬 ettoday新聞雲  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -1920,7 +2120,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "惡警圖利4400萬！業者進派出所看班表...路上巧遇「吊扣變吊銷」 ettoday新聞雲  員警 圖利 收賄"
     },
     {
@@ -1951,14 +2151,51 @@
       "published_at": "2025-12-02T08:00:00Z",
       "published_label": "2025-12-02 16:00",
       "matched_keywords": [
-        "員警 改單"
+        "員警 改單",
+        "警察 改單"
       ],
       "tags": [
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
-      "search_text": "扣牌變吊牌！台中12警「開假單」圖利車主4400萬…市警局：全部停職 - 三立新聞網setn.com 三立新聞網 setn.com 扣牌變吊牌！台中12警「開假單」圖利車主4400萬…市警局：全部停職 三立新聞網setn.com 員警 改單 收賄"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "扣牌變吊牌！台中12警「開假單」圖利車主4400萬…市警局：全部停職 - 三立新聞網setn.com 三立新聞網 setn.com 扣牌變吊牌！台中12警「開假單」圖利車主4400萬…市警局：全部停職 三立新聞網setn.com 員警 改單 警察 改單 收賄"
+    },
+    {
+      "id": "1b57065b3e34",
+      "title": "開假單「圖利4400萬」！台中12警遭檢起訴　中市警：全部停職",
+      "source": "NOWnews今日新聞",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9OYkRiZVlwa1kyQ1EwclBYNlgzQXZONHhJYl93T0xOY0RDWnlNdE4yOGZsRldFandNWFEybFhLT3ZSZFZvODVsZG9RWE_SAVJBVV95cUxQWEJiZV82a2pMdU43aFZkd3VGdXBTb002ZnNkbEJRMFpJbm44TTI2U0YtVUYweVV4dWFaWTQwaUhpVFJHN1V3STN4VW1sZWRxYk1n?oc=5",
+      "summary": "開假單「圖利4400萬」！台中12警遭檢起訴 中市警：全部停職 NOWnews今日新聞",
+      "published_at": "2025-12-02T08:00:00Z",
+      "published_label": "2025-12-02 08:00",
+      "matched_keywords": [
+        "員警 改單"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "開假單「圖利4400萬」！台中12警遭檢起訴　中市警：全部停職 nownews今日新聞 開假單「圖利4400萬」！台中12警遭檢起訴 中市警：全部停職 nownews今日新聞 員警 改單 收賄"
+    },
+    {
+      "id": "1404357f11ab",
+      "title": "圖利4400萬! 偽造罰單\"扣牌變吊銷\" 台中12警遭起訴",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxQZU9NWVl5US0yNFIteG1ROHl5ekh1U1VjYi1nOWgtNjhWN3lXZ05LLVphT1lpUTVIM0NfRmRnZWZqcFA2WkNWUHlwYW5PZ0tDRXNXNE5hZDRUMXRzX052UXk1dGsxX1Fwd3hjWHhtM2duNzIwZk1lQlRLak93dkZYT2tqSTJ4ZlVNWlRVelZod3BLR05IVUFPSHdTQ2tPVUQzU1pzNndTZGVia0xCUU95TkQ5aHc1cnYtaDBPekVWQUFFckxiLWpWbWRYc1ZreHA2MmJ2Ml9BT0ZyZlNZZVN3NE9jUGhEZl9aQ3VKMkQtbjFRVV9HUHlHanpjQ3RRai03RTNlSGVra0lpbUNxQWoyM0tFZTRpMmFHTDQ4QUhuRmdVNno2RjNUdDNVLVdUeC10R3FkNGw3MA?oc=5",
+      "summary": "",
+      "published_at": "2025-12-02T08:00:00Z",
+      "published_label": "2025-12-02 08:00",
+      "matched_keywords": [
+        "員警 改單"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "圖利4400萬! 偽造罰單\"扣牌變吊銷\" 台中12警遭起訴 yahoo新聞  員警 改單 收賄"
     },
     {
       "id": "4bc041202e66",
@@ -1976,7 +2213,7 @@
       ],
       "search_text": "影／彰化永靖酒駕連2撞！員警被撞傷 淒厲慘叫聲畫破夜空 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "63991938840e",
@@ -2029,7 +2266,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "假冒壽星參加警友會抽獎吃官司 北市巡佐偕教職妻一起上法院 聯合新聞網  巡佐 涉貪 收賄"
     },
     {
@@ -2048,7 +2285,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "2警「違停沒開單」被控圖利停職二審再判無罪- 綜合 華視新聞網  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -2069,7 +2306,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台中「紅白單」弊案增至32警捲入 警友違停怨搶錢...他幫改單涉圖利 聯合新聞網  員警 改單 警察 圖利 警察 改單 警察 銷單 收賄"
     },
     {
@@ -2087,7 +2324,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台中六分局紅白單擴大 警友站副站長兒請託銷單 已32警遭起訴 中時新聞網  員警 改單 警察 改單 警察 銷單 "
     },
     {
@@ -2106,7 +2343,7 @@
       ],
       "search_text": "北市2警沒開單舉發無牌違停遭控貪污 二審再判無罪 yahoo新聞  員警 貪污 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c3a2e0a48cd3",
@@ -2124,7 +2361,7 @@
       ],
       "search_text": "警界孔子高哲翰講座教授點評台灣跨領域警政的未來之路 台灣華報  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "4e81bb2aad5a",
@@ -2144,7 +2381,7 @@
       ],
       "search_text": "北市2警沒開單舉發無牌違停車輛...遭指控貪汙圖利 二審再判決無罪 聯合新聞網  員警 圖利 員警 貪污 警察 圖利 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c0531cac72ab",
@@ -2162,7 +2399,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "停職1年暴瘦20公斤…士林2警未開單被控圖利 高院二度判無罪 yahoo新聞  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -2178,7 +2415,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台南交通罰單預算嚴重超收 議員痛批市府把市民當提款機 台灣好新聞  警察 銷單 "
     },
     {
@@ -2195,7 +2432,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "交通助理員開單遭質疑黃偉哲喊停...今改線上勸導 人本交通：深感遺憾 聯合新聞網  員警 改單 警察 改單 "
     },
     {
@@ -2234,7 +2471,7 @@
       ],
       "search_text": "獨家》為了1盒便當 台南警小隊長退休前捲貪汙疑雲 自由時報  員警 貪污 警察 貪瀆 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "11d524976e81",
@@ -2251,7 +2488,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "獨家》為了1盒便當 台南警小隊長退休前捲貪汙疑雲 自由時報  巡佐 涉貪 收賄"
     },
     {
@@ -2269,7 +2506,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "彰化色警新竹受訓 大膽偷拍女警私密照被活逮送辦 自由時報  台灣警察風紀 風紀"
     },
     {
@@ -2290,7 +2527,7 @@
       ],
       "search_text": "桃園警察、稽查員「每月收6~12萬公關費」包庇廢土回填 品觀點  警察 包庇 警察 收賄 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "6299cb5792ab",
@@ -2308,7 +2545,7 @@
       ],
       "search_text": "桃園警察、稽查員收公關費包庇廢土回填 業者出庭「全都認」 聯合新聞網  警察 包庇 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "9cc1b830793a",
@@ -2326,7 +2563,7 @@
       ],
       "search_text": "超過9千條加熱煙非法入台 航警收賄近百萬放行「12人遭起訴」 台視新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "cda5edbf754c",
@@ -2343,7 +2580,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T04:23:43.440310Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "涉擅查個資、洩密 新北中和警分局偵查佐收押禁見 自由時報  警察 洩密 洩密"
     },
     {
@@ -2361,7 +2598,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "報到第2天就出事！樹林警涉助詐團查165帳戶　遭屏東地院裁定收押 ettoday新聞雲 報到第2天就出事！樹林警涉助詐團查165帳戶 遭屏東地院裁定收押 ettoday新聞雲 員警 涉貪 收賄"
     },
     {
@@ -2381,7 +2618,7 @@
       ],
       "search_text": "新北2天爆3警風紀醜聞 局長方仰寧震怒嚴令整頓 yahoo新聞  台灣警察風紀 警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "32aa340c4e55",
@@ -2400,7 +2637,7 @@
       ],
       "search_text": "再爆員警涉貪！樹林警涉勾結詐團被收押 記兩大過免職 yahoo新聞  員警 涉貪 員警 貪污 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "e64ee391b902",
@@ -2418,7 +2655,7 @@
       ],
       "search_text": "新北樹林警疑擅查165帳戶個資還洩密 屏東地院裁定收押 yahoo新聞  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "dcbaf359f438",
@@ -2436,7 +2673,7 @@
       ],
       "search_text": "涉擅查個資、洩密 中和、三重2分局被搜索2刑警被帶走 自由時報  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "65ce180d3a9f",
@@ -2474,7 +2711,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "樹林警疑偷查165洩露資料涉貪瀆 警分局開鍘擬免職 中時新聞網  員警 涉貪 警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -2494,7 +2731,7 @@
       ],
       "search_text": "台南前警所長被控洩密、收賄 稱傳取締勤務表是疏忽 聯合新聞網  警察 洩密 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "121c01c13b5d",
@@ -2512,7 +2749,7 @@
       ],
       "search_text": "台中警員酒駕撞孕婦...酒測值0.76 法院斥「知法犯法」不給緩刑 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "67c9bc22f085",
@@ -2531,6 +2768,24 @@
       "search_text": "台中警酒駕肇事害孕婦險當場生產 判刑2月不得緩刑 yahoo新聞  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
       "last_seen_at": "2026-04-16T05:54:18.081530Z"
+    },
+    {
+      "id": "d87d9182050d",
+      "title": "台中警酒駕撞前車！險害孕婦「就地生產」　法官重判不給緩刑",
+      "source": "ETtoday新聞雲",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5JSzZocTdyVE1qVFl0aFp2eGRLZ05NdmE5TVM4UVRpYlh4RWY4TE9XRmdvbUI3RkNqckRmN1lORjJSUmJaOVZ6YXk5d0ZINld3cTRQYTJwVjctUnBuSnfSAWhBVV95cUxQcEc2QUVpb0xMOVJDeU9qLS1zeDk3VHhEZ0trbTVJVk5GMF9WbU12UXVMcm02MEZzVUhvampjZExwbG9XdnFPQlpsb1YzakgtY05FM0V6WkZQSEI5clhkVmVsWHdIc0g4VQ?oc=5",
+      "summary": "台中警酒駕撞前車！險害孕婦「就地生產」 法官重判不給緩刑 ETtoday新聞雲",
+      "published_at": "2025-10-10T07:00:00Z",
+      "published_label": "2025-10-10 07:00",
+      "matched_keywords": [
+        "員警 酒駕"
+      ],
+      "tags": [
+        "酒駕"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "台中警酒駕撞前車！險害孕婦「就地生產」　法官重判不給緩刑 ettoday新聞雲 台中警酒駕撞前車！險害孕婦「就地生產」 法官重判不給緩刑 ettoday新聞雲 員警 酒駕 酒駕"
     },
     {
       "id": "f9488516023a",
@@ -2552,7 +2807,7 @@
       ],
       "search_text": "罰單變生財工具！ 雙北警勾結業者「開假罰單」圖利300萬遭訴 自由時報  員警 圖利 員警 改單 員警 貪污 警察 圖利 警察 改單 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "f3d8946901b4",
@@ -2570,7 +2825,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "2警「幫吊銷」換牌圖利289萬遭起訴　牽線警落跑慘淪通緝犯 ettoday新聞雲 2警「幫吊銷」換牌圖利289萬遭起訴 牽線警落跑慘淪通緝犯 ettoday新聞雲 員警 圖利 警察 圖利 收賄"
     },
     {
@@ -2589,7 +2844,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "吊銷牌照涉助提早重領牌 致「無形利益289萬」雙北2警遭訴圖利罪 聯合新聞網  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -2608,7 +2863,7 @@
       ],
       "search_text": "交通警察洩密！轉傳賴士葆撞傷2女個資 判刑6月緩刑4年 聯合新聞網  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a3cc4d35720e",
@@ -2623,7 +2878,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "飆速151km！國道警「教訓超速仔」 多做1事慘被判刑 yahoo新聞  警察 改單 "
     },
     {
@@ -2640,7 +2895,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "拍到狂飆151公里測速照糊了！國道警為開單「竄改照片」遭判刑 聯合新聞網  員警 改單 警察 改單 "
     },
     {
@@ -2656,7 +2911,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "「時速149改成151」硬要重罰再扣牌　國道警惡整飆仔反被判刑 ettoday新聞雲 「時速149改成151」硬要重罰再扣牌 國道警惡整飆仔反被判刑 ettoday新聞雲 警察 改單 "
     },
     {
@@ -2675,7 +2930,7 @@
       ],
       "search_text": "航警涉收賄 公務門護航走私加熱菸 聯合新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "ea324947a5c4",
@@ -2693,7 +2948,7 @@
       ],
       "search_text": "航警收賄開「公務門」！護航2旅客走私大量加熱菸品闖關遭聲押 聯合新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a5a031a8a344",
@@ -2731,7 +2986,7 @@
       ],
       "search_text": "【台語新聞】花蓮港警警紀鬆懈？ 一週內傳酒駕.性侵.管制區遭闖 華視新聞網  台灣警察風紀 性紀律 酒駕 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "65ce8b68945d",
@@ -2750,7 +3005,7 @@
       ],
       "search_text": "花蓮港警一周三爆！1警酒駕被逮 1警遭女友指控性侵 聯合新聞網  員警 酒駕 性紀律 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "8c02079d3b70",
@@ -2768,7 +3023,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "林明佐涉貪條款》台中市警局「6年大輪調」引反彈 宣布暫緩 自由時報  員警 改單 警察 改單 收賄"
     },
     {
@@ -2790,7 +3045,7 @@
       ],
       "search_text": "北市警保防組長疑涉貪交保 警察局立刻調整為非主管 聯合新聞網  員警 涉貪 警察 涉貪 警察 警紀 收賄 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "fa6673c9af25",
@@ -2847,7 +3102,7 @@
       ],
       "search_text": "北市警分局組長涉貪污、包庇賭博 北檢諭令80萬元交保 yahoo新聞  員警 貪污 警察 包庇 警察 貪瀆 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "c0ff55462bd5",
@@ -2867,7 +3122,7 @@
       ],
       "search_text": "北投分局組長涉貪包庇賭博 北檢兵分31路搜索約談13人 yahoo新聞  警察 包庇 警察 涉貪 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "9ef554f6758c",
@@ -2904,7 +3159,7 @@
         "詐欺"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "曾獲國家警光獎！警員涉組織犯罪、洗錢遭收押 台東縣警局：依法停職 聯合新聞網  員警 涉貪 警察 涉貪 收賄 詐欺"
     },
     {
@@ -2922,8 +3177,27 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "保防組長疑涉貪遭搜索約談 員警也錯愕…北市警北投分局：不庇縱 聯合新聞網  員警 涉貪 收賄"
+    },
+    {
+      "id": "82d684732ee3",
+      "title": "警察洗錢數千萬！檢方聲請羈押禁見獲准 台東縣警局：斷然淘汰",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMijwNBVV95cUxNeWc4VzI2ajVocy1URjdueGVUOFg1ZGhmTmNjZ3dkVG5uQTc0bURRNjhLUkhyNDB2emxYaG5aQjBMZUlPbnd3bDdkaklERkVGeVlmaURGMG50OFo3eFhiem5ZTUhnZE51QS1rR1VFSlhQQnh3ang4RDk1OTlFdXU2aUZ4d2N1dlRzcFZwbEREaUUwemtXanZoc1p4QW1zdmk0b2lFMWw2MG5DMnFVRFFUOFM4OG84Wm1jY0FBcGxVejVoenFjcTMwSTViRzFuYTE2aHBEUDRFWmlxa05vandDczd2UU9HRDh6ampSTm1wdVgwVUMxSm1XVVliQkdQdTdncUJuUVZOeGtLTHk3S0htaWpVMjFjNU9sU0V6aTB6VER0YTFWLW5oSkIwc0NFSlhkRmRkQUc3SlpidHZ4Tl9tMEVWeEtkbEp6d0NUVFNMOGdSSzNLSXd2SHUweHMwQUpKR1VQaEg3QXlyT0NxVXhZYVYxRjUwOVhsWU9rTHNuZXlaanotSEVua1FKNEVsWlE?oc=5",
+      "summary": "",
+      "published_at": "2025-09-04T07:00:00Z",
+      "published_label": "2025-09-04 07:00",
+      "matched_keywords": [
+        "警察 包庇"
+      ],
+      "tags": [
+        "包庇",
+        "詐欺"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "警察洗錢數千萬！檢方聲請羈押禁見獲准 台東縣警局：斷然淘汰 yahoo新聞  警察 包庇 包庇 詐欺"
     },
     {
       "id": "9004717bde4e",
@@ -2968,7 +3242,7 @@
       ],
       "search_text": "松山分局巡佐涉包庇應召站業者 國道警察涉銷單 貪汙圖利等罪9人起訴 聯合新聞網  員警 貪污 巡佐 涉貪 警察 包庇 警察 圖利 警察 貪瀆 警察 銷單 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "be6aa3555040",
@@ -2989,7 +3263,7 @@
       ],
       "search_text": "包庇色情業又幫同仁銷國道超速罰單　5警涉圖利罪起訴 ettoday新聞雲 包庇色情業又幫同仁銷國道超速罰單 5警涉圖利罪起訴 ettoday新聞雲 警察 包庇 警察 圖利 警察 銷單 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a4331005417a",
@@ -3004,7 +3278,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "民眾陳情交通違規卻遭警嗆「再補開3罰單」 竹北警：用詞不當加強訓練 聯合新聞網  員警 改單 "
     },
     {
@@ -3040,7 +3314,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:54:18.081530Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "基隆貪警收賄427萬判20年 出庭稱羈押1年「害憂鬱」求交保 自由時報  警察 收賄 收賄"
     },
     {
@@ -3059,7 +3333,7 @@
       ],
       "search_text": "警被控收賄487萬不起訴…色情集團媒介性交易撈2.6億 24人起訴 聯合新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "19a9efea242c",
@@ -3077,7 +3351,7 @@
       ],
       "search_text": "北市巡官護女頻洩密！po東家「秦小姐豆漿店」檢舉情資 「叫妳跑時拼命跑」 yahoo新聞  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2a8e6e726137",
@@ -3096,7 +3370,7 @@
       ],
       "search_text": "竹東警爆風紀爭議！ 警員上班時間跑護膚店遭臨檢抓 msn  警察 警紀 性紀律 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "37ec07be3015",
@@ -3116,7 +3390,7 @@
       ],
       "search_text": "楊梅警包庇廢土業者衍生「假筆錄」案外案 桃市警局祭停職重懲 聯合新聞網  警察 包庇 警察 警紀 包庇 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "59ecf0bee406",
@@ -3134,7 +3408,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "包庇業者廢土回填新屋3農地 桃園3警1環涉貪起訴 聯合新聞網  員警 涉貪 包庇 收賄"
     },
     {
@@ -3173,7 +3447,7 @@
       ],
       "search_text": "獨家／韓豫平警界翻版！基層警沒開單面臨５年刑 法官判無罪檢察官堅持上訴 yahoo新聞  員警 圖利 員警 貪污 警察 圖利 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "29e36f530c70",
@@ -3191,8 +3465,26 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "幕後／警圖利罰單判無罪 檢旋風上訴 3年官司折磨「暴瘦20公斤、自囚1年」 yahoo新聞  員警 圖利 警察 圖利 收賄"
+    },
+    {
+      "id": "ea6e61b5548a",
+      "title": "送4元回收物、舊電鍋也算貪污？ 《貪污治罪條例》情輕法重頻惹議",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxOclg0RWl2NlkzY3hFZ0hGU2tMZ3UyZ181VmxyZHVnUF9udDAzc0pXcHMwOWxsQ1o2am1xWDlVNWdRVDFhZDg1eVVLbExoazJneW5ualdUZTJGaGhRSU00S3hHSk91RS1pbEdmQjhadXBKdzhBbklsRzR5WTc4SUZEcVFmRlZfd0gydGk1MWJGWGZIaDF5dE1KcGhiSmZjQTk5bFYwbExQVTh2UVVvakc0cERrMW5Lb2xSTFBpNkVvTy16RW9vN0tMbXVGcWc5MFFZSVZQQmo5VzhPbkdESFpodW5SenB1Q21EYmRWdEx1QmpNTDNraVVCY2R1WU9QQ0NKc3l5NEt3S2xuanlaVVhMeUJKdW0xSTBiU1JKdG90UWhudHhlZzlFTS01QTBBRzRaUldHVlB6c3RwZHh6UlUyaDlLQ1V3Q1RyMHJsUVpFQ3lkdnlFUGVyd3Q0dENHYVhyQWpkVVpHOHV6M0I1bmhJU1o3Y3ZoVHY1YVVjU3gybFdSc3V5?oc=5",
+      "summary": "",
+      "published_at": "2025-08-21T07:00:00Z",
+      "published_label": "2025-08-21 07:00",
+      "matched_keywords": [
+        "警察 圖利"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "送4元回收物、舊電鍋也算貪污？ 《貪污治罪條例》情輕法重頻惹議 yahoo新聞  警察 圖利 收賄"
     },
     {
       "id": "0a945ef8eefa",
@@ -3209,7 +3501,7 @@
         "酒駕"
       ],
       "first_seen_at": "2026-04-16T04:23:43.440310Z",
-      "last_seen_at": "2026-04-16T05:29:44.235587Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "知法犯法！台中警員酒駕0.76撞孕婦 犯後想私了下場出爐 聯合新聞網  員警 酒駕 酒駕"
     },
     {
@@ -3230,7 +3522,7 @@
       ],
       "search_text": "金山警涉嫌包庇賭場　共收賄34萬遭到起訴 | 社會 | ctwant ctwant 金山警涉嫌包庇賭場 共收賄34萬遭到起訴 | 社會 | ctwant ctwant 警察 包庇 警察 收賄 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "5842b69d21ee",
@@ -3250,7 +3542,7 @@
       ],
       "search_text": "金山偵查佐進賭場玩天九牌 還索賄1天收1萬就不取締 聯合新聞網  警察 包庇 警察 貪瀆 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "4ffe336ad36a",
@@ -3267,7 +3559,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "北市文山一分局偵查隊長涉貪 12萬元交保 yahoo新聞  警察 涉貪 收賄"
     },
     {
@@ -3286,7 +3578,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "金山警包庇賭場收賄34萬還去捧場 警員與業者雙雙被訴 自由時報  巡佐 涉貪 包庇 收賄"
     },
     {
@@ -3323,7 +3615,7 @@
       ],
       "search_text": "縱放通緝犯又包庇賭場「每天給一萬」就不抓 金山惡警芭比q了 221 yahoo新聞  警察 包庇 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "69241b81ff7f",
@@ -3341,7 +3633,7 @@
       ],
       "search_text": "收錢助逮人偵查小隊長貪汙起訴 新莊分局：依規定停職追究責任 聯合新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "5e78901a1805",
@@ -3358,7 +3650,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T04:23:43.440310Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "前里長私怨！新莊警收賄設局誘捕通緝犯 2人貪汙遭訴 聯合新聞網  警察 收賄 收賄"
     },
     {
@@ -3398,7 +3690,7 @@
       ],
       "search_text": "洩漏死亡案件給殯葬業者 新北警涉收賄洩密 1人起訴 2人緩起訴 聯合新聞網  員警 涉貪 警察 收賄 警察 洩密 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "35ea4aa15945",
@@ -3416,7 +3708,7 @@
       ],
       "search_text": "台北市警局9個分局長換人做 蔣萬安主持交接提出3點期許 自由時報  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "4504b693c568",
@@ -3451,7 +3743,7 @@
         "包庇"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "快訊／北市副議長葉林傳辦公室遭搜索　疑下屬涉包庇色情業者、行賄警察 - 三立新聞網setn.com 三立新聞網 setn.com 快訊／北市副議長葉林傳辦公室遭搜索 疑下屬涉包庇色情業者、行賄警察 三立新聞網setn.com 警察 包庇 包庇"
     },
     {
@@ -3470,7 +3762,7 @@
       ],
       "search_text": "警界人事黃明昭回鍋 接警大校長 中時新聞網  台灣警察風紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "53e49e930eb3",
@@ -3510,7 +3802,7 @@
       ],
       "search_text": "2警官護航萬華賭博電玩業者月收12萬公關費 貪汙行收賄起訴 聯合新聞網  員警 涉貪 員警 貪污 警察 收賄 警察 涉貪 警察 貪瀆 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "0f0b51cc0cf3",
@@ -3529,7 +3821,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "收賄96萬包庇賭博電玩業者！又詐超勤加班費　北市2貪警起訴 - 三立新聞網setn.com 三立新聞網 setn.com 收賄96萬包庇賭博電玩業者！又詐超勤加班費 北市2貪警起訴 三立新聞網setn.com 警察 包庇 警察 收賄 包庇 收賄"
     },
     {
@@ -3548,7 +3840,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "月收12萬「公關費」 萬華分局前組長鄧進華等2人涉貪起訴 自由時報  員警 涉貪 警察 涉貪 收賄"
     },
     {
@@ -3567,7 +3859,7 @@
       ],
       "search_text": "萬華分局2線3警官收賄近百萬 檢方起訴求處重刑 yahoo新聞  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "4eb309e5b014",
@@ -3582,7 +3874,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "私繪紅線塗銷未同步 違停罰單誤開高達475張 yahoo新聞  警察 銷單 "
     },
     {
@@ -3600,8 +3892,24 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "北市中正一2警讓拘留人犯「簡單吃」 浮報金額買衛生紙...降級改敘 聯合新聞網  警察 貪瀆 收賄"
+    },
+    {
+      "id": "ee91cece06b2",
+      "title": "基隆 科技執法 上半年舉發近5萬件",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOV3dDN19mcTB2c2hDeHRtWngxQW5pWFUzeDcxd05GUUh2dTRyaHc2VnNBTE1FM2F5TEoybGdublFUcUZaUkhoTkxVdFhqTlNTbVpRWWd0eXdEem9yNkZzOUs0SGNQbmk1YlFkQ0hmUUR6Y3Q4aV8wZHNFQW5odHNKeUx3SjVGQmNsanlvZzdRRlBCNFQ2Z0V3X3NsNmRBclFyRVZVbzNjZy1DdXJZRWZsTHBzV0RfMFJQVDNfT0w1NktUSk5ORUFOZTRETnpRMllHdXdqRm9KajlpRjZraUZ4NGx1dWFSOWVFMkluSUM2Z0phXzZXaThfcF81RVJrLTg?oc=5",
+      "summary": "",
+      "published_at": "2025-07-20T07:00:00Z",
+      "published_label": "2025-07-20 07:00",
+      "matched_keywords": [
+        "警察 改單"
+      ],
+      "tags": [],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "基隆 科技執法 上半年舉發近5萬件 yahoo新聞  警察 改單 "
     },
     {
       "id": "14fc66d78471",
@@ -3616,7 +3924,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "紅線竟是私畫的！北市誤開475單 3大熱點曝 yahoo新聞  警察 銷單 "
     },
     {
@@ -3635,7 +3943,7 @@
       ],
       "search_text": "被控洩露取締勤務給業者收賄 台南停職中派出所長喊冤 聯合新聞網  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "1e43a88714a4",
@@ -3652,7 +3960,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "獨／刑事局南打大隊長涉案50萬交保遭拔官 接任者和高雄警界有淵源 聯合新聞網  警察 涉貪 收賄"
     },
     {
@@ -3671,7 +3979,7 @@
       ],
       "search_text": "知法犯法！台中員警酒駕追撞孕婦 酒測值0.76移送法辦 台視新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a7c3421a3f40",
@@ -3689,7 +3997,25 @@
       ],
       "search_text": "台中員警酒駕撞賓士！害孕婦嚇到「差點原地生產」…急道歉求私了下場曝 yahoo新聞  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
+    },
+    {
+      "id": "65617360bb72",
+      "title": "處理罰單有代號？ 「代繳罰款」撤單 知情人士：甩鍋話術",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxPdWNOOU43ckVuck14dE1sRk1zblpNSk0zLWUxNG9LV2RmclpSOWl1S21DdVI2TU1XVVozSHJfS2hiaTY4NGdMdDNOVTJubk1keEZRbDF3OEJqY0FHYURRdkhnU3cxa2NtdjFhM2YtZmJKOTRNYnhndDFZaEI0dGw0VElDbFUteC1VWmQxdF91LXRSMVprcDFFUS1KSFcyVUdpcnN2eUtQMzF2akp0VjVnRTFnRGZ0TWdLeTFEWmI0bkpqZl8ySHBlVmN6ZEZuMWgyLTFmR3lndTVqU3liVnU3T3JIcDFra2YxWTNaTkZDVFpRNVh3X0lEZmhzZ2hHbXN6dUZ0VlJWS3I1RnpUVHU4dWN3aGwzdWUyQnU2NkFqUjhhRmd4Yld6NFRfOGIwSlQ3QTJwZV9NWmFmX3czYUtWX1k0LXBWOVVJd2RleUdiTHhyaWg2?oc=5",
+      "summary": "",
+      "published_at": "2025-07-12T07:00:00Z",
+      "published_label": "2025-07-12 07:00",
+      "matched_keywords": [
+        "員警 改單",
+        "警察 改單",
+        "警察 銷單"
+      ],
+      "tags": [],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "處理罰單有代號？ 「代繳罰款」撤單 知情人士：甩鍋話術 yahoo新聞  員警 改單 警察 改單 警察 銷單 "
     },
     {
       "id": "dbfe14bae02c",
@@ -3709,7 +4035,7 @@
       ],
       "search_text": "警縱放違停未開單遭起訴 法官：不算貪汙 聯合新聞網  員警 圖利 員警 貪污 警察 圖利 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "13755131cf0a",
@@ -3730,7 +4056,7 @@
       ],
       "search_text": "無牌車違停警到場沒開單！北市2警一審獲無罪 法官：這不是貪汙 聯合新聞網  員警 圖利 員警 貪污 警察 圖利 警察 貪瀆 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "1941204a4eb8",
@@ -3748,7 +4074,7 @@
       ],
       "search_text": "台中2線2星警官帶妻小爽遊台東！竟請款「刑案加油費」遭6罪起訴 yahoo新聞  員警 貪污 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "587895a22986",
@@ -3766,7 +4092,7 @@
       ],
       "search_text": "處理違停爆爭議！社子所2警遭控貪汙停職 一審無罪可申請復職 中時新聞網  員警 貪污 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "b5bef765fd48",
@@ -3806,7 +4132,7 @@
       ],
       "search_text": "涉貪、洩密 刑事局第八大隊大隊長送辦 聯合新聞網  警察 洩密 警察 涉貪 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "bcdbaea17b60",
@@ -3824,7 +4150,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "刑事局南打大隊長徐宏杰涉貪 士檢50萬交保...畫面曝光 聯合新聞網  警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -3843,7 +4169,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "獨／把警友站當提款機？台中所長詐8萬 涉6個貪汙罪遭起訴 聯合新聞網  警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -3862,7 +4188,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "\"緝毒悍將\"遭搜索! 刑事局八大隊大隊長徐宏杰疑涉貪 yahoo新聞  警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -3881,7 +4207,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "放走違停車遭起訴圖利 士林2警沒頭路近1年 今判無罪平反 yahoo新聞  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -3899,8 +4225,26 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "【更新】3線1星緝毒悍將徐宏杰疑涉貪 士檢50萬交保 yahoo新聞  警察 涉貪 收賄"
+    },
+    {
+      "id": "c246954612b5",
+      "title": "台中2線2警官詐領警友會經費 6項貪汙罪起訴",
+      "source": "Yahoo新聞",
+      "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPcHVLcEh1cGt6aUxITkRkVjd1cHNOY0tFWW9aclB6ZER3TTVMMjNhaUpHQlRvckNEXzBDTGNQMWhFaGRRTDRLamxmVGpDbWc2TEt1cmxpQTF0YUxGcXNpaFY3UDlldHFSM05kdnVOVlBBNnhMa3liZlZzdGxIZ2RhNUdVMU1hWHJJTERESm1SUC1KdWhRZ3VCNlpOemdBTnV2N3BxSFVvUzZTdWp3bFBHNjFSbGF3Q3ZWcXFFZTlGU0otWk1wc19XaE1icjdYaWJzeV9EVWtwbFlNMVpwNHlxb0MtN0hPOXluUURrZkgyUDQySGZURXZwdjlMR1VzRlpBTDBkd0l3ZWMyZU03RFNKMDNKdm5IZlJ1RW9rMlRUaGQtNXpNYVFCMGNlNkhNQ3NU?oc=5",
+      "summary": "",
+      "published_at": "2025-07-09T07:00:00Z",
+      "published_label": "2025-07-09 07:00",
+      "matched_keywords": [
+        "員警 貪污"
+      ],
+      "tags": [
+        "收賄"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "台中2線2警官詐領警友會經費 6項貪汙罪起訴 yahoo新聞  員警 貪污 收賄"
     },
     {
       "id": "ddfe40fa1630",
@@ -3919,7 +4263,7 @@
       ],
       "search_text": "竹東警爆風紀爭議！ 警員上班時間跑護膚店遭臨檢抓 msn  台灣警察風紀 性紀律 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "64739bb65b23",
@@ -3938,7 +4282,7 @@
       ],
       "search_text": "獨／竹東分局警紀敗壞連環爆 色警竟上班時間到護膚店消費被逮 聯合新聞網  警察 警紀 性紀律 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "7e50eea7d4f1",
@@ -3955,7 +4299,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "萬華分局涉貪風暴擴大！調查局第3波搜索賭博電玩 多名業者、職員遭帶走 聯合新聞網  警察 涉貪 收賄"
     },
     {
@@ -3974,7 +4318,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "「改單」即圖利？警大開辦學術論壇 探討制度改革方向 yahoo新聞  警察 圖利 警察 改單 收賄"
     },
     {
@@ -3993,7 +4337,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "快訊／北市涉貪警又出事！涉找國道警幫友銷紅單 3人交保 msn  巡佐 涉貪 警察 銷單 收賄"
     },
     {
@@ -4013,7 +4357,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "北市涉貪警找2國道警替友銷紅單 3人交保 自由時報  巡佐 涉貪 警察 涉貪 警察 銷單 收賄"
     },
     {
@@ -4033,7 +4377,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "松山分局包庇色情扯出銷單案外案 3員警交保 聯合新聞網  巡佐 涉貪 警察 銷單 包庇 收賄"
     },
     {
@@ -4046,15 +4390,16 @@
       "published_label": "2025-06-19 15:00",
       "matched_keywords": [
         "巡佐 涉貪",
-        "警察 收賄"
+        "警察 收賄",
+        "警察 涉貪"
       ],
       "tags": [
         "收賄",
         "洩密"
       ],
-      "search_text": "松山分局巡佐涉收賄、違法查個資等未被停職 今又遭調查局約談 聯合新聞網  巡佐 涉貪 警察 收賄 收賄 洩密",
+      "search_text": "松山分局巡佐涉收賄、違法查個資等未被停職 今又遭調查局約談 聯合新聞網  巡佐 涉貪 警察 收賄 警察 涉貪 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "238fdcbed646",
@@ -4079,7 +4424,7 @@
       ],
       "search_text": "北市警涉貪又爆案外案 違法查個資、找國道警察銷超速罰單 聯合新聞網  員警 涉貪 巡佐 涉貪 警察 包庇 警察 收賄 警察 涉貪 警察 銷單 包庇 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "ec198c5ffbc1",
@@ -4098,7 +4443,7 @@
       ],
       "search_text": "松山分局2警包庇色情 扯出國道3警特權銷單案外案 聯合新聞網  警察 包庇 警察 銷單 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "1e25df719b7f",
@@ -4117,7 +4462,7 @@
       ],
       "search_text": "包庇應召站松山分局巡佐陳建業又出事 找國道警替友銷紅單被搜索 自由時報  警察 包庇 警察 銷單 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "fa93a323cd2c",
@@ -4130,6 +4475,7 @@
       "matched_keywords": [
         "員警 涉貪",
         "巡佐 涉貪",
+        "警察 涉貪",
         "警察 銷單"
       ],
       "tags": [
@@ -4138,8 +4484,8 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
-      "search_text": "松山分局員警涉貪包庇應召站 又涉查個資、銷單案外案 yahoo新聞  員警 涉貪 巡佐 涉貪 警察 銷單 包庇 收賄 洩密"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "松山分局員警涉貪包庇應召站 又涉查個資、銷單案外案 yahoo新聞  員警 涉貪 巡佐 涉貪 警察 涉貪 警察 銷單 包庇 收賄 洩密"
     },
     {
       "id": "351a34f1a563",
@@ -4155,7 +4501,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "《台中》違規停車逕舉電子化 全面啟動 自由時報  員警 改單 警察 改單 "
     },
     {
@@ -4171,7 +4517,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "為了撤銷1名警員超速罰單 4警違法3交保1請回 yahoo新聞  警察 銷單 "
     },
     {
@@ -4191,7 +4537,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "包庇應召站巡佐找國道警替友銷紅單 松山分局：從嚴究辦 自由時報  巡佐 涉貪 警察 銷單 包庇 收賄"
     },
     {
@@ -4208,7 +4554,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "杜絕紙本罰單易遭竄改 中市警推違停逕舉電子化三箭止弊 自由時報  員警 改單 警察 改單 "
     },
     {
@@ -4226,7 +4572,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台中警紅白單涉貪…中警推違停逕舉電子化6月上線 聯合新聞網  警察 貪瀆 收賄"
     },
     {
@@ -4245,7 +4591,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "金山分局巡佐涉縱放通緝犯、包庇賭場遭羈押 品觀點  巡佐 涉貪 包庇 收賄"
     },
     {
@@ -4264,7 +4610,7 @@
       ],
       "search_text": "員警不只洩密還疑當皮條客！　2警晚間各10萬元交保 | 社會 | ctwant ctwant 員警不只洩密還疑當皮條客！ 2警晚間各10萬元交保 | 社會 | ctwant ctwant 警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "8e356b17b516",
@@ -4282,7 +4628,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "金山警涉縱放通緝犯、包庇賭場 收押禁見 自由時報  巡佐 涉貪 包庇 收賄"
     },
     {
@@ -4302,7 +4648,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "萬華分局前行政組長涉貪羈押 調查局今再搜索賭博電玩 聯合新聞網  員警 涉貪 警察 涉貪 警察 貪瀆 收賄"
     },
     {
@@ -4320,7 +4666,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "九州博弈案涉貪警官林明佐喊成「半殘之人」 今裁定1500萬元交保 聯合新聞網  員警 涉貪 收賄"
     },
     {
@@ -4339,7 +4685,7 @@
       ],
       "search_text": "警察涉收賄大逆轉！高院「難認嫌疑重大」撤銷羈押 北院改裁定30萬交保 yahoo新聞  警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2bcf750622ea",
@@ -4357,7 +4703,7 @@
       ],
       "search_text": "抽白單害19警起訴 保安科前秘書宋瑞展當庭致歉：盼讓員警重返崗位 聯合新聞網  員警 貪污 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "b12793bef338",
@@ -4374,7 +4720,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "私菸案擴大！海巡、員警涉集體詐獎金 彰檢將偵結起訴 自由時報  員警 涉貪 收賄"
     },
     {
@@ -4393,7 +4739,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "竹市抽白單案開庭 多名員警否認違法 檢批「不具警察基本常識」 聯合新聞網  員警 圖利 警察 圖利 收賄"
     },
     {
@@ -4411,7 +4757,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "海巡署爆集體貪瀆！「1手法詐領國庫」7年發了數億獎金，共犯們沒罰全成呆帳 | 林瑩真 | 全解析 風傳媒  警察 貪瀆 收賄"
     },
     {
@@ -4428,7 +4774,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "台中女警變麥當勞打工 只因幫學長「白單改紅單」省200元罰鍰 yahoo新聞  員警 改單 警察 改單 "
     },
     {
@@ -4450,7 +4796,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "幫巡佐學長「白單改紅單」省200元涉貪 台中女警遭停職淪麥當勞打工 yahoo新聞  員警 改單 員警 涉貪 巡佐 涉貪 警察 改單 警察 涉貪 收賄"
     },
     {
@@ -4474,7 +4820,7 @@
       ],
       "search_text": "幫巡佐學長省200元「白單改紅單」 女警涉貪停職在麥當勞打工 自由時報  員警 改單 員警 涉貪 員警 貪污 巡佐 涉貪 警察 改單 警察 涉貪 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "a540dc1627f0",
@@ -4490,7 +4836,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "幫學長改單省200 台中女警遭停職淪速食店打工 yahoo新聞  員警 改單 警察 改單 "
     },
     {
@@ -4509,7 +4855,7 @@
       ],
       "search_text": "獨／北市保大一個月內2員警酒駕被逮 保大：均記一大過調職 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "e3cd03637924",
@@ -4565,7 +4911,7 @@
       ],
       "search_text": "警酒駕碰撞記大過調職 南港分局自清門戶…追出4警跑酒店懲處 聯合新聞網  員警 酒駕 酒駕 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "4d4e9513d999",
@@ -4586,7 +4932,7 @@
       ],
       "search_text": "88會館涉洩密警遭羈押禁見 南港分局開鍘先予停職 聯合新聞網  員警 涉貪 警察 洩密 警察 涉貪 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "5b2b4d7db83c",
@@ -4603,7 +4949,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "88會館再爆官警涉貪 南港分局員警疑收賄遭聲押禁見 聯合新聞網  員警 涉貪 收賄"
     },
     {
@@ -4621,7 +4967,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "市警局自檢三線一督察濫用健身器材 檢察官上周約談 中時新聞網  警察 貪瀆 收賄"
     },
     {
@@ -4637,7 +4983,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "龜山取締噪音車 他改管跑給警察追…連吞罰單最高罰3萬 聯合新聞網  警察 改單 "
     },
     {
@@ -4656,7 +5002,7 @@
       ],
       "search_text": "苗栗3刑警涉包庇槍擊頂包案　1收押2交保 ettoday新聞雲 苗栗3刑警涉包庇槍擊頂包案 1收押2交保 ettoday新聞雲 警察 包庇 包庇",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "90e88a4d5908",
@@ -4674,7 +5020,7 @@
       ],
       "search_text": "「自覺酒精已代謝」員警竟酒駕撞傷人！分局僅記1大過調＋職 風傳媒  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "896bbb1f67a5",
@@ -4692,7 +5038,7 @@
       ],
       "search_text": "南港警分局警員酒駕還撞傷女老師 遭新北警送辦 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "9a5fea41f70a",
@@ -4710,7 +5056,7 @@
       ],
       "search_text": "北市南港分局員警酒後上路還撞車 記大過調離現職 聯合新聞網  員警 酒駕 酒駕",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "d995667d7b48",
@@ -4727,7 +5073,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "前基隆刑警小隊長周學賢涉貪被判20年 有串證逃亡之虞延押2個月 自由時報  警察 涉貪 收賄"
     },
     {
@@ -4746,7 +5092,7 @@
       ],
       "search_text": "南投警紀再出包！ 男警偷拍女警洗澡被法辦 自由時報  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "3caa52bb1af2",
@@ -4764,7 +5110,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "獨／南投警副所長曖昧應召站闆娘 洩密臨檢訊息今改判5年2月 聯合新聞網  巡佐 涉貪 收賄 洩密"
     },
     {
@@ -4783,7 +5129,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "南投警副所長洩密應召站闆娘 二審改判理由曝光 聯合新聞網  巡佐 涉貪 收賄 洩密"
     },
     {
@@ -4802,7 +5148,7 @@
       ],
       "search_text": "閃兵案外案 王大陸找警察、黑道查個資被起訴 聯合新聞網  警察 洩密 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "5216dce5608e",
@@ -4822,7 +5168,7 @@
       ],
       "search_text": "2警涉收賄洩密遭羈押停職北市警局公布6警官人事異動| 社會萬象| 社會 聯合新聞網  警察 收賄 警察 洩密 收賄 洩密",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "2d19611f4df9",
@@ -4842,7 +5188,7 @@
       ],
       "search_text": "涉賄包庇濫倒 3警1稽查助理收押 聯合新聞網  警察 包庇 警察 收賄 包庇 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "feb8683837d1",
@@ -4859,7 +5205,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
       "search_text": "桃園3警涉貪聲押禁見獲准 市警局祭重懲2 大過免職 msn  員警 涉貪 收賄"
     },
     {
@@ -4879,7 +5225,7 @@
       ],
       "search_text": "桃園3警1環涉收賄「全遭免職」！多位高官連坐 全記過調非主管職 yahoo新聞  警察 收賄 收賄 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "fe18d959ff31",
@@ -4899,7 +5245,7 @@
       ],
       "search_text": "影／現職2警收賄羈押 桃市警局祭連坐調職重懲 聯合新聞網  員警 涉貪 巡佐 涉貪 警察 收賄 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "051f2fc75264",
@@ -4910,14 +5256,15 @@
       "published_at": "2025-04-24T07:00:00Z",
       "published_label": "2025-04-24 15:00",
       "matched_keywords": [
-        "警察 收賄"
+        "警察 收賄",
+        "警察 貪瀆"
       ],
       "tags": [
         "收賄"
       ],
-      "search_text": "10年重罪恐入獄！桃園爆集體貪瀆 警員、環保局助理「收錢放水」全栽了 yahoo新聞  警察 收賄 收賄",
+      "search_text": "10年重罪恐入獄！桃園爆集體貪瀆 警員、環保局助理「收錢放水」全栽了 yahoo新聞  警察 收賄 警察 貪瀆 收賄",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "940928d77266",
@@ -4929,6 +5276,7 @@
       "published_label": "2025-04-24 15:00",
       "matched_keywords": [
         "員警 涉貪",
+        "員警 貪污",
         "警察 涉貪",
         "警察 貪瀆"
       ],
@@ -4936,8 +5284,26 @@
         "收賄"
       ],
       "first_seen_at": "2026-04-16T05:29:44.235587Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z",
-      "search_text": "3警涉貪！桃市警局秒祭出重懲 涉案免職、高官遭連坐 yahoo新聞  員警 涉貪 警察 涉貪 警察 貪瀆 收賄"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "3警涉貪！桃市警局秒祭出重懲 涉案免職、高官遭連坐 yahoo新聞  員警 涉貪 員警 貪污 警察 涉貪 警察 貪瀆 收賄"
+    },
+    {
+      "id": "2fa3f59bfcb2",
+      "title": "涉嫌收錢包庇非法業者濫倒廢土 3警1稽查員收押禁見",
+      "source": "聯合新聞網",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtWTl4ZXFMbzRqTGMwLXZpcGdGMHVNWE9HM1ZHMXFjeTlRdkdseUJqdHY4N0tMUDY4YzNRMGl6RnFzTXdNZXc3QVd4bW80d2JW0gFWQVVfeXFMTmdiazRfVXA1NDBHN1BkMEdWSm5McnV6SkZqWWNLbmVOcmRQMjFaSS1KQjJkNHA5WXpqWWxjOThQQ1EyanBVNjFOQVV6Vk9UR2l3enFPOXc?oc=5",
+      "summary": "",
+      "published_at": "2025-04-24T07:00:00Z",
+      "published_label": "2025-04-24 07:00",
+      "matched_keywords": [
+        "警察 包庇"
+      ],
+      "tags": [
+        "包庇"
+      ],
+      "first_seen_at": "2026-04-16T19:06:00.158045Z",
+      "last_seen_at": "2026-04-16T19:06:00.158045Z",
+      "search_text": "涉嫌收錢包庇非法業者濫倒廢土 3警1稽查員收押禁見 聯合新聞網  警察 包庇 包庇"
     },
     {
       "id": "7512355629c5",
@@ -4955,7 +5321,7 @@
       ],
       "search_text": "金門金城分局卸、新任分局長都升官 警局長黃壬聰：警紀是警察命脈 自由時報  警察 警紀 風紀",
       "first_seen_at": "2026-04-16T04:15:48.608649Z",
-      "last_seen_at": "2026-04-16T05:54:18.081530Z"
+      "last_seen_at": "2026-04-16T19:06:00.158045Z"
     },
     {
       "id": "764c39b6c2a1",
