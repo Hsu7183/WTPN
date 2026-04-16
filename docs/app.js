@@ -12,11 +12,14 @@ const elements = {
   authOverlay: document.querySelector("#auth-overlay"),
   authForm: document.querySelector("#auth-form"),
   authPassword: document.querySelector("#auth-password"),
+  authKeys: [...document.querySelectorAll(".auth-key")],
   authSubmit: document.querySelector("#auth-submit"),
   authMessage: document.querySelector("#auth-message"),
   protectedApp: document.querySelector("#protected-app"),
   count: document.querySelector("#article-count"),
   lastUpdated: document.querySelector("#last-updated"),
+  searchToggle: document.querySelector("#search-toggle"),
+  searchPanel: document.querySelector("#search-panel"),
   searchInput: document.querySelector("#search-input"),
   sourceFilter: document.querySelector("#source-filter"),
   sortSelect: document.querySelector("#sort-select"),
@@ -32,6 +35,7 @@ const state = {
   activeTag: "all",
   eventsBound: false,
   guardTimer: null,
+  searchPanelOpen: false,
 };
 
 
@@ -86,10 +90,22 @@ function setAuthMessage(message, tone = "info") {
 }
 
 
+function setAuthPasswordValue(value) {
+  elements.authPassword.value = value;
+}
+
+
+function setAuthPadDisabled(disabled) {
+  elements.authPassword.disabled = disabled;
+  for (const button of elements.authKeys) {
+    button.disabled = disabled;
+  }
+}
+
+
 function setAuthBusy(isBusy) {
-  elements.authPassword.disabled = isBusy;
-  elements.authSubmit.disabled = isBusy;
-  elements.authSubmit.textContent = isBusy ? "更新中..." : "進入系統";
+  setAuthPadDisabled(isBusy);
+  elements.authSubmit.textContent = isBusy ? "更新中..." : "確認";
 }
 
 
@@ -150,9 +166,8 @@ function syncGuardUi({ resetMessage = false } = {}) {
   const lockedOut = remaining > 0;
 
   if (lockedOut) {
-    elements.authPassword.disabled = true;
-    elements.authSubmit.disabled = true;
-    elements.authSubmit.textContent = "進入系統";
+    setAuthPadDisabled(true);
+    elements.authSubmit.textContent = "確認";
     setAuthMessage(`輸入錯誤次數過多，請於 ${formatRemainingLock(remaining)} 後再試。`, "error");
     return true;
   }
@@ -201,7 +216,7 @@ function setLocked(locked) {
   }
 
   stopGuardTimer();
-  elements.authPassword.value = "";
+  setAuthPasswordValue("");
 }
 
 
@@ -211,6 +226,32 @@ async function digestText(value) {
   return [...new Uint8Array(digest)]
     .map((byte) => byte.toString(16).padStart(2, "0"))
     .join("");
+}
+
+
+function appendAuthDigit(digit) {
+  if (elements.authSubmit.disabled) {
+    return;
+  }
+  setAuthPasswordValue(`${elements.authPassword.value}${digit}`);
+  elements.authPassword.focus();
+}
+
+
+function removeLastAuthDigit() {
+  if (elements.authSubmit.disabled) {
+    return;
+  }
+  setAuthPasswordValue(elements.authPassword.value.slice(0, -1));
+  elements.authPassword.focus();
+}
+
+
+function setSearchPanelOpen(isOpen) {
+  state.searchPanelOpen = isOpen;
+  elements.searchPanel.hidden = !isOpen;
+  elements.searchToggle.setAttribute("aria-expanded", String(isOpen));
+  elements.searchToggle.textContent = isOpen ? "收起搜尋" : "展開搜尋";
 }
 
 
@@ -416,6 +457,10 @@ function updateView() {
 
 
 function bindEvents() {
+  elements.searchToggle.addEventListener("click", () => {
+    setSearchPanelOpen(!state.searchPanelOpen);
+  });
+
   elements.searchInput.addEventListener("input", updateView);
   elements.sourceFilter.addEventListener("change", updateView);
   elements.sortSelect.addEventListener("change", updateView);
@@ -432,6 +477,43 @@ function bindEvents() {
     }
     updateView();
   });
+}
+
+
+function handleAuthPadClick(event) {
+  const button = event.target.closest("button[data-key], button[data-action]");
+  if (!button || button.disabled) {
+    return;
+  }
+
+  if (button.dataset.key) {
+    appendAuthDigit(button.dataset.key);
+    return;
+  }
+
+  if (button.dataset.action === "backspace") {
+    removeLastAuthDigit();
+  }
+}
+
+
+function handleAuthInputKeydown(event) {
+  if (/^\d$/.test(event.key)) {
+    event.preventDefault();
+    appendAuthDigit(event.key);
+    return;
+  }
+
+  if (event.key === "Backspace") {
+    event.preventDefault();
+    removeLastAuthDigit();
+    return;
+  }
+
+  if (event.key === "Enter") {
+    event.preventDefault();
+    elements.authForm.requestSubmit(elements.authSubmit);
+  }
 }
 
 
@@ -541,14 +623,14 @@ async function handleAuthSubmit(event) {
     const guard = getGuardState();
     const nextAttempts = guard.attempts + 1;
     const remainingAttempts = Math.max(SECURITY.maxAttempts - nextAttempts, 0);
-    const nextGuard = {
+  const nextGuard = {
       attempts: nextAttempts,
       lockUntil: nextAttempts >= SECURITY.maxAttempts
         ? Date.now() + SECURITY.lockoutMs
         : 0,
     };
     saveGuardState(nextGuard);
-    elements.authPassword.value = "";
+    setAuthPasswordValue("");
 
     if (nextGuard.lockUntil > 0) {
       syncGuardUi();
@@ -631,6 +713,8 @@ function protectInteractions() {
 
 
 function bindAuthEvents() {
+  elements.authForm.addEventListener("click", handleAuthPadClick);
+  elements.authPassword.addEventListener("keydown", handleAuthInputKeydown);
   elements.authForm.addEventListener("submit", (event) => {
     handleAuthSubmit(event).catch((error) => {
       setAuthMessage(`驗證失敗：${error.message}`, "error");
@@ -643,6 +727,7 @@ function bindAuthEvents() {
 function bootstrap() {
   protectInteractions();
   bindAuthEvents();
+  setSearchPanelOpen(false);
   setLocked(true);
 
   if (getRemainingLockMs() > 0) {

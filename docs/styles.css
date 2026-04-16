@@ -68,19 +68,67 @@ a {
 
 .auth-form {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.7rem;
   margin: 0;
+}
+
+.auth-form #auth-password {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  color: var(--ink);
+  background: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+
+.auth-pad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.auth-key {
+  min-height: 3.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.auth-key:hover {
+  background: #f6f6f6;
+  border-color: #c8c8c8;
+}
+
+.auth-key:active {
+  transform: translateY(1px);
+}
+
+.auth-key--subtle {
+  font-size: 0.92rem;
 }
 
 .auth-button {
   border: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 0.78rem 1rem;
   color: #ffffff;
   background: #1f1f1f;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+}
+
+.auth-key--confirm {
+  border-color: #1f1f1f;
 }
 
 .auth-button:disabled {
@@ -162,6 +210,33 @@ h3 {
 .layout {
   display: grid;
   gap: 0.9rem;
+}
+
+.controls-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.35rem;
+}
+
+.search-toggle {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  color: var(--ink);
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.search-toggle:hover {
+  background: #f7f7f7;
+}
+
+.search-panel {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
 }
 
 .control-row {
@@ -363,6 +438,10 @@ h3 {
   .auth-card {
     padding: 0.8rem;
     border-radius: 14px;
+  }
+
+  .auth-key {
+    min-height: 3.25rem;
   }
 
   .site-title {
