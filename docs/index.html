@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台灣警政風紀輿情蒐報整理系統</title>
+    <meta
+      name="description"
+      content="台灣警政風紀輿情蒐報整理系統，提供警政風紀新聞搜尋、分類與條列瀏覽。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <h1 class="site-title">台灣警政風紀輿情蒐報整理系統</h1>
+        <p class="ownership">版權所有: 北市警督察室風紀股</p>
+        <p class="header-meta">
+          <span>已收錄 <strong id="article-count">0</strong> 則</span>
+          <span>最近更新 <strong id="last-updated">載入中</strong></span>
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="controls">
+          <div class="control-row">
+            <label class="field">
+              <span>搜尋新聞</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="例如：板橋、收賄、酒駕、分局、包庇"
+              />
+            </label>
+
+            <label class="field">
+              <span>媒體來源</span>
+              <select id="source-filter">
+                <option value="all">全部來源</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>排序方式</span>
+              <select id="sort-select">
+                <option value="newest">最新優先</option>
+                <option value="oldest">最舊優先</option>
+                <option value="source">依來源排序</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="tag-strip">
+            <span>快速標籤</span>
+            <div id="tag-filters" class="tags"></div>
+          </div>
+
+          <div class="meta-note">
+            資料來源為 Google News RSS 搜尋結果，再依台灣媒體來源名稱進行過濾。
+            內容適合做監測與索引，引用前請回到原始新聞頁面確認。
+          </div>
+        </section>
+
+        <section class="results">
+          <div class="results-head">
+            <h2>新聞列表</h2>
+            <p id="results-summary">讀取資料中...</p>
+          </div >
+          <div id="results" class="results-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
