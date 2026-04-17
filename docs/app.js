@@ -35,7 +35,7 @@ const REFRESH_STATUS = Object.freeze({
   fallback:
     "目前無法連到本機更新服務，已改載入現有資料。若要即時更新，請用 local_server.py 開啟。",
   cloudTokenNeeded:
-    "手機即時更新需要先設定 GitHub token。請展開搜尋區，貼上只授權這個 repo 的 token。",
+    "手機即時更新前，請先到下方「手機即時更新設定」貼上 GitHub token。",
   cloudDispatching: "已送出雲端更新要求，等待 GitHub 開始執行...",
   cloudRunning: "GitHub 正在更新新聞資料，請稍候...",
   cloudPublishing: "雲端資料已更新，等待網站發佈最新版本...",
@@ -55,6 +55,8 @@ const elements = {
   lastUpdated: document.querySelector("#last-updated"),
   refreshButton: document.querySelector("#refresh-button"),
   refreshStatus: document.querySelector("#refresh-status"),
+  cloudToggle: document.querySelector("#cloud-toggle"),
+  cloudPanel: document.querySelector("#cloud-panel"),
   githubTokenInput: document.querySelector("#github-token-input"),
   saveGithubToken: document.querySelector("#save-github-token"),
   clearGithubToken: document.querySelector("#clear-github-token"),
@@ -77,6 +79,7 @@ const state = {
   eventsBound: false,
   guardTimer: null,
   searchPanelOpen: false,
+  cloudPanelOpen: false,
   sessionPassword: "",
   refreshInFlight: false,
   githubToken: "",
@@ -391,6 +394,14 @@ function setSearchPanelOpen(isOpen) {
 }
 
 
+function setCloudPanelOpen(isOpen) {
+  state.cloudPanelOpen = isOpen;
+  elements.cloudPanel.hidden = !isOpen;
+  elements.cloudToggle.setAttribute("aria-expanded", String(isOpen));
+  elements.cloudToggle.textContent = isOpen ? "收起手機更新設定" : "手機即時更新設定";
+}
+
+
 function buildSourceOptions(sources) {
   const defaultOption = document.createElement("option");
   defaultOption.value = "all";
@@ -440,6 +451,7 @@ function applyPayload(payload) {
   const previousSort = elements.sortSelect.value;
   const previousTag = state.activeTag;
   const previousPanelOpen = state.searchPanelOpen;
+  const previousCloudPanelOpen = state.cloudPanelOpen;
 
   state.articles = payload.articles ?? [];
   state.sources = payload.available_sources ?? [];
@@ -463,6 +475,7 @@ function applyPayload(payload) {
     ? previousSort
     : "newest";
   setSearchPanelOpen(previousPanelOpen);
+  setCloudPanelOpen(previousCloudPanelOpen);
 
   if (!state.eventsBound) {
     bindEvents();
@@ -617,6 +630,10 @@ function updateView() {
 
 
 function bindEvents() {
+  elements.cloudToggle.addEventListener("click", () => {
+    setCloudPanelOpen(!state.cloudPanelOpen);
+  });
+
   elements.searchToggle.addEventListener("click", () => {
     setSearchPanelOpen(!state.searchPanelOpen);
   });
@@ -1030,13 +1047,11 @@ async function loadNews({
       }
 
       if (localRefreshUnavailable && !hasGithubToken()) {
-        setSearchPanelOpen(true);
         setRefreshStatus(REFRESH_STATUS.cloudTokenNeeded, "warning");
         setCloudTokenStatus(
-          "請先儲存 GitHub token，之後手機按「抓最新資料」就能直接觸發雲端更新。",
+          "請貼上 GitHub token，儲存後再按一次「抓最新資料」。",
           "warning",
         );
-        elements.githubTokenInput.focus();
         return;
       }
 
@@ -1219,6 +1234,7 @@ function bootstrap() {
   protectInteractions();
   bindAuthEvents();
   state.githubToken = loadGithubToken();
+  setCloudPanelOpen(false);
   setSearchPanelOpen(false);
   setRefreshStatus(REFRESH_STATUS.ready);
   syncCloudTokenUi();

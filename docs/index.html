@@ -75,6 +75,49 @@
 
       <main class="layout">
         <section class="controls">
+          <section class="cloud-settings" aria-label="手機即時更新設定">
+            <button
+              id="cloud-toggle"
+              class="cloud-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="cloud-panel"
+            >
+              手機即時更新設定
+            </button>
+
+            <div id="cloud-panel" class="cloud-panel" hidden>
+              <p class="cloud-admin-note">
+                如果你是從手機或 GitHub Pages 開啟，請先貼上只授權這個 repo 的 GitHub Fine-grained token。
+                權杖只會保存在目前這台裝置的瀏覽器。
+              </p>
+              <label class="field field--token">
+                <span>GitHub token</span>
+                <input
+                  id="github-token-input"
+                  type="password"
+                  placeholder="貼上 GitHub Fine-grained token"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                />
+              </label>
+              <div class="cloud-admin-actions">
+                <button id="save-github-token" class="secondary-button" type="button">
+                  儲存手機更新權杖
+                </button>
+                <button
+                  id="clear-github-token"
+                  class="secondary-button secondary-button--ghost"
+                  type="button"
+                >
+                  清除權杖
+                </button>
+              </div>
+              <p id="cloud-token-status" class="cloud-token-status" aria-live="polite"></p>
+            </div>
+          </section>
+
           <div class="controls-top">
             <button
               id="search-toggle"
@@ -123,38 +166,6 @@
               資料來源為 Google News RSS 搜尋結果，再依台灣媒體來源名稱進行過濾。
               內容適合做監測與索引，引用前請回到原始新聞頁面確認。
             </div>
-
-            <section class="cloud-admin" aria-label="手機即時更新設定">
-              <p class="cloud-admin-title">手機即時更新設定</p>
-              <p class="cloud-admin-note">
-                如果你是從手機或 GitHub Pages 開啟，請先貼上只授權這個 repo 的 GitHub Fine-grained token。
-                權杖只會保存在目前這台裝置的瀏覽器。
-              </p>
-              <label class="field field--token">
-                <span>GitHub token</span>
-                <input
-                  id="github-token-input"
-                  type="password"
-                  placeholder="貼上 GitHub Fine-grained token"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                />
-              </label>
-              <div class="cloud-admin-actions">
-                <button id="save-github-token" class="secondary-button" type="button">
-                  儲存手機更新權杖
-                </button>
-                <button
-                  id="clear-github-token"
-                  class="secondary-button secondary-button--ghost"
-                  type="button"
-                >
-                  清除權杖
-                </button>
-              </div>
-              <p id="cloud-token-status" class="cloud-token-status" aria-live="polite"></p>
-            </section>
           </div>
         </section>
 
