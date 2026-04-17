@@ -277,65 +277,27 @@ h3 {
 }
 
 .header-actions {
-  display: grid;
-  gap: 0.65rem;
-  margin-top: 0.25rem;
-}
-
-.refresh-button {
-  min-height: 2.9rem;
-  border: 1px solid rgba(35, 77, 115, 0.12);
-  border-radius: 999px;
-  padding: 0.58rem 1rem;
-  color: #ffffff;
-  background: linear-gradient(135deg, #234d73 0%, #182d43 100%);
-  font: inherit;
-  font-size: 0.96rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 12px 22px rgba(19, 34, 54, 0.12);
-  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
-}
-
-.refresh-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 16px 28px rgba(19, 34, 54, 0.16);
-}
-
-.refresh-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.65;
-  transform: none;
-  box-shadow: none;
+  margin-top: 0.35rem;
 }
 
 .refresh-status {
   margin: 0;
-  padding: 0.55rem 0.8rem;
+  padding: 0;
   color: var(--ink-soft);
-  font-size: 0.92rem;
-  line-height: 1.65;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(35, 77, 115, 0.08);
-  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .refresh-status[data-tone="success"] {
   color: #0d6b3b;
-  background: #edf9f2;
-  border-color: rgba(13, 107, 59, 0.16);
 }
 
 .refresh-status[data-tone="warning"] {
   color: #8a5a16;
-  background: #fff6e7;
-  border-color: rgba(138, 90, 22, 0.16);
 }
 
 .refresh-status[data-tone="error"] {
   color: var(--warn);
-  background: #fff3f2;
-  border-color: rgba(138, 28, 28, 0.16);
 }
 
 .layout {
@@ -365,16 +327,9 @@ h3 {
   flex-wrap: wrap;
   gap: 0.65rem;
   justify-content: flex-start;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.2rem;
 }
 
-.cloud-settings {
-  display: grid;
-  gap: 0.7rem;
-  margin-bottom: 0.8rem;
-}
-
-.cloud-toggle,
 .search-toggle {
   border: 1px solid rgba(35, 77, 115, 0.12);
   border-radius: 999px;
@@ -389,24 +344,10 @@ h3 {
   transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
 }
 
-.cloud-toggle:hover,
 .search-toggle:hover {
   border-color: rgba(35, 77, 115, 0.22);
   transform: translateY(-1px);
   box-shadow: 0 12px 22px rgba(19, 34, 54, 0.1);
-}
-
-.cloud-panel {
-  display: grid;
-  gap: 0.7rem;
-  padding: 0.95rem;
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(35, 77, 115, 0.08);
-  border-radius: 18px;
-}
-
-.cloud-panel[hidden] {
-  display: none !important;
 }
 
 .search-panel {
@@ -520,79 +461,6 @@ h3 {
   background: var(--surface-soft);
   border: 1px solid rgba(35, 77, 115, 0.08);
   border-radius: 16px;
-}
-
-.cloud-admin-note {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  line-height: 1.7;
-}
-
-.field--token input {
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-  font-size: 0.92rem;
-}
-
-.cloud-admin-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-.secondary-button {
-  min-height: 2.75rem;
-  border: 1px solid rgba(35, 77, 115, 0.14);
-  border-radius: 999px;
-  padding: 0.58rem 0.95rem;
-  color: var(--accent);
-  background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
-  font: inherit;
-  font-size: 0.92rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 8px 18px rgba(19, 34, 54, 0.06);
-  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
-}
-
-.secondary-button:hover {
-  transform: translateY(-1px);
-  border-color: rgba(35, 77, 115, 0.22);
-  box-shadow: 0 12px 22px rgba(19, 34, 54, 0.08);
-}
-
-.secondary-button--ghost {
-  color: var(--ink-soft);
-  background: #ffffff;
-}
-
-.cloud-token-status {
-  margin: 0;
-  padding: 0.55rem 0.75rem;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  line-height: 1.65;
-  background: var(--surface-soft);
-  border: 1px solid rgba(35, 77, 115, 0.08);
-  border-radius: 14px;
-}
-
-.cloud-token-status[data-tone="success"] {
-  color: #0d6b3b;
-  background: #edf9f2;
-  border-color: rgba(13, 107, 59, 0.16);
-}
-
-.cloud-token-status[data-tone="warning"] {
-  color: #8a5a16;
-  background: #fff6e7;
-  border-color: rgba(138, 90, 22, 0.16);
-}
-
-.cloud-token-status[data-tone="error"] {
-  color: var(--warn);
-  background: #fff3f2;
-  border-color: rgba(138, 28, 28, 0.16);
 }
 
 .results-head {
@@ -781,10 +649,7 @@ h3 {
     flex-direction: column;
   }
 
-  .refresh-button,
-  .cloud-toggle,
-  .search-toggle,
-  .secondary-button {
+  .search-toggle {
     width: 100%;
   }
 

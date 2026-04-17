@@ -224,6 +224,24 @@ TRUSTED_SOURCE_ALIASES = {
     },
 }
 
+MANUAL_ARTICLE_SEEDS = [
+    {
+        "title": "與黃文烈親信有債務糾紛 鍾文智找警察偷查個資 北檢另案偵辦中",
+        "source": "LINE TODAY",
+        "link": "https://liff.line.me/1454987169-1WAXAP3K/v3/article/l2GO2yk",
+        "summary": (
+            "檢方偵辦鍾文智偽造簽到案時發現，鍾文智因與黃文烈親信有債務糾紛，"
+            "涉嫌透過南港派出所警員偷查親友個資討債，目前由北檢另案偵辦中。"
+        ),
+        "published_at": "2026-04-15T20:02:00Z",
+        "matched_keywords": [
+            "鍾文智 偷查個資",
+            "黃文烈 親信 偷查個資",
+            "警察 查個資 討債",
+        ],
+    },
+]
+
 TAG_RULES = {
     "收賄": ["收賄", "賄賂", "貪瀆", "貪污", "涉貪", "圖利", "索賄", "回扣"],
     "性紀律": ["性騷", "性侵", "猥褻", "援交", "性招待", "護膚店", "不當場所"],
@@ -535,6 +553,28 @@ def format_published_label(value: str) -> str:
     return dt.astimezone().strftime("%Y-%m-%d %H:%M")
 
 
+def build_manual_articles() -> list[dict]:
+    entries: list[dict] = []
+
+    for seed in MANUAL_ARTICLE_SEEDS:
+        matched_keywords = dedupe_preserve_order(seed.get("matched_keywords") or [])
+        article = {
+            "id": article_id(seed["source"], seed["title"], seed["published_at"]),
+            "title": seed["title"],
+            "source": seed["source"],
+            "link": seed["link"],
+            "summary": seed.get("summary", ""),
+            "published_at": seed["published_at"],
+            "published_label": format_published_label(seed["published_at"]),
+            "matched_keywords": matched_keywords,
+            "tags": classify_tags([seed["title"], seed.get("summary", ""), *matched_keywords]),
+        }
+        if is_relevant_article(article["title"], article["summary"], matched_keywords):
+            entries.append(article)
+
+    return entries
+
+
 def hydrate_article(article: dict, default_seen_at: str | None = None) -> dict:
     item = dict(article)
     item["matched_keywords"] = sorted(set(item.get("matched_keywords") or []))
@@ -710,6 +750,7 @@ def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
             failed_queries.append({"query": query, "error": str(exc)})
             print(f"[warn] failed to fetch '{query}': {exc}", file=sys.stderr)
 
+    collected.extend(build_manual_articles())
     fresh_articles = merge_articles([], collected, refreshed_at)
     existing_keys = {article_key(article) for article in existing_articles}
     new_articles = sum(

@@ -64,60 +64,14 @@
           <span>最近更新 <strong id="last-updated">載入中</strong></span>
         </p>
         <div class="header-actions">
-          <button id="refresh-button" class="refresh-button" type="button">
-            抓最新資料
-          </button>
           <p id="refresh-status" class="refresh-status" aria-live="polite">
-            登入後會先嘗試抓最新資料，也可以隨時手動更新。
+            登入後會自動檢查最新資料。
           </p>
         </div>
       </header>
 
       <main class="layout">
         <section class="controls">
-          <section class="cloud-settings" aria-label="手機即時更新設定">
-            <button
-              id="cloud-toggle"
-              class="cloud-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="cloud-panel"
-            >
-              手機即時更新設定
-            </button>
-
-            <div id="cloud-panel" class="cloud-panel" hidden>
-              <p class="cloud-admin-note">
-                如果你是從手機或 GitHub Pages 開啟，請先貼上只授權這個 repo 的 GitHub Fine-grained token。
-                權杖只會保存在目前這台裝置的瀏覽器。
-              </p>
-              <label class="field field--token">
-                <span>GitHub token</span>
-                <input
-                  id="github-token-input"
-                  type="password"
-                  placeholder="貼上 GitHub Fine-grained token"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                />
-              </label>
-              <div class="cloud-admin-actions">
-                <button id="save-github-token" class="secondary-button" type="button">
-                  儲存手機更新權杖
-                </button>
-                <button
-                  id="clear-github-token"
-                  class="secondary-button secondary-button--ghost"
-                  type="button"
-                >
-                  清除權杖
-                </button>
-              </div>
-              <p id="cloud-token-status" class="cloud-token-status" aria-live="polite"></p>
-            </div>
-          </section>
-
           <div class="controls-top">
             <button
               id="search-toggle"
