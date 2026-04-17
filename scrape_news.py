@@ -25,25 +25,135 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
 )
 
-SEARCH_KEYWORDS = [
-    "台灣警察風紀",
-    "警察 收賄",
-    "警察 警紀",
-    "員警 貪污",
-    "警察 涉貪",
-    "員警 涉貪",
-    "副所長 涉貪",
-    "警察 圖利",
-    "員警 圖利",
-    "警察 改單",
-    "員警 改單",
-    "警察 銷單",
-    "警察 貪瀆",
-    "巡佐 涉貪",
-    "警察 包庇",
-    "警察 洩密",
-    "員警 酒駕",
+GENERAL_SEARCH_KEYWORDS = [
+    "員警風紀",
+    "警員風紀",
+    "警察風紀",
+    "員警 違紀",
+    "警員 違紀",
+    "員警 違法違紀",
+    "警員 違法違紀",
+    "員警 風紀案",
+    "警員 風紀案",
 ]
+
+BROAD_ROLE_SEARCH_TERMS = (
+    "員警",
+    "警員",
+    "警察",
+)
+
+BROAD_MISCONDUCT_SEARCH_TERMS = (
+    "收賄",
+    "索賄",
+    "貪污",
+    "涉貪",
+    "貪瀆",
+    "圖利",
+    "包庇",
+    "包庇 詐團",
+    "包庇 賭場",
+    "包庇 賭博電玩",
+    "洩密",
+    "洩個資",
+    "非法查詢個資",
+    "勾結 詐團",
+    "勾結 博弈",
+    "勾結 黑道",
+    "通風報信",
+    "洩漏 臨檢情資",
+    "改單",
+    "銷單",
+    "吞贓",
+    "酒駕",
+    "吸毒",
+    "販毒",
+    "性騷",
+    "性侵",
+    "猥褻",
+    "援交",
+    "偷拍",
+    "妨害秘密",
+    "合成 性影像",
+    "不當交往",
+    "詐領加班費",
+    "浮報 加班費",
+    "偽造文書",
+    "登載不實",
+)
+
+SPECIAL_SEARCH_KEYWORDS = [
+    "員警 不當交往",
+    "非法查詢個資 員警",
+    "警察 博弈 洩密",
+    "員警 包庇 博弈",
+    "員警 包庇 電玩",
+    "員警 包庇 詐團",
+    "員警 包庇 賭場",
+    "員警 警示帳戶",
+    "員警 165 系統 收賄",
+    "員警 臨檢情資",
+    "員警 個資外洩",
+    "員警 外流 監視器",
+    "員警 違反個資法",
+    "員警 白單 圖利",
+    "員警 紅單 圖利",
+    "員警 開假罰單",
+    "員警 製單 違法",
+    "員警 侵占 證物",
+    "員警 贓款",
+    "員警 創意私房",
+    "員警 針孔 偷拍",
+    "男警 偷拍 女警",
+    "員警 妨害秘密",
+    "員警 性招待",
+    "員警 養生館",
+    "員警 護膚店",
+    "員警 合成 性影像",
+    "男警 合成 性影像",
+    "員警 詐領加班費",
+    "員警 浮報 加班費",
+    "員警 偽造文書",
+    "員警 登載不實",
+]
+
+RANK_FOCUSED_QUERY_MAP = {
+    "巡佐": ("涉貪", "包庇", "酒駕", "偷拍", "改單"),
+    "偵查佐": ("涉貪", "洩密", "吞贓", "偷拍", "偽造文書"),
+    "副所長": ("涉貪", "收賄", "洩密", "包庇"),
+    "所長": ("收賄", "包庇", "洩個資", "不當交往"),
+    "小隊長": ("涉貪", "洩密", "包庇", "偷拍"),
+    "警務員": ("涉貪", "酒駕", "吸毒", "洩密"),
+    "巡官": ("詐領加班費", "浮報 加班費", "酒駕"),
+    "交通警察": ("改單", "銷單", "洩密", "開假罰單"),
+    "刑警": ("洩密", "包庇", "涉貪", "勾結 詐團"),
+    "警政監": ("博弈 洩密", "涉貪", "收賄"),
+    "男警": ("偷拍", "性騷", "性侵", "妨害秘密", "不實影像"),
+    "女警": ("涉貪", "勾結 詐團"),
+}
+
+
+def dedupe_preserve_order(values: Iterable[str]) -> list[str]:
+    return list(dict.fromkeys(value.strip() for value in values if value.strip()))
+
+
+def build_search_keywords() -> list[str]:
+    keywords: list[str] = list(GENERAL_SEARCH_KEYWORDS)
+
+    for role in BROAD_ROLE_SEARCH_TERMS:
+        keywords.extend(
+            f"{role} {misconduct}"
+            for misconduct in BROAD_MISCONDUCT_SEARCH_TERMS
+        )
+
+    for role, misconducts in RANK_FOCUSED_QUERY_MAP.items():
+        keywords.extend(f"{role} {misconduct}" for misconduct in misconducts)
+
+    keywords.extend(SPECIAL_SEARCH_KEYWORDS)
+    return dedupe_preserve_order(keywords)
+
+
+SEARCH_KEYWORDS = build_search_keywords()
 
 TRUSTED_SOURCES = {
     "中央社",
@@ -60,6 +170,7 @@ TRUSTED_SOURCES = {
     "華視新聞網",
     "翻爆",
     "鏡新聞",
+    "鏡週刊",
     "壹蘋新聞網",
     "CTWANT",
     "ETtoday新聞雲",
@@ -69,6 +180,8 @@ TRUSTED_SOURCES = {
     "Yahoo新聞",
     "yesmedia.com.tw",
     "三立新聞網 Setn.com",
+    "太報",
+    "東森新聞",
     "風傳媒",
 }
 
@@ -79,17 +192,158 @@ TRUSTED_SOURCE_ALIASES = {
         "setn.com",
         "三立",
     },
+    "東森新聞": {
+        "東森新聞",
+        "EBC東森新聞",
+        "東森新聞雲",
+    },
 }
 
 TAG_RULES = {
-    "收賄": ["收賄", "賄選", "賄賂", "貪瀆", "貪污", "涉貪", "圖利", "索賄"],
-    "性紀律": ["性騷", "性侵", "猥褻", "護膚店", "不當場所"],
+    "收賄": ["收賄", "賄賂", "貪瀆", "貪污", "涉貪", "圖利", "索賄", "回扣"],
+    "性紀律": ["性騷", "性侵", "猥褻", "援交", "性招待", "護膚店", "不當場所"],
     "酒駕": ["酒駕"],
-    "包庇": ["包庇", "關說"],
-    "洩密": ["洩密", "個資", "偵查資料"],
-    "詐欺": ["詐欺", "洗錢", "車手"],
-    "風紀": ["風紀", "警紀", "懲處", "記過"],
+    "包庇": ["包庇", "關說", "護航", "縱放"],
+    "洩密": ["洩密", "洩個資", "個資", "偵查資料", "監視器", "警示帳戶"],
+    "詐欺": ["詐欺", "詐團", "詐騙集團", "洗錢", "車手"],
+    "博弈": ["博弈", "賭場", "賭博電玩", "地下匯兌"],
+    "毒品": ["毒品", "吸毒", "販毒", "安非他命", "K他命"],
+    "吞贓": ["吞贓", "贓款", "證物室", "侵占"],
+    "偷拍": ["偷拍", "針孔", "妨害秘密", "不實影像", "性影像", "創意私房"],
+    "文書造假": [
+        "偽造文書",
+        "登載不實",
+        "開假罰單",
+        "假罰單",
+        "白單",
+        "紅單",
+        "製單違法",
+        "詐領加班費",
+        "浮報加班費",
+        "浮報",
+    ],
+    "風紀": ["風紀", "警紀", "違紀", "懲處", "記過", "免職"],
 }
+
+RELEVANT_ROLE_TERMS = (
+    "警察",
+    "員警",
+    "警員",
+    "男警",
+    "女警",
+    "巡官",
+    "警務員",
+    "偵查佐",
+    "巡佐",
+    "副所長",
+    "所長",
+    "小隊長",
+    "派出所",
+    "分局",
+    "國道警",
+    "北市警",
+    "新北警",
+    "中市警",
+    "高市警",
+    "市警",
+    "縣警",
+    "警政監",
+)
+
+RELEVANT_MISCONDUCT_TERMS = (
+    "風紀",
+    "警紀",
+    "違紀",
+    "違法",
+    "收賄",
+    "索賄",
+    "貪污",
+    "涉貪",
+    "貪瀆",
+    "圖利",
+    "包庇",
+    "洩密",
+    "通風報信",
+    "臨檢情資",
+    "個資",
+    "查個資",
+    "違反個資法",
+    "警示帳戶",
+    "詐團",
+    "詐騙集團",
+    "黑道",
+    "博弈",
+    "賭場",
+    "賭博電玩",
+    "改單",
+    "銷單",
+    "白單",
+    "紅單",
+    "吞贓",
+    "贓款",
+    "證物",
+    "酒駕",
+    "毒品",
+    "吸毒",
+    "販毒",
+    "性騷",
+    "性侵",
+    "猥褻",
+    "援交",
+    "偷拍",
+    "針孔",
+    "妨害秘密",
+    "不實影像",
+    "性影像",
+    "創意私房",
+    "不當交往",
+    "性招待",
+    "養生館",
+    "護膚店",
+    "詐領加班費",
+    "浮報",
+    "加班費",
+    "偽造文書",
+    "登載不實",
+    "開假罰單",
+    "假罰單",
+    "免職",
+    "停職",
+    "未繳槍",
+)
+
+RELEVANT_CASE_CONTEXT_TERMS = (
+    "涉",
+    "疑",
+    "遭",
+    "起訴",
+    "被訴",
+    "遭訴",
+    "送辦",
+    "法辦",
+    "收押",
+    "羈押",
+    "交保",
+    "聲押",
+    "判刑",
+    "認罪",
+    "免職",
+    "停職",
+    "記過",
+    "記大過",
+    "撤職",
+    "搜索",
+    "約談",
+    "函送",
+    "偵辦",
+    "查辦",
+    "臨檢",
+    "開鍘",
+    "求刑",
+    "拒測",
+    "拒檢",
+    "下場出爐",
+)
 
 RSS_TEMPLATE = (
     "https://news.google.com/rss/search"
@@ -105,7 +359,14 @@ IRRELEVANT_ARTICLE_PATTERNS = (
     "北市警未開單遭檢舉圖利",
     "檢舉達人不爽警沒開單",
     "調查官超速扣牌銷單",
+    "假警察",
+    "假刑警",
+    "盜用警察照片",
+    "圍棋師猥褻",
+    "警方及時阻詐",
 )
+
+ROLE_MARKER_PATTERN = re.compile(r"[0-9一二三四五六七八九十兩]+警")
 
 
 def iso_utc_now() -> str:
@@ -182,13 +443,34 @@ def clean_summary(summary: str, title: str, source: str) -> str:
     return compact
 
 
+def load_existing_payload(output_path: Path = OUTPUT_PATH) -> dict:
+    if not output_path.exists():
+        return {}
+
+    return json.loads(output_path.read_text(encoding="utf-8"))
+
+
 def is_relevant_article(
     title: str,
     summary: str = "",
     matched_keywords: Iterable[str] = (),
 ) -> bool:
     haystack = " ".join([title, summary, *matched_keywords])
-    return not any(pattern in haystack for pattern in IRRELEVANT_ARTICLE_PATTERNS)
+    if any(pattern in haystack for pattern in IRRELEVANT_ARTICLE_PATTERNS):
+        return False
+
+    content_haystack = " ".join([title, summary])
+    has_role = any(term in content_haystack for term in RELEVANT_ROLE_TERMS) or bool(
+        ROLE_MARKER_PATTERN.search(content_haystack)
+    )
+    misconduct_hits = sum(
+        1 for term in RELEVANT_MISCONDUCT_TERMS if term in content_haystack
+    )
+    has_misconduct = misconduct_hits > 0
+    has_case_context = any(
+        term in content_haystack for term in RELEVANT_CASE_CONTEXT_TERMS
+    )
+    return has_role and has_misconduct and (has_case_context or misconduct_hits >= 2)
 
 
 def classify_tags(chunks: Iterable[str]) -> list[str]:
@@ -284,11 +566,14 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
     return entries
 
 
-def load_existing_articles(output_path: Path = OUTPUT_PATH) -> list[dict]:
-    if not output_path.exists():
+def load_existing_articles(
+    output_path: Path = OUTPUT_PATH,
+    payload: dict | None = None,
+) -> list[dict]:
+    payload = payload or load_existing_payload(output_path)
+    if not payload:
         return []
 
-    payload = json.loads(output_path.read_text(encoding="utf-8"))
     generated_at = payload.get("generated_at")
     articles = payload.get("articles") or []
     hydrated = [
@@ -353,14 +638,17 @@ def build_payload(
     articles: list[dict],
     *,
     generated_at: str,
+    refresh_attempted_at: str,
     fetched_articles: int,
     new_articles: int,
+    failed_queries: list[dict[str, str]],
 ) -> dict:
     sources = sorted({article["source"] for article in articles})
     tags = sorted({tag for article in articles for tag in article["tags"]})
     return {
         "project": PROJECT_NAME,
         "generated_at": generated_at,
+        "refresh_attempted_at": refresh_attempted_at,
         "lookback_days": LOOKBACK_DAYS,
         "keywords": SEARCH_KEYWORDS,
         "trusted_sources": sorted(TRUSTED_SOURCES),
@@ -368,6 +656,8 @@ def build_payload(
         "available_tags": tags,
         "fetched_articles": fetched_articles,
         "new_articles": new_articles,
+        "failed_query_count": len(failed_queries),
+        "failed_queries": failed_queries,
         "total_articles": len(articles),
         "articles": articles,
     }
@@ -375,18 +665,22 @@ def build_payload(
 
 def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
     refreshed_at = iso_utc_now()
+    existing_payload = load_existing_payload(output_path)
+    existing_generated_at = existing_payload.get("generated_at")
     existing_articles = merge_articles(
-        load_existing_articles(output_path),
+        load_existing_articles(output_path, payload=existing_payload),
         [],
         refreshed_at,
     )
     collected: list[dict] = []
+    failed_queries: list[dict[str, str]] = []
 
     for query in SEARCH_KEYWORDS:
         try:
             feed_bytes = fetch_feed(query)
             collected.extend(parse_feed(feed_bytes, query))
         except Exception as exc:  # pragma: no cover - operational fallback
+            failed_queries.append({"query": query, "error": str(exc)})
             print(f"[warn] failed to fetch '{query}': {exc}", file=sys.stderr)
 
     fresh_articles = merge_articles([], collected, refreshed_at)
@@ -395,11 +689,15 @@ def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
         1 for article in fresh_articles if article_key(article) not in existing_keys
     )
     articles = merge_articles(existing_articles, fresh_articles, refreshed_at)
+    successful_fetch = len(failed_queries) < len(SEARCH_KEYWORDS)
+    generated_at = refreshed_at if successful_fetch or not existing_generated_at else existing_generated_at
     payload = build_payload(
         articles,
-        generated_at=refreshed_at,
+        generated_at=generated_at,
+        refresh_attempted_at=refreshed_at,
         fetched_articles=len(fresh_articles),
         new_articles=new_articles,
+        failed_queries=failed_queries,
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -418,6 +716,14 @@ def main() -> int:
         f"({payload['new_articles']} new, {payload['fetched_articles']} fetched)"
         f" to {OUTPUT_PATH}"
     )
+    if payload["failed_query_count"] >= len(SEARCH_KEYWORDS):
+        print("All queries failed; dataset freshness was not updated.", file=sys.stderr)
+        return 1
+    if payload["failed_query_count"] > 0:
+        print(
+            f"{payload['failed_query_count']} queries failed during refresh.",
+            file=sys.stderr,
+        )
     return 0
 
 

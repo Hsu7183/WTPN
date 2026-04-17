@@ -5,7 +5,7 @@
     <meta
       id="viewport-meta"
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
     <meta name="referrer" content="no-referrer" />
@@ -63,6 +63,14 @@
           <span>已收錄 <strong id="article-count">0</strong> 則</span>
           <span>最近更新 <strong id="last-updated">載入中</strong></span>
         </p>
+        <div class="header-actions">
+          <button id="refresh-button" class="refresh-button" type="button">
+            抓最新資料
+          </button>
+          <p id="refresh-status" class="refresh-status" aria-live="polite">
+            登入後會先嘗試抓最新資料，也可以隨時手動更新。
+          </p>
+        </div>
       </header>
 
       <main class="layout">

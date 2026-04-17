@@ -2,8 +2,7 @@ const DATA_URL = new URL("./data/news.json", window.location.href);
 const REFRESH_URL = new URL("../api/refresh-news", window.location.href);
 
 const VIEWPORT = Object.freeze({
-  locked: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
-  unlocked: "width=device-width, initial-scale=1, viewport-fit=cover",
+  default: "width=device-width, initial-scale=1, viewport-fit=cover",
 });
 
 const SECURITY = Object.freeze({
@@ -11,6 +10,14 @@ const SECURITY = Object.freeze({
   guardKey: "wtpn-auth-guard",
   maxAttempts: 5,
   lockoutMs: 5 * 60 * 1000,
+});
+
+const REFRESH_STATUS = Object.freeze({
+  ready: "登入後會先嘗試抓最新資料，也可以隨時手動更新。",
+  loadingStored: "正在載入現有資料...",
+  loadingLive: "正在抓取最新資料...",
+  fallback:
+    "目前無法連到本機更新服務，已改載入現有資料。若要即時更新，請用 local_server.py 開啟。",
 });
 
 const elements = {
@@ -24,6 +31,8 @@ const elements = {
   protectedApp: document.querySelector("#protected-app"),
   count: document.querySelector("#article-count"),
   lastUpdated: document.querySelector("#last-updated"),
+  refreshButton: document.querySelector("#refresh-button"),
+  refreshStatus: document.querySelector("#refresh-status"),
   searchToggle: document.querySelector("#search-toggle"),
   searchPanel: document.querySelector("#search-panel"),
   searchInput: document.querySelector("#search-input"),
@@ -42,6 +51,8 @@ const state = {
   eventsBound: false,
   guardTimer: null,
   searchPanelOpen: false,
+  sessionPassword: "",
+  refreshInFlight: false,
 };
 
 
@@ -82,6 +93,38 @@ function formatRocMonth(value) {
   const parts = getTaipeiParts(value);
   const rocYear = Number(parts.year) - 1911;
   return `${rocYear}年${parts.month}月份`;
+}
+
+
+function buildDataUrl() {
+  const url = new URL(DATA_URL);
+  url.searchParams.set("ts", String(Date.now()));
+  return url;
+}
+
+
+function setRefreshStatus(message, tone = "info") {
+  elements.refreshStatus.textContent = message;
+
+  if (message) {
+    elements.refreshStatus.dataset.tone = tone;
+    return;
+  }
+
+  delete elements.refreshStatus.dataset.tone;
+}
+
+
+function syncRefreshButton() {
+  elements.refreshButton.disabled = state.refreshInFlight || !state.sessionPassword;
+  elements.refreshButton.textContent = state.refreshInFlight ? "更新中..." : "抓最新資料";
+}
+
+
+function setRefreshBusy(isBusy) {
+  state.refreshInFlight = isBusy;
+  elements.results.setAttribute("aria-busy", String(isBusy));
+  syncRefreshButton();
 }
 
 
@@ -209,7 +252,7 @@ function stopGuardTimer() {
 
 function setLocked(locked) {
   if (elements.viewportMeta) {
-    elements.viewportMeta.setAttribute("content", locked ? VIEWPORT.locked : VIEWPORT.unlocked);
+    elements.viewportMeta.setAttribute("content", VIEWPORT.default);
   }
 
   document.body.classList.toggle("is-locked", locked);
@@ -217,6 +260,9 @@ function setLocked(locked) {
   elements.protectedApp.setAttribute("aria-hidden", String(locked));
 
   if (locked) {
+    state.sessionPassword = "";
+    syncRefreshButton();
+    setRefreshStatus(REFRESH_STATUS.ready);
     syncGuardUi({ resetMessage: true });
     if (getRemainingLockMs() > 0) {
       startGuardTimer();
@@ -227,6 +273,7 @@ function setLocked(locked) {
 
   stopGuardTimer();
   setAuthPasswordValue("");
+  syncRefreshButton();
 }
 
 
@@ -287,7 +334,7 @@ function buildTagButtons(tags) {
   allButton.type = "button";
   allButton.textContent = "全部";
   allButton.dataset.tag = "all";
-  allButton.className = "tag-chip is-active";
+  allButton.className = "tag-chip";
   elements.tagFilters.append(allButton);
 
   for (const tag of tags) {
@@ -301,12 +348,26 @@ function buildTagButtons(tags) {
 }
 
 
+function syncActiveTagChip() {
+  for (const chip of elements.tagFilters.querySelectorAll(".tag-chip")) {
+    chip.classList.toggle("is-active", chip.dataset.tag === state.activeTag);
+  }
+}
+
+
 function applyPayload(payload) {
+  const previousSearch = elements.searchInput.value;
+  const previousSource = elements.sourceFilter.value;
+  const previousSort = elements.sortSelect.value;
+  const previousTag = state.activeTag;
+  const previousPanelOpen = state.searchPanelOpen;
+
   state.articles = payload.articles ?? [];
   state.sources = payload.available_sources ?? [];
   state.tags = payload.available_tags ?? [];
-  state.activeTag = "all";
-  setSearchPanelOpen(false);
+  state.activeTag = previousTag === "all" || state.tags.includes(previousTag)
+    ? previousTag
+    : "all";
 
   elements.count.textContent = String(payload.total_articles ?? state.articles.length);
   elements.lastUpdated.textContent = payload.generated_at
@@ -315,6 +376,14 @@ function applyPayload(payload) {
 
   buildSourceOptions(state.sources);
   buildTagButtons(state.tags);
+  syncActiveTagChip();
+
+  elements.searchInput.value = previousSearch;
+  elements.sourceFilter.value = state.sources.includes(previousSource) ? previousSource : "all";
+  elements.sortSelect.value = ["newest", "oldest", "source"].includes(previousSort)
+    ? previousSort
+    : "newest";
+  setSearchPanelOpen(previousPanelOpen);
 
   if (!state.eventsBound) {
     bindEvents();
@@ -347,7 +416,8 @@ function filterArticles() {
   const activeTag = state.activeTag;
 
   const filtered = state.articles.filter((article) => {
-    const matchesKeyword = !keyword || article.search_text.includes(keyword);
+    const searchText = article.search_text ?? "";
+    const matchesKeyword = !keyword || searchText.includes(keyword);
     const matchesSource = source === "all" || article.source === source;
     const matchesTag = activeTag === "all" || article.tags.includes(activeTag);
     return matchesKeyword && matchesSource && matchesTag;
@@ -472,6 +542,18 @@ function bindEvents() {
     setSearchPanelOpen(!state.searchPanelOpen);
   });
 
+  elements.refreshButton.addEventListener("click", () => {
+    if (!state.sessionPassword || state.refreshInFlight) {
+      return;
+    }
+
+    loadNews({
+      password: state.sessionPassword,
+      preferLive: true,
+      trigger: "manual",
+    }).catch(handleLoadFailure);
+  });
+
   elements.searchInput.addEventListener("input", updateView);
   elements.sourceFilter.addEventListener("change", updateView);
   elements.sortSelect.addEventListener("change", updateView);
@@ -529,7 +611,12 @@ function handleAuthInputKeydown(event) {
 
 
 async function fetchStoredNews() {
-  const response = await fetch(DATA_URL, { cache: "no-store" });
+  const response = await fetch(buildDataUrl(), {
+    cache: "no-store",
+    headers: {
+      "Cache-Control": "no-store",
+    },
+  });
   if (!response.ok) {
     throw new Error(`Failed to load ${DATA_URL}`);
   }
@@ -537,7 +624,7 @@ async function fetchStoredNews() {
 }
 
 
-async function refreshNewsOnLogin(password) {
+async function requestLiveRefresh(password) {
   try {
     const response = await fetch(REFRESH_URL, {
       method: "POST",
@@ -567,22 +654,115 @@ async function refreshNewsOnLogin(password) {
 }
 
 
-async function loadNews(password = null) {
-  let payload = null;
+function buildLiveRefreshNotice(payload) {
+  const updatedLabel = payload.generated_at
+    ? `資料時間 ${formatUpdatedAt(payload.generated_at)}`
+    : "已完成更新";
+  const failedQueryCount = Number(payload.failed_query_count ?? 0);
+  const totalQueries = Array.isArray(payload.keywords) ? payload.keywords.length : 0;
 
-  if (password) {
-    try {
-      payload = await refreshNewsOnLogin(password);
-    } catch (error) {
-      console.warn("Latest refresh failed, falling back to stored news.", error);
+  if (failedQueryCount > 0 && totalQueries > 0 && failedQueryCount >= totalQueries) {
+    return {
+      tone: "warning",
+      message: `外部新聞來源目前連不上，已顯示上次成功資料，${updatedLabel}。`,
+    };
+  }
+
+  if (failedQueryCount > 0) {
+    return {
+      tone: "warning",
+      message: `已抓到最新資料，但有 ${failedQueryCount} 組關鍵字更新失敗，結果可能不完整，${updatedLabel}。`,
+    };
+  }
+
+  if (typeof payload.new_articles === "number") {
+    if (payload.new_articles > 0) {
+      return {
+        tone: "success",
+        message: `已抓到最新資料，新增 ${payload.new_articles} 則，${updatedLabel}。`,
+      };
     }
+    return {
+      tone: "success",
+      message: `已抓到最新資料，目前沒有新增，${updatedLabel}。`,
+    };
   }
 
-  if (!payload) {
-    payload = await fetchStoredNews();
-  }
+  return {
+    tone: "success",
+    message: `已抓到最新資料，${updatedLabel}。`,
+  };
+}
 
-  applyPayload(payload);
+
+function buildStoredMessage(payload) {
+  if (payload.generated_at) {
+    return `目前顯示現有資料，資料時間 ${formatUpdatedAt(payload.generated_at)}。`;
+  }
+  return "目前顯示現有資料。";
+}
+
+
+async function loadNews({
+  password = state.sessionPassword,
+  preferLive = Boolean(password),
+  trigger = "load",
+} = {}) {
+  let payload = null;
+  let liveError = null;
+  let liveRefreshUnavailable = false;
+
+  setRefreshBusy(true);
+  setRefreshStatus(
+    preferLive && password ? REFRESH_STATUS.loadingLive : REFRESH_STATUS.loadingStored,
+    "info",
+  );
+
+  try {
+    if (preferLive && password) {
+      try {
+        payload = await requestLiveRefresh(password);
+        liveRefreshUnavailable = payload === null;
+      } catch (error) {
+        liveError = error;
+        console.warn("Latest refresh failed, falling back to stored news.", error);
+      }
+    }
+
+    if (!payload) {
+      payload = await fetchStoredNews();
+    }
+
+    applyPayload(payload);
+
+    if (preferLive && password) {
+      if (liveError) {
+        setRefreshStatus(
+          `抓最新資料失敗：${liveError.message}；已改載入現有資料。`,
+          "warning",
+        );
+        return;
+      }
+
+      if (liveRefreshUnavailable) {
+        setRefreshStatus(REFRESH_STATUS.fallback, "warning");
+        return;
+      }
+
+      const notice = buildLiveRefreshNotice(payload);
+      setRefreshStatus(notice.message, notice.tone);
+      return;
+    }
+
+    if (trigger === "manual") {
+      setRefreshStatus(buildStoredMessage(payload), "info");
+      return;
+    }
+
+    setRefreshStatus(buildStoredMessage(payload), "info");
+  } finally {
+    setRefreshBusy(false);
+  }
 }
 
 
@@ -596,13 +776,17 @@ function handleLoadFailure(error) {
     <p>${error.message}</p>
   `;
   elements.results.replaceChildren(errorBox);
+  setRefreshBusy(false);
+  setRefreshStatus(`資料載入失敗：${error.message}`, "error");
 }
 
 
 async function unlockApp(password) {
+  state.sessionPassword = password;
+  syncRefreshButton();
   setLocked(false);
   setAuthMessage("");
-  await loadNews(password);
+  await loadNews({ password, preferLive: true, trigger: "login" });
 }
 
 
@@ -634,7 +818,7 @@ async function handleAuthSubmit(event) {
     const guard = getGuardState();
     const nextAttempts = guard.attempts + 1;
     const remainingAttempts = Math.max(SECURITY.maxAttempts - nextAttempts, 0);
-  const nextGuard = {
+    const nextGuard = {
       attempts: nextAttempts,
       lockUntil: nextAttempts >= SECURITY.maxAttempts
         ? Date.now() + SECURITY.lockoutMs
@@ -739,6 +923,8 @@ function bootstrap() {
   protectInteractions();
   bindAuthEvents();
   setSearchPanelOpen(false);
+  setRefreshStatus(REFRESH_STATUS.ready);
+  syncRefreshButton();
   setLocked(true);
 
   if (getRemainingLockMs() > 0) {
