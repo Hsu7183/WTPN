@@ -51,40 +51,6 @@
       </section>
     </div>
 
-    <div
-      id="cloud-setup-overlay"
-      class="cloud-setup-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-label="手機即時更新設定"
-      hidden
-    >
-      <section class="cloud-setup-card">
-        <h2 class="cloud-setup-title">啟用手機即時更新</h2>
-        <p class="cloud-setup-note">
-          第一次需貼上 GitHub Fine-grained token。設定完成後，手機每次打開都會自動更新，不再顯示這個視窗。
-        </p>
-        <label class="field field--token">
-          <span>GitHub token</span>
-          <input
-            id="cloud-setup-token"
-            type="password"
-            placeholder="貼上 GitHub Fine-grained token"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-          />
-        </label>
-        <div class="cloud-setup-actions">
-          <button id="cloud-setup-save" class="auth-button" type="button">啟用即時更新</button>
-          <button id="cloud-setup-skip" class="secondary-button secondary-button--ghost" type="button">
-            先看現有資料
-          </button>
-        </div>
-        <p id="cloud-setup-message" class="auth-message" aria-live="polite"></p>
-      </section>
-    </div>
-
     <noscript>
       <div class="noscript-banner">本系統需啟用 JavaScript 才能完成登入驗證與內容保護。</div>
     </noscript>

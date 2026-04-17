@@ -10,7 +10,6 @@ const GITHUB = Object.freeze({
   repo: "WTPN",
   branch: "main",
   workflow: "update-news.yml",
-  tokenKey: "wtpn-github-token",
   apiBase: "https://api.github.com",
   apiVersion: "2026-03-10",
   dispatchPollMs: 4000,
@@ -34,6 +33,14 @@ const SECURITY = Object.freeze({
   lockoutMs: 5 * 60 * 1000,
 });
 
+const CLOUD_CREDENTIAL = Object.freeze({
+  iterations: 210000,
+  salt: "2ZZeHC98zFVYXEEMALiSYA==",
+  iv: "694RHNZGkHC+atcD",
+  ciphertext: "HrnHeRvOVU8RU0xXwO3paAWtrlm/GklkRNztYX04b3jOyybjCayXag==",
+  tag: "4YgrDkWhjS/1XU1Bgnp9fQ==",
+});
+
 const REFRESH_STATUS = Object.freeze({
   ready: "登入後會自動檢查最新資料。",
   loadingStored: "正在載入最近同步資料...",
@@ -47,11 +54,6 @@ const REFRESH_STATUS = Object.freeze({
 const elements = {
   viewportMeta: document.querySelector("#viewport-meta"),
   authOverlay: document.querySelector("#auth-overlay"),
-  cloudSetupOverlay: document.querySelector("#cloud-setup-overlay"),
-  cloudSetupToken: document.querySelector("#cloud-setup-token"),
-  cloudSetupSave: document.querySelector("#cloud-setup-save"),
-  cloudSetupSkip: document.querySelector("#cloud-setup-skip"),
-  cloudSetupMessage: document.querySelector("#cloud-setup-message"),
   authForm: document.querySelector("#auth-form"),
   authPassword: document.querySelector("#auth-password"),
   authKeys: [...document.querySelectorAll(".auth-key")],
@@ -82,7 +84,6 @@ const state = {
   sessionPassword: "",
   refreshInFlight: false,
   githubToken: "",
-  cloudSetupOpen: false,
 };
 
 
@@ -145,16 +146,6 @@ function setRefreshStatus(message, tone = "info") {
 }
 
 
-function loadGithubToken() {
-  return localStorage.getItem(GITHUB.tokenKey)?.trim() ?? "";
-}
-
-
-function persistGithubToken(token) {
-  localStorage.setItem(GITHUB.tokenKey, token);
-}
-
-
 function hasGithubToken() {
   return Boolean(state.githubToken);
 }
@@ -202,33 +193,6 @@ function setAuthMessage(message, tone = "info") {
   }
 
   delete elements.authMessage.dataset.tone;
-}
-
-
-function setCloudSetupMessage(message, tone = "info") {
-  elements.cloudSetupMessage.textContent = message;
-  if (message) {
-    elements.cloudSetupMessage.dataset.tone = tone;
-    return;
-  }
-
-  delete elements.cloudSetupMessage.dataset.tone;
-}
-
-
-function setCloudSetupOpen(isOpen) {
-  state.cloudSetupOpen = isOpen;
-  elements.cloudSetupOverlay.hidden = !isOpen;
-
-  if (!isOpen) {
-    elements.cloudSetupToken.value = "";
-    setCloudSetupMessage("");
-    return;
-  }
-
-  window.setTimeout(() => {
-    elements.cloudSetupToken.focus();
-  }, 30);
 }
 
 
@@ -358,8 +322,8 @@ function setLocked(locked) {
   elements.protectedApp.setAttribute("aria-hidden", String(locked));
 
   if (locked) {
-    setCloudSetupOpen(false);
     state.sessionPassword = "";
+    state.githubToken = "";
     setRefreshStatus(REFRESH_STATUS.ready);
     syncGuardUi({ resetMessage: true });
     if (getRemainingLockMs() > 0) {
@@ -380,6 +344,64 @@ async function digestText(value) {
   return [...new Uint8Array(digest)]
     .map((byte) => byte.toString(16).padStart(2, "0"))
     .join("");
+}
+
+
+function decodeBase64(value) {
+  return Uint8Array.from(atob(value), (char) => char.charCodeAt(0));
+}
+
+
+async function decryptGithubToken(password) {
+  const encoder = new TextEncoder();
+  const seedKey = await crypto.subtle.importKey(
+    "raw",
+    encoder.encode(password),
+    "PBKDF2",
+    false,
+    ["deriveKey"],
+  );
+  const key = await crypto.subtle.deriveKey(
+    {
+      name: "PBKDF2",
+      salt: decodeBase64(CLOUD_CREDENTIAL.salt),
+      iterations: CLOUD_CREDENTIAL.iterations,
+      hash: "SHA-256",
+    },
+    seedKey,
+    {
+      name: "AES-GCM",
+      length: 256,
+    },
+    false,
+    ["decrypt"],
+  );
+
+  const ciphertext = decodeBase64(CLOUD_CREDENTIAL.ciphertext);
+  const tag = decodeBase64(CLOUD_CREDENTIAL.tag);
+  const payload = new Uint8Array(ciphertext.length + tag.length);
+  payload.set(ciphertext);
+  payload.set(tag, ciphertext.length);
+
+  const plaintext = await crypto.subtle.decrypt(
+    {
+      name: "AES-GCM",
+      iv: decodeBase64(CLOUD_CREDENTIAL.iv),
+    },
+    key,
+    payload,
+  );
+  return new TextDecoder().decode(plaintext);
+}
+
+
+async function ensureGithubToken(password) {
+  if (state.githubToken || !password || !isHostedClient()) {
+    return state.githubToken;
+  }
+
+  state.githubToken = await decryptGithubToken(password);
+  return state.githubToken;
 }
 
 
@@ -635,30 +657,6 @@ function updateView() {
 
 
 function bindEvents() {
-  elements.cloudSetupSave.addEventListener("click", () => {
-    const token = elements.cloudSetupToken.value.trim();
-    if (!token) {
-      setCloudSetupMessage("請先貼上 GitHub token。", "warning");
-      elements.cloudSetupToken.focus();
-      return;
-    }
-
-    state.githubToken = token;
-    persistGithubToken(token);
-    setCloudSetupOpen(false);
-    setRefreshStatus("已啟用手機即時更新，正在確認最新資料...", "info");
-    loadNews({
-      password: state.sessionPassword,
-      preferLive: true,
-      trigger: "cloud-setup",
-    }).catch(handleLoadFailure);
-  });
-
-  elements.cloudSetupSkip.addEventListener("click", () => {
-    setCloudSetupOpen(false);
-    setRefreshStatus("目前先顯示最近同步資料。若要手機每次打開都即時更新，請重新登入後完成一次設定。", "warning");
-  });
-
   elements.searchToggle.addEventListener("click", () => {
     setSearchPanelOpen(!state.searchPanelOpen);
   });
@@ -1003,6 +1001,15 @@ async function loadNews({
         console.warn("Latest refresh failed, falling back to stored news.", error);
       }
 
+      if (!payload && localRefreshUnavailable && !hasGithubToken()) {
+        try {
+          await ensureGithubToken(password);
+        } catch (error) {
+          liveError = error;
+          console.warn("Unable to prepare cloud refresh credential.", error);
+        }
+      }
+
       if (!payload && localRefreshUnavailable && hasGithubToken() && canRequestCloudRefresh()) {
         try {
           const cloudRefresh = await requestCloudRefresh();
@@ -1051,9 +1058,8 @@ async function loadNews({
           /bad credentials|requires authentication|github api failed/i.test(liveError.message)
         ) {
           state.githubToken = "";
-          localStorage.removeItem(GITHUB.tokenKey);
-          setCloudSetupMessage("手機上的 GitHub token 已失效，請重新貼上新的 token。", "warning");
-          setCloudSetupOpen(true);
+          setRefreshStatus("手機自動更新權限失效，已改載入最近同步資料。", "warning");
+          return;
         }
         setRefreshStatus(
           `自動檢查更新失敗：${liveError.message}；已改載入最近同步資料。`,
@@ -1063,16 +1069,7 @@ async function loadNews({
       }
 
       if (localRefreshUnavailable && !hasGithubToken()) {
-        if (isHostedClient()) {
-          setRefreshStatus("目前先顯示最近同步資料。完成一次手機即時更新設定後，之後每次打開都會自動更新。", "warning");
-          if (!state.cloudSetupOpen) {
-            setCloudSetupMessage("第一次需要輸入 GitHub token，之後手機每次打開都會自動更新。", "info");
-            setCloudSetupOpen(true);
-          }
-          return;
-        }
-
-        setRefreshStatus(buildStoredMessage(payload), "info");
+        setRefreshStatus("目前先顯示最近同步資料。手機自動更新暫時不可用。", "warning");
         return;
       }
 
@@ -1110,6 +1107,12 @@ function handleLoadFailure(error) {
 
 async function unlockApp(password) {
   state.sessionPassword = password;
+  try {
+    await ensureGithubToken(password);
+  } catch (error) {
+    console.warn("Unable to unlock cloud refresh credential.", error);
+    state.githubToken = "";
+  }
   setLocked(false);
   setAuthMessage("");
   await loadNews({ password, preferLive: true, trigger: "login" });
@@ -1248,8 +1251,7 @@ function bindAuthEvents() {
 function bootstrap() {
   protectInteractions();
   bindAuthEvents();
-  state.githubToken = loadGithubToken();
-  setCloudSetupOpen(false);
+  state.githubToken = "";
   setSearchPanelOpen(false);
   setRefreshStatus(REFRESH_STATUS.ready);
   setLocked(true);
