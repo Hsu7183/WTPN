@@ -26,6 +26,10 @@ const AUTO_REFRESH = Object.freeze({
   cloudPendingMs: 8 * 60 * 1000,
 });
 
+const CACHE = Object.freeze({
+  payloadKey: "wtpn-news-cache-v1",
+});
+
 const SECURITY = Object.freeze({
   passwordHash: "2a6dda3118910de47066df2ef71acd693ae7bb48dcba8eaea86cd75d4813863d",
   guardKey: "wtpn-auth-guard",
@@ -45,6 +49,7 @@ const REFRESH_STATUS = Object.freeze({
   ready: "登入後會自動檢查最新資料。",
   loadingStored: "正在載入最近同步資料...",
   loadingLive: "正在自動檢查最新資料...",
+  backgroundSync: "已載入前次資料，正在背景檢查最新資料...",
   cloudDispatching: "已送出雲端更新要求，等待 GitHub 開始執行...",
   cloudRunning: "GitHub 正在更新新聞資料，請稍候...",
   cloudPublishing: "雲端資料已更新，等待網站發佈最新版本...",
@@ -84,6 +89,8 @@ const state = {
   sessionPassword: "",
   refreshInFlight: false,
   githubToken: "",
+  payloadStamp: "",
+  backgroundRefreshTask: null,
 };
 
 
@@ -143,6 +150,56 @@ function setRefreshStatus(message, tone = "info") {
   }
 
   delete elements.refreshStatus.dataset.tone;
+}
+
+
+function getPayloadStamp(payload) {
+  if (!payload) {
+    return "";
+  }
+  return [
+    payload.generated_at ?? "",
+    payload.total_articles ?? "",
+    Array.isArray(payload.articles) ? payload.articles.length : 0,
+  ].join("|");
+}
+
+
+function loadCachedPayload() {
+  try {
+    const raw = localStorage.getItem(CACHE.payloadKey);
+    if (!raw) {
+      return null;
+    }
+
+    const payload = JSON.parse(raw);
+    if (!payload || !Array.isArray(payload.articles)) {
+      return null;
+    }
+
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+
+function persistPayloadCache(payload) {
+  try {
+    localStorage.setItem(CACHE.payloadKey, JSON.stringify(payload));
+  } catch {
+    // Ignore local storage quota or private mode issues.
+  }
+}
+
+
+function hasRenderablePayload(payload) {
+  return Boolean(payload) && Array.isArray(payload.articles) && payload.articles.length > 0;
+}
+
+
+function shouldReplacePayload(payload) {
+  return Boolean(payload) && getPayloadStamp(payload) !== state.payloadStamp;
 }
 
 
@@ -510,6 +567,8 @@ function applyPayload(payload) {
   }
 
   updateView();
+  state.payloadStamp = getPayloadStamp(payload);
+  persistPayloadCache(payload);
 }
 
 
@@ -727,7 +786,9 @@ async function fetchStoredNews() {
   if (!response.ok) {
     throw new Error(`Failed to load ${DATA_URL}`);
   }
-  return response.json();
+  const payload = await response.json();
+  persistPayloadCache(payload);
+  return payload;
 }
 
 
@@ -958,6 +1019,11 @@ function buildStoredMessage(payload) {
 }
 
 
+function buildBackgroundStoredMessage(payload) {
+  return `${buildStoredMessage(payload)} 正在背景檢查最新資料。`;
+}
+
+
 function buildCloudRefreshMessage(payload, dataUpdated) {
   if (!dataUpdated) {
     return {
@@ -974,119 +1040,188 @@ function buildCloudRefreshMessage(payload, dataUpdated) {
 }
 
 
-async function loadNews({
-  password = state.sessionPassword,
-  preferLive = Boolean(password),
-  trigger = "load",
-} = {}) {
+async function hydrateStoredNewsForDisplay() {
+  const cachedPayload = loadCachedPayload();
+  let preferredPayload = cachedPayload;
+
+  if (cachedPayload) {
+    applyPayload(cachedPayload);
+    setRefreshStatus(buildBackgroundStoredMessage(cachedPayload), "info");
+  } else {
+    setRefreshBusy(true);
+    setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
+  }
+
+  try {
+    const storedPayload = await fetchStoredNews();
+    preferredPayload = storedPayload;
+
+    if (shouldReplacePayload(storedPayload) || !cachedPayload) {
+      applyPayload(storedPayload);
+    }
+
+    setRefreshStatus(buildBackgroundStoredMessage(storedPayload), "info");
+    return preferredPayload;
+  } catch (error) {
+    console.warn("Unable to load stored news payload.", error);
+
+    if (hasRenderablePayload(cachedPayload)) {
+      setRefreshStatus(
+        `已載入前次資料；同步資料讀取失敗：${error.message}。`,
+        "warning",
+      );
+      return preferredPayload;
+    }
+
+    throw error;
+  } finally {
+    setRefreshBusy(false);
+  }
+}
+
+
+async function runBackgroundRefresh({ password = state.sessionPassword, basePayload = null } = {}) {
+  if (!password) {
+    return;
+  }
+
   let payload = null;
   let liveError = null;
   let localRefreshUnavailable = false;
   let cloudRefreshUsed = false;
   let cloudDataUpdated = false;
+  const previousGeneratedAt = basePayload?.generated_at ?? "";
 
   setRefreshBusy(true);
-  setRefreshStatus(
-    preferLive && password ? REFRESH_STATUS.loadingLive : REFRESH_STATUS.loadingStored,
-    "info",
-  );
+  if (hasRenderablePayload(basePayload)) {
+    setRefreshStatus(buildBackgroundStoredMessage(basePayload), "info");
+  } else {
+    setRefreshStatus(REFRESH_STATUS.loadingLive, "info");
+  }
 
   try {
-    if (preferLive && password) {
+    try {
+      payload = await requestLocalRefresh(password);
+      localRefreshUnavailable = payload === null;
+    } catch (error) {
+      liveError = error;
+      console.warn("Latest refresh failed, falling back to stored news.", error);
+    }
+
+    if (!payload && localRefreshUnavailable && !hasGithubToken()) {
       try {
-        payload = await requestLocalRefresh(password);
-        localRefreshUnavailable = payload === null;
+        await ensureGithubToken(password);
       } catch (error) {
         liveError = error;
-        console.warn("Latest refresh failed, falling back to stored news.", error);
-      }
-
-      if (!payload && localRefreshUnavailable && !hasGithubToken()) {
-        try {
-          await ensureGithubToken(password);
-        } catch (error) {
-          liveError = error;
-          console.warn("Unable to prepare cloud refresh credential.", error);
-        }
-      }
-
-      if (!payload && localRefreshUnavailable && hasGithubToken() && canRequestCloudRefresh()) {
-        try {
-          const cloudRefresh = await requestCloudRefresh();
-          payload = cloudRefresh.payload;
-          cloudRefreshUsed = true;
-          cloudDataUpdated = cloudRefresh.dataUpdated;
-          liveError = null;
-        } catch (error) {
-          liveError = error;
-          console.warn("Cloud refresh failed, falling back to stored news.", error);
-        }
-      }
-
-      if (!payload && localRefreshUnavailable && hasGithubToken() && hasRecentCloudRefreshRequest()) {
-        try {
-          const previousPayload = await fetchStoredNews();
-          setRefreshStatus("最近已送出雲端更新要求，正在確認最新資料...", "info");
-          const published = await waitForPublishedData(previousPayload?.generated_at ?? "");
-          payload = published.payload;
-          cloudRefreshUsed = true;
-          cloudDataUpdated = published.updated;
-          liveError = null;
-        } catch (error) {
-          liveError = error;
-          console.warn("Waiting for cloud publish failed, falling back to stored news.", error);
-        }
+        console.warn("Unable to prepare cloud refresh credential.", error);
       }
     }
 
-    if (!payload) {
-      payload = await fetchStoredNews();
+    if (!payload && localRefreshUnavailable && hasGithubToken() && canRequestCloudRefresh()) {
+      try {
+        const cloudRefresh = await requestCloudRefresh();
+        payload = cloudRefresh.payload;
+        cloudRefreshUsed = true;
+        cloudDataUpdated = cloudRefresh.dataUpdated;
+        liveError = null;
+      } catch (error) {
+        liveError = error;
+        console.warn("Cloud refresh failed, falling back to stored news.", error);
+      }
     }
 
-    applyPayload(payload);
+    if (!payload && localRefreshUnavailable && hasGithubToken() && hasRecentCloudRefreshRequest()) {
+      try {
+        setRefreshStatus("最近已送出雲端更新要求，正在背景確認最新資料...", "info");
+        const published = await waitForPublishedData(previousGeneratedAt);
+        payload = published.payload;
+        cloudRefreshUsed = true;
+        cloudDataUpdated = published.updated;
+        liveError = null;
+      } catch (error) {
+        liveError = error;
+        console.warn("Waiting for cloud publish failed, falling back to stored news.", error);
+      }
+    }
 
-    if (preferLive && password) {
-      if (cloudRefreshUsed) {
-        const notice = buildCloudRefreshMessage(payload, cloudDataUpdated);
-        setRefreshStatus(notice.message, notice.tone);
+    if (payload && shouldReplacePayload(payload)) {
+      applyPayload(payload);
+    }
+
+    if (cloudRefreshUsed) {
+      const notice = buildCloudRefreshMessage(payload ?? basePayload ?? {}, cloudDataUpdated);
+      setRefreshStatus(notice.message, notice.tone);
+      return;
+    }
+
+    if (liveError) {
+      if (
+        hasGithubToken() &&
+        /bad credentials|requires authentication|github api failed/i.test(liveError.message)
+      ) {
+        state.githubToken = "";
+        setRefreshStatus("背景更新權限失效，先顯示前次資料。", "warning");
         return;
       }
 
-      if (liveError) {
-        if (
-          hasGithubToken() &&
-          /bad credentials|requires authentication|github api failed/i.test(liveError.message)
-        ) {
-          state.githubToken = "";
-          setRefreshStatus("手機自動更新權限失效，已改載入最近同步資料。", "warning");
-          return;
-        }
-        setRefreshStatus(
-          `自動檢查更新失敗：${liveError.message}；已改載入最近同步資料。`,
-          "warning",
-        );
-        return;
-      }
+      setRefreshStatus(
+        `背景更新失敗：${liveError.message}；先顯示前次資料。`,
+        "warning",
+      );
+      return;
+    }
 
-      if (localRefreshUnavailable && !hasGithubToken()) {
-        setRefreshStatus("目前先顯示最近同步資料。手機自動更新暫時不可用。", "warning");
-        return;
-      }
+    if (localRefreshUnavailable && !hasGithubToken()) {
+      setRefreshStatus("已載入前次資料；背景更新暫時不可用。", "warning");
+      return;
+    }
 
-      if (localRefreshUnavailable) {
-        setRefreshStatus("雲端更新尚未完成，先顯示最近同步資料。", "warning");
-        return;
-      }
+    if (localRefreshUnavailable) {
+      setRefreshStatus("已載入前次資料；背景更新仍在處理中。", "warning");
+      return;
+    }
 
+    if (payload) {
       const notice = buildLiveRefreshNotice(payload);
       setRefreshStatus(notice.message, notice.tone);
       return;
     }
 
-    setRefreshStatus(buildStoredMessage(payload), "info");
+    if (hasRenderablePayload(basePayload)) {
+      setRefreshStatus(buildStoredMessage(basePayload), "info");
+      return;
+    }
+
+    setRefreshStatus("已載入最近同步資料。", "info");
   } finally {
     setRefreshBusy(false);
   }
+}
+
+
+function startBackgroundRefresh(options = {}) {
+  if (state.backgroundRefreshTask) {
+    return state.backgroundRefreshTask;
+  }
+
+  let task = null;
+  task = runBackgroundRefresh(options)
+    .catch((error) => {
+      console.warn("Background refresh failed.", error);
+      if (!state.articles.length) {
+        handleLoadFailure(error);
+        return;
+      }
+      setRefreshStatus(`背景更新失敗：${error.message}；先顯示前次資料。`, "warning");
+    })
+    .finally(() => {
+      if (state.backgroundRefreshTask === task) {
+        state.backgroundRefreshTask = null;
+      }
+    });
+
+  state.backgroundRefreshTask = task;
+  return task;
 }
 
 
@@ -1107,15 +1242,26 @@ function handleLoadFailure(error) {
 
 async function unlockApp(password) {
   state.sessionPassword = password;
-  try {
-    await ensureGithubToken(password);
-  } catch (error) {
-    console.warn("Unable to unlock cloud refresh credential.", error);
-    state.githubToken = "";
-  }
   setLocked(false);
   setAuthMessage("");
-  await loadNews({ password, preferLive: true, trigger: "login" });
+
+  let storedPayload = loadCachedPayload();
+  if (hasRenderablePayload(storedPayload)) {
+    applyPayload(storedPayload);
+    setRefreshStatus(buildBackgroundStoredMessage(storedPayload), "info");
+  } else {
+    setRefreshBusy(true);
+    setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
+  }
+
+  try {
+    storedPayload = await hydrateStoredNewsForDisplay();
+  } catch (error) {
+    handleLoadFailure(error);
+    return;
+  }
+
+  void startBackgroundRefresh({ password, basePayload: storedPayload });
 }
 
 
