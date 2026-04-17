@@ -5,6 +5,22 @@ const VIEWPORT = Object.freeze({
   default: "width=device-width, initial-scale=1, viewport-fit=cover",
 });
 
+const GITHUB = Object.freeze({
+  owner: "Hsu7183",
+  repo: "WTPN",
+  branch: "main",
+  workflow: "update-news.yml",
+  tokenKey: "wtpn-github-token",
+  apiBase: "https://api.github.com",
+  apiVersion: "2026-03-10",
+  dispatchPollMs: 4000,
+  dispatchTimeoutMs: 90 * 1000,
+  runPollMs: 5000,
+  runTimeoutMs: 6 * 60 * 1000,
+  dataPollMs: 5000,
+  dataTimeoutMs: 3 * 60 * 1000,
+});
+
 const SECURITY = Object.freeze({
   passwordHash: "2a6dda3118910de47066df2ef71acd693ae7bb48dcba8eaea86cd75d4813863d",
   guardKey: "wtpn-auth-guard",
@@ -18,6 +34,12 @@ const REFRESH_STATUS = Object.freeze({
   loadingLive: "正在抓取最新資料...",
   fallback:
     "目前無法連到本機更新服務，已改載入現有資料。若要即時更新，請用 local_server.py 開啟。",
+  cloudTokenNeeded:
+    "手機即時更新需要先設定 GitHub token。請展開搜尋區，貼上只授權這個 repo 的 token。",
+  cloudDispatching: "已送出雲端更新要求，等待 GitHub 開始執行...",
+  cloudRunning: "GitHub 正在更新新聞資料，請稍候...",
+  cloudPublishing: "雲端資料已更新，等待網站發佈最新版本...",
+  cloudPublished: "手機雲端資料已更新完成。",
 });
 
 const elements = {
@@ -33,6 +55,10 @@ const elements = {
   lastUpdated: document.querySelector("#last-updated"),
   refreshButton: document.querySelector("#refresh-button"),
   refreshStatus: document.querySelector("#refresh-status"),
+  githubTokenInput: document.querySelector("#github-token-input"),
+  saveGithubToken: document.querySelector("#save-github-token"),
+  clearGithubToken: document.querySelector("#clear-github-token"),
+  cloudTokenStatus: document.querySelector("#cloud-token-status"),
   searchToggle: document.querySelector("#search-toggle"),
   searchPanel: document.querySelector("#search-panel"),
   searchInput: document.querySelector("#search-input"),
@@ -53,6 +79,7 @@ const state = {
   searchPanelOpen: false,
   sessionPassword: "",
   refreshInFlight: false,
+  githubToken: "",
 };
 
 
@@ -115,6 +142,51 @@ function setRefreshStatus(message, tone = "info") {
 }
 
 
+function setCloudTokenStatus(message, tone = "info") {
+  elements.cloudTokenStatus.textContent = message;
+
+  if (message) {
+    elements.cloudTokenStatus.dataset.tone = tone;
+    return;
+  }
+
+  delete elements.cloudTokenStatus.dataset.tone;
+}
+
+
+function loadGithubToken() {
+  return localStorage.getItem(GITHUB.tokenKey)?.trim() ?? "";
+}
+
+
+function persistGithubToken(token) {
+  localStorage.setItem(GITHUB.tokenKey, token);
+}
+
+
+function clearStoredGithubToken() {
+  localStorage.removeItem(GITHUB.tokenKey);
+}
+
+
+function hasGithubToken() {
+  return Boolean(state.githubToken);
+}
+
+
+function syncCloudTokenUi() {
+  if (hasGithubToken()) {
+    elements.githubTokenInput.value = "";
+    elements.githubTokenInput.placeholder = "此裝置已儲存 GitHub token";
+    setCloudTokenStatus("已儲存在目前裝置。手機按「抓最新資料」就能觸發雲端更新。", "success");
+    return;
+  }
+
+  elements.githubTokenInput.placeholder = "貼上 GitHub Fine-grained token";
+  setCloudTokenStatus("尚未設定手機雲端更新權杖。", "info");
+}
+
+
 function syncRefreshButton() {
   elements.refreshButton.disabled = state.refreshInFlight || !state.sessionPassword;
   elements.refreshButton.textContent = state.refreshInFlight ? "更新中..." : "抓最新資料";
@@ -125,6 +197,13 @@ function setRefreshBusy(isBusy) {
   state.refreshInFlight = isBusy;
   elements.results.setAttribute("aria-busy", String(isBusy));
   syncRefreshButton();
+}
+
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, ms);
+  });
 }
 
 
@@ -554,6 +633,28 @@ function bindEvents() {
     }).catch(handleLoadFailure);
   });
 
+  elements.saveGithubToken.addEventListener("click", () => {
+    const token = elements.githubTokenInput.value.trim();
+    if (!token) {
+      setCloudTokenStatus("請先貼上 GitHub token。", "warning");
+      elements.githubTokenInput.focus();
+      return;
+    }
+
+    state.githubToken = token;
+    persistGithubToken(token);
+    syncCloudTokenUi();
+    setRefreshStatus("已儲存手機雲端更新權杖。之後可直接從手機觸發 GitHub 更新。", "success");
+  });
+
+  elements.clearGithubToken.addEventListener("click", () => {
+    state.githubToken = "";
+    clearStoredGithubToken();
+    elements.githubTokenInput.value = "";
+    syncCloudTokenUi();
+    setRefreshStatus("已清除這台裝置儲存的 GitHub token。", "info");
+  });
+
   elements.searchInput.addEventListener("input", updateView);
   elements.sourceFilter.addEventListener("change", updateView);
   elements.sortSelect.addEventListener("change", updateView);
@@ -624,7 +725,7 @@ async function fetchStoredNews() {
 }
 
 
-async function requestLiveRefresh(password) {
+async function requestLocalRefresh(password) {
   try {
     const response = await fetch(REFRESH_URL, {
       method: "POST",
@@ -651,6 +752,153 @@ async function requestLiveRefresh(password) {
     }
     throw error;
   }
+}
+
+
+async function githubApiRequest(path, { method = "GET", body = null, token = state.githubToken } = {}) {
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": GITHUB.apiVersion,
+  };
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  if (body !== null) {
+    headers["Content-Type"] = "application/json";
+  }
+
+  const response = await fetch(`${GITHUB.apiBase}${path}`, {
+    method,
+    headers,
+    body: body === null ? null : JSON.stringify(body),
+    cache: "no-store",
+  });
+
+  if (response.ok) {
+    if (response.status === 204) {
+      return null;
+    }
+    return response.json();
+  }
+
+  const errorPayload = await response.json().catch(() => null);
+  throw new Error(errorPayload?.message ?? `GitHub API failed (${response.status})`);
+}
+
+
+async function dispatchCloudRefresh() {
+  const requestId = `wtpn-${Date.now()}`;
+
+  await githubApiRequest(
+    `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/workflows/${GITHUB.workflow}/dispatches`,
+    {
+      method: "POST",
+      body: {
+        ref: GITHUB.branch,
+        inputs: {
+          request_id: requestId,
+          trigger_source: "browser",
+        },
+      },
+    },
+  );
+
+  return {
+    requestedAt: Date.now(),
+  };
+}
+
+
+async function waitForWorkflowRun(requestedAt) {
+  const deadline = Date.now() + GITHUB.dispatchTimeoutMs;
+
+  while (Date.now() < deadline) {
+    const payload = await githubApiRequest(
+      `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/workflows/${GITHUB.workflow}/runs?event=workflow_dispatch&branch=${GITHUB.branch}&per_page=10`,
+    );
+    const run = (payload?.workflow_runs ?? []).find((item) => {
+      return Date.parse(item.created_at) >= requestedAt - 15000;
+    });
+
+    if (run) {
+      return run;
+    }
+
+    await sleep(GITHUB.dispatchPollMs);
+  }
+
+  throw new Error("GitHub 還沒有開始執行更新工作，請稍後再試。");
+}
+
+
+async function waitForWorkflowCompletion(runId) {
+  const deadline = Date.now() + GITHUB.runTimeoutMs;
+
+  while (Date.now() < deadline) {
+    const run = await githubApiRequest(
+      `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/runs/${runId}`,
+    );
+
+    if (run.status === "completed") {
+      if (run.conclusion === "success") {
+        return run;
+      }
+
+      throw new Error(`GitHub 更新失敗：${run.conclusion ?? "unknown"}`);
+    }
+
+    await sleep(GITHUB.runPollMs);
+  }
+
+  throw new Error("GitHub 更新逾時，請稍後再試。");
+}
+
+
+async function waitForPublishedData(previousGeneratedAt) {
+  const deadline = Date.now() + GITHUB.dataTimeoutMs;
+  let latestPayload = null;
+
+  while (Date.now() < deadline) {
+    latestPayload = await fetchStoredNews();
+    const nextGeneratedAt = latestPayload?.generated_at ?? "";
+
+    if (nextGeneratedAt && nextGeneratedAt !== previousGeneratedAt) {
+      return {
+        payload: latestPayload,
+        updated: true,
+      };
+    }
+
+    await sleep(GITHUB.dataPollMs);
+  }
+
+  return {
+    payload: latestPayload ?? await fetchStoredNews(),
+    updated: false,
+  };
+}
+
+
+async function requestCloudRefresh() {
+  const previousPayload = await fetchStoredNews();
+  const previousGeneratedAt = previousPayload?.generated_at ?? "";
+
+  setRefreshStatus(REFRESH_STATUS.cloudDispatching, "info");
+  const dispatchMeta = await dispatchCloudRefresh();
+  const run = await waitForWorkflowRun(dispatchMeta.requestedAt);
+
+  setRefreshStatus(REFRESH_STATUS.cloudRunning, "info");
+  await waitForWorkflowCompletion(run.id);
+
+  setRefreshStatus(REFRESH_STATUS.cloudPublishing, "info");
+  const published = await waitForPublishedData(previousGeneratedAt);
+
+  return {
+    payload: published.payload,
+    dataUpdated: published.updated,
+  };
 }
 
 
@@ -703,6 +951,22 @@ function buildStoredMessage(payload) {
 }
 
 
+function buildCloudRefreshMessage(payload, dataUpdated) {
+  if (!dataUpdated) {
+    return {
+      tone: "warning",
+      message: "GitHub 已完成更新，但網站新版本還在發佈中，請再等一下重新整理。",
+    };
+  }
+
+  const notice = buildLiveRefreshNotice(payload);
+  return {
+    tone: notice.tone,
+    message: `${REFRESH_STATUS.cloudPublished} ${notice.message}`,
+  };
+}
+
+
 async function loadNews({
   password = state.sessionPassword,
   preferLive = Boolean(password),
@@ -710,7 +974,9 @@ async function loadNews({
 } = {}) {
   let payload = null;
   let liveError = null;
-  let liveRefreshUnavailable = false;
+  let localRefreshUnavailable = false;
+  let cloudRefreshUsed = false;
+  let cloudDataUpdated = false;
 
   setRefreshBusy(true);
   setRefreshStatus(
@@ -721,11 +987,24 @@ async function loadNews({
   try {
     if (preferLive && password) {
       try {
-        payload = await requestLiveRefresh(password);
-        liveRefreshUnavailable = payload === null;
+        payload = await requestLocalRefresh(password);
+        localRefreshUnavailable = payload === null;
       } catch (error) {
         liveError = error;
         console.warn("Latest refresh failed, falling back to stored news.", error);
+      }
+
+      if (!payload && localRefreshUnavailable && hasGithubToken()) {
+        try {
+          const cloudRefresh = await requestCloudRefresh();
+          payload = cloudRefresh.payload;
+          cloudRefreshUsed = true;
+          cloudDataUpdated = cloudRefresh.dataUpdated;
+          liveError = null;
+        } catch (error) {
+          liveError = error;
+          console.warn("Cloud refresh failed, falling back to stored news.", error);
+        }
       }
     }
 
@@ -736,6 +1015,12 @@ async function loadNews({
     applyPayload(payload);
 
     if (preferLive && password) {
+      if (cloudRefreshUsed) {
+        const notice = buildCloudRefreshMessage(payload, cloudDataUpdated);
+        setRefreshStatus(notice.message, notice.tone);
+        return;
+      }
+
       if (liveError) {
         setRefreshStatus(
           `抓最新資料失敗：${liveError.message}；已改載入現有資料。`,
@@ -744,7 +1029,18 @@ async function loadNews({
         return;
       }
 
-      if (liveRefreshUnavailable) {
+      if (localRefreshUnavailable && !hasGithubToken()) {
+        setSearchPanelOpen(true);
+        setRefreshStatus(REFRESH_STATUS.cloudTokenNeeded, "warning");
+        setCloudTokenStatus(
+          "請先儲存 GitHub token，之後手機按「抓最新資料」就能直接觸發雲端更新。",
+          "warning",
+        );
+        elements.githubTokenInput.focus();
+        return;
+      }
+
+      if (localRefreshUnavailable) {
         setRefreshStatus(REFRESH_STATUS.fallback, "warning");
         return;
       }
@@ -922,8 +1218,10 @@ function bindAuthEvents() {
 function bootstrap() {
   protectInteractions();
   bindAuthEvents();
+  state.githubToken = loadGithubToken();
   setSearchPanelOpen(false);
   setRefreshStatus(REFRESH_STATUS.ready);
+  syncCloudTokenUi();
   syncRefreshButton();
   setLocked(true);
 

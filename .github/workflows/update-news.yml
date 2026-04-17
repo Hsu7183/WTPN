@@ -2,11 +2,24 @@ name: Update News Index
 
 on:
   workflow_dispatch:
+    inputs:
+      request_id:
+        description: Client request identifier
+        required: false
+        type: string
+      trigger_source:
+        description: Trigger source
+        required: false
+        type: string
   schedule:
     - cron: "0 18 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
 
 jobs:
   update-news:

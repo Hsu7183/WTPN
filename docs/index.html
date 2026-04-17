@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
     <meta name="referrer" content="no-referrer" />
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
     <title>台灣警政「風紀類」輿情蒐報系統</title>
@@ -123,6 +123,38 @@
               資料來源為 Google News RSS 搜尋結果，再依台灣媒體來源名稱進行過濾。
               內容適合做監測與索引，引用前請回到原始新聞頁面確認。
             </div>
+
+            <section class="cloud-admin" aria-label="手機即時更新設定">
+              <p class="cloud-admin-title">手機即時更新設定</p>
+              <p class="cloud-admin-note">
+                如果你是從手機或 GitHub Pages 開啟，請先貼上只授權這個 repo 的 GitHub Fine-grained token。
+                權杖只會保存在目前這台裝置的瀏覽器。
+              </p>
+              <label class="field field--token">
+                <span>GitHub token</span>
+                <input
+                  id="github-token-input"
+                  type="password"
+                  placeholder="貼上 GitHub Fine-grained token"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                />
+              </label>
+              <div class="cloud-admin-actions">
+                <button id="save-github-token" class="secondary-button" type="button">
+                  儲存手機更新權杖
+                </button>
+                <button
+                  id="clear-github-token"
+                  class="secondary-button secondary-button--ghost"
+                  type="button"
+                >
+                  清除權杖
+                </button>
+              </div>
+              <p id="cloud-token-status" class="cloud-token-status" aria-live="polite"></p>
+            </section>
           </div>
         </section>
 
