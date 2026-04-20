@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 
 PROJECT_NAME = "WTPN"
 OUTPUT_PATH = Path("docs/data/news.json")
-MAX_ITEMS_PER_QUERY = int(os.getenv("MAX_ITEMS_PER_QUERY", "30"))
+MAX_ITEMS_PER_QUERY = int(os.getenv("MAX_ITEMS_PER_QUERY", "50"))
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "365"))
 TIMEOUT_SECONDS = 30
 USER_AGENT = (
@@ -29,6 +29,8 @@ GENERAL_SEARCH_KEYWORDS = [
     "員警風紀",
     "警員風紀",
     "警察風紀",
+    "警紀案",
+    "色警",
     "員警 違紀",
     "警員 違紀",
     "員警 違法違紀",
@@ -58,8 +60,14 @@ BROAD_MISCONDUCT_SEARCH_TERMS = (
     "洩個資",
     "偷查個資",
     "查個資",
+    "查詢個資",
+    "私查個資",
+    "濫查個資",
+    "濫查",
     "違法查個資",
     "非法查詢個資",
+    "違規查詢",
+    "非因公查詢",
     "勾結 詐團",
     "勾結 博弈",
     "勾結 黑道",
@@ -76,9 +84,18 @@ BROAD_MISCONDUCT_SEARCH_TERMS = (
     "猥褻",
     "援交",
     "偷拍",
+    "無故攝錄性影像",
+    "攝錄性影像",
     "妨害秘密",
+    "宿舍 偷拍",
+    "盥洗室 偷拍",
+    "浴室 偷拍",
+    "洗澡 偷拍",
+    "如廁 偷拍",
     "合成 性影像",
     "不當交往",
+    "討債",
+    "債務糾紛",
     "詐領加班費",
     "浮報 加班費",
     "偽造文書",
@@ -90,11 +107,29 @@ SPECIAL_SEARCH_KEYWORDS = [
     "非法查詢個資 員警",
     "員警 偷查個資",
     "警察 偷查個資",
+    "員警 私查個資",
+    "警察 私查個資",
+    "員警 濫查個資",
+    "警察 濫查個資",
+    "員警 查詢個資",
+    "警察 查詢個資",
     "副所長 偷查個資",
     "員警 違法查個資",
     "警察 違法查個資",
+    "員警 違規查詢 個資",
+    "警察 違規查詢 個資",
+    "員警 非因公 查詢",
+    "警察 非因公 查詢",
     "員警 查個資 討債",
     "警察 查個資 討債",
+    "員警 查詢個資 討債",
+    "警察 查詢個資 討債",
+    "員警 債務糾紛 個資",
+    "警察 債務糾紛 個資",
+    "員警 幫友人 查個資",
+    "警察 幫友人 查個資",
+    "色警 偷查個資",
+    "色警 個資 討債",
     "鍾文智 偷查個資",
     "鍾文智 查個資",
     "鍾文智 警察 個資",
@@ -123,7 +158,19 @@ SPECIAL_SEARCH_KEYWORDS = [
     "員警 贓款",
     "員警 創意私房",
     "員警 針孔 偷拍",
+    "員警 無故攝錄性影像",
+    "警察 無故攝錄性影像",
+    "員警 偷拍 女警",
+    "警察 偷拍 女警",
     "男警 偷拍 女警",
+    "女警 偷拍",
+    "女警 洗澡 偷拍",
+    "女警 沐浴 偷拍",
+    "女警 盥洗室 偷拍",
+    "色警 偷拍",
+    "色警 偷拍 女警",
+    "警局 宿舍 偷拍",
+    "分局 宿舍 偷拍",
     "員警 妨害秘密",
     "員警 性招待",
     "員警 養生館",
@@ -148,7 +195,7 @@ RANK_FOCUSED_QUERY_MAP = {
     "刑警": ("洩密", "包庇", "涉貪", "勾結 詐團"),
     "警政監": ("博弈 洩密", "涉貪", "收賄"),
     "男警": ("偷拍", "性騷", "性侵", "妨害秘密", "不實影像"),
-    "女警": ("涉貪", "勾結 詐團"),
+    "女警": ("偷拍", "妨害秘密", "性騷", "性侵", "針孔 偷拍"),
 }
 
 
@@ -240,6 +287,21 @@ MANUAL_ARTICLE_SEEDS = [
             "警察 查個資 討債",
         ],
     },
+    {
+        "title": "南投女警沐浴驚見鏡頭崩潰求醫！分局揪色警「知法犯法」二審重判",
+        "source": "Yahoo新聞",
+        "link": "https://tw.news.yahoo.com/%E5%8D%97%E6%8A%95%E5%A5%B3%E8%AD%A6%E6%B2%90%E6%B5%B4%E9%A9%9A%E8%A6%8B%E9%8F%A1%E9%A0%AD%E5%B4%A9%E6%BD%B0%E6%B1%82%E9%86%AB-%E5%88%86%E5%B1%80%E6%8F%AA%E8%89%B2%E8%AD%A6-%E7%9F%A5%E6%B3%95%E7%8A%AF%E6%B3%95-%E4%BA%8C%E5%AF%A9%E9%87%8D%E5%88%A4-041243223.html",
+        "summary": (
+            "南投一名張姓員警趁女同事在分局宿舍盥洗時持手機從門板上方偷拍，"
+            "二審認定知法犯法且犯後試圖刪除影像，改判有期徒刑8月。"
+        ),
+        "published_at": "2026-03-25T16:12:00Z",
+        "matched_keywords": [
+            "色警 偷拍",
+            "女警 沐浴 偷拍",
+            "警局 宿舍 偷拍",
+        ],
+    },
 ]
 
 TAG_RULES = {
@@ -247,12 +309,37 @@ TAG_RULES = {
     "性紀律": ["性騷", "性侵", "猥褻", "援交", "性招待", "護膚店", "不當場所"],
     "酒駕": ["酒駕"],
     "包庇": ["包庇", "關說", "護航", "縱放"],
-    "洩密": ["洩密", "洩個資", "偷查個資", "查個資", "個資", "偵查資料", "監視器", "警示帳戶"],
+    "洩密": [
+        "洩密",
+        "洩個資",
+        "偷查個資",
+        "查個資",
+        "查詢個資",
+        "私查個資",
+        "濫查個資",
+        "違規查詢",
+        "非因公查詢",
+        "個資",
+        "偵查資料",
+        "監視器",
+        "警示帳戶",
+        "討債",
+    ],
     "詐欺": ["詐欺", "詐團", "詐騙集團", "洗錢", "車手"],
     "博弈": ["博弈", "賭場", "賭博電玩", "地下匯兌"],
     "毒品": ["毒品", "吸毒", "販毒", "安非他命", "K他命"],
     "吞贓": ["吞贓", "贓款", "證物室", "侵占"],
-    "偷拍": ["偷拍", "針孔", "妨害秘密", "不實影像", "性影像", "創意私房"],
+    "偷拍": [
+        "偷拍",
+        "針孔",
+        "妨害秘密",
+        "不實影像",
+        "性影像",
+        "私密影像",
+        "無故攝錄性影像",
+        "攝錄性影像",
+        "創意私房",
+    ],
     "文書造假": [
         "偽造文書",
         "登載不實",
@@ -265,24 +352,31 @@ TAG_RULES = {
         "浮報加班費",
         "浮報",
     ],
-    "風紀": ["風紀", "警紀", "違紀", "懲處", "記過", "免職"],
+    "風紀": ["風紀", "警紀", "違紀", "懲處", "記過", "免職", "色警", "不肖警", "貪警"],
 }
 
-RELEVANT_ROLE_TERMS = (
+STRONG_ROLE_TERMS = (
     "警察",
     "員警",
     "警員",
+    "色警",
+    "不肖警",
+    "貪警",
     "男警",
     "女警",
-    "巡官",
-    "警務員",
-    "偵查佐",
-    "巡佐",
-    "副所長",
-    "所長",
-    "小隊長",
+    "警官",
+    "高階警官",
+    "警職",
+    "警界",
+    "警局",
+    "警察局",
+    "警政署",
+    "警分局",
     "派出所",
     "分局",
+    "督察組",
+    "偵查隊",
+    "交通分隊",
     "國道警",
     "北市警",
     "新北警",
@@ -290,7 +384,29 @@ RELEVANT_ROLE_TERMS = (
     "高市警",
     "市警",
     "縣警",
+)
+
+SEMI_EXPLICIT_ROLE_TERMS = (
+    "巡官",
+    "警務員",
+    "偵查佐",
+    "巡佐",
+    "副所長",
+    "所長",
     "警政監",
+)
+
+AMBIGUOUS_ROLE_TERMS = (
+    "小隊長",
+)
+
+POLICE_CONTEXT_TERMS = (
+    *STRONG_ROLE_TERMS,
+    *SEMI_EXPLICIT_ROLE_TERMS,
+    "警政",
+    "警用",
+    "勤務",
+    "查勤",
 )
 
 RELEVANT_MISCONDUCT_TERMS = (
@@ -311,8 +427,15 @@ RELEVANT_MISCONDUCT_TERMS = (
     "個資",
     "偷查個資",
     "查個資",
+    "查詢個資",
+    "私查個資",
+    "濫查個資",
+    "濫查",
     "違法查個資",
     "違反個資法",
+    "違規查詢",
+    "非因公查詢",
+    "不實查詢事由",
     "警示帳戶",
     "詐團",
     "詐騙集團",
@@ -336,12 +459,17 @@ RELEVANT_MISCONDUCT_TERMS = (
     "猥褻",
     "援交",
     "偷拍",
+    "無故攝錄性影像",
+    "攝錄性影像",
+    "私密影像",
     "針孔",
     "妨害秘密",
     "不實影像",
     "性影像",
     "創意私房",
     "不當交往",
+    "討債",
+    "債務糾紛",
     "性招待",
     "養生館",
     "護膚店",
@@ -387,7 +515,60 @@ RELEVANT_CASE_CONTEXT_TERMS = (
     "求刑",
     "拒測",
     "拒檢",
+    "二審",
+    "上訴",
+    "重判",
     "下場出爐",
+    "羈押禁見",
+    "裁定",
+)
+
+PERSONAL_DATA_ABUSE_TERMS = (
+    "個資",
+    "偷查個資",
+    "查個資",
+    "查詢個資",
+    "私查個資",
+    "濫查個資",
+    "違法查個資",
+    "非法查詢個資",
+    "違規查詢",
+    "非因公查詢",
+)
+
+PERSONAL_DATA_ABUSE_CONTEXT_TERMS = (
+    "討債",
+    "債務糾紛",
+    "幫友人",
+    "請託",
+    "提供",
+    "洩漏",
+    "外流",
+    "不法利用",
+    "不實查詢事由",
+)
+
+VOYEURISM_EVIDENCE_TERMS = (
+    "偷拍",
+    "針孔",
+    "妨害秘密",
+    "無故攝錄性影像",
+    "攝錄性影像",
+    "私密影像",
+    "鏡頭",
+    "錄影",
+)
+
+VOYEURISM_SCENE_TERMS = (
+    "洗澡",
+    "沐浴",
+    "浴室",
+    "盥洗室",
+    "如廁",
+    "宿舍",
+    "女警",
+    "女同事",
+    "同事",
 )
 
 RSS_TEMPLATE = (
@@ -412,6 +593,9 @@ IRRELEVANT_ARTICLE_PATTERNS = (
 )
 
 ROLE_MARKER_PATTERN = re.compile(r"[0-9一二三四五六七八九十兩]+警")
+POLICE_SHORTHAND_PATTERN = re.compile(
+    r"(?:^|[「『（(／\s])警(?=利用職權|涉|涉犯|幫友人|偷查|洩密|查詢|違法|違規|遭|爆|捲)"
+)
 
 
 def iso_utc_now() -> str:
@@ -495,6 +679,22 @@ def load_existing_payload(output_path: Path = OUTPUT_PATH) -> dict:
     return json.loads(output_path.read_text(encoding="utf-8"))
 
 
+def count_term_hits(haystack: str, terms: Iterable[str]) -> int:
+    return sum(1 for term in terms if term in haystack)
+
+
+def content_tags(title: str, summary: str = "") -> list[str]:
+    haystack = " ".join([title, summary])
+    tags = classify_tags([title, summary])
+    if (
+        "偷拍" not in tags
+        and any(term in haystack for term in VOYEURISM_EVIDENCE_TERMS)
+        and any(term in haystack for term in VOYEURISM_SCENE_TERMS)
+    ):
+        tags.append("偷拍")
+    return sorted(set(tags))
+
+
 def is_relevant_article(
     title: str,
     summary: str = "",
@@ -505,17 +705,35 @@ def is_relevant_article(
         return False
 
     content_haystack = " ".join([title, summary])
-    has_role = any(term in content_haystack for term in RELEVANT_ROLE_TERMS) or bool(
-        ROLE_MARKER_PATTERN.search(content_haystack)
+    has_role = (
+        any(term in content_haystack for term in STRONG_ROLE_TERMS)
+        or any(term in content_haystack for term in SEMI_EXPLICIT_ROLE_TERMS)
+        or (
+            any(term in content_haystack for term in AMBIGUOUS_ROLE_TERMS)
+            and any(term in content_haystack for term in POLICE_CONTEXT_TERMS)
+        )
+        or bool(ROLE_MARKER_PATTERN.search(content_haystack))
+        or bool(POLICE_SHORTHAND_PATTERN.search(content_haystack))
     )
-    misconduct_hits = sum(
-        1 for term in RELEVANT_MISCONDUCT_TERMS if term in content_haystack
-    )
+    misconduct_hits = count_term_hits(content_haystack, RELEVANT_MISCONDUCT_TERMS)
     has_misconduct = misconduct_hits > 0
     has_case_context = any(
         term in content_haystack for term in RELEVANT_CASE_CONTEXT_TERMS
     )
-    return has_role and has_misconduct and (has_case_context or misconduct_hits >= 2)
+    has_personal_data_abuse_pattern = (
+        any(term in content_haystack for term in PERSONAL_DATA_ABUSE_TERMS)
+        and any(term in content_haystack for term in PERSONAL_DATA_ABUSE_CONTEXT_TERMS)
+    )
+    has_voyeurism_pattern = (
+        any(term in content_haystack for term in VOYEURISM_EVIDENCE_TERMS)
+        and any(term in content_haystack for term in VOYEURISM_SCENE_TERMS)
+        and has_case_context
+    )
+    return has_role and (
+        has_personal_data_abuse_pattern
+        or has_voyeurism_pattern
+        or (has_misconduct and (has_case_context or misconduct_hits >= 2))
+    )
 
 
 def classify_tags(chunks: Iterable[str]) -> list[str]:
@@ -533,7 +751,7 @@ def article_id(source: str, title: str, published_at: str) -> str:
 
 
 def article_key(article: dict) -> str:
-    return article.get("link") or article["id"]
+    return article.get("id") or article.get("link") or ""
 
 
 def build_search_text(article: dict) -> str:
@@ -567,7 +785,7 @@ def build_manual_articles() -> list[dict]:
             "published_at": seed["published_at"],
             "published_label": format_published_label(seed["published_at"]),
             "matched_keywords": matched_keywords,
-            "tags": classify_tags([seed["title"], seed.get("summary", ""), *matched_keywords]),
+            "tags": content_tags(seed["title"], seed.get("summary", "")),
         }
         if is_relevant_article(article["title"], article["summary"], matched_keywords):
             entries.append(article)
@@ -578,11 +796,11 @@ def build_manual_articles() -> list[dict]:
 def hydrate_article(article: dict, default_seen_at: str | None = None) -> dict:
     item = dict(article)
     item["matched_keywords"] = sorted(set(item.get("matched_keywords") or []))
-    item["tags"] = sorted(set(item.get("tags") or []))
     item["summary"] = item.get("summary") or ""
     item["source"] = item.get("source") or ""
     item["title"] = item.get("title") or ""
     item["link"] = item.get("link") or ""
+    item["tags"] = sorted(set(content_tags(item["title"], item["summary"])))
     item["published_label"] = item.get("published_label") or format_published_label(
         item["published_at"]
     )
@@ -614,7 +832,7 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
             continue
 
         published_at, published_label = parse_datetime(item.findtext("pubDate") or "")
-        tags = classify_tags([title, description, query])
+        tags = content_tags(title, description)
 
         entries.append(
             {
