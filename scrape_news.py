@@ -105,6 +105,9 @@ BROAD_MISCONDUCT_SEARCH_TERMS = (
     "浮報 加班費",
     "偽造文書",
     "登載不實",
+    "報復檢舉人",
+    "盜用電話",
+    "惡作劇訂餐",
 )
 
 SPECIAL_SEARCH_KEYWORDS = [
@@ -222,6 +225,19 @@ SPECIAL_SEARCH_KEYWORDS = [
     "誤噴 辣椒水 警",
     "柯文哲 辣椒水 分局長",
     "柯P 辣椒水 分局長",
+    "110 勤指 警員",
+    "110勤指 警員",
+    "勤務指揮中心 警員 報復",
+    "勤務指揮中心 警員 檢舉電話",
+    "勤指警員 報復 檢舉",
+    "勤指警員 盜用電話",
+    "警員 報復 訂披薩",
+    "警員 惡作劇 訂餐",
+    "警員 檢舉電話 盜用",
+    "警察 報復 檢舉人",
+    "民眾檢舉 警員 報復",
+    "檢舉違停 警員 報復",
+    "檢舉電話 訂披薩",
 ]
 
 RANK_FOCUSED_QUERY_MAP = {
@@ -249,6 +265,8 @@ RANK_FOCUSED_QUERY_MAP = {
     "刑大隊長": ("偷查個資", "查個資", "偽造文書", "個資 判刑"),
     "警官": ("性騷", "性騷擾", "職場性騷", "開黃腔", "性平會", "偷查個資", "涉貪"),
     "分局長": ("辣椒水", "誤噴 辣椒水", "警紀", "拔官", "調職"),
+    "勤務指揮中心": ("報復", "檢舉電話", "盜用電話", "惡作劇訂餐"),
+    "勤指警員": ("報復", "檢舉電話", "盜用電話", "訂披薩"),
     "警政監": ("博弈 洩密", "涉貪", "收賄"),
     "男警": ("偷拍", "性騷", "性侵", "妨害秘密", "不實影像"),
     "女警": ("偷拍", "妨害秘密", "性騷", "性侵", "針孔 偷拍"),
@@ -437,6 +455,22 @@ MANUAL_ARTICLE_SEEDS = [
             "高雄 分局 性平會",
         ],
     },
+    {
+        "title": "快訊／民眾檢舉違停遭報復狂訂披薩　竟是蘆洲110勤指警員幹的",
+        "source": "三立新聞網 Setn.com",
+        "link": "https://www.setn.com/News.aspx?NewsID=1826219",
+        "summary": (
+            "新北民眾檢舉違停後遭人盜用電話大量訂披薩與餐廳訂位，"
+            "警方調查確認為勤務指揮中心一名員警所為，後續交由督察單位處理。"
+        ),
+        "published_at": "2026-04-22T02:55:00Z",
+        "matched_keywords": [
+            "110勤指 警員",
+            "警員 報復 訂披薩",
+            "警員 檢舉電話 盜用",
+            "檢舉電話 訂披薩",
+        ],
+    },
 ]
 
 TAG_RULES = {
@@ -473,6 +507,12 @@ TAG_RULES = {
         "監視器",
         "警示帳戶",
         "討債",
+        "檢舉電話",
+        "報案電話",
+        "盜用電話",
+        "惡作劇訂餐",
+        "訂披薩",
+        "報復檢舉",
     ],
     "詐欺": ["詐欺", "詐團", "詐騙集團", "洗錢", "車手"],
     "博弈": ["博弈", "賭場", "賭博電玩", "地下匯兌"],
@@ -530,6 +570,10 @@ STRONG_ROLE_TERMS = (
     "刑大隊長",
     "刑事警察大隊",
     "刑事警察局",
+    "勤務指揮中心",
+    "勤指中心",
+    "勤指警員",
+    "110勤指",
     "交通分隊",
     "國道警",
     "北市警",
@@ -640,6 +684,16 @@ RELEVANT_MISCONDUCT_TERMS = (
     "登載不實",
     "開假罰單",
     "假罰單",
+    "報復檢舉人",
+    "報復檢舉",
+    "報復",
+    "盜用電話",
+    "檢舉電話",
+    "報案電話",
+    "惡作劇訂餐",
+    "訂披薩",
+    "狂訂披薩",
+    "亂訂餐",
     "免職",
     "停職",
     "未繳槍",
@@ -664,6 +718,33 @@ SERVICE_MISCONDUCT_CONTEXT_TERMS = (
     "柯P",
 )
 
+REPORTER_RETALIATION_TERMS = (
+    "報復",
+    "報復檢舉",
+    "報復檢舉人",
+    "盜用電話",
+    "惡作劇",
+    "惡作劇訂餐",
+    "訂披薩",
+    "狂訂披薩",
+    "亂訂餐",
+    "訂位",
+)
+
+REPORTER_RETALIATION_CONTEXT_TERMS = (
+    "檢舉",
+    "檢舉人",
+    "檢舉電話",
+    "報案",
+    "報案電話",
+    "110",
+    "勤務指揮中心",
+    "勤指中心",
+    "勤指警員",
+    "違停",
+    "電話",
+)
+
 RELEVANT_CASE_CONTEXT_TERMS = (
     "涉",
     "疑",
@@ -673,6 +754,7 @@ RELEVANT_CASE_CONTEXT_TERMS = (
     "提報",
     "通報",
     "調查",
+    "確認",
     "起訴",
     "被訴",
     "遭訴",
@@ -932,10 +1014,16 @@ def is_relevant_article(
         and any(term in content_haystack for term in SERVICE_MISCONDUCT_CONTEXT_TERMS)
         and has_case_context
     )
+    has_reporter_retaliation_pattern = (
+        any(term in content_haystack for term in REPORTER_RETALIATION_TERMS)
+        and any(term in content_haystack for term in REPORTER_RETALIATION_CONTEXT_TERMS)
+        and has_case_context
+    )
     return has_role and (
         has_personal_data_abuse_pattern
         or has_voyeurism_pattern
         or has_service_misconduct_pattern
+        or has_reporter_retaliation_pattern
         or (has_misconduct and (has_case_context or misconduct_hits >= 2))
     )
 
