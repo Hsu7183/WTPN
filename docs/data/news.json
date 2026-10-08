@@ -1,7 +1,7 @@
 {
   "project": "WTPN",
-  "generated_at": "2026-10-08T09:30:01.579952Z",
-  "refresh_attempted_at": "2026-10-08T09:30:01.579952Z",
+  "generated_at": "2026-10-08T16:49:13.708087Z",
+  "refresh_attempted_at": "2026-10-08T16:49:13.708087Z",
   "lookback_days": 365,
   "keywords": [
     "員警風紀",
@@ -450,10 +450,1415 @@
     "酒駕",
     "風紀"
   ],
-  "fetched_articles": 1066,
-  "new_articles": 7,
-  "failed_query_count": 0,
-  "failed_queries": [],
+  "fetched_articles": 137,
+  "new_articles": 0,
+  "failed_query_count": 351,
+  "failed_queries": [
+    {
+      "query": "員警風紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員風紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察風紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警紀案",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "色警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 違紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違法違紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 違法違紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 風紀案",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 風紀案",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 索賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 貪污",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 貪瀆",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 圖利",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇 賭場",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇 賭博電玩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 洩個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 私查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 濫查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 濫查",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違法查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 非法查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違規查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 非因公查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 勾結 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 勾結 博弈",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 勾結 黑道",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 通風報信",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 洩漏 臨檢情資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 改單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 銷單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 吞贓",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 吸毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 販毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 職場性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 開黃腔",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 熊抱",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 性侵",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 猥褻",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 援交",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 無故攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 妨害秘密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 宿舍 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 盥洗室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 浴室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 洗澡 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 如廁 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 合成 性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 不當交往",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 債務糾紛",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 詐領加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 浮報 加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 偽造文書",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 登載不實",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 報復檢舉人",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 盜用電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 惡作劇訂餐",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 索賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 貪污",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 貪瀆",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 圖利",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 包庇 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 包庇 賭場",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 包庇 賭博電玩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 洩個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 私查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 濫查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 濫查",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 違法查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 非法查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 違規查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 非因公查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 勾結 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 勾結 博弈",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 勾結 黑道",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 通風報信",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 洩漏 臨檢情資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 改單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 銷單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 吞贓",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 吸毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 販毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 職場性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 開黃腔",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 熊抱",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 性侵",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 猥褻",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 援交",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 無故攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 妨害秘密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 宿舍 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 盥洗室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 浴室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 洗澡 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 如廁 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 合成 性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 不當交往",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 債務糾紛",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 詐領加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 浮報 加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 偽造文書",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 登載不實",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 報復檢舉人",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 盜用電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警員 惡作劇訂餐",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 索賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 貪污",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 貪瀆",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 圖利",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 包庇 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 包庇 賭場",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 包庇 賭博電玩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 洩個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 私查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 濫查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 濫查",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 違法查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 非法查詢個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 違規查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 非因公查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 勾結 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 勾結 博弈",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 勾結 黑道",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 通風報信",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 洩漏 臨檢情資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 改單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 銷單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 吞贓",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 吸毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 販毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 職場性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 開黃腔",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 熊抱",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 性侵",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 猥褻",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 援交",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 無故攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 攝錄性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 妨害秘密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 宿舍 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 盥洗室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 浴室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 洗澡 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 如廁 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 合成 性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 不當交往",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 債務糾紛",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 詐領加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 浮報 加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 偽造文書",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 登載不實",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 報復檢舉人",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 盜用電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 惡作劇訂餐",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 改單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡佐 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 吞贓",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 偽造文書",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 熊抱",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 記過調職",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "副所長 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "副所長 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "副所長 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "副所長 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "副所長 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "所長 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "所長 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "所長 洩個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "所長 不當交往",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "所長 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "小隊長 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "小隊長 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "小隊長 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "小隊長 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警務員 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警務員 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警務員 吸毒",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警務員 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡官 詐領加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡官 浮報 加班費",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "巡官 酒駕",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "交通警察 改單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "交通警察 銷單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "交通警察 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "交通警察 開假罰單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑警 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑警 包庇",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑警 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑警 勾結 詐團",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑大隊長 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑大隊長 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑大隊長 偽造文書",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "刑大隊長 個資 判刑",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 性騷擾",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 職場性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 開黃腔",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警官 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局長 辣椒水",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局長 誤噴 辣椒水",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局長 警紀",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局長 拔官",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局長 調職",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤務指揮中心 報復",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤務指揮中心 檢舉電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤務指揮中心 盜用電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤務指揮中心 惡作劇訂餐",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤指警員 報復",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤指警員 檢舉電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤指警員 盜用電話",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "勤指警員 訂披薩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警政監 博弈 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警政監 涉貪",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警政監 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 性侵",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 妨害秘密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 不實影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 妨害秘密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 性侵",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 針孔 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "非法查詢個資 員警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違規查詢 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 違規查詢 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 非因公 查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 非因公 查詢",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 查個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 查個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 查詢個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 查詢個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 債務糾紛 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 債務糾紛 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 幫友人 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 幫友人 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "色警 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "色警 個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鍾文智 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鍾文智 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鍾文智 警察 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鍾文智 員警 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鍾文智 討債 警察",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "黃文烈 親信 偷查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "黃文烈 親信 查個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "黃文烈 親信 警察 個資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "黃文烈 親信 個資 討債",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 博弈 洩密",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇 博弈",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 包庇 電玩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 警示帳戶",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 165 系統 收賄",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 臨檢情資",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 個資外洩",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 外流 監視器",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 違反個資法",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 白單 圖利",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 紅單 圖利",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 開假罰單",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 製單 違法",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 侵占 證物",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 贓款",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 創意私房",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 針孔 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 偷拍 女警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警察 偷拍 女警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 偷拍 女警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 洗澡 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 沐浴 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女警 盥洗室 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "色警 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "色警 偷拍 女警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "警局 宿舍 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局 宿舍 偷拍",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 性招待",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 養生館",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "員警 護膚店",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "男警 合成 性影像",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 女警 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 女同事 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "偵查佐 熊抱 女同事",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "信義分局 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "信義分局 偵查佐 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "鑑識小隊 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "分局 性平會 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "性平會 記過調職 警",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "2線3星 警官 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "兩線三星 警官 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "2線3警官 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "女同事 開黃腔 警官",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "高雄 警官 性騷",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "高雄 分局 性平會",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "query": "王大陸 個資 判刑",
+      "error": "HTTP Error 503: Service Unavailable"
+    }
+  ],
   "total_articles": 10234,
   "articles": [
     {
@@ -1797,7 +3202,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-09-30T10:27:36.210076Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "透過警官查個資一審遭判6月　王大陸和女友二審仍不認罪 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte85sehduk44tkrndxnfuv9mtk5oadv3ntz2thbxx0f1owvhnnhwwnv5v05fx3ztslbry2t5c05yngw5vu5jwlnowxfortjzc05tqna2wezheufisvdrzwfsautbvv95cuxoujhtu0rrrtzwcxhjqm16dzbjq2lcx0vzx2dyyufpthuywfhnzm5vbdhtx2y4svgtngwzvhhywnhry0pyyvqzduprsdq?oc=5 透過警官查個資一審遭判6月 王大陸和女友二審仍不認罪 ettoday新聞雲 刑大隊長 偷查個資 員警 債務糾紛 個資 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 警官 偷查個資 洩密"
     },
     {
@@ -2910,7 +4315,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-10-04T06:20:48.276875Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大前科偵隊長涉貪風暴擴大 北檢再羈押1人 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte9sci03xzvxq0hmogpnlwnjmudjluk1qxg2skvwxzdod3czwthvcvqzew5qmy1jntg0x1duu2fjtkpxou56avhnu3hbay1iv2z30gfwqvvfexfmtw5fnghbaklkzmfhwedxzmdotuxvsxaxsdlfckliegr4egjuunnlcmxknejltthks2ftbe5vtvh5afv6dgvcx2pxtmlnevleenvuzgr1bue?oc=5 北市刑大前科偵隊長涉貪風暴擴大 北檢再羈押1人 udn 刑大隊長 偷查個資 北市刑大隊長 偷查個資 員警 非因公 查詢 員警 非因公查詢 小隊長 涉貪 警員 非因公查詢 收賄"
     },
     {
@@ -3450,7 +4855,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-10-02T19:22:46.493703Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大前科偵隊長收賄百萬偷查個資 檢方溯源逮上游買家聲押禁見 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5vuk5evc1telb2cunmn0xsnenyx045suttbmddtdc2mldycew5t0nmbenvmhdtslhiqtbpdv82wmrvbvflwk9xngh6zzjlee1u0gfwqvvfexfmt0t1sk5vv01yvfhlqu1vs0djrhflx2xybetmu0nmn2faykvimxlqudrldvd6otdrru5hc3utzutezv83eg1bc3g1verou0zmvtjuqujyb0e?oc=5 北市刑大前科偵隊長收賄百萬偷查個資 檢方溯源逮上游買家聲押禁見 udn 偵查佐 偷查個資 刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 查個資 副所長 收賄 北市刑大隊長 偷查個資 員警 165 系統 收賄 員警 幫友人 查個資 員警 濫查個資 員警 非因公 查詢 員警 非因公查詢 色警 偷查個資 警員 偷查個資 警員 濫查 警員 濫查個資 警員 非因公查詢 警官 偷查個資 警察 偷查個資 警察 幫友人 查個資 警察 濫查 警察 濫查個資 警察 非因公 查詢 警察 非因公查詢 收賄 洩密"
     },
     {
@@ -12012,7 +13417,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-09-08T10:20:24.610719Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "警偷查、外洩個資上千筆　賣郭哲敏集團成員撈500多萬起訴 - 三立新聞 三立新聞網 setn.com https://news.google.com/rss/articles/cbmisefvx3lxte95muqtb3a2nw1zq0dlafq4dghpt3bmnxp3tnrya1rvuzjzae5ztzlpufflbs0wqjlmcnzhc0wtwxdmami2rjgzcnibtefvx3lxte5uqy1vy0lddgtlzmmzlwvdsgrismjxd0tszmy2bndcexftbfdewvr6tlfquvdevetcmw9iukv1ek5rskzmszitsukyeui?oc=5 警偷查、外洩個資上千筆 賣郭哲敏集團成員撈500多萬起訴 三立新聞 刑大隊長 偷查個資 北市刑大隊長 偷查個資 員警 偷查個資 色警 偷查個資 警員 偷查個資 警員 洩個資 警員 非法查詢個資 警官 偷查個資 警察 偷查個資 警察 違規查詢 個資 非法查詢個資 員警 洩密"
     },
     {
@@ -12119,7 +13524,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-09-09T06:03:27.296730Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "勾結「88會館」成員！北市警長期偷查901筆通聯助放貸收賄720萬遭訴- 社會 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte5ledvgzfjru29pywtiahatdldwzgdxwwpqbtl1yzj0te9wu0hymw5iwlm5yvv3rv9ounzwrtdpvwvmcehvvjnuutdlv3fwtm83rddwrurkwxnsrkfmmujss0e5x2n5zzvf?oc=5  刑大隊長 偷查個資 北市刑大隊長 偷查個資 收賄"
     },
     {
@@ -19042,7 +20447,7 @@
         "酒駕"
       ],
       "first_seen_at": "2026-08-25T13:58:44.543176Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "斷送美好前程！ 刑大副隊長昔打詐今疑酒駕遭逮- 社會 華視新聞網 https://news.google.com/rss/articles/cbmicefvx3lxte1edgfvm2hrz05qq25sx0dfoxyxvxzfwu56dnzymeq1znjzudnctvn0yvcymgy1zgfpdkluendxb0dizw0tnuxernhov0mtq2vmeezzadn2mwramuk0bxmwb3nfqjbjs3zps2u2uvjpmta?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 酒駕"
     },
     {
@@ -19546,7 +20951,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-10-05T15:56:08.806113Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "師父害慘徒弟！北市刑大科偵隊長念舊情查個資遭押 曾獲模範公務員 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxte5kulldwfvlckrlclpec2jvm1dka0ptmlprx21nweizrwzyam1gujfbykjrndfxs25la0tquxhzykc3ehrxr2xjzktnsvyzuuj2oxdfq0t4yuywexh0yxj0q2c3t194dwvzv3fmrelb?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 洩密"
     },
     {
@@ -22049,7 +23454,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-08-24T22:26:06.647622Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大科偵隊長涉偷查個資賣給恩師收賄百萬- 社會 華視新聞網 https://news.google.com/rss/articles/cbmicefvx3lxte1rselqntdpyufotnfkuuhir1rmtdvxngryzgzts29wrllqx1bomnziy096mnrub1pizk55te1uymfnnmjkdvbiclryn2xynglozvj4ukthwev0ovfzanphrwstt01zmjqwcm9dvzbdzza?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 警官 偷查個資 警察 偷查個資 收賄 洩密"
     },
     {
@@ -22531,7 +23936,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-08-30T12:15:04.358440Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大科偵隊長「洩個資」給師父 2人遭羈押禁見 | 民視新聞網 line today https://news.google.com/rss/articles/cbmivkfvx3lxtfbsx0rktvfsu2m0wgk2ykrgsdfvwvfsam5yt0fcmkrpcndacmnfbw1edwnvztlusi0ycgdndva5m0hydnhdb3oxlvm4qwvueul6c3gyvunr?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 員警 165 系統 收賄 員警 勾結 黑道 員警 洩個資 員警 非法查詢個資 色警 偷查個資 警員 非法查詢個資 非法查詢個資 員警 洩密"
     },
     {
@@ -22552,7 +23957,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-08-31T03:43:03.383892Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大科偵隊長「洩個資」給師父 師徒兩人羈押禁見 民視新聞網 https://news.google.com/rss/articles/cbmiyefvx3lxte55yznkve1hvunjytbrvuxyu2hdevh0uhp5avoxvujidfdzmm05bxbaaw9qmzzknjjbrlu0zvdgay1ual9mt19vmvbam0v1b3fsnjvpzfnkdmmyyxvzveduta?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 員警 洩個資 洩密"
     },
     {
@@ -23046,7 +24451,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-09-06T09:23:38.255165Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大科偵隊長「洩個資」給師父 師徒兩人遭檢方聲押 民視新聞網 https://news.google.com/rss/articles/cbmiyefvx3lxte4xcmtibw1hbzzndgh4njljq2fkuhdwqmxum0iwdhhusefomjkwdugzx0nsr0ryu0h0n01tehbwy1hmvfzzy2zhowfgc1gxx1a1mhpsnll6u3z2qmjmrznksg?oc=5  刑大隊長 偷查個資 北市刑大隊長 偷查個資 色警 偷查個資 洩密"
     },
     {
@@ -25611,7 +27016,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-08-28T12:29:05.320578Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市刑大科偵隊長栽在「師徒情」 涉洩個資給退休警師父遭聲押免職 | 聯合新聞網 line today https://news.google.com/rss/articles/cbmivkfvx3lxte5sdmvjc2pxvglin2ptnnzhndfmahbeekw0b3nmnhk1vmvjazzkburtuxk4z21ytthwdmfhzu9ivezobdqtahzkndrmrxfaa0k0v3z4emhb?oc=5  2線3星 警官 性騷 2線3警官 性騷 刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 員警 幫友人 查個資 員警 查詢個資 員警 洩個資 員警 非法查詢個資 警察 幫友人 查個資 警察 洩個資 警察 非法查詢個資 洩密 風紀"
     },
     {
@@ -28222,7 +29627,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-08-19T09:18:00.150367Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "手口並用！新北色警輕咬女子手臂挨罰否認性騷提告被打臉- 社會 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte1rq2zzv2ljy1luyxhlxzbgzlhcedjom1l1yktsq3zhts1xa2vxmxy3mdnxsvfnsnrxb1lyownzmex6rza1d0hoodfiqktuu2x6rhq1nnrntmfmbhgzmklqou5mwuwzrtrw?oc=5  分局 性平會 性騷 女同事 性騷 分局 男警 性騷 色警 警員 性平會 警官 性平會 警察 性平會 警察 性騷 性紀律 風紀"
     },
     {
@@ -28432,7 +29837,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-08-20T12:56:22.860878Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "兩線四星警官偷查個資「想拚績效調離南投」　法官1825字洗臉 | 社會 | ctwant ctwant https://news.google.com/rss/articles/cbmit0fvx3lxte9ibkvhxzvps0fdoejwued3ogo3rndlcvf6uxu0qmfzbmg3ttjzehbsqtlhcne4btz4a1itslhfemvcwfdjru5ivgryzwzutjtsavrbvv95cuxpy0vwtvjzb2jrzwfza3vbduq5tutsvwoxzthzafe5rnhinkted2lin25hzktsbzuyrkq4btzrrgs2zzhhddrnwxzkykzymxcyrnrqzny?oc=5 兩線四星警官偷查個資「想拚績效調離南投」 法官1825字洗臉 | 社會 | ctwant ctwant 員警 偷查個資 員警 查詢個資 員警 警示帳戶 員警 違法查個資 員警 非法查詢個資 王大陸 警官 偷查個資 色警 偷查個資 警員 偷查個資 警官 偷查個資 警察 偷查個資 非法查詢個資 員警 洩密"
     },
     {
@@ -42136,7 +43541,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-09-04T19:16:27.966662Z",
-      "last_seen_at": "2026-10-08T02:44:41.754266Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "18歲女搭計程車遭性騷不敢喊救命！撥110「訂披薩」女警秒懂救援 yahoo新聞 https://news.google.com/rss/articles/cbmi_gjbvv95cuxnc2zht21yeg5wafhjquftqwznv2ozrwhlnjdxwu5lnnfmvk15ekvuc3dmdfpertdwdkviwtmyywpyrf9oquzjse9ibm5qnvhhcwp6oezoakdqn3pfvgvimg9yztbmv3z2twnox0leohfuwg9owgdtukdumw9fzxf2uwjonu1razvkrtdmqldcbzvlwlrkb3hztdhsri1vcjn6y0dmzjjstxhkcvpjdupna2xmd25qem9ynzrjz0y3azb3awpjnxpkr0jiqzvrsu0xvg5hdhheu2kwtwh3sho4nwz5bxpleuztahi5r2dkcezza0nvmvnovgnordfhc1y1uxvznl9haejucffizthmce5ubjnlvznucjdxt0zxaevuui10eezhczvvtzbrzvhwn0x0ukpwcm9jete1ewfnsw1ybvzpy2hvbnnwwxfxn29mm2lkefrbxzqtstyya0hpbjf5ou9oyjlfy3e2zu54q19odtfulufsvxlebzjn?oc=5  檢舉電話 訂披薩 性紀律 洩密"
     },
     {
@@ -44917,7 +46322,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-07-31T22:42:37.497544Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "辣椒水誤噴柯文哲! 前分局長丟官又挨告獲不起訴 yahoo新聞 https://news.google.com/rss/articles/cbmi0ajbvv95cuxqzkhlt19lu3y2vugxdzritdhwclbqre83avruzzluzxdqruhnqwywaznyz2v3cvjtx0zfb2wzoxjwsepewv9zyndomfi5wi1swjjwtlfodlf4vhfveedunkx3qwxacfbgb3buogrgujhetzq5sgdwuhjzq3gtdvn0r1f3rgtbugfpcwtzrs1lr2k0s0vjy0hdsvphus1oaupfruxxmzbprnv1vzhiyuqwm1fmzfr2qnhgeehsq3bsttzjq0u1y1rvc2d6rvplohgzmlv3dm1tbjy5rl9ctnhywgroatnfwfv2tmx6nvvpmfnscvd5zgruyw8tadb4z29zvvzcddrly3zqotfjcgi4cte5yujpb0gwegjsykztwulxty1esketc25oulb4ovvxzk9nqvzabdlsrf94d1nusxc1avd6qzl3cmhoedrerha?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 勤務爭議"
     },
     {
@@ -44998,7 +46403,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-08-17T11:38:52.329607Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長誤噴柯文哲辣椒水遭拔官檢方偵查獲「不起訴」 理由曝光- 社會 華視新聞網 https://news.google.com/rss/articles/cbmicefvx3lxte55tw41yli1a1hym3jmbzvwdwfcd1b1n2l5oefkoedlzey2wudyeexrzvcxqwdfu2nque85b3rlmnducevhrjdcz0lbr2wwtjzmeeroag5kyvbrsthiv3ldbgxgtvrxc3zxrhc5zjziuwg?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 勤務爭議"
     },
     {
@@ -47076,7 +48481,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-07-23T11:16:38.606587Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "小隊長才性侵免職又爆所長涉性騷 台中警局長怒：若達兩大過直接免職 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfazy1z5sedyutvxb0tmbmv2tjlov256b3qzyth1x25jamo0ouxyr0i2btf5vmj2qlp0y2n3sfr1bjhfekdin3joszuwd3djae160gfwqvvfexfmt0uzy1fpntbuu0poc0t6vtl1tuvrtfg4eevnnexzv3rzd0v0cfhtn2zxn3hhrzvvag56a1i0rtr6mdnfu2m1rehtvnbjtlz5tmx4elcym3c?oc=5 小隊長才性侵免職又爆所長涉性騷 台中警局長怒：若達兩大過直接免職 udn 偵查佐 女同事 性騷 偵查佐 女警 性騷 分局 性平會 性騷 員警 性侵 員警 性騷 女同事 性騷 分局 女警 性侵 女警 性騷 小隊長 偷拍 男警 性侵 男警 性騷 警員 性侵 警員 性平會 警員 性騷 警員 熊抱 警員 職場性騷 警官 性平會 警官 性騷 警官 職場性騷 警察 性侵 警察 性平會 警察 性騷 警察 性騷擾 警察 熊抱 警察 職場性騷 警紀案 性紀律 風紀"
     },
     {
@@ -47104,7 +48509,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-07-23T14:55:17.457387Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "女警控性騷 「明日之星」所長遭拔官 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfbuemjgzmpldjvvb09wsxnlylfpzdnwq2rvy1p2u0lxsk9cx3otm3lyznzxuu1xd1fxowztuddevfpsnjnqqklnrzlmawxbqjdn0gfwqvvfexfmt0w1qmpcswrrrxb1zw1lrm1vnuvqodhcv2d0c09ib3nxm1a0dgzetulmu0dxdkr4otzzymc1zzzqam5rm3rbyzr2dnzfb2rnrlnsenh1oee?oc=5 女警控性騷 「明日之星」所長遭拔官 udn 分局 性平會 性騷 女同事 性騷 分局 女警 性侵 女警 性騷 女警 洗澡 偷拍 男警 性騷 警官 性騷 警官 性騷擾 警官 職場性騷 警察 性騷 勤務爭議 性紀律"
     },
     {
@@ -47833,7 +49238,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-07-22T07:13:04.538757Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "台中已婚所長陷性騷女警風波...同事爆「有跡可尋」市警局調查中 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte9kmmjyzw82tmfmz2dlvjrpv3llcnhfn1eyb1i4yzlvbvriv3didjvis2t5ohg4offqx3rzx3bqeuxxx2g1m1ppchlgne9gnvrz0gfwqvvfexfmuevprmq0wk01s2vzufpiywgyzvvjvljsmnlnmgl0vy1vzmhxlxezc3f4n0zxq0vsnvz0nklurxnusjzgvdfbn09udulps29hy051akd4n2c?oc=5 台中已婚所長陷性騷女警風波...同事爆「有跡可尋」市警局調查中 udn 分局 性平會 性騷 員警 性平會 員警 性騷擾 女同事 性騷 分局 女警 性侵 女警 性騷 女警 洗澡 偷拍 男警 性侵 男警 性騷 警員 性平會 警員 性騷 警官 性平會 警官 性騷 警官 性騷擾 警察 性平會 警察 性騷 警察 性騷擾 高雄 分局 性平會 性紀律"
     },
     {
@@ -75495,7 +76900,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-07-17T10:23:01.347372Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "台中警界大地震！偵查隊小隊長家搜出安毒「還涉性侵女線民」 2大過免職+收押 鏡報 https://news.google.com/rss/articles/cbmiukfvx3lxte9xqjz6n245ri1fekxketzyz3jzwkiydnjysxatzupnsju5ws10zdjpueixutjezldodnp0mfhutfrrum5mewlydg5kodd0d0nvzfe?oc=5  小隊長 包庇 民眾檢舉 警員 報復 警員 報復檢舉人 性紀律 風紀"
     },
     {
@@ -87994,7 +89399,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-06-15T16:07:55.718045Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "穿警褲逛廟會偷摸女舞者！台南劣警涉性騷 分局開鍘2大過免職 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxte9gsknyvexwc3z6sk1hddfttffbblhludlxedazwws2afv6stdhchjizwzsqljbeklsz3bocs1twknhu0fsm1ntrghoxznxdfz4sgp6wmkyzzzvafhwqklwazbocwpjcuc2suz6sw5b?oc=5  2線3警官 性騷 兩線三星 警官 性騷 員警 性騷 員警 性騷擾 員警 熊抱 女同事 性騷 分局 女警 性侵 女警 性騷 色警 警員 性騷 警員 性騷擾 警員 熊抱 警員 職場性騷 警官 性騷 警官 性騷擾 警察 性騷 警察 性騷擾 警察 熊抱 性紀律 風紀"
     },
     {
@@ -91025,7 +92430,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-06-07T14:57:16.601631Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／王大陸靠黑道、警官偷查個資判6月　新北檢上訴 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxtfbgcfburtjjwgg5nxqtqmnku2fgdhffuvbpz29qtgrlmlr3n1bsrxr0ymgzmldrbze2ou1oz3pps2dndxlqatniatc5x0o0ymzkzxhitfrkmxe3qwfynhfsawhbvv95cuxndmjvmgkztk54a1fpnnfmwhk4ywuwrfdgylbqvkpvsjdwslfrywtysg1lttnpwvrwuna5zdrkbhriqvrhtgmyb0lteflamnpxumfrss1nz0njovzmdwjysvngq2rhn2jyaq?oc=5 快訊／王大陸靠黑道、警官偷查個資判6月 新北檢上訴 ettoday新聞雲 刑大隊長 個資 判刑 刑大隊長 偷查個資 員警 偷查個資 員警 債務糾紛 個資 員警 勾結 黑道 員警 私查個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 警官 偷查個資 警察 私查個資 洩密"
     },
     {
@@ -95470,7 +96875,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-06-04T13:42:26.396075Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "女警執勤彎腰填單遭偷拍po網　網開黃腔性騷...她怒蒐證提告 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxtfbbwgvsuexgefc2z2lbakvhcus3vdbxt2plufpouwpxnxnkmflhuuqtsxblugmwb2fzt1pbbzh4lxy5uwk1utg1exz6vfbmb1jixzfprm5scwu4sklpzxfsawhbvv95cuxncff1ykvunuvyvgdnsxb5mer4vkvtzejadezzatlhsxz0dtvsuuqxbuhxtljqq0xou1jfmhixby1eszngb0xwnkhxegv3ulhoslvbcdzxa1rnn1diqxdvmkz1mjbkywhnbw?oc=5 女警執勤彎腰填單遭偷拍po網 網開黃腔性騷...她怒蒐證提告 ettoday新聞雲 分局 性平會 性騷 員警 宿舍 偷拍 員警 洗澡 偷拍 員警 浴室 偷拍 員警 開黃腔 女同事 開黃腔 警官 女警 偷拍 警員 開黃腔 警官 開黃腔 警察 開黃腔 高雄 警官 開黃腔 偷拍 性紀律"
     },
     {
@@ -96353,7 +97758,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-06-05T15:43:40.563829Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "航警局有性騷擾慣犯？女警控襲胸 男警不認罪判刑5月 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte1rztnkr3fxm3nqrdjuwhfvrwg5v3pymfvzbjnpvnlims1xrgnhbk9cr3bfq2r0bknktexhvgzoblrvaglmqnfjnudooxdobutr0gfwqvvfexfmtm5asetxadvxrvn5zw9oz2y0nvvju2rdbjlyter3eupsbgjtlupbd3h1qxlqwdbpnthnww05qlhhvgp5yvbtvxnrnhkyvhi3dmc4mhlrb0e?oc=5 航警局有性騷擾慣犯？女警控襲胸 男警不認罪判刑5月 udn 偵查佐 女同事 性騷 員警 性侵 員警 性騷 員警 性騷擾 員警 熊抱 女同事 性騷 分局 女警 妨害秘密 女警 性侵 女警 性騷 女警 洗澡 偷拍 女警 針孔 偷拍 男警 不實影像 男警 偷拍 女警 男警 合成 性影像 男警 妨害秘密 男警 性侵 男警 性騷 警員 性騷 警員 性騷擾 警員 熊抱 警官 性騷擾 警察 偷拍 女警 警察 性平會 警察 性騷擾 警察 熊抱 性紀律"
     },
     {
@@ -106423,7 +107828,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-06-03T07:25:07.957892Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "老鳥航警值勤「逼女警聞痠痛貼布」撞胸1秒　性騷判5月還調職 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte5lr0zxqjfxvk1osxbfb21kdxlzde55nmt4svhsmeryevjztxvubg9en1hktkrsrg5qnk94otbdt0uwovi2mnbodxvod2vrmfzzzxdatvhgv1jccujtzxfsawhbvv95cuxqcflsag1sqwtmdwtzvxnyrfbyc194lvpbyvbez2fqbhg3bjj0bunwujvrx1brdkt5ruprwktibfvluezqrlzfunbtqkplytreughksgttnuf0m1fwcelvwk44amfhy2p3wg?oc=5 老鳥航警值勤「逼女警聞痠痛貼布」撞胸1秒 性騷判5月還調職 ettoday新聞雲 女同事 性騷 分局 女警 性騷 男警 性騷 警員 性騷 警官 性騷 警官 性騷擾 警官 職場性騷 警察 性騷 性紀律"
     },
     {
@@ -107137,7 +108542,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-10-02T07:53:50.140390Z",
-      "last_seen_at": "2026-10-08T06:00:35.632270Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨／高雄色警官邀女警開房間記2大過免職前後任分局長連坐罰被懲處| 情慾犯罪| 社會 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte1jchf0qji5uhlkclfobkjvbxvhqwoycgjivghgmxfmnddzwwl1su9nof9unkziy2xuqw91qxbvttruewd3cv96oufoymz3eflu?oc=5 獨／高雄色警官邀女警開房間記2大過免職前後任分局長連坐罰被懲處| 情慾犯罪| 社會 udn 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 分局 性平會 性騷 分局長 警紀 員警 偷拍 女警 員警 性平會 員警 性騷 員警 性騷擾 員警 開黃腔 女同事 性騷 分局 女同事 開黃腔 警官 女警 偷拍 女警 性騷 色警 色警 偷拍 色警 偷拍 女警 警員 性平會 警員 開黃腔 警官 性平會 警官 性騷 警官 性騷擾 警官 開黃腔 警察 性平會 警察 性騷擾 警察 開黃腔 警紀案 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 風紀"
     },
     {
@@ -113052,7 +114457,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-23T17:38:47.012510Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "女警不堪遭男長官性騷、跟拍崩潰離職縣警局：已懲處並偵查中| 情慾犯罪| 社會 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5jx0eyce1sbmxxtgxmstyyszhfzhvuay1ldl8zn1vlckrgy1pyvdflawhmtet1uktluvdfqug1bfhjedr2zzrhnzf0q2hvn0fm?oc=5 女警不堪遭男長官性騷、跟拍崩潰離職縣警局：已懲處並偵查中| 情慾犯罪| 社會 udn 2線3警官 性騷 信義分局 性騷 偵查佐 偷拍 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 偵查佐 性騷擾 兩線三星 警官 性騷 分局 性平會 性騷 員警 偷拍 員警 偷拍 女警 員警 性侵 員警 性平會 員警 性騷 員警 性騷擾 員警 攝錄性影像 員警 白單 圖利 員警 開黃腔 女同事 開黃腔 警官 女警 偷拍 女警 性侵 女警 性騷 巡佐 偷拍 巡佐 性騷 巡佐 性騷擾 男警 不實影像 男警 偷拍 女警 男警 性侵 男警 性騷 色警 偷拍 女警 警員 偷拍 警員 性平會 警員 性騷 警員 性騷擾 警員 職場性騷 警員 開黃腔 警官 性平會 警官 性騷 警官 性騷擾 警官 開黃腔 警察 開黃腔 高雄 警官 開黃腔 性紀律 風紀"
     },
     {
@@ -113119,7 +114524,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-23T17:38:47.012510Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "東港分局巡佐性騷女警記2支申誡調地 涉及刑事偵辦中 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxte1qwu9wrll2mhlbemg2ynjgzjlhrjhkcem1vlvxdmpiqlbmqvzvnwpdzdlibvhnuhh3rjezcnbfutduudgtwxpfznytuc1mumk0qthkumlpefryzezav0thuvljaddwc0o0t1nibwp3?oc=5  2線3星 警官 性騷 2線3警官 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性騷 兩線三星 警官 性騷 員警 偷拍 女警 員警 性侵 女同事 性騷 分局 女警 偷拍 女警 性侵 女警 性騷 巡佐 偷拍 巡佐 性騷 巡佐 性騷擾 巡佐 酒駕 性紀律"
     },
     {
@@ -113298,7 +114703,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-24T07:18:08.721165Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "副所長疑以考績誘同仁組「偷拍團」 女警遭性騷.寄黑函忍無可忍提告 台視新聞網 https://news.google.com/rss/articles/cbmiv0fvx3lxtfbhlte1vduymjrvctazzmhxsfc2wvnpodzln2dhbjv5oflfmefrwknfzuxhwvfuwfdwtg1rs2hlrmhnrwl2stjly1lzn251qm8wanjfmdzxma?oc=5  副所長 洩密 員警 開黃腔 女警 偷拍 女警 性騷 色警 偷拍 女警 警員 開黃腔 警官 開黃腔 警察 偷拍 警察 偷拍 女警 警察 職場性騷 警察 開黃腔 高雄 警官 開黃腔 偷拍 性紀律"
     },
     {
@@ -113428,7 +114833,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-26T17:38:48.702573Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "副所長伸狼爪性騷！ 組偷拍團、寄黑函女警崩潰離職- 社會 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxtfbumjzyzfdvdzhvwm1qeezzyulwrzezavvinnltvgriazlzwtrfn1lewjnxreiwujj4zew3tjlorglhvdzvutlldwxfsw90uuzjmg1eynptbf8znxn1zxreaugwteq5wddnqlitluzn?oc=5  2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 員警 偷拍 員警 偷拍 女警 員警 性騷 員警 職場性騷 員警 開黃腔 女警 偷拍 女警 性騷 巡佐 偷拍 巡佐 性騷 巡佐 性騷擾 巡佐 涉貪 男警 偷拍 男警 偷拍 女警 男警 性騷 色警 偷拍 色警 偷拍 女警 警員 偷拍 警員 職場性騷 警員 開黃腔 警官 性騷 警官 職場性騷 警官 開黃腔 警察 偷拍 女警 警察 職場性騷 警察 開黃腔 高雄 警官 開黃腔 偷拍 性紀律"
     },
     {
@@ -113690,7 +115095,7 @@
         "偷拍"
       ],
       "first_seen_at": "2026-06-03T15:02:14.978403Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "女警遭同事組團跟蹤.偷拍全案已移送地檢偵辦- 綜合 華視新聞網 https://news.google.com/rss/articles/cbmicefvx3lxte93cwpuohpou196mlc4efvftxy5vjvua0libddvz21jbuc2r3ffx1dxb2njsniyc0x6a2lllxnwmlryv1jtnu44cvuxamfyn09ld0t3sxzrmevytukxnwg2z3byvhfsvensqzjvmnzzbda?oc=5  員警 偷拍 員警 偷拍 女警 員警 開黃腔 員警 風紀案 女同事 性騷 分局 女同事 開黃腔 警官 女警 偷拍 警員 偷拍 警員 性騷 警員 開黃腔 警員 風紀案 警官 開黃腔 警察 偷拍 警察 偷拍 女警 警察 職場性騷 警察 開黃腔 高雄 警官 開黃腔 偷拍"
     },
     {
@@ -115091,7 +116496,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-22T14:16:42.334504Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "兩線三星男警官言語性騷女警 北市警開鍘拔官調職 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxtfb0q3rurnzmqwthqwhwdfdfnhv3wvbqa0cyc2jcsve3bfo4nfhgxzrezjjvwhl0zjvgbwvutja3s0hiy2xpx1d2awszr25bakv6mm9hae1xby1vbnbovvhhzjrpsgt4qwdo0gfuqvvfexfmt1vfckrpdzlnrhiyrtq1vfd4sklocvi0qm9lefvkr1ezr3j0zwnbmmjdufhzavddeurrcuizvgt5vedfluponzhryuz3z3redgrrcujgrtf2nvmzytc2chntq3fxmc1ewglwuhf1nwc?oc=5  2線3星 警官 性騷 2線3警官 性騷 信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性騷擾 兩線三星 警官 性騷 分局 性平會 性騷 員警 偷拍 女警 員警 性騷 員警 性騷擾 員警 職場性騷 員警 風紀案 員警風紀 女同事 性騷 分局 女警 性侵 女警 性騷 性平會 記過調職 警 男警 偷拍 女警 男警 性侵 男警 性騷 警員 性騷 警員 性騷擾 警員 職場性騷 警官 性騷 警官 性騷擾 警官 職場性騷 警察 性騷 警察 性騷擾 勤務爭議 性紀律"
     },
     {
@@ -115245,7 +116650,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-23T01:30:16.163458Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市警爆長官性騷女下屬　信義分局民防組長記過二次同步拔官 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte9xmgxzc2exyk8tmlbvnvbrd3zgrdfet2nor2dwwe5zwmg2etvvmnjlejfnotgwq1bhrs1yudhny0fkblphsep2nlbioxvfslbtyk5kuwjyunhqa3jaevhsawhbvv95cuxputhqakzovnnfnec1txrnbgd4s1o5sdhym0nkug93zwlurllrszbkexrfdnfmqui4szdswgddtzfut19nwfhulxn3dxhnwgrct0vkd1hdefjradhhbfpyofperfnet2dtza?oc=5 北市警爆長官性騷女下屬 信義分局民防組長記過二次同步拔官 ettoday新聞雲 2線3星 警官 性騷 2線3警官 性騷 信義分局 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 分局 性平會 性騷 員警 性騷 員警 性騷擾 女同事 性騷 分局 女警 性騷 性平會 記過調職 警 警員 性騷 警官 性騷 警官 性騷擾 警察 性騷 警察 性騷擾 勤務爭議 性紀律 風紀"
     },
     {
@@ -127511,7 +128916,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-15T23:33:19.024230Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "信義色警淪「創意私房」會員！裝針孔偷拍女警 一審緩刑免關 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxte9fn0lrc1nwzmrkq251rulvv1jxtk9introbnp1yzbrwxktb1m2eggyvuvzlwrkt3l5mdz2bg11wfzamkrndvdmsvfysktfewc?oc=5  信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 偷查個資 偵查佐 女同事 性騷 偵查佐 女警 性騷 副所長 偷查個資 員警 偷拍 女警 員警 創意私房 員警 如廁 偷拍 員警 妨害秘密 員警 攝錄性影像 員警 浴室 偷拍 員警 無故攝錄性影像 員警 熊抱 員警 盥洗室 偷拍 員警 私查個資 員警 針孔 偷拍 員警 非法查詢個資 女同事 性騷 分局 女警 偷拍 女警 妨害秘密 女警 沐浴 偷拍 女警 盥洗室 偷拍 女警 針孔 偷拍 所長 偷查個資 所長 洩個資 男警 偷拍 女警 男警 合成 性影像 男警 妨害秘密 色警 色警 個資 討債 色警 偷拍 色警 偷拍 女警 色警 偷查個資 警員 偷拍 警員 如廁 偷拍 警員 妨害秘密 警員 攝錄性影像 警員 浴室 偷拍 警員 無故攝錄性影像 警員 熊抱 警員 盥洗室 偷拍 警員 私查個資 警員 非法查詢個資 警察 偷拍 警察 偷拍 女警 警察 如廁 偷拍 警察 妨害秘密 警察 攝錄性影像 警察 浴室 偷拍 警察 無故攝錄性影像 警察 盥洗室 偷拍 警察 私查個資 鍾文智 偷查個資 偷拍 風紀"
     },
     {
@@ -130702,7 +132107,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-12T10:10:22.176556Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄遭性騷女警加控長官霸凌！他慘被記大過拔官 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte16wjuyq3yxnxnaz1zgmnhtv0k4nm1wnvvjcw05any5tlr4nuo4n1fkymluoenmculaym81c0jswwvpmejjswxpdmfcsw5tytryekvkzu9fazy2yxbeanndsfl4vmvmnk9w0gfuqvvfexfmufjhrzixa3viv2zjwnv1vfj6u2rjsgxlls1nufhrafjobg01ewdcm0njbdfzs1hletbfx3q4vklsx0m3afmznmvdbkpox1pqsxddv29ssu9unuf0r0zwz2nwsndleuhyuwotvgi5ble?oc=5  2線3星 警官 性騷 2線3警官 性騷 信義分局 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 性平會 員警 職場性騷 女同事 性騷 分局 女警 性騷 警員 性平會 警員 職場性騷 警官 性平會 警官 職場性騷 警察 性平會 高雄 分局 性平會 高雄 警官 性騷 勤務爭議 性紀律"
     },
     {
@@ -130737,7 +132142,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-12T10:10:22.176556Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "已婚警官邀女同事開房泡湯 重懲二大過免職！組長霸凌也慘了 壹蘋新聞網 https://news.google.com/rss/articles/cbmiggfbvv95cuxowvhjrhhiqnldz21pwwvhq1lubv8ywvnxbuvrnvvwtehfehphdmlsu3fzeejfqzb4dwlrcklpnlrlv052ujv0ckfxdghgu1phofv5df82eepfr1b4mufnnkh1n1buwhdszkfdnk9evk80wgx2rexkmgjnrhbvmkdlt0db?oc=5  2線3星 警官 性騷 2線3警官 性騷 信義分局 性騷 分局 性平會 性騷 分局長 警紀 員警 性招待 員警 性騷 員警 性騷擾 員警 職場性騷 女同事 性騷 分局 女警 性騷 警官 性騷 警官 性騷擾 警官 職場性騷 警察 性騷 警察 職場性騷 高雄 分局 性平會 高雄 警官 性騷 風紀"
     },
     {
@@ -130794,7 +132199,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-12T17:21:55.303006Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "退休金泡湯！高雄色警約女下屬開房　遭記2大過免職 | 社會 | ctwant ctwant https://news.google.com/rss/articles/cbmit0fvx3lxte16rvc5uvg5m3a1yxzcsljxtgitrjhqsxdms05ys3hou0d2nf92lv83bhp4zvf6rw9edgpozejeaxpjvupxtjeyymvtby1hbgfsavrbvv95cuxpcljbb2f5t09deuzrwmnyohvnyvdmdw1nmgpfdxbvehbbmgp4cznynfdmywplbdrot1dgvlpqa3b0mzd5dwkytflzvi1vrekzs0rrtgk?oc=5 退休金泡湯！高雄色警約女下屬開房 遭記2大過免職 | 社會 | ctwant ctwant 女同事 性騷 分局 色警 風紀"
     },
     {
@@ -130878,7 +132283,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-12T20:50:32.923227Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "鐵飯碗破了！高雄狼警官「設局約女警開房」遭開鍘免職 - 三立新聞網setn.com 三立新聞網 setn.com https://news.google.com/rss/articles/cbmiwefvx3lxte5cstdzws1zwlntnxl2cld6sfnnegtmzezbwxawugtdv0f1otfqwemzuhd0wlj5nghedmh2v2zuzu1ktmfxqwffr1ncvkxcb05mluxkak8taffsav9bvv95cuxqzk5rcznlwjbmu1u5adv6vg0zenfltf9kawl3wc1xymzrukw3ahczrupeqvbvvtjzmdrltlfttzbay0uxnelxq1b6d21kn0xtv01xbnhls1vyreywsuo4tq?oc=5 鐵飯碗破了！高雄狼警官「設局約女警開房」遭開鍘免職 三立新聞網setn.com 員警 熊抱 員警 開黃腔 女同事 開黃腔 警官 警員 開黃腔 警官 開黃腔 警察 開黃腔 高雄 警官 性騷 高雄 警官 開黃腔 風紀"
     },
     {
@@ -131240,7 +132645,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-21T18:22:36.872891Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "退休金真泡湯！高雄色警官「設局約女警開房」2大過開鍘免職 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxte5vtjutyjlpcugwcefzvhfbefl1tzvem2e2twningjmsjcwyu1vttn5amhhbgpwamdoohd1dzzzy1fzmdbkuxvdshe3sw5qx28?oc=5  2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 員警 開黃腔 警員 開黃腔 警官 開黃腔 警察 開黃腔 高雄 警官 性騷 高雄 警官 開黃腔 風紀"
     },
     {
@@ -132611,7 +134016,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-11T08:43:54.960480Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／鐵飯碗破了！高雄狼警官「設局約女警開房」遭開鍘免職 yahoo新聞 https://news.google.com/rss/articles/cbmi-ajbvv95cuxnx0xkd1lyeef1vefzs0dfee5ccc1mvejjogjem2x2r2z4tnffvhm0bno1ddfluxuyb0jcaxfnwezcdm5znzjmsjy4cznvohvidnd6mfrmm1rrykdrv20zq0zqmwxnrw1rwxrmmelpu2ftmdlcwgczbvlqlutbzupvb2jtawgxqzi1nlpxzmz2zy1ua0vlmuhfoxbsvwt4z0e4chzty1z0ynjyvkgzvg5lme9zzxixsevlujftvnhqqulqsmx6s0jutg5pzkt1elfrzdleakxmmwtfzs1qvwhfdvyxdzqzq04zyudkek9tudvrq1rzywxbbhrrajhzltnzuuw0a1dhutuxagjgdmlrsut0s0leu1hau2f4vfdmr0zmr1lfuzzqvna4ugdsrew2ulffu1l5bnhasgnbskxly1dotjlgegfpagzfefjftzjuotvxv1axd3fsze04vnhib1dud1f6cy14utdknnfsy0llrwrbme5t?oc=5  分局 性平會 性騷 員警 性騷 員警 性騷擾 員警 開黃腔 女同事 開黃腔 警官 女警 性騷 警員 開黃腔 警官 性騷 警官 開黃腔 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 風紀"
     },
     {
@@ -133242,7 +134647,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-21T06:52:11.949249Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "男警喊「美女」還摸後頸！女警氣喊性騷擾 提國賠遭駁 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxtfbkqwppznatrghpudrmdkzot013ee9fetbucvvwy0ewdfzvzzhkujh2mnvkczg1zkcyqxjuu3jtymi3rfq2btvyd2fusgdjn2c?oc=5  員警 性騷 員警 性騷擾 員警 開黃腔 男警 性侵 男警 性騷 警員 性騷 警員 性騷擾 警員 開黃腔 警官 性騷擾 警官 開黃腔 警察 性騷 警察 性騷擾 警察 職場性騷 警察 開黃腔 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -137600,7 +139005,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-06T07:22:32.776217Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄男警官涉誘女警至溫泉性騷遭 記大過並停職 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte1xyzztbwrvctezn2nut2jmdgw3m2kwvnnaddfvsurtqwc0mmrmznjzawjhagzzt2dos0tkbxfneta2b3ryvdftcu5yt0prr0dlzmzfx3r4b1etqjdlodblve1hetmwqjvi0gfuqvvfexfmtwvudfgyt1hpnuz6uhrlq2myzxbltmnjy0lpdvh4t2cwoxvba0jeeufuthr2zjq3auzwtfhmwmhhdtjdq2rzmxzgaxg0x0ftx05cbzjqyl9iuwlfnxdcv29jawntx0hednjcodnsqle?oc=5  2線3星 警官 性騷 2線3警官 性騷 分局 性平會 性騷 員警 性平會 員警 性招待 員警 性騷 員警 性騷擾 員警 職場性騷 女同事 性騷 分局 女警 性侵 女警 性騷 男警 性騷 警員 性平會 警員 性騷 警官 性平會 警官 性騷 警官 性騷擾 警察 性平會 警察 性騷 警察 性騷擾 高雄 分局 性平會 高雄 警官 性騷 性紀律"
     },
     {
@@ -137681,7 +139086,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-06T09:38:30.288533Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "約女警「開房泡溫泉」！高雄警官性騷案懲處出爐　遭記大過拔官 nownews今日新聞 https://news.google.com/rss/articles/cbmitefvx3lxte9druhkmevtltzedw42beuwtknws1vabghfnfn1rwgzsnzqeepluxbrtgjkcewyzg5ltmjxu3hkbfr1vhzlqvn3oulrdmzsavjbvv95cuxozwzbtv84udnnbxzlwxlcslvqc2d2cxytowd1x3fex1p2ujmzy3pgs2o5djjndjlhb2lhrjbrdvlyctdlmkrca2z1rnrozxvrskrb?oc=5 約女警「開房泡溫泉」！高雄警官性騷案懲處出爐 遭記大過拔官 nownews今日新聞 2線3星 警官 性騷 2線3警官 性騷 偵查佐 女警 性騷 偵查佐 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 性平會 員警 性騷 員警 職場性騷 員警 開黃腔 女警 性侵 女警 性騷 警員 性平會 警員 職場性騷 警員 開黃腔 警官 性平會 警官 性騷 警官 職場性騷 警官 開黃腔 警察 性平會 警察 性騷 警察 職場性騷 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 勤務爭議 性紀律 風紀"
     },
     {
@@ -137984,7 +139389,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-06T13:13:08.211754Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "警官邀泡湯開房遭控性騷　高市警重懲拔主管、恐延退送懲戒 | 社會 | ctwant ctwant https://news.google.com/rss/articles/cbmit0fvx3lxtfbisjhur2txtephtm1ycvftou5ucerfyxfoaefgawdvqxbkzlbtakjqdkoync1zmc1fwfnuzvu2oxpjmmhdr3jqrf9peupzzk3savrbvv95cuxnvmvmbllhx3u4atf1mdnbwgpubedwvwiznta5b3zczxf0mwxjnzhosc1mac1prgy0mwh5ei1uzudznjjswezvm0laohziamc5ogrkrxm?oc=5 警官邀泡湯開房遭控性騷 高市警重懲拔主管、恐延退送懲戒 | 社會 | ctwant ctwant 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 員警 性騷 員警 職場性騷 員警 開黃腔 女同事 開黃腔 警官 女警 性騷 警員 開黃腔 警官 性騷 警官 性騷擾 警官 開黃腔 警察 性騷 警察 職場性騷 警察 開黃腔 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -138295,7 +139700,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-06T22:27:05.243438Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄警分局幹部涉嫌性騷！市警局出重手 記大過拔官還移送懲戒法院 壹蘋新聞網 https://news.google.com/rss/articles/cbmif0fvx3lxte90qtreourpog1oou56qtbjwwnobtfzb3vnafr6zvp0afbxblu5mzvkvjzntwddck1vowfkx1r0t3zuu0p3rhj5ovbqytzllwnwakz0r1ittmfomjlsze9wv2jlqluzqulwykrdt3hpogdrctz3egy5mkromjfszwc?oc=5  2線3星 警官 性騷 2線3警官 性騷 分局 性平會 性騷 女同事 性騷 分局 警官 性平會 警官 性騷 警察 性平會 警察 性騷 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 勤務爭議 性紀律"
     },
     {
@@ -138373,7 +139778,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-08T01:20:07.987085Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "性騷女警案成立！高雄兩線三星警官遭記過拔官無法如期退休 | 中廣新聞網 line today https://news.google.com/rss/articles/cbmivkfvx3lxte1lngjqr2ytsmzjoflboxhzoe11yun0ohnibdjummkzsgdtthhnbzr6zny3zxdorgxltxrtnzrfymlhq2zzwjlidg1xszhtmlc1ymnlzgz3?oc=5  2線3星 警官 性騷 兩線三星 警官 性騷 員警 性騷 員警 性騷擾 員警 開黃腔 女同事 開黃腔 警官 女警 性騷 警員 開黃腔 警官 性騷 警官 性騷擾 警官 開黃腔 警察 性騷 警察 性騷擾 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 勤務爭議 性紀律 風紀"
     },
     {
@@ -138430,7 +139835,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-08T03:10:06.654046Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "退休夢碎…高雄狼警官「設局約女警開房」性騷成立！3重懲出爐 - 三立新聞網setn.com 三立新聞網 setn.com https://news.google.com/rss/articles/cbmiwefvx3lxte1rwurmcgtum0ltnv82ndlsxzu5qnztzzrvewdus1daz3ryulq1nktxc3e5mnpcqjq3wkjwwu5kulayswxer09etf9tuxriewnhcvlasv9ftdlsav9bvv95cuxpq1rkuhy4nno0djhqv2xsqvfusxfrm1nfv2xdqm9ltnlzzjvvoudldljxb2f6rernsklfvudxv3k2x1lwu2zgbjvtutfmunhzsxrynul4lvrymnfxcm1qzw?oc=5 退休夢碎…高雄狼警官「設局約女警開房」性騷成立！3重懲出爐 三立新聞網setn.com 2線3警官 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 性招待 員警 性騷 員警 性騷擾 員警 熊抱 員警 開黃腔 女同事 開黃腔 警官 女警 性騷 警員 開黃腔 警官 開黃腔 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -138614,7 +140019,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨／高雄色警官邀女警開房間性騷擾行為成立 將記過拔主管職 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte8xcvzry1r2umrpmewxzvnrzjvmafznbu5mstfrbetfywxpowztywfnnml1dnbytxrlwwl6u0k4tfjhmlziv0tjqtb2wta4t18y0gfwqvvfexfmtky5dtryee1nwnhhuxgxvxvplxbulu01nkveodu2c29vqulhcnpcmtyxctvurlcznk1ncjvjvg9pm2lscvbvshjivtlzvvffx2vqnnh4v1e?oc=5 獨／高雄色警官邀女警開房間性騷擾行為成立 將記過拔主管職 udn 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 員警 偷拍 女警 員警 宿舍 偷拍 員警 性招待 員警 性騷 員警 性騷擾 員警 洗澡 偷拍 員警 盥洗室 偷拍 員警 職場性騷 員警 開黃腔 女同事 性騷 分局 女同事 開黃腔 警官 女警 偷拍 女警 性侵 女警 性騷 女警 沐浴 偷拍 女警 洗澡 偷拍 女警 盥洗室 偷拍 男警 偷拍 女警 色警 色警 偷拍 色警 偷拍 女警 警員 宿舍 偷拍 警員 性騷 警員 性騷擾 警員 洗澡 偷拍 警員 盥洗室 偷拍 警員 職場性騷 警員 開黃腔 警官 性騷 警官 性騷擾 警官 職場性騷 警官 開黃腔 警察 性騷擾 警察 盥洗室 偷拍 警察 開黃腔 警局 宿舍 偷拍 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律 風紀"
     },
     {
@@ -138683,7 +140088,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄色警官涉性騷女警成立 警官、督察組長都被拔官 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5lmmloamo3bujxvgk2otjnadk4nlzhowjgzwxtn2dvvvfydxhbr0vfznnkzwpxel9tz1bccjnbdffnvhnyrnfndtvkndc3cdlj0gfwqvvfexfmtvkzyvqynkmwofcxrejxtwhptwzfexgyejywbuxquzzuzzbiqnvkru04otkwdwnxsvbwuvd4nknqredumxrttmzir1r0cgzwoghxqlz2vgc?oc=5 高雄色警官涉性騷女警成立 警官、督察組長都被拔官 udn 2線3星 警官 性騷 2線3警官 性騷 信義分局 性騷 兩線三星 警官 性騷 分局 宿舍 偷拍 員警 偷拍 女警 員警 宿舍 偷拍 員警 性招待 員警 性騷 員警 性騷擾 員警 攝錄性影像 員警 洗澡 偷拍 員警 盥洗室 偷拍 員警 職場性騷 員警 開黃腔 女同事 開黃腔 警官 女警 偷拍 女警 性侵 女警 性騷 女警 沐浴 偷拍 女警 洗澡 偷拍 女警 盥洗室 偷拍 男警 不實影像 男警 偷拍 女警 男警 性侵 男警 性騷 色警 色警 偷拍 色警 偷拍 女警 警員 宿舍 偷拍 警員 性騷 警員 洗澡 偷拍 警員 盥洗室 偷拍 警員 開黃腔 警官 性騷 警官 性騷擾 警官 開黃腔 警察 偷拍 女警 警察 宿舍 偷拍 警察 性騷 警察 性騷擾 警察 攝錄性影像 警察 洗澡 偷拍 警察 盥洗室 偷拍 警察 職場性騷 警察 開黃腔 警局 宿舍 偷拍 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 勤務爭議 性紀律 風紀"
     },
     {
@@ -141884,7 +143289,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-05T08:13:46.350347Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "台中分局長誤噴辣椒水遭記過拔官 中警局：柯文哲曾四次致電盼不調職 yahoo新聞 https://news.google.com/rss/articles/cbmiyanbvv95cuxpbkfyrhzhduhkavlndjhem3lab0d1d01urupox2lzutfkekxanm1wstfjyjznanhfuxgtm0npwgz4chntq1lqamx5ckxabdfvtzq2ymwtthrndfdpvuhoenpvtu5fbvbzwmnod1bwluvwwgtoyxvuvfnjmuvuqwxteehrt2nvdjnpcjlxvwhcbvz6cdvelxzlz3fislc0dk1gc2zurthhoe9anddit1fzwkdqodc5c3vlwgxnu3rymhjrt0fksf94zjrxq0iyexhvu0pnqwrwq1zpbvvergpxwk9ocmjnuvjusfjylwita1vrs0dszurlmlvjeutdrxjoqxz3uzjemlhfnkzuzuxjbu9hlu8znfjyqtnxagtungv6dfhzbwt2c0lnazrytxe1y0ptwdhzofn6ahplbktbb215ukhpqmxrr2nlsnfnegh5x1biumxzt211whc5bju4tjfjd1zsyzr1r3g0u2p1bkzjdvvym2vpt0dgvmoxngveuveyulq4txgzq0z1bu1xtxbtr0w5ohfiuwrwvljdqmplcw9tm2hnm3lxuc0tb3hiamnzzjzrsl9tchl6bmmtngn4m0h3vvm?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 性平會 記過調職 警 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -141908,7 +143313,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-05T08:13:46.350347Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "台中警分局長辣椒水事件 警局長證實：柯文哲致電四通要求別調職 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte85d1fgagpfci1lbdf1afqyyufhowriel91czjurndtzhdacmleufblcudhz0vlq1f0vtdtouroq2vpu1bja1iwrkjveefzuxcyakwzc0doni0tyuxynddgx2teqxnymgr0ylhsaw9bvv95cuxnzhvpejezsljhr2xjmnppznhmceviuzhjvnjlegtnd1z6uzljckphmgyzddhpmloxrhfialfvq25fwmnfvxvpqvjpenlkujdief9zehbzndflcxvts2vlaec5cjhoas1ork9wslcxave?oc=5  分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警政監 收賄 勤務爭議"
     },
     {
@@ -142165,7 +143570,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-05T22:16:23.026236Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "2線3星男警官性騷女警又霸凌　高市警局：已啟動性平調查 nownews今日新聞 https://news.google.com/rss/articles/cbmitefvx3lxtfbwc1fvs293smvdvg55m1c1r1jkd3ftcvjqwkledvm3vf96ae9ndxpywulstg5hn3zss2lselc0lxb4yud2mme2zmx4zuhsavjbvv95cuxpc08wrjfzbmo2ylhha3ffskzwqv85n3ezexndb2fjy1q0zlrxznhhrhn1a1vyds1wcxpizwzxukrsse1rbtzrtf9tcxuzdepuwm1b?oc=5 2線3星男警官性騷女警又霸凌 高市警局：已啟動性平調查 nownews今日新聞 2線3星 警官 性騷 2線3警官 性騷 分局 性平會 性騷 員警 性平會 員警 職場性騷 員警 開黃腔 女同事 開黃腔 警官 女警 性侵 女警 性騷 男警 性侵 男警 性騷 警官 性平會 警官 性騷 警官 職場性騷 警官 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -142236,7 +143641,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-06T04:39:06.514240Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄色警慘了！開黃腔＋設局共浴退休夢碎 趙瑞華下重手拔官連坐 yahoo新聞 https://news.google.com/rss/articles/cbmitanbvv95cuxpdfrwaupyckp5ru9izmvnmnf0r2phazytsvhyoxr2sdh3rnfkrmnvzufqsxh2edbyylz0d2njcko3bkfhdfdovewweupbck9nsnjpznhxx21yrgfia0xtudr4sw5pblnkdw5xm183sc1pedjfwjbtbe9lwvbtu1bfmmgtluqxb3mzru5wwfrzafvoallnclqtmedqsmhkowtntfzhtvzduvnpdfjqmnrzaw1svjzotetzmfbhzw1odkswynbrmwr4dzfvq0vormf4znn3ykvnulqwdu95d3mzx3cwbuvmewr1t0f6tkk3tez3qms4euo0yufqdhrzzfrkty0xcwnynuljx2zkcu9grno0rxq4lxh6oex2tjlizxhlwufyzlvzs2v0cxjkefmxngdoa3pyykz2quhudg54sxlzv2hpcnhreddsnwphmmlfzxzjevdxrehwu292cel4ujdowelsb2ezdtvevevum3jxyth0mwfzr25oaxlpyjk4qlroag5kb3dumlnhz1a5aezqwevbclhxazmzzlvztexgedz0ss1xbjgxz0y3mmxsc25f?oc=5  員警 開黃腔 女同事 開黃腔 警官 色警 色警 偷查個資 警員 開黃腔 警官 開黃腔 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 勤務爭議 性紀律 風紀"
     },
     {
@@ -142454,7 +143859,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-06T13:13:08.211754Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "約開房泡溫泉！高雄警官涉性騷女警　多年前曾偷吃女兒家教被抓包 nownews今日新聞 https://news.google.com/rss/articles/cbmitefvx3lxtfbcm1fsyzdgthrvy2tsd09vdhducu8tmflestdqsffsrnzqne95sc1hy0n5ymnxv25lemz5bzhwcumwnmi5snfia1ptbttsavjbvv95cuxnzvnsuxbsqxzwcmzhaxzycuhkzlctb3jsq1hcymk0mwoywhnwnuheaghoy05swne4s1hyatrieluzvfk3u1i0re9hnfvyvnzztmr3?oc=5 約開房泡溫泉！高雄警官涉性騷女警 多年前曾偷吃女兒家教被抓包 nownews今日新聞 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 職場性騷 員警 開黃腔 警員 開黃腔 警官 性騷 警官 性騷擾 警官 職場性騷 警官 開黃腔 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -143126,7 +144531,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨／高雄色警官邀女警開房間性騷遭調查 18年前曾外遇女兒女家教 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte05bw9iswzfyvbgsmdcyknyrk1ptkn6ejvnzhbjngzfoxjrswvitxlmbg1zmew2d0zrsl9eaw4teglfcjbybxjsout5nhnbd1he0gfwqvvfexfmtnddoenfdfrpqzlptf9wdlm3cw1kdvp6cefwy0lmx0o2umritfbjws1vd2jfdmzhdk50tudvszvisjnqbvrstnviytu3lvdvsi1kmuzpsnc?oc=5 獨／高雄色警官邀女警開房間性騷遭調查 18年前曾外遇女兒女家教 udn 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 偷拍 女警 員警 性騷 員警 性騷擾 員警 職場性騷 員警 開黃腔 女同事 開黃腔 警官 女警 性侵 女警 性騷 男警 性侵 色警 色警 偷拍 女警 警員 性侵 警員 性騷 警員 性騷擾 警員 攝錄性影像 警員 職場性騷 警員 開黃腔 警官 性騷 警官 性騷擾 警官 職場性騷 警官 開黃腔 警察 性侵 警察 性騷擾 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律 風紀"
     },
     {
@@ -143150,7 +144555,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "逢甲夜市辣椒水案延燒 中市警局長證實：柯文哲4度關切分局長仍遭調職 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte9jb1vwdk43t09kswq1bhlvaex4qvpnb1luuwvlvdnlq2q5tudtaxrsqw5fvjjnrwyyyldjdxvzvxjdanljqm9wcke0qjzbc2vi0gfwqvvfexfmt3hmnujarjnnbeptlxjzc09du1dyeuvwrgctt3q1nmxwetnstm1sq25odnv4d0dpawppalhdlw1levnxnw5xqmt6tvpemwjqamk5swjsrxc?oc=5 逢甲夜市辣椒水案延燒 中市警局長證實：柯文哲4度關切分局長仍遭調職 udn 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -149342,7 +150747,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-02T08:46:58.421701Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "中正二分局清秀女警違法幫前男友查個資 10萬交保記過2次 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte9kytyzdnnlwufrby1uuhktthppqtnmuldjtjzjsmo4bwvqv3d2cuywbudts0fbbktzltzruhliz1lfbhhxttvvavlymfzfcuf3alfxblvpskdqczzxz0rirjzzotrkoxvp0gfuqvvfexfmuhnbduo1shlbm3vxcwxqn3ytmjvpm3ddyklvruvwdxnlcmgymejiuevtmexiavpxt1y2dvk5nlbwn1jmv3qttfzmnw8ttlvsvxhimdfecla0any5vfnkos1vt2lyd0g4slhlt0y1tgc?oc=5  偵查佐 偷查個資 刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 偽造文書 刑大隊長 查個資 刑警 涉貪 副所長 偷查個資 北市刑大隊長 偷查個資 員警 個資外洩 員警 偷查個資 員警 幫友人 查個資 員警 查個資 員警 查個資 討債 員警 查詢個資 員警 查詢個資 討債 員警 洩個資 員警 濫查 員警 濫查個資 員警 私查個資 員警 違反個資法 員警 違法查個資 員警 違法違紀 員警 違規查詢 個資 員警 非法查詢個資 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 色警 個資 討債 色警 偷查個資 警員 偷查個資 警員 查個資 警員 查詢個資 警員 洩個資 警員 濫查個資 警員 私查個資 警員 違法查個資 警員 違法違紀 警員 違紀 警員 非法查詢個資 警官 偷查個資 警察 偷拍 女警 警察 偷查個資 警察 幫友人 查個資 警察 查個資 警察 查個資 討債 警察 查詢個資 警察 查詢個資 討債 警察 洩個資 警察 濫查個資 警察 私查個資 警察 違法查個資 警察 違規查詢 警察 違規查詢 個資 警察 非法查詢個資 非法查詢個資 員警 洩密 風紀"
     },
     {
@@ -150270,6 +151675,7 @@
       "published_at": "2026-04-24T07:00:00Z",
       "published_label": "2026-04-24 07:00",
       "matched_keywords": [
+        "北市刑大隊長 偷查個資",
         "員警 偷查個資",
         "王大陸 警官 偷查個資",
         "色警 偷查個資",
@@ -150284,8 +151690,8 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-12T10:10:22.176556Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
-      "search_text": "女警為前男友偷查個資遭逮！雙雙交保限制出境 品觀點 https://news.google.com/rss/articles/cbmivefvx3lxte82qv9bzurtzjnsd050edvfamvodvvny3zruy1bb1zty3fvelbouhg3z3nfawfzndftmuppmnrrrk9rwxq2dzfymxp0ns1csdvytfoymg?oc=5  員警 偷查個資 王大陸 警官 偷查個資 色警 偷查個資 警員 偷查個資 警員 查個資 警員 查詢個資 警員 洩個資 警官 偷查個資 警察 偷查個資 洩密"
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
+      "search_text": "女警為前男友偷查個資遭逮！雙雙交保限制出境 品觀點 https://news.google.com/rss/articles/cbmivefvx3lxte82qv9bzurtzjnsd050edvfamvodvvny3zruy1bb1zty3fvelbouhg3z3nfawfzndftmuppmnrrrk9rwxq2dzfymxp0ns1csdvytfoymg?oc=5  北市刑大隊長 偷查個資 員警 偷查個資 王大陸 警官 偷查個資 色警 偷查個資 警員 偷查個資 警員 查個資 警員 查詢個資 警員 洩個資 警官 偷查個資 警察 偷查個資 洩密"
     },
     {
       "id": "ffec4715be25",
@@ -150391,7 +151797,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "影／涉幫前男友偷查個資遭約談 中正二分局女警10萬交保 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfbytkr1svvpzmfyvgmznui3udbxcjvyetbonlryq29esnlsc2lrss1cwnrmzdjpes1yy1nwshhpavhjqmppejdalw9oc0nhsnjf0gfwqvvfexfmufl4y2fcug1mcjfrcuppsffizhnqwg9oody2tknlug5wa2xswvnru0p5uktnznnmanplef94c2nvx0tftwvvajraovdwxzdbqkp5v3lov0e?oc=5 影／涉幫前男友偷查個資遭約談 中正二分局女警10萬交保 udn 偵查佐 偷查個資 刑大隊長 偷查個資 副所長 偷查個資 北市刑大隊長 偷查個資 員警 偷查個資 員警 幫友人 查個資 員警 查詢個資 所長 偷查個資 王大陸 警官 偷查個資 色警 偷查個資 警員 偷查個資 警官 偷查個資 警察 偷查個資 警察 幫友人 查個資 警察 違規查詢 個資 洩密"
     },
     {
@@ -156068,7 +157474,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-03T01:21:21.905381Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市中正二分局遭搜索 1女警違反個資法被帶回調查 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxtfbwyujpb2rmngf1c2hvqmj2qmmwc3dlq2s4cxhvv0zcexjrm0e5mupiu3q3bze4qudnr0fxstfymuqyzutinefzqvbtbdrqtfk?oc=5  信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 偷查個資 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性騷 偵查佐 熊抱 偵查佐 熊抱 女同事 刑大隊長 偷查個資 北市刑大隊長 偷查個資 員警 查詢個資 討債 員警 違反個資法 員警 違法查個資 員警 違法違紀 員警 違紀 員警 非法查詢個資 女同事 性騷 分局 王大陸 警官 偷查個資 色警 偷查個資 警員 違法查個資 警員 違法違紀 警員 違紀 警察 偷查個資 警察 違法查個資 非法查詢個資 員警 洩密"
     },
     {
@@ -156248,7 +157654,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-03T14:00:43.311107Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／北市中正二分局女警涉洩密 檢調搜索帶回約談 鏡報 https://news.google.com/rss/articles/cbmiukfvx3lxtfbpngjkwlrxlvprovjibuhobkoytfziqudftk5qeefmcujtdgxfz0vzz25sew13czu0eupfltaxuhnoulbjsxi0emvzcexda0vmemc?oc=5  信義分局 性騷 女同事 性騷 分局 洩密"
     },
     {
@@ -157042,7 +158448,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "誤噴辣椒水分局長遭疑升官 內政部：拔主管職平調警政監 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5rmetcakvsuw5asgjuu09cchk3s1bwakljruo0bwdhetdnz05gwugya1bxwuqwundwcffyxze0wef3di03ztbhakffvkrdr1ze0gfwqvvfexfmugrpuno0evpxzkjoouhhrvlllwjhtgvyamp5ces5qtnkwtlumzzalwpizffty2fldflud0x0sxlqbi1azkluzjn3yzitlvfnbwpqttn2ofe?oc=5 誤噴辣椒水分局長遭疑升官 內政部：拔主管職平調警政監 udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -157064,7 +158470,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "辣椒水事件分局長遭拔官 柯文哲心疼：烏龍罵一罵就算了 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte94cfmyttjhzutusmrfnm5xukxflxdirxfaaunxnnbsmgherxbyn3dzm1nnm2nfzuxwvxpqr285ovhfnm83rdr5txl0u1jrnndy0gfwqvvfexfmtk5ib29jmzqwbkffd1nyzghvrnpbzznluvryalv2u015mw9wdhduwnvxx21prkwwdlbaekrxlvzqn1nlvdbblxowdmg0lw1srhuxsuqzt0e?oc=5 辣椒水事件分局長遭拔官 柯文哲心疼：烏龍罵一罵就算了 udn 分局長 拔官 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 警界 辣椒水 勤務爭議"
     },
     {
@@ -160547,7 +161953,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T07:16:20.771978Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "檢舉違停竟遭警員報復！蘆洲分局爆內鬼盜取民眾個資冒名訂餐 nownews今日新聞 https://news.google.com/rss/articles/cbmitefvx3lxte40c1lcoe15mvvhuk9cawm5ytk0otnsz0mxb2vwyk05uw5cmw13dmfuwktfd3u1u25yoe8xrmpjy21wq2g5a1pyt1oztwpsavjbvv95cuxqy083ynzvrlnqmfa1bhvvlwnxv2g5vkjpm3iteeg4unfmaxhfm3zleu43ukh5ytk1emwxwi12exzoltniu3pmrevttxbdwnlvzhdr?oc=5  勤務指揮中心 報復 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 員警 個資外洩 員警 報復檢舉人 員警 洩個資 員警 違反個資法 員警 違規查詢 個資 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 報復檢舉人 警員 檢舉電話 盜用 警員 洩個資 警察 報復 檢舉人 警察 報復檢舉人 洩密"
     },
     {
@@ -160622,7 +162028,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-04-30T07:55:27.329479Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "信義分局爆性騷！男偵查佐熊抱女警竟「調涼缺」 警局回應了 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxte1rbvrya2z1ewvfcfruzgfuuehxvhu4qxjqexota3nbx0zoadnwzuhmzzjmtmcwsmg2unnir3jqym1uvnhlzeliaxmzoehyek0?oc=5  信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 偵查佐 性騷擾 偵查佐 熊抱 偵查佐 熊抱 女同事 偵查佐 記過調職 分局 性平會 性騷 員警 熊抱 女同事 性騷 分局 女警 性侵 女警 性騷 性平會 記過調職 警 男警 性騷 警員 性平會 警員 熊抱 警官 性平會 警察 性平會 警察 性騷 警察 熊抱 警察 職場性騷 性紀律"
     },
     {
@@ -160659,7 +162065,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T07:55:27.329479Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "28歲蘆洲警盜檢舉人個資狂訂披薩　分局長鞠躬致歉：記大過移送 | 社會 | ctwant ctwant https://news.google.com/rss/articles/cbmit0fvx3lxte5ldlowx0trdwljtjfhqtdiywxrrffznjbfc2nyvgvqzxprnfflskrwwxfyrgv2envkv2piswx0r0jrstvbmjvudwxkdxvkbuhsavrbvv95cuxpcmgxdvlidmjivzjkuxb6yth2zzlwdgjlu3bnrkmtb2fts1viwkgtzmlrtfjbbvjysgjragd5cxlhdknmtepvvxdneunjdujbuvjnee8?oc=5 28歲蘆洲警盜檢舉人個資狂訂披薩 分局長鞠躬致歉：記大過移送 | 社會 | ctwant ctwant 110 勤指 警員 110勤指 警員 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 個資外洩 員警 報復檢舉人 員警 洩個資 員警 盜用電話 員警 私查個資 員警 護膚店 檢舉違停 警員 報復 檢舉電話 訂披薩 警員 報復 訂披薩 警員 報復檢舉人 警員 檢舉電話 盜用 警員 洩個資 警員 私查個資 洩密"
     },
     {
@@ -160822,7 +162228,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T16:44:03.351730Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "律師氣到摔文件！前警官劉居榮認幫王大陸查個資 6被告判刑最重 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxtfbzmjbtblhmbllfowhnzw40s2zfbhvfdjlxsth3ew9vvfztsdrjttnlnjvmt1fmognrctfradvhwdq4admtntdqsffcsnzgdhm?oc=5  刑大隊長 個資 判刑 刑大隊長 偽造文書 刑大隊長 查個資 員警 個資外洩 員警 幫友人 查個資 員警 查個資 討債 員警 查詢個資 討債 員警 登載不實 員警 私查個資 員警 討債 員警 非法查詢個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 警員 登載不實 警員 非法查詢個資 警察 幫友人 查個資 警察 查個資 討債 警察 查詢個資 討債 警察 登載不實 警察 非法查詢個資 非法查詢個資 員警 洩密"
     },
     {
@@ -160847,7 +162253,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-30T16:44:03.351730Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／曾是警界明日之星！誤噴柯p辣椒水　台中六分局長最新職務出爐 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte42swhqt1joqjnjvtnmavbinvpqofvpskfyrtm1qkr3umezoe90tknwrvdooxlkswvluly0rc1nwtrdbzqzrfvbq1prv09onkhjtw1qdzfduetmcereexfsawhbvv95cuxoc0jvbkh4shznutmzqwpetmrvcnrzy1j4bkzjrvdscdjyukdisgncy0otugthafdidxpymgvpnutmdfzjrthvaflqzvbmc0natzvxbxphvfqwag5usldqndjrdtjvwfp1ba?oc=5 快訊／曾是警界明日之星！誤噴柯p辣椒水 台中六分局長最新職務出爐 ettoday新聞雲 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警政監 收賄 警界 辣椒水 勤務爭議"
     },
     {
@@ -160998,7 +162404,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-30T21:38:26.449043Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "噴辣椒水毀前途！分局長慘被拔官　背景遭起底「超驚人」 nownews今日新聞 https://news.google.com/rss/articles/cbmitefvx3lxte9jaufuchz5bzrwa0x2mhzswgowzjrqyvditjhrbgf0r29rzw01qzz2eglnvefydhgyzzzsmu85wmtmn01ya1r3rve1m1hsavjbvv95cuxncthxvfjzx1bhcupsvezkwmhdwunzwuh4annlcgf5c2o0dhnpc2etdlhlymvjoxfxrzfnwkf0unfqdnr0wvvrvmhfewn5vvvrvvnb?oc=5 噴辣椒水毀前途！分局長慘被拔官 背景遭起底「超驚人」 nownews今日新聞 分局長 拔官 分局長 調職 分局長 辣椒水 警界 辣椒水 勤務爭議"
     },
     {
@@ -161029,7 +162435,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T22:33:12.980182Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "蘆洲警冒名亂訂披薩！遭記大過調職 分局長親鞠躬致歉 東森新聞 https://news.google.com/rss/articles/cbmivkfvx3lxte9tcwzlbjfrugfbng5yeevtowu2ag9yrxjxme9edjnwvnhuugxjqlutxzaxze9rukg4vk9jm000vjmwa0xcbjfuvlrkvdlcdevxy2xtcgv3?oc=5  分局長 調職 分局長 警紀 勤務指揮中心 檢舉電話 勤務指揮中心 盜用電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 檢舉電話 訂披薩 警員 報復 訂披薩 警員 檢舉電話 盜用 洩密"
     },
     {
@@ -161086,7 +162492,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-01T01:21:41.984178Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "檢舉違停慘被冒名狂訂披薩！竟是新北110警察幹的　這下慘了 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte1prufvwkq4wgrwuvjycv9xufhuy01wcfnemnzqtke4d0m0c2liz0xuynpxbet6m0tfrdvrczl4mi1fyzlcawv5rv9dr0cwtvl2dmx3cjlxyupmympgtuhsawhbvv95cuxpcvrqmjdfm0zdlupxr091bgtlntl5ckjmahrizuxvdgvns0fsxzl4nw1cdxlwsvz2dvblrknkyml4akxlulb4yk9yzvy0wwm2ti1jtetguulabxrybjy4nnnvttjnthbjrw?oc=5 檢舉違停慘被冒名狂訂披薩！竟是新北110警察幹的 這下慘了 ettoday新聞雲 勤務指揮中心 報復 勤務指揮中心 檢舉電話 勤務指揮中心 盜用電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 員警 個資外洩 員警 報復檢舉人 員警 洩個資 員警 盜用電話 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 報復檢舉人 警員 檢舉電話 盜用 警員 洩個資 警員 盜用電話 警察 報復 檢舉人 警察 報復檢舉人 警察 洩個資 警察 盜用電話 洩密"
     },
     {
@@ -161124,7 +162530,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-01T01:55:13.426088Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "冒名訂披薩惡整檢舉人！28歲警記大過...主管拔官分局長鞠躬道歉 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte9fx0frshbivxnwdwe0wfpfdxdfcgjqqxhoy0vcnmnfdk9ichi4qudrb2oxdez3s1rxqzzzluxomdbpym5nqxpiywfusuw4z1baykg0nldnd0i2x0lzy0hsawhbvv95cuxqqkrqwm9ubs1lck1otxb4qtlry3zhtwjqmldjmzqwz1czvke4tfjuclpavll1sxfzwjj3r2e0yzy5nf9mre9ia2voumrsr1jfnmo5vwktdlbyodvotmpvumfvu1j3tgc5aw?oc=5  110 勤指 警員 110勤指 警員 分局長 警紀 勤務指揮中心 報復 勤務指揮中心 惡作劇訂餐 勤務指揮中心 檢舉電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 訂披薩 員警 報復檢舉人 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 報復檢舉人 警察 報復 檢舉人 警察 報復檢舉人 勤務爭議 洩密"
     },
     {
@@ -161304,7 +162710,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-01T14:05:30.521510Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "6被告中「刑期最重」！警官脫口認幫王大陸查個資　判1年4月 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte9rveywu2zzsw5mv2tlsxbcu1v3b011cw1fnlhwaw1esjj0b1vhejf1q1cxmeniywjlwg13lxlbsnnxszvirup0ttd0zllxv05prvluc2dbvufbymlwbehsawhbvv95cuxorvv3mg8wm3fiwjnnejbszkjwtlrceunzmkpir2tfrunsethzvdfpm3i2q2r0wkfjugf5a2fkr2r2vergsdhprxjxcurormv6ug90ntf5rkn4rgkttfhvq1q1mwn3oe5dbw?oc=5 6被告中「刑期最重」！警官脫口認幫王大陸查個資 判1年4月 ettoday新聞雲 刑大隊長 個資 判刑 刑大隊長 查個資 員警 幫友人 查個資 員警 查個資 討債 員警 查詢個資 討債 員警 濫查個資 員警 私查個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 洩密"
     },
     {
@@ -161344,7 +162750,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-01T15:10:46.401513Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "辣椒水分局長拔官 江和樹認有點過：不希望有人用民眾黨打人 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxte12v3veq3bqcgzlauxhshbfvexidelvrnk4ohbiclhpsnrssdhfatj5qm5lvviyng1ybzi3ohhpqnvmyuk4nunilxrmz2llm0wtmtfeqv80zugztu5iaeytdjy5ug5gyvh1cgplvhlr?oc=5  警界 辣椒水 勤務爭議"
     },
     {
@@ -161423,7 +162829,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-01T21:27:00.917771Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "新北警「惡整5人訂披薩」釀損失7萬！涉多罪被移送「上級遭拔官」 yahoo新聞 https://news.google.com/rss/articles/cbmi0wjbvv95cuxqumpnwwi4nupcaxy1s2pmvznjmkhlu3ffekpcqmx1smzktfr5r0hsn0ntn09rbfvqazlvzho0afd3bdlhwgprddhmx2sttxbacefrv0dur2n4rtnwcffkzza3ef8yzk14vufcuvjuou5joe12edm2bhzzofbas295mktxefn1os11rlbwwvi2ow9yvmm1x1brx1jkam9wodfkttixogr6qkjsnjkwyu1sr0davjvzzje2z2vbuehxte1wmng4zg9ybu5hegtxzzlcsxp5teu1zkxbbfpqa1biwlzzce9quxdcauoyaez0cmv5rk0zz1hrvti0yuhsbuz5cthbdnhoadeynuyzsnnywuqwz04wnffeuediq1veagloumfoymvlegxfm2ruoef1b2pedkhncdvdnuhuc25av0uwmxnswgpaanhidefwv1vksvu?oc=5  110 勤指 警員 110勤指 警員 勤務指揮中心 惡作劇訂餐 勤務指揮中心 檢舉電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 債務糾紛 個資 員警 報復檢舉人 員警 惡作劇訂餐 檢舉電話 訂披薩 警員 報復 訂披薩 警員 惡作劇 訂餐 警員 惡作劇訂餐 警員 檢舉電話 盜用 警員 涉貪 勤務爭議 洩密"
     },
     {
@@ -162457,7 +163863,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "花360萬…憂閃兵被坑找警官偷查個資 藝人王大陸與女友闕沐軒各判6月 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfbtwmzxovfjmxvudnlmzy1qzhnungjltnddwwc1z3rxqzm2ovb5dfzfdmi3ytnvoeldrgnzahixlxpfwuxlltjjq1vtxzfqrgkx0gfwqvvfexfmtjg0wnniwhrrme1jvlpqvedta0ptzknjchluamy1q0hpskliejzmwwlpohlmvgd2z24xzxy3mlhnvtnrsvpvrxr2rnbad3g5bhfnog5ov1e?oc=5 花360萬…憂閃兵被坑找警官偷查個資 藝人王大陸與女友闕沐軒各判6月 udn 偵查佐 偷查個資 刑大隊長 個資 判刑 刑大隊長 偷查個資 副所長 偷查個資 北市刑大隊長 偷查個資 員警 偷查個資 員警 債務糾紛 個資 員警 幫友人 查個資 員警 查個資 員警 查個資 討債 員警 濫查個資 員警 盜用電話 員警 私查個資 員警 討債 員警 違反個資法 員警 違規查詢 個資 所長 偷查個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 色警 個資 討債 色警 偷查個資 警官 偷查個資 警察 偷查個資 警察 幫友人 查個資 警察 查個資 討債 警察 查詢個資 討債 警察 私查個資 洩密"
     },
     {
@@ -162511,7 +163917,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "挾怨報復檢舉人？蘆洲警認了情緒失控「冒名訂餐19次」 分局長鞠躬道歉 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5atxvhnf9bdfpwrgxprtrrbm5dnhhluv9wcnznd0vluxvrwdjttgi5ckyzauxmn0zpahcyqzrbetbuvzfxdvlod3lxsdzwrghi0gfwqvvfexfmttrltjlzbey2bfvfnzctvjhqtv9smkfrmkhfskm0ctfdumq2mf91eljpadjermhkoefomvbjzulct04tnkp3m19wa01rnuswcxntm3cwzhc?oc=5 挾怨報復檢舉人？蘆洲警認了情緒失控「冒名訂餐19次」 分局長鞠躬道歉 udn 110 勤指 警員 110勤指 警員 分局長 調職 勤務指揮中心 報復 勤務指揮中心 惡作劇訂餐 勤務指揮中心 檢舉電話 勤務指揮中心 盜用電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 個資外洩 員警 報復檢舉人 員警 惡作劇訂餐 員警 洩個資 員警 盜用電話 員警 私查個資 員警 違規查詢 個資 性平會 記過調職 警 檢舉違停 警員 報復 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 報復檢舉人 警員 惡作劇 訂餐 警員 惡作劇訂餐 警員 檢舉電話 盜用 警員 洩個資 警員 盜用電話 警員 私查個資 警察 報復 檢舉人 警察 報復檢舉人 警察 惡作劇訂餐 警察 洩個資 警察 私查個資 洩密"
     },
     {
@@ -162534,7 +163940,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長「柯p辣椒水事件」 江和樹：有嚴重到要拔官嗎？ - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte1izezocdjob3pczgj5nzfmai1ta2xymmpxnfvtnffyqut0muhhvmpxz0zftuvyyms1ugrvbmkzrthzutnxudhqejb0ztbdnzjb0gfwqvvfexfmtzvarlfhdzjualboujh1vfawcjqwmdlowhdruf9cwuhqsdbsuephq0fbog1wcmm2thz3lu14bwj5vkz1tu5jm1j0ogzoclmyqkm1n2dhnve?oc=5 分局長「柯p辣椒水事件」 江和樹：有嚴重到要拔官嗎？ udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 警界 辣椒水 勤務爭議"
     },
     {
@@ -162557,7 +163963,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "辣椒水誤傷柯文哲…中市六警分局長遭拔官神隱一周最新動向曝光| 焦點事件| 社會 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte8zvnpjs19uag5jauzwc2t2nffnz01tamtvetd0ewc2bkfsbtfslxf5nc0ys0dgvmr5nxnqwlfznlvsb19pa0rodhhpteduwgrk?oc=5 辣椒水誤傷柯文哲…中市六警分局長遭拔官神隱一周最新動向曝光| 焦點事件| 社會 udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -162893,7 +164299,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-21T07:21:30.135165Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長誤噴辣椒水波及柯文哲遭拔官 新職曝光將任北市警政監 tvbs新聞網 https://news.google.com/rss/articles/cbmit0fvx3lxtfbebwhjadltqlhcy2dsnxplcgxjdg5hdnlgb0xhqkntskfuwm9asehndexpvulwrupwbkc0ohpkbvrxchj6whppm3f6lw1pzjq?oc=5  信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 女警 性騷 分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警察 查個資 討債 警察 查詢個資 討債 警界 辣椒水 勤務爭議"
     },
     {
@@ -163454,7 +164860,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-07-05T10:29:53.436272Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "新北民眾檢舉違停遭報復狂訂披薩　竟是蘆洲110勤指警員幹的 - 三立新聞 三立新聞網 setn.com https://news.google.com/rss/articles/cbmiwefvx3lxte5hvu80c1llc3bcq053y2p3t1azzk4tvvlutzdmaljqafrnekvosfc5ytd4mvhamkq2rtnlazlwn0o0ze94meczsuswbnrkdtnvmeixm1h2eursav9bvv95cuxorldyzgdun2zvmzi4qlnlvxb5tnfvahjhsehcbwn0ujf6emvzdvrxvvvvt0v6auzjz1bjx213qjzjvy1ycvpivtbpdupzsghsohn3y01oudftefjwuk5kma?oc=5 新北民眾檢舉違停遭報復狂訂披薩 竟是蘆洲110勤指警員幹的 三立新聞 110 勤指 警員 110勤指 警員 勤務指揮中心 報復 勤務指揮中心 惡作劇訂餐 勤務指揮中心 檢舉電話 勤務指揮中心 盜用電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 個資外洩 員警 報復檢舉人 員警 幫友人 查個資 員警 查個資 討債 員警 洩個資 員警 濫查個資 員警 盜用電話 員警 護膚店 員警 違規查詢 個資 所長 洩個資 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 王大陸 警官 偷查個資 色警 個資 討債 警員 報復 訂披薩 警員 報復檢舉人 警員 惡作劇 訂餐 警員 惡作劇訂餐 警員 改單 警員 檢舉電話 盜用 警員 洩個資 警員 濫查個資 警員 盜用電話 警員 私查個資 警員 風紀案 警員風紀 警察 報復 檢舉人 警察 報復檢舉人 警察 幫友人 查個資 警察 查個資 討債 警察 查詢個資 討債 警察 洩個資 警察 濫查個資 警察 盜用電話 警察 私查個資 警察 違規查詢 個資 洩密"
     },
     {
@@ -163494,7 +164900,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-07-05T10:29:53.436272Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "誤噴辣椒水遭拔官！中六分局長周俊銘「調北市警局」新職務曝光 - 三立新聞 三立新聞網 setn.com https://news.google.com/rss/articles/cbmiwefvx3lxte01uvlvrl9tafr6y3qxlvrdm2huvfbxodh3vhl1ehbqbxlty1mwu3byzhlznfjtr0tyv0ptnu1ndnpqszzmz1buy2q3al9yqkprrjvtzzhaekhsav9bvv95cuxobxvjoeddyxk1bfzezgtlumrznelnswpus29lb1hdqluxt3dvdg41dzyyz2h1wwi5swr1nvhjzgxwn2i3bvjaufrnuupsvjvxdthzns1iwgdulwfezedwsq?oc=5 誤噴辣椒水遭拔官！中六分局長周俊銘「調北市警局」新職務曝光 三立新聞 分局長 拔官 分局長 誤噴 辣椒水 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -165770,7 +167176,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-22T04:22:16.171005Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／曾是警界明日之星！誤噴柯p辣椒水　台中六分局長最新職務出爐 ettoday新聞雲 https://www.ettoday.net/news/20260422/3153463.htm 台中六分局長因柯文哲相關勤務誤噴辣椒水事件引發警紀與職務調整討論，ettoday報導其最新職務安排。 分局長 拔官 分局長 辣椒水 柯p 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -166066,7 +167472,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-22T05:38:29.288429Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／民眾檢舉違停遭報復狂訂披薩　竟是蘆洲110勤指警員幹的 三立新聞網 setn.com https://www.setn.com/news.aspx?newsid=1826219 新北民眾檢舉違停後遭人盜用電話大量訂披薩與餐廳訂位，警方調查確認為勤務指揮中心一名員警所為，後續交由督察單位處理。 110勤指 警員 檢舉電話 訂披薩 警員 報復 訂披薩 警員 檢舉電話 盜用 洩密"
     },
     {
@@ -166589,7 +167995,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-22T04:22:16.171005Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "王大陸與女友雙雙遭判刑！非法搜刮個資追討「閃兵款」一審判刑6月 line today https://today.line.me/tw/v3/article/gz95gyz 王大陸因疑遭閃兵集團詐騙，找前北市刑大隊長劉居榮協助查個資討款；新北地院一審判王大陸與女友闕沐軒各6月，劉居榮涉偽造文書另判刑。 刑大隊長 偷查個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 文書造假 洩密"
     },
     {
@@ -166906,7 +168312,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-22T04:22:16.171005Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市信義分局驚傳偵查佐性騷女警　提報性平竟反調爽缺 ctwant https://www.ctwant.com/article/478121/ 北市信義分局孫姓偵查佐遭同隊女同事指控在分局內熊抱性騷，申訴後僅被記過調職且疑調往較輕勤務，引發被害女警不滿。 信義分局 偵查佐 性騷 偵查佐 女警 性騷 偵查佐 熊抱 女同事 性平會 記過調職 警 性紀律 風紀"
     },
     {
@@ -167812,7 +169218,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-29T08:37:56.448558Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／找警官、黑道查個資！王大陸一審判6個月、直播主女友也被判刑 yahoo新聞 https://news.google.com/rss/articles/cbmipgjbvv95cuxqzzjycw5uclboylrknvfumfe1vluwclk3d1zuodk5ltjymfbzegm5edhttk1ebvzavunrajuzatbzzm8wt1n5alp2vi1xclfwrwjcmvzqu0pque5dwupzaxjvnznscljoz1n3vellykxmrfdtqvm0v3der1ndru1xwwsyskytuvl4bk5uqtlgmkjjdw5yu3f1q3jidwj0bvlrthyxexa3ewlaym9mm1pjng9avwiztg1qbdjyyzb2d1fhqmmtukm0elvouvy3b1dpsgr1eldzs1hqmfzks3rkahnuauv3tc1bmdbtrm80rdvgy2vbnwpnnmlomjfxdfmwefi1bnlprxjzm3butu0ztee5v0xjzxnynmtws3lcue5iddi2uve?oc=5  刑大隊長 個資 判刑 刑大隊長 偽造文書 刑大隊長 查個資 員警 債務糾紛 個資 員警 勾結 黑道 員警 幫友人 查個資 員警 查個資 員警 查詢個資 員警 查詢個資 討債 員警 濫查 員警 濫查個資 員警 私查個資 員警 違法查個資 員警 違規查詢 個資 員警 非法查詢個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 警員 濫查個資 警員 私查個資 警官 偷查個資 警察 債務糾紛 個資 警察 幫友人 查個資 警察 濫查個資 警察 私查個資 警察 違法查個資 警察 違規查詢 個資 警察 非法查詢個資 洩密"
     },
     {
@@ -168792,7 +170198,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-30T01:18:22.935960Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長誤噴柯文哲辣椒水遭拔官 盧秀燕：不僅烏龍更是警紀問題 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte1hndfhmexwogliver4zffmtzn5vhdfmevfzxvlnffzd29xzi1xzljfculdu2k0zgpxzkvhaxfpzglcvc1srg5wzwpwv1ixr2huwvhwvy00rhzgvm5vqlzoyuteq2k1ehnjegfsaw9bvv95cuxosxjjehr6b3ddb1m1ry1ftjk2d1rmbzltufpny2w5ses1vwfyylfkwxnatmldawzaczfvy1purthmzfpcu1jiaerfexl2n25ebja3bxa3vmvxwvy0v2hfzhe5nvrmzw1wzvpen29yn0u?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 警紀 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 警紀案 勤務爭議 風紀"
     },
     {
@@ -168824,7 +170230,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T01:18:22.935960Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "蘆洲警冒名亂訂披薩！遭記大過調職 分局長親鞠躬致歉 yahoo新聞 https://news.google.com/rss/articles/cbmi6gjbvv95cuxod3pgajzzblm2dti2aluttulxmfzknnpxskvoourznlprdxlztkfzvm9pd2zdmxllzjktrfbwegy5qtrnvf9fwuruzm1kzl9xehu2mkhgbhjaalr1dhq4ofbib25nx3dvylj0netyynflmuytrgrlnlq4b2pduhpfckn3skjzchvoz1dtadjavno5b2zxqm9klwvdulftazvnx3djx2ruyklvui11y3bxrfhhceh2q1nrywvcddbfz0teng5nuhhpa2cymm1er2f4dexmeuvfwjfwd2lzc1zjq0foq25zrznknzhlzxhzbenhumvjohnty1zjcm5myjn3n2vvyno1r0rsbfgtmvgytxlhd0juwfrcctnss01hm3gzmvjtmzfprudpcmoxlxhysedobwlhse9zv1nztzfvwvfodlpntggtb2myn3k2yxpmzdb2dzu3vlvtmjf6bvlcx1zpcxp4ndzxzw?oc=5  分局長 調職 分局長 警紀 勤務指揮中心 檢舉電話 勤務指揮中心 警員 報復 勤務指揮中心 警員 檢舉電話 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 盜用電話 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 檢舉電話 盜用 洩密"
     },
     {
@@ -168900,7 +170306,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-30T04:45:28.960695Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "「辣椒水誤傷柯文哲」分局長遭拔官！調任台北市警局警政監 yahoo新聞 https://news.google.com/rss/articles/cbmi9gjbvv95cuxpcezbafdob0c4svnyu05tntfndhe0vmfrd1pwavk1vzvhb1m5dnl6ow5vu0vox2ctnhe0ymzxvk9rtdv2rvhgt19fukpueflxdu8xtm9aclbktxp5odjjn1vka2s3zzzzu2rtzzlyevoxvjjnoujiajfvm19mu1jxyvjcuur1ctvrclrfm29bb3dfquvxqkjlr1hbdepimf9qzgrwrnlut2xtv0pwqjnvnudorm5uuvhhalptze8zzwdruevdm0loqtzwb3faedfdow5remczz3izsgrpnnr1v0fsdzn3qjlxekjfbnprourazjhozvp4z3lcnu5yympoavzlmeh0ythba2fjdxn3q3y2tgv3rhy1z2rqog1mseu3s25xmvdot1exsvz2ctk3t0rpuhlpve81ue43odfdsnj0ykhkv2tdwdvjcnpznhrlrmu1x0jhzwvvqnf4dfrhneznt0fhbi1vtvljykgtbjrpu2pwuq?oc=5  分局長 拔官 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 警政監 涉貪 勤務爭議"
     },
     {
@@ -169083,7 +170489,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-04-30T09:29:33.629183Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市信義分局驚傳偵查佐性騷女警　提報性平竟反調爽缺 | 社會 | ctwant ctwant https://news.google.com/rss/articles/cbmit0fvx3lxtfa3lvbothbiwu5lowfpx29sdnddqnfzd2xgvv8zzwi4ujczrk1mbkp2dknqltfxytc3duftykm4tgfnudvanldkri01ogiyzm_savrbvv95cuxpoxlnywi1wlhmmff3y0tyehvxem5kujfxn296ethrrxzknkdmzmvqogxfsjlznjhvajrlvxb3r0hfd1o3ctfpr0nqswtqshn6d1huoec?oc=5 北市信義分局驚傳偵查佐性騷女警 提報性平竟反調爽缺 | 社會 | ctwant ctwant 信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 偵查佐 熊抱 偵查佐 熊抱 女同事 偵查佐 記過調職 分局 性平會 性騷 員警 熊抱 女同事 性騷 分局 性平會 記過調職 警 警員 性平會 警員 熊抱 警官 性平會 警察 性平會 警察 熊抱 鑑識小隊 性騷 高雄 分局 性平會 性紀律"
     },
     {
@@ -169162,7 +170568,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-30T11:15:04.932139Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "中市警六分局長誤噴「辣椒水」遭拔官 劉世芳：處置失當就該懲處 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxtfa1ouvrmwp2tkkxtu5cb0rhtklelvbhcvblslriajfhm0vid2rhwtv0ulzirxzpofdez25dtmt2emtobg9qeuixm3ctvezbyuhhnjzybmi1sxk0vnpdovzfwhlktzzkx040bwfsaw9bvv95cuxnemzqltzvoujcmwxamvhjmlvpbl9vnwhbcdfuohrvafdqqzrjavj0uur3afawwej1svvaywtxdxkxq1dfannlctzxzi0xdhr3wfnymumzbhdjwlhvdwdpltk4uk96ulrmnghirfazquk?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議 風紀"
     },
     {
@@ -169200,7 +170606,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-30T15:06:55.604322Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "檢舉違停後狂收訂披薩簡訊 竟是警察惡搞冒名訂餐！1大過、法辦 yahoo新聞 https://news.google.com/rss/articles/cbmikanbvv95cuxqs2rbx2rgu2dnmghxmkrfnvvkzzjgni1hlvphdk8ystlyvhc2tw56z25lm21cbfhsrxvovxrssfv0cjyxvvzzs29oalgzstrqbfbzckcwm1c4q2r4x2r1udzxqurwckrvumldznzjd0jtwtnxetryyvjudtvsq19ywvfqse9udxrfvthmwwv1nwtlqznpsglqmeg3ujy3vtfyrtyxdgp0bkhocvvla2ztq2v5cknivvdsvgfink9eqv9zzkmwy3lgwlb1tfl6ulu0rzzwotq3vxnfcwj5zxo1oxh5ntzvbxhzvg1tqvvtwkjkwmptbexrsjlicddts1y3tzhuahdncfyzyupavtvqylv4n3itamrfd0szu1nwsnbprw8tdkw4vf9nswnvyvvkn1hizzbymzq4dhppdhbndevdmglodfhscgv1qux4ufrvmfjotgpuvzm1ztbubuettfdjchlzdfvyu0pyaehozw04z25sx2jotwnwuw5gehzulu5twgxsnxrwuwlkmi13?oc=5  110 勤指 警員 110勤指 警員 勤務指揮中心 檢舉電話 勤務指揮中心 盜用電話 勤務指揮中心 警員 檢舉電話 勤指警員 報復 勤指警員 報復 檢舉 勤指警員 檢舉電話 勤指警員 盜用電話 勤指警員 訂披薩 員警 報復檢舉人 員警 盜用電話 檢舉違停 警員 報復 檢舉電話 訂披薩 民眾檢舉 警員 報復 警員 報復 訂披薩 警員 報復檢舉人 警員 檢舉電話 盜用 警察 報復 檢舉人 警察 報復檢舉人 警察 盜用電話 洩密"
     },
     {
@@ -169624,7 +171030,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-03T01:21:21.905381Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨家／信義分局爆性騷風暴！偵查佐熊抱女同事 竟調爽缺讓人傻眼 鏡報 https://news.google.com/rss/articles/cbmiukfvx3lxte9nb19fs2pot2f0wxrwamxuqlvqalyxzlbvuhjoeu9ubu9ibkdvrvu2awpsx2rlr1zfn3nxzgdrnhvcwjdqx3zyymlgtvzhswrqzhc?oc=5  信義分局 偵查佐 性騷 信義分局 性騷 偵查佐 偷拍 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 偵查佐 性騷擾 偵查佐 熊抱 偵查佐 熊抱 女同事 分局 性平會 性騷 女同事 性騷 分局 警員 性平會 警官 性平會 警察 性平會 警察 熊抱 高雄 分局 性平會 性紀律"
     },
     {
@@ -170062,7 +171468,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-05T16:45:58.091063Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "王大陸不認罪輕判6月理由曝光！ 前刑大隊長辯「未洩密」卻炫耀「這幾句」被打臉 yahoo新聞 https://news.google.com/rss/articles/cbmiqgnbvv95cuxobwnlbmdqdhhkdgtmrzrcutbfohuzbhvtymlxvk01wgvwmkvjcmlvoc15em1eqjhpaeozteywndbhv0nwrv9gvui1b29iwkxjwhnpnkexs2hkchlqykxjutdhatzzouj6ampxwk1wvenoqty2axzwsgrmltncsxhwm3bkae1ln1n0bdfux2ftm1bytwficxdrsw1fwjffbep1zmryandvqkvvtjboqjjuq1ktzedmrddru3vxohdxnhaxdjy0yjjiqtnacmg4wevvqnhfvy1zn3rhrhfqn28xcec4yxdxmdjty29dwgzjqvfscjrjb0jfnxrpazflqmjjmtazm3hlrtlkak40ddatdzg4zhlbxzf5dlktmc0ynfcwzgxqwfjymuxdrg5huzdguffkdtvqwmc4dfffm3p2adr4uldkvkvhwxo3cu1bx190zln1vwwwc29ezkzxn1rudhlmzdfjcvlraut3qzhoyvbru0hsnwhxvk1rcmxlvhlxuk9ndhjrcmhxr1pyumdase15rgitx0dfv1iwmtn3q09wbxlwthbmz1e?oc=5  刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 員警 債務糾紛 個資 小隊長 洩密 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 洩密"
     },
     {
@@ -170375,7 +171781,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-10T21:56:08.812498Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "辣椒水噴柯「遭拔官」 分局長涉隱瞞拖24hrs才坦承- 政治 華視新聞網 https://news.google.com/rss/articles/cbmickfvx3lxte1bqy0wskftq1ronnfcbzrxenvpdevrnkdvre95cvlhrjbvsutuugdndtricxfxu0lqcfbfsem3q0xhm05grjbxvghomhzmsvfutc1hbdndqmpqym53mvfzwfqtww1ctzfletawz2j2a05rdw?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -170595,7 +172001,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨／高雄傳2線3星警官對女同事開黃腔性騷 分局：已組性平會調查 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte16ttq4atz1qjh2zmvqbjvhtmjdzgdyx09xzwtxxzr4amjnnglmovctelbrmeneyvhuexkxnjnstgd4zefvzfrmdvgxnmy2zgm30gfwqvvfexfmuc1zndnwmjbldkpndhdgc1rfqkn5y0r0n0dfsmzqwwvnrlpzuedgtfk4vml6qwctekzbogpus2tqzg9duuw1sevxv3naytutclu4rwfpt2c?oc=5 獨／高雄傳2線3星警官對女同事開黃腔性騷 分局：已組性平會調查 udn 2線3星 警官 性騷 2線3警官 性騷 兩線三星 警官 性騷 分局 性平會 性騷 員警 性平會 員警 性騷 員警 性騷擾 員警 濫查個資 員警 職場性騷 員警 開黃腔 女同事 性騷 分局 女同事 開黃腔 警官 女警 性侵 女警 性騷 警員 性平會 警員 開黃腔 警官 性平會 警官 性騷 警官 性騷擾 警官 職場性騷 警官 開黃腔 警察 性侵 警察 性平會 警察 性騷 警察 性騷擾 警察 職場性騷 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -170620,7 +172026,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長誤噴柯文哲辣椒水遭調職 劉世芳：尊重警政署懲處 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfb6rkffvhbmtmp0dw02bulfrfqtm2fhqmvsbw9see4yv2eymc1stxnamfbjc0hhwfdjdfbicvznv0rxqjrlb0r2vmvty3dvne5f0gfwqvvfexfmtkrlnvbuyuvzwknytfdzvjvvxzzdugndmge0akroec1st05hmwtuclnqwev1r2fby0lry2hiahdpywhmbxlntvvqskzjzzjzeufutek2zgc?oc=5 分局長誤噴柯文哲辣椒水遭調職 劉世芳：尊重警政署懲處 udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議 風紀"
     },
     {
@@ -170645,7 +172051,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長外洩辣椒水遭拔官...今到紫南宮散心 自嘲「風口上的豬」 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5nbfi5nhu1s3viyum2uefezjdrmkfpzurdnu1mbjhnz3pjdlfjrc1enjzjas1cc3rhuxewcv9rtme5y1vtmkx2mgy1svhuek5q0gfwqvvfexfmtxb5wtfxuhzieetrwhbub0rhy1dxszfkefvmx2tcrtrhogdrn3nqexjjy0d2znmwsf9tdkvjyzrelvpdx2cxduvxsjlotmwydjdjbhzqa1e?oc=5 分局長外洩辣椒水遭拔官...今到紫南宮散心 自嘲「風口上的豬」 udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -170668,7 +172074,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲遭噴辣椒水案 分局長「丟垃圾」畫面曝光 四叉貓拋1疑問 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte93skxyx1zqow5mlu5rqkpmuhjsbzdpwdnxnu1rwfp5wg05cwutmurhqmwybnrqqmmzdng3axpbrfz3yzexbufonhvusuhvmdff0gfwqvvfexfmugtprnuxz21ktunxdjvyudvdrhhnvmlkvxnoluhyyjrpvtkzczbwzhlhczktynpjodz1m0vfcjhceufkwwdxatbawlbuu0znzf8zsvvnbke?oc=5 柯文哲遭噴辣椒水案 分局長「丟垃圾」畫面曝光 四叉貓拋1疑問 udn 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -170692,7 +172098,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "影／中市六分局長誤噴辣椒水調職記過送辦 盧秀燕：警察紀律問題 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte1dzjvanu45bdljrllpyznrvkdslxizumhyse9hx1zdd1dusfhkdznnrvzprudvrxqxclhnt0kzslaxqtlivdbfd3k3tzj1ttry0gfwqvvfexfmuf9lum1abuvhddl3svrhtll0ylpeyzzzvkrua3ljuk45t2dwsxa1ufhvm0dpmlbite1pmi11wc1ycnjznmfkejhjb2hwd21evhe5rudmzfe?oc=5 影／中市六分局長誤噴辣椒水調職記過送辦 盧秀燕：警察紀律問題 udn 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 性平會 記過調職 警 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -170715,7 +172121,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲遭噴辣椒水...分局長誤噴釀烏龍 中檢分「選偵」字案偵辦 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfborkhtrtfqrs1xvldxovfyq3y4ylm3z01hsghmwklwztlla0zdd01qv2p0s3bdzfv6z0szthbkv1nhchrtmwhls0dksthpbmry0gfwqvvfexfmt1pka3bjrnbivwrwbdfzqjhdm0ninhdryks0ykw2sg9nuxc2tkfstnphck5maxg5njbkm3a5otrsnfhiqxzenk1kytbqowdwrhvwylderke?oc=5 柯文哲遭噴辣椒水...分局長誤噴釀烏龍 中檢分「選偵」字案偵辦 udn 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -170740,7 +172146,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "噴柯烏龍！誤噴辣椒水 中市警第6分局長調職記過送辦 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5fnwxsngrhv2vin21ybl80ufnjlvz2v3u3wfpbewnpru9nynpfcxjbumrfmzjndmtcrvexoedyb082vlhfdl9rswy3lwv3d2cz0gfwqvvfexfmugzgou1ioeuxejg0bknucvdxtxf5qwjhwni1vu1faet6qtfvsfo4m0ndtg41thdgdzkwdgjlu0rwdmlnvuzyrwj5telqzxytovhwuxfzswc?oc=5 噴柯烏龍！誤噴辣椒水 中市警第6分局長調職記過送辦 udn 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -171517,7 +172923,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-06-03T00:12:27.598151Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲掃街遭噴辣椒水 分局長坦承誤噴.黨團撤告- 政治 華視新聞網 https://news.google.com/rss/articles/cbmickfvx3lxtfb6snrdmgr0b3jtnev2z1hsnmpnwwt2qw9dv2rirl9abffgazncsdh1ouhldug2exd2cmhtvfnkwgv5ec1vwxnoruotu2xmdtbmwgx0uuv0bi1fmk4wzgnqtc1motjkx0fvrwjjrfpnbunxqq?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -171557,7 +172963,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-06-04T13:42:26.396075Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲遭噴辣椒水 竟是分局長誤噴 中時新聞網 https://news.google.com/rss/articles/cbmia0fvx3lxte00dujrlws0rgxtrkxcz0dnzjhjm1g3a19fvkdqde51s0rjtevxmmjusxrirgo3uxuys0lvdmfluufwzg5rdtk5mmjgeuyzlvzxmuzpsthxos00bvr3nnpzwmfon2oxmfoyuexj?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -172019,7 +173425,7 @@
         "詐欺"
       ],
       "first_seen_at": "2026-08-19T11:55:13.234964Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長誤噴柯文哲辣椒水遭拔官他挖宣導片酸：栽在最大詐騙集團手裡- 政治 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte5ws2xnogzzmxq5clfxtxduedezekg5depomdngbe1qeuzvoxjty2zkuvjytwhvsej4vl9ldxotx3pymdd6owf4n3f1agkyrvfymwptunetby1gtjjoltdhym1ymkvswdfur0e?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 勤務爭議 詐欺"
     },
     {
@@ -172079,7 +173485,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-08-21T04:46:55.946821Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "高雄傳2線3星警官性騷市警局：已啟動調查- 社會 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte5mx21iadrqrehzz2victv6uknoq21zutzuogc4lvnnwevzmuteblvktfdpdefivgjsymvxqxjga1rysc1ttfbnmnftuehquletwhruthrgunvtmzbrughhszz2q3jrdlry?oc=5  2線3星 警官 性騷 2線3警官 性騷 分局 性平會 性騷 員警 性平會 員警 性騷 員警 性騷擾 員警 職場性騷 員警 開黃腔 女同事 性騷 分局 女同事 開黃腔 警官 警員 開黃腔 警官 性平會 警官 性騷 警官 性騷擾 警官 開黃腔 警察 性平會 警察 性騷 警察 性騷擾 警察 開黃腔 高雄 分局 性平會 高雄 警官 性騷 高雄 警官 開黃腔 性紀律"
     },
     {
@@ -174103,7 +175509,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-04-22T04:22:16.171005Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "獨／高雄傳2線3星警官對女同事開黃腔性騷 分局：已組性平會調查 line today https://today.line.me/tw/v3/article/jp1wbak 高雄某分局2線3星警官遭指控對女同事開黃腔、涉及職場性騷；分局表示已依規定邀外部委員組性平會調查。 2線3星 警官 性騷 女同事 開黃腔 警官 高雄 分局 性平會 性紀律"
     },
     {
@@ -176072,7 +177478,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-22T05:38:29.288429Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "快訊／分局長噴辣椒水誤傷柯文哲多人　記過拔官再依傷害罪送辦 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte0wczlornzyd04wv2dwtxrvzjdsc1bxn2xmy2s4c1hiytrmbu8ya01qswjvttl0q0rtvwpnwxvmundstmfuzvytrdcydkdfa1fpcwk2cmnhsg9vbjvvdmfsawhbvv95cuxnzjyzuzhmmepibwdodtrdv0thr01vngtsnhjttfytv3jbdknttujeoxbpnk5os0d3v2u3dhntblvywfpesm5erlbbsvjuatzevzdwy0xndlnqwe5pannsqutocwdhchlooa?oc=5 快訊／分局長噴辣椒水誤傷柯文哲多人 記過拔官再依傷害罪送辦 ettoday新聞雲 分局長 拔官 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 勤務爭議 風紀"
     },
     {
@@ -176130,7 +177536,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-28T07:32:05.482843Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲遭噴辣椒水案 台中分局長釀禍記過調職 柯：第一時間說明可減少對立 yahoo新聞 https://news.google.com/rss/articles/cbmi4gnbvv95cuxnq3fmtwzytlnqrhlccthvmvliq3zhbnmtsfvvawntmxc5a3fxemktzmk4cnhkmuxangu4del2cvb5dzewrxdjrfe2ckctuhv3zhzvempxvurdyunkqzyxqu5gzkw0ueloa2fzvdjzsujwcnjywud3wvrndhjrdlpba2lkrk1rujcwruzbvl85zzztamxgcldrz3hkukqxs2xjx0xyzdu3vdn6wxzovdn0whz0cm1uslnwwupmu3lbz3lnzkhzmulswdvfc0valvrjzs1zru5xnvlqx1dvdvpfmzjmmhdsbjjhqtcxouj1ovazbvdneg5iunfwbutluhmwrkk5a0qwbi1oymewdgxrqzhyvejuzu1dunpfyxy2ehnzbvdqu1zrlurbqw9pt1ztrvyyeg5wvfpdzzvfwtfqcjn0wkjltljet0ytukxzy016m3jwykthz21futjxutjozmp3ymq3d0nfu0j2wwjerlitdwtpdgjwrmu1r0jamefjqzdnn0yzzgvowfndev83s2f3bxptrhvsnwfgyvpyodh4tuppx0u0bwd2tdhjblvlawzns0tlblpsbc1lbhzev3bjaennue4zatzpc01pn3y3mjjmazc4relwcxjsdm93dw?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 員警 外流 監視器 性平會 記過調職 警 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -176224,7 +177630,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-28T07:52:06.231566Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "雙載青鳥？鬧3天結果是分局長誤噴辣椒水 柯文哲發聲遭網灌爆 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte92vjbxtwxfwklrtwhudhiztho3tg1qsupbmxhrvlvqetq3aw8zagtfchzywu5asnu0sjrtatdftfrxbexez2vcm1luadjcswpnvgfatfj4rnbyykzmrwe3rlmwwknzzgjvu3fsaw9bvv95cuxpn1a1nmltwlgxnfmxrwxzdvu2ogw1mkl1bkfjsev4bulseuz1oexpewi1zfi1azu4es1znvrrbjzzmm1pdmx5bnneu0dwutbevdr3ufnprup2njbmbe9nadfmdnjunhdsz2xroereng8?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -176250,7 +177656,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-28T07:52:06.231566Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲被噴辣椒水偵破 分局長遭拔官記過 盧秀燕：不只是烏龍更是警紀問題 yahoo新聞 https://news.google.com/rss/articles/cbmi4gnbvv95cuxprvgwclzstljirk02n2hzr0llnuh3n3ryoe1tduf1wvexd0jxm19oa0fhzuqzmvzns2tzuc1gdxm3nxvaa0zndmvwzunkr21sngvndjvma3rlcnrkre8wqu94vvdrls0zexjhml9uzvfytmw3lu9cmu1rrfplswhlslh4d0htmxj4u2lva2rdsxpycmhgy2neeu5iwdzubelqsdqwreves1bpwmzqa19uowp0d3z6tzd3mc1yd3hquxlinvphtnu1v2i4ywfzmuk2rhhzr0p6t1dwdhflcthlvghybgjpahfia3jhbw13nkjbqnhyb3b2bucwnm05tglotmvqowfud2nalxu0dwloekk0wvltwjhvchhpng9ywhzkmjzyymzaundrb3f6mgjodjiytuxvlxl5uunynnnir0wxmgrsz2lxvxi5mzrcdnbjnvgttxdnrgctslpmsv82odrcmwn0sgw0nfb0cwrkt1fpunphadv5afbss1bjbvfwdnpfy2ztv0exru9qam80ehzsmvv1r0htzu51nejvmeu2lvn3nle5ntrid05wszfnzhriuwrdwfbtcklouezka1qtwkj3vdm0zy1psfzjmfozrnyxueo3re1xrunzdehyzw?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 警紀 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議 風紀"
     },
     {
@@ -176274,7 +177680,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-28T08:07:49.776740Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "台中六分局長周俊銘噴柯文哲辣椒水 延誤24小時通報加重處分 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte5ieelwafrmzjc5zhi0uehhtk9yam9ma1zhlux6m3pzzjlrtlytbuzwnui3sldan1e1dml3ejrhcfewz0dnazrerfnweeffr1dfs2p4uu8wddhelus4zg1rs0lwu1f5djq4wnfsaw9bvv95cuxpsujsohnovklqlvdctl96blp2bgdmlu9yn0trv3vtq2p0rgzlswlzrexrb3nxwlpcavzymc1hufjkufbwr0r3mk91bm1scm96v1lxd19hv1n0d0z0rmo0y0tcbjizm21rztjunmden0k?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -176340,7 +177746,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-28T09:06:15.569486Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲遭噴辣椒水竟是「分局長」惹禍 王義川揭關鍵：再唬爛啊！你會信？ 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte02r1pdcwjdnk9dwvd2sjj6yxmyz0niq1vmqxvnukjeoep3yvbkoffichrmcedlrkrjzed0wwh4cxvjbwpcq0zwdwj5skhgag1fotjpnhy2wepozjhjmzzwdln6ss1nznzwx1hsaw9bvv95cuxqmfnblxzbeeetdmvqzlrqedqzuu94t3hjujnuzzjqwlfzrzlix0rzu2lfndh5zdnoqvc1u3nhstlwwgxdakjtsjlptupvlupxq2f0agxlulu2qzcyr0nqyunun18xuzaxn3c4mzhablk?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -176429,7 +177835,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-28T09:06:15.569486Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "「誤噴」柯文哲辣椒水台中六分局長遭拔官法辦 警政署火速批准 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxtfb0t20tlxldsgvrmu8wexc4d3lwuei2afzed0fymu1bmgzrwxi5aevnbjvnbxzxze5mrmy3shnvehndafhfvxdqrwszoxi5ehjjm08tnzrrelhlcwfem0tfbuvhneuwowtja0hsaw9bvv95cuxnuw53dvgyc3fttgvfrtlfnkxnr0r5twl0mffqqzdbb1qyy25wawdfu0y0wnz6zznnedi2sg53dv9ktndmbdrdtwtlcffnrgzva1hwb1lfzhp0ttjprk9mqk4xr05ym01kvdgwx25ma0k?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -176478,7 +177884,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-28T10:38:10.361658Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲被噴辣椒水 台中6分局長誤噴記2小過拔官、傷害罪函送 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte1eame0benkvvvyqu5unmxmuwzvwddhr0dranpgeux4rjg5bexpc3zyuflunndua1l1umnydddwzdrxrww3qwzpc3zvrvvqbffqql9ivgdpz1bnt0xknhczakpbcmnuvmfnanfsaw9bvv95cuxptfbdzlmxuurlsdcxn3oxzwuwa29yrmx5vdh6sududfpjnmzergllbhrtoha2tk1qcm45ck1obgzetwxzm2xnmuvuedz3dxk4z2k2akfzanjfuunsnndlretdmwvftm5lx0d2cgfuz0k?oc=5  分局長 拔官 分局長 誤噴 辣椒水 分局長 調職 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -177165,7 +178571,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-29T03:59:10.200041Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "分局長「誤噴」柯文哲辣椒水傷害罪送辦 中檢證實已分案調查 自由時報 https://news.google.com/rss/articles/cbmiakfvx3lxte8yckjad0tqywpjv1nhn2fcamrncdfev2rvwhoywllzywpjc2lmzlbnz3j4wedfbgi5q2x0aepvn0cxnvppdgt0sxl4v3nrz0lcqm5xuk9iz180y1zjb0tltxpvoxpzanplmxfsaw9bvv95cuxqwfh3smlxevazdu02lxbfyndkm1dostuyavrtbwm5tgm2qxrjnvrududtylngmfbxlwdecffzb08xcxnwrvyxy0homfczahbvb1lfmnvocm9dyvbuvep4lvr5zy03v2dmejner3rlb1k?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -177290,7 +178696,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-04-29T16:13:10.524025Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "【警界內幕】誤噴辣椒水成「拔官導火線」？分局長曾為這事和局長摩擦 東森新聞 https://news.google.com/rss/articles/cbmivkfvx3lxtfbkcvfqvwrbv2lyrtcyx3hezhk4zwkwww5fqkv0vdzms0xyni1sotvpthowu3firtbvdek2qwtcb2d6dm44r1lvlxhrn1jywkneemrmt2pb?oc=5  分局長 拔官 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -178193,7 +179599,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-07T23:32:45.905178Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "真相大白！柯文哲掃街遭噴辣椒水竟是烏龍 台中市警局曝懲處原因 yahoo新聞 https://news.google.com/rss/articles/cbmipgnbvv95cuxqenm2nnzyowfqsxhqs0xklwfbcdk3vjvnbujyalh1nullwm9otuy4u1lhehvonnzoegwxck1jzvzwdjhmtgjlbmzvve01rw5waetpa2dywmsttelzcvnjwvk4y3jjuwx2ue1lt054zgric1n0skhad2zuyxl5u2vjlufhrjhsb0rvyjr5q3ziuvaxre1mq0ztxzhtnud5bjdsb0nhtjiwwm5jbgh5slvxsec0sxjduth4qtr1ufppwvvnbjc3tgdnvzg4cghtr3fsnhatze5lrujpwnv4mgjutw1kdnpxz3vemnzan2fhyutysxk4ufd5nlvzrwv6tvo5bmnrmw9yweg3q210svnrvwsyutqtnejxuw5fq0pcutr6txi1v25fythqzulkukhmnkrjdjv6qwlkwukttjcxv1lsrhrmn19faxbdqul1qmzjmertb2rzqy11znaxyws4cgo3ohhcq2lmnhvpskz5yl9poujou1hnt0vxqwe3egpjqtllwtuwx3dicjlrc1n1tzhwewuzndjmu29mlu4xu0rvufplqq?oc=5  分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議 風紀"
     },
     {
@@ -178704,7 +180110,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "中市警分局長試噴辣椒水惹禍！柯文哲：第一時間說明可減少懷疑與對立 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte1nd2tux1zvynrxvtcxdktinzdhmxnozzlic2lnn0t3tkv6vzhsogjhzznbvum2wwj3oxdnrjhblvhxq2vfdgm5tzlzq1nqqtdp0gfwqvvfexfmufl5uhy1vhbtvmdvdk9unwi2v1p2ew9gmkrqvg5xengyq0ngngrtmwzobk9fwvfhytnvyxpquxezq3o0wnnbstf4mvfla3vnexprsvhjwle?oc=5 中市警分局長試噴辣椒水惹禍！柯文哲：第一時間說明可減少懷疑與對立 udn 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 警界 辣椒水 勤務爭議"
     },
     {
@@ -178728,7 +180134,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "誤噴辣椒水分局長被拔官 藍綠批政治事件「懲處不成比例」 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5qww1eegriempntujrqlfvajetcty2yw56twy5enbzeetystvkltryr3axdgzrehzxt1vvrtl1mhbqrgxrx0xrmwhnodfabzfv0gfwqvvfexfmtvhumeitckhtnxrxrdkxbvnpuew4dljpwvpwwwzstm1lamhrcmvls3dqmdblqlvlehrtajhwd056ce44eelhzdryuut4z1dxtknwn0fxdle?oc=5 誤噴辣椒水分局長被拔官 藍綠批政治事件「懲處不成比例」 udn 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議 風紀"
     },
     {
@@ -178750,7 +180156,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "柯文哲逢甲掃街…六分局長誤洩辣椒水糗大 警局長吳敬田自請處分 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte9az0tlq21xcki3r0hqytlfbwvqdhlywhpqajjtennncjfdvkg0wkpmtm9osupvnkrndvvmeu9wrvnmc1btcxfinzfocvhwtuno0gfwqvvfexfmtw1qyuhkxzheltnzuknxc1rauhzzne5pdzy5uuryrmiwac02zzbnnxbhmvvnadexotkxalvobugyzmh4s240vdnatdnhehjrcxfzedfwske?oc=5 柯文哲逢甲掃街…六分局長誤洩辣椒水糗大 警局長吳敬田自請處分 udn 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -178806,7 +180212,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-14T04:58:57.272163Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "掉漆！柯文哲逢甲夜市遭噴辣椒水 竟是警官配戴辣椒水洩漏惹禍 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5edvu1dwjyvtlqdfo4ym12yumyohjswdizrwxlvvfzee0xmlhrtudpsnpcaedrafltswx0exfasv81rll6yutes05wtmqxbdgt0gfwqvvfexfmtju2wwvjrgwtmwtmqjvdrvnssdnxrufpvee2ali1m3zfsg5wmwxmuhjvdc1hmktnukhvow1ntue0otc5uhbysvzoduxfbhjrcug4andpaue?oc=5 掉漆！柯文哲逢甲夜市遭噴辣椒水 竟是警官配戴辣椒水洩漏惹禍 udn 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 勤務爭議"
     },
     {
@@ -178905,7 +180311,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-05-15T08:11:38.808389Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "烏龍！柯p掃街遭噴辣椒水「抓到凶手」 分局長測試誤按- 政治 華視新聞網 https://news.google.com/rss/articles/cbmickfvx3lxtfbusuhfz0j4v1dymeuwql9bmxbacle1b1biekfhvnbmuedlsnpxdlramhjuawtes3jdywzmyu1ysmx5mwsztksxre9vczhfte53welhwku2txhhmnfqmzfnm09fa2jltzrkyudtedhmnhfxdw?oc=5  分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議"
     },
     {
@@ -179095,7 +180501,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-05-22T14:16:42.334504Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "新／辣椒水誤噴柯文哲「2小過拔官」懲處太重?警局：分局長24h後才坦承 - 三立新聞網setn.com 三立新聞網 setn.com https://news.google.com/rss/articles/cbmiwefvx3lxte82sg1tcmhprxe2ulppwkxwt3dhwefvn1rqtws0u1ruumxguzhkrutnskk0nw94dw44dxiweefzre92wjljbku0yu05z0foazbzmui2b0vrd0bsav9bvv95cuxqb0hrenoxtjvwchfwdfo2cutzdhlmafnys1drexvodwdrx0jgltjeckzxrmjerflutlzzz19vywtsm0njtvbxnjrycuw2qlzznwtzx2t6mhjttnztaunjoa?oc=5 新／辣椒水誤噴柯文哲「2小過拔官」懲處太重?警局：分局長24h後才坦承 三立新聞網setn.com 分局長 拔官 分局長 誤噴 辣椒水 分局長 辣椒水 柯p 辣椒水 分局長 柯文哲 辣椒水 分局長 誤噴 辣椒水 警 勤務爭議 風紀"
     },
     {
@@ -180135,7 +181541,7 @@
         "勤務爭議"
       ],
       "first_seen_at": "2026-10-05T15:56:08.806113Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "超烏龍！噴柯文哲辣椒水兇手找到了 第六分局長測試惹禍記2小過拔官 中時新聞網 https://news.google.com/rss/articles/cbmibkfvx3lxte1wykvjvm1rndvvv2zxdlncmfq1y1dkuejfuut4ytnwq01lchrfckvgskvhczhirfj5slbkmgjrnupqr3pwvwlnnxzxb1bcclbprupqsm1wumhtulpncfppq1itwtnqwlfvvzbstjrr?oc=5  分局長 拔官 分局長 調職 分局長 警紀 柯p 辣椒水 分局長 勤務爭議"
     },
     {
@@ -182910,7 +184316,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-17T13:05:15.646340Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "與黃文烈親信有債務糾紛 鍾文智找警察偷查個資 北檢另案偵辦中 line today https://liff.line.me/1454987169-1waxap3k/v3/article/l2go2yk 檢方偵辦鍾文智偽造簽到案時發現，鍾文智因與黃文烈親信有債務糾紛，涉嫌透過南港派出所警員偷查親友個資討債，目前由北檢另案偵辦中。 警察 查個資 討債 鍾文智 偷查個資 黃文烈 親信 偷查個資 洩密"
     },
     {
@@ -186450,7 +187856,7 @@
         "風紀"
       ],
       "first_seen_at": "2026-04-20T00:46:24.530817Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "南投女警沐浴驚見鏡頭崩潰求醫！分局揪色警「知法犯法」二審重判 yahoo新聞 https://tw.news.yahoo.com/%e5%8d%97%e6%8a%95%e5%a5%b3%e8%ad%a6%e6%b2%90%e6%b5%b4%e9%a9%9a%e8%a6%8b%e9%8f%a1%e9%a0%ad%e5%b4%a9%e6%bd%b0%e6%b1%82%e9%86%ab-%e5%88%86%e5%b1%80%e6%8f%aa%e8%89%b2%e8%ad%a6-%e7%9f%a5%e6%b3%95%e7%8a%af%e6%b3%95-%e4%ba%8c%e5%af%a9%e9%87%8d%e5%88%a4-041243223.html 南投一名張姓員警趁女同事在分局宿舍盥洗時持手機從門板上方偷拍，二審認定知法犯法且犯後試圖刪除影像，改判有期徒刑8月。 女警 沐浴 偷拍 色警 偷拍 警局 宿舍 偷拍 偷拍 風紀"
     },
     {
@@ -198995,7 +200401,7 @@
       ],
       "tags": [],
       "first_seen_at": "2026-05-13T23:19:29.012611Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "其人其事／遭歹徒報復割頸 王新弘堅持警職 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte03zvzsdfnzvkx0a1q0bkfdvnlcz0x5zxbuyll5zkfjrvjywmpntf9ibglhc01ku0hfluzetjz4tnvuq3d1bdjzm08wcgkzsdhs0gfwqvvfexfmtlllsus4bnv0revtc1zwcwvgsxjtbep6dhetzmvnrk1qyvjbdmpbrxb6zvd4qvvzz1jzm1dnrhhvd0vpnwtuazvadfz3umzjtnlgq29qbmc?oc=5 其人其事／遭歹徒報復割頸 王新弘堅持警職 udn 員警 報復檢舉人 民眾檢舉 警員 報復 警員 報復檢舉人 警察 報復 檢舉人 警察 報復檢舉人 "
     },
     {
@@ -200211,7 +201617,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-20T00:46:24.530817Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "找黑白道查個資討債！王大陸喊：忘記　警官脫口認了讓律師氣炸 ettoday新聞雲 https://news.google.com/rss/articles/cbmixkfvx3lxte8zs29pswd6nutodmter3jps2tybmpyrldymkhfx2retkxxlwlcvji5wnhtwhvwbjk1wl9gtnzgnvfirexrrnnuu0nswnc3d21rr2fpbdvztjffdk1zr2fsawhbvv95cuxqc21zyznuwmpkz0rfclvct042c3rhyvfkwfr5btnwdwxyngfxvhjktmvuowtpte1md0pweue3qxbzlunrbtjwwtvcnfrhoxp2eevsemrmog9ivk9eode5mgves2hkcm9qlq?oc=5 找黑白道查個資討債！王大陸喊：忘記 警官脫口認了讓律師氣炸 ettoday新聞雲 刑大隊長 個資 判刑 刑大隊長 偽造文書 刑大隊長 查個資 員警 債務糾紛 個資 員警 幫友人 查個資 員警 查個資 員警 查個資 討債 員警 查詢個資 討債 員警 濫查 員警 濫查個資 員警 私查個資 員警 討債 員警 違規查詢 個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 色警 個資 討債 警員 濫查個資 警員 私查個資 警察 查個資 討債 警察 查詢個資 討債 警察 濫查個資 警察 私查個資 警察 討債 警察 違規查詢 個資 洩密"
     },
     {
@@ -203174,7 +204580,7 @@
         "性紀律"
       ],
       "first_seen_at": "2026-04-30T20:37:05.447518Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "屏縣警局3性騷案2成立 「叫女警喝農藥」偵查隊長調職、記2申誡 自由時報 https://news.google.com/rss/articles/cbmiaefvx3lxte8tntlsa1jarufncfz4wtjsvvjpu3jfsc1qwvfknxjftnldt2joa2zlzkrmrjh6wv9wrghiouxwdg5fqtzlsuxqxznqatzjdnfrzvm4btvav29wthk2zs1ewgzqa0jtu3lo0gfuqvvfexfmtv9pruvqcxpxqjhgng1ot08wrfflce5tdmrpwgy5dujycmxhcc1refnqui1uuzdorc1rdmloymv6r3pts3jtt3bpctf6swfnsffqzfhcvdremtbbzxnvogriddjnzfrpd2m2ukvwrve?oc=5  信義分局 性騷 偵查佐 偷拍 偵查佐 女同事 性騷 偵查佐 女警 性騷 偵查佐 性平會 偵查佐 性騷 偵查佐 性騷擾 分局 性平會 性騷 女同事 性騷 分局 女警 性騷 小隊長 偷拍 巡佐 偷拍 巡佐 性騷 巡佐 性騷擾 警官 性騷擾 警察 性平會 警察 性騷擾 性紀律"
     },
     {
@@ -204282,7 +205688,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-20T00:46:24.530817Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "閃兵案外案！王大陸找高階警官查個資 今同框女友開庭 台視新聞網 https://news.google.com/rss/articles/cbmiv0fvx3lxte5ovmrjbtc0y2tawgfrm3etay14bxkzx01cvezvne9qau9smtz5uv92b0xsde96yxhhlvg0ru1lnzfgn0vazhvktznmythqqv9izhr4bmjpoa?oc=5  刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 員警 偷查個資 員警 性招待 員警 私查個資 員警 違規查詢 員警 違規查詢 個資 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 警官 偷查個資 警察 違規查詢 個資 洩密"
     },
     {
@@ -204440,7 +205846,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-14T16:24:02.485116Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "王大陸閃兵案外案再開庭 刑大隊長查個資後「邀功對象」曝光...竟是議員 鏡報 https://news.google.com/rss/articles/cbmiukfvx3lxte1jxzvpylljbxlmstb6ukhlz3nxm0ziy2ptsdvzzvbgqxo5ujbfwjbtqxi5nhrzoufuzlrgbfkzc2zhcxhfcxdetfhhvkhyvvnrm2c?oc=5  刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 查個資 北市刑大隊長 偷查個資 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 洩密"
     },
     {
@@ -204469,7 +205875,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-05-15T08:11:38.808389Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "王大陸偷查個資案 車商小開證稱曾找楊植斗請北市刑大隊長關心此案 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxtfbswmdmzvpkymhhbu1inefydmexuvfmqvjnwfdkyxrjazhyuxmwoxlpdzhrbg0tbgfvrm9rnva1luztdjqtyuwyc29fegnsvddq0gfwqvvfexfmt0narenutlfob3zon3rjn2dneu15clnfthlkdujbvmruqvhocwk5zmlca0nrovv1aupotkhtymlsv19nzfbsv0nfegjtzfrkx0txczj1v2c?oc=5 王大陸偷查個資案 車商小開證稱曾找楊植斗請北市刑大隊長關心此案 udn 刑大隊長 個資 判刑 刑大隊長 偷查個資 刑大隊長 查個資 副所長 偷查個資 北市刑大隊長 偷查個資 小隊長 偷拍 小隊長 包庇 小隊長 涉貪 所長 偷查個資 王大陸 個資 判刑 王大陸 刑大隊長 個資 王大陸 警官 偷查個資 洩密"
     },
     {
@@ -204586,7 +205992,7 @@
         "洩密"
       ],
       "first_seen_at": "2026-04-22T04:22:16.171005Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "王大陸與女友涉個資法同框出庭 刑大隊長邀功對象曝光 yahoo新聞 https://news.google.com/rss/articles/cbmi9ajbvv95cuxnc1lfwfzqqzhvnhdosgz3nglmq3luaenmdmxsouswt29iowrwujkxznj3sunhs2g5rm5rwxlzbfpguks0suzlb1frejvjnwngblfyz1drcdawohfbnm5jvxbmsln5nmzquhzpazqwuw5vq05zeg9rz2p0vfzzufbuc2lxmhqwvflledrvrdr0y3hqn250vv96wgduew03czdqtgqtbkpzsgwzvktqngwynefzaw5mnm92ymtfnddwaulou1a1me9noxpjwvj0twtluzrntur6tuduwmrwvzawtuxby3fraxvlcvvlektys24tamm4ek4ty0u4d1hkcetxzjnyuerhdm9kog5qd08yx2trwmh3b05ntvh6zjftnhprwkdnmfrovegxby1vmtf2efpssdhqtdrmqwryt3lubenpb2pznjjwnv9uswq0zmmtykfsz1znrm9cowdyuju2tmixbglqbkjfmnvmc2licullwki?oc=5  刑大隊長 個資 判刑 刑大隊長 查個資 王大陸 刑大隊長 個資 洩密"
     },
     {
@@ -213443,7 +214849,7 @@
         "收賄"
       ],
       "first_seen_at": "2026-05-13T10:02:33.250530Z",
-      "last_seen_at": "2026-10-08T09:30:01.579952Z",
+      "last_seen_at": "2026-10-08T16:49:13.708087Z",
       "search_text": "北市2警沒開單舉發無牌違停車輛...遭指控貪汙圖利 二審再判決無罪 - udn 聯合新聞網 https://news.google.com/rss/articles/cbmiuefvx3lxte5yrvjfnut6be9loetom3nzsnzlavlfbjqywflbuuvseny0dk9fsefszgyyqldfuxbqa1ncd1ayazvozxbjcny4smrns0rltvhl0gfwqvvfexfmtljyamrwyufhu1vfbwhjag9gngnpwxyyzxffadnwynlizmlhofb1lupovfrhqk1sakd0nda2v1flsvbqbezkwglzwxvttvdrvm42dms3y3c?oc=5 北市2警沒開單舉發無牌違停車輛...遭指控貪汙圖利 二審再判決無罪 udn 員警 債務糾紛 個資 員警 圖利 員警 改單 員警 白單 圖利 員警 紅單 圖利 員警 製單 違法 員警 貪污 員警 貪瀆 員警 開假罰單 檢舉違停 警員 報復 警員 圖利 警員 改單 警員 貪污 警員 貪瀆 警察 圖利 警察 改單 警察 貪污 警察 貪瀆 收賄"
     },
     {
