@@ -20,7 +20,6 @@ The sign-in screen is a convenience gate for the interface. It is client-side co
 - `docs/styles.css`: interface styling.
 - `docs/data/news.json`: generated article index.
 - `.github/workflows/update-news.yml`: scheduled and manual dataset refresh.
-- `.github/workflows/deploy-pages.yml`: optional GitHub Actions Pages deployment workflow.
 
 ## Local use
 
@@ -46,7 +45,7 @@ Both methods update the same saved JSON file. Stop other refresh processes first
 
 `Update News Index` runs every three hours and can also be started with `workflow_dispatch`. It runs the offline unit tests before fetching, commits only changed generated data, and uses an ordinary non-force push to `main`.
 
-This repository is currently published by GitHub Pages' branch-based, dynamic `pages-build-deployment` workflow. A successful data commit to the configured Pages branch causes that GitHub-managed deployment to publish the new static files. This is separate from the repository's optional `.github/workflows/deploy-pages.yml` workflow. Keep the repository's Pages source setting and this documentation aligned if the deployment mode changes.
+This repository is published by GitHub Pages' branch-based, dynamic `pages-build-deployment` workflow. A successful commit to the configured Pages branch causes that GitHub-managed deployment to publish the new static files. Keep the repository's Pages source setting and this documentation aligned if the deployment mode changes.
 
 For a new repository using the current arrangement:
 
