@@ -12,7 +12,7 @@ on:
         required: false
         type: string
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "17 */3 * * *"
 
 permissions:
   contents: write
@@ -24,6 +24,7 @@ concurrency:
 jobs:
   update-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -33,6 +34,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
 
       - name: Refresh news dataset
         run: python scrape_news.py

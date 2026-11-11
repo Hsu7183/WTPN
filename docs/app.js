@@ -5,29 +5,10 @@ const VIEWPORT = Object.freeze({
   default: "width=device-width, initial-scale=1, viewport-fit=cover",
 });
 
-const GITHUB = Object.freeze({
-  owner: "Hsu7183",
-  repo: "WTPN",
-  branch: "main",
-  workflow: "update-news.yml",
-  apiBase: "https://api.github.com",
-  apiVersion: "2026-03-10",
-  dispatchPollMs: 4000,
-  dispatchTimeoutMs: 90 * 1000,
-  runPollMs: 5000,
-  runTimeoutMs: 6 * 60 * 1000,
-  dataPollMs: 5000,
-  dataTimeoutMs: 3 * 60 * 1000,
-});
-
-const AUTO_REFRESH = Object.freeze({
-  cloudCooldownKey: "wtpn-cloud-refresh-at",
-  cloudCooldownMs: 2 * 60 * 1000,
-  cloudPendingMs: 8 * 60 * 1000,
-});
-
-const CACHE = Object.freeze({
-  payloadKey: "wtpn-news-cache-v1",
+const VIEW = Object.freeze({
+  pageSize: 50,
+  searchDebounceMs: 150,
+  legacyCacheKey: "wtpn-news-cache-v1",
 });
 
 const SECURITY = Object.freeze({
@@ -37,23 +18,11 @@ const SECURITY = Object.freeze({
   lockoutMs: 5 * 60 * 1000,
 });
 
-const CLOUD_CREDENTIAL = Object.freeze({
-  iterations: 210000,
-  salt: "2ZZeHC98zFVYXEEMALiSYA==",
-  iv: "694RHNZGkHC+atcD",
-  ciphertext: "HrnHeRvOVU8RU0xXwO3paAWtrlm/GklkRNztYX04b3jOyybjCayXag==",
-  tag: "4YgrDkWhjS/1XU1Bgnp9fQ==",
-});
-
 const REFRESH_STATUS = Object.freeze({
-  ready: "登入後會自動檢查最新資料。",
+  ready: "登入後會載入已發布資料；使用本機服務時會自動檢查最新資料。",
   loadingStored: "正在載入最近同步資料...",
   loadingLive: "正在自動檢查最新資料...",
   backgroundSync: "已載入前次資料，正在背景檢查最新資料...",
-  cloudDispatching: "已送出雲端更新要求，等待 GitHub 開始執行...",
-  cloudRunning: "GitHub 正在更新新聞資料，請稍候...",
-  cloudPublishing: "雲端資料已更新，等待網站發佈最新版本...",
-  cloudPublished: "手機雲端資料已更新完成。",
 });
 
 const elements = {
@@ -76,6 +45,10 @@ const elements = {
   tagFilters: document.querySelector("#tag-filters"),
   resultsSummary: document.querySelector("#results-summary"),
   results: document.querySelector("#results"),
+  pagination: document.querySelector("#pagination"),
+  previousPage: document.querySelector("#previous-page"),
+  pageStatus: document.querySelector("#page-status"),
+  nextPage: document.querySelector("#next-page"),
 };
 
 const state = {
@@ -88,9 +61,10 @@ const state = {
   searchPanelOpen: false,
   sessionPassword: "",
   refreshInFlight: false,
-  githubToken: "",
   payloadStamp: "",
   backgroundRefreshTask: null,
+  currentPage: 1,
+  searchTimer: null,
 };
 
 
@@ -134,6 +108,12 @@ function formatRocMonth(value) {
 }
 
 
+function getTaipeiMonthKey(value) {
+  const parts = getTaipeiParts(value);
+  return `${parts.year}-${String(parts.month).padStart(2, "0")}`;
+}
+
+
 function buildDataUrl() {
   const url = new URL(DATA_URL);
   url.searchParams.set("ts", String(Date.now()));
@@ -165,30 +145,11 @@ function getPayloadStamp(payload) {
 }
 
 
-function loadCachedPayload() {
+function removeLegacyPayloadCache() {
   try {
-    const raw = localStorage.getItem(CACHE.payloadKey);
-    if (!raw) {
-      return null;
-    }
-
-    const payload = JSON.parse(raw);
-    if (!payload || !Array.isArray(payload.articles)) {
-      return null;
-    }
-
-    return payload;
+    localStorage.removeItem(VIEW.legacyCacheKey);
   } catch {
-    return null;
-  }
-}
-
-
-function persistPayloadCache(payload) {
-  try {
-    localStorage.setItem(CACHE.payloadKey, JSON.stringify(payload));
-  } catch {
-    // Ignore local storage quota or private mode issues.
+    // Storage can be unavailable in private or restricted browsing modes.
   }
 }
 
@@ -203,42 +164,9 @@ function shouldReplacePayload(payload) {
 }
 
 
-function hasGithubToken() {
-  return Boolean(state.githubToken);
-}
-
-
-function getLastCloudRefreshAt() {
-  const raw = Number(localStorage.getItem(AUTO_REFRESH.cloudCooldownKey) ?? "0");
-  return Number.isFinite(raw) ? raw : 0;
-}
-
-
-function canRequestCloudRefresh() {
-  return Date.now() - getLastCloudRefreshAt() >= AUTO_REFRESH.cloudCooldownMs;
-}
-
-
-function hasRecentCloudRefreshRequest() {
-  return Date.now() - getLastCloudRefreshAt() < AUTO_REFRESH.cloudPendingMs;
-}
-
-
-function markCloudRefreshRequested() {
-  localStorage.setItem(AUTO_REFRESH.cloudCooldownKey, String(Date.now()));
-}
-
-
 function setRefreshBusy(isBusy) {
   state.refreshInFlight = isBusy;
   elements.results.setAttribute("aria-busy", String(isBusy));
-}
-
-
-function sleep(ms) {
-  return new Promise((resolve) => {
-    window.setTimeout(resolve, ms);
-  });
 }
 
 
@@ -253,7 +181,7 @@ function setAuthMessage(message, tone = "info") {
 }
 
 
-function isHostedClient() {
+function isStaticPagesClient() {
   return /\.github\.io$/i.test(window.location.hostname);
 }
 
@@ -380,7 +308,6 @@ function setLocked(locked) {
 
   if (locked) {
     state.sessionPassword = "";
-    state.githubToken = "";
     setRefreshStatus(REFRESH_STATUS.ready);
     syncGuardUi({ resetMessage: true });
     if (getRemainingLockMs() > 0) {
@@ -401,64 +328,6 @@ async function digestText(value) {
   return [...new Uint8Array(digest)]
     .map((byte) => byte.toString(16).padStart(2, "0"))
     .join("");
-}
-
-
-function decodeBase64(value) {
-  return Uint8Array.from(atob(value), (char) => char.charCodeAt(0));
-}
-
-
-async function decryptGithubToken(password) {
-  const encoder = new TextEncoder();
-  const seedKey = await crypto.subtle.importKey(
-    "raw",
-    encoder.encode(password),
-    "PBKDF2",
-    false,
-    ["deriveKey"],
-  );
-  const key = await crypto.subtle.deriveKey(
-    {
-      name: "PBKDF2",
-      salt: decodeBase64(CLOUD_CREDENTIAL.salt),
-      iterations: CLOUD_CREDENTIAL.iterations,
-      hash: "SHA-256",
-    },
-    seedKey,
-    {
-      name: "AES-GCM",
-      length: 256,
-    },
-    false,
-    ["decrypt"],
-  );
-
-  const ciphertext = decodeBase64(CLOUD_CREDENTIAL.ciphertext);
-  const tag = decodeBase64(CLOUD_CREDENTIAL.tag);
-  const payload = new Uint8Array(ciphertext.length + tag.length);
-  payload.set(ciphertext);
-  payload.set(tag, ciphertext.length);
-
-  const plaintext = await crypto.subtle.decrypt(
-    {
-      name: "AES-GCM",
-      iv: decodeBase64(CLOUD_CREDENTIAL.iv),
-    },
-    key,
-    payload,
-  );
-  return new TextDecoder().decode(plaintext);
-}
-
-
-async function ensureGithubToken(password) {
-  if (state.githubToken || !password || !isHostedClient()) {
-    return state.githubToken;
-  }
-
-  state.githubToken = await decryptGithubToken(password);
-  return state.githubToken;
 }
 
 
@@ -511,6 +380,7 @@ function buildTagButtons(tags) {
   allButton.textContent = "全部";
   allButton.dataset.tag = "all";
   allButton.className = "tag-chip";
+  allButton.setAttribute("aria-pressed", "false");
   elements.tagFilters.append(allButton);
 
   for (const tag of tags) {
@@ -519,6 +389,7 @@ function buildTagButtons(tags) {
     button.textContent = tag;
     button.dataset.tag = tag;
     button.className = "tag-chip";
+    button.setAttribute("aria-pressed", "false");
     elements.tagFilters.append(button);
   }
 }
@@ -526,8 +397,22 @@ function buildTagButtons(tags) {
 
 function syncActiveTagChip() {
   for (const chip of elements.tagFilters.querySelectorAll(".tag-chip")) {
-    chip.classList.toggle("is-active", chip.dataset.tag === state.activeTag);
+    const isActive = chip.dataset.tag === state.activeTag;
+    chip.classList.toggle("is-active", isActive);
+    chip.setAttribute("aria-pressed", String(isActive));
   }
+}
+
+
+function buildArticleSearchText(article) {
+  return [
+    article.title ?? "",
+    article.source ?? "",
+    article.link ?? "",
+    article.summary ?? "",
+    ...(article.matched_keywords ?? []),
+    ...(article.tags ?? []),
+  ].join(" ").toLowerCase();
 }
 
 
@@ -538,7 +423,10 @@ function applyPayload(payload) {
   const previousTag = state.activeTag;
   const previousPanelOpen = state.searchPanelOpen;
 
-  state.articles = payload.articles ?? [];
+  state.articles = (payload.articles ?? []).map((article) => ({
+    ...article,
+    search_text: buildArticleSearchText(article),
+  }));
   state.sources = payload.available_sources ?? [];
   state.tags = payload.available_tags ?? [];
   state.activeTag = previousTag === "all" || state.tags.includes(previousTag)
@@ -568,7 +456,6 @@ function applyPayload(payload) {
 
   updateView();
   state.payloadStamp = getPayloadStamp(payload);
-  persistPayloadCache(payload);
 }
 
 
@@ -605,7 +492,7 @@ function filterArticles() {
 }
 
 
-function renderArticles(articles) {
+function renderArticles(articles, sortBy) {
   elements.results.replaceChildren();
 
   if (articles.length === 0) {
@@ -613,19 +500,20 @@ function renderArticles(articles) {
     empty.className = "empty-state card";
     empty.innerHTML = `
       <h3>目前沒有符合條件的新聞</h3>
-      <p>可以試試其他分局名稱、事件類型，或清空篩選條件。</p>
+      <p>可以試試其他關鍵字、來源、事件類型，或清空篩選條件。</p>
     `;
     elements.results.append(empty);
     return;
   }
 
   const groups = new Map();
+  const groupBySource = sortBy === "source";
 
   for (const article of articles) {
-    const key = article.published_at.slice(0, 7);
+    const key = groupBySource ? article.source : getTaipeiMonthKey(article.published_at);
     if (!groups.has(key)) {
       groups.set(key, {
-        label: formatRocMonth(article.published_at),
+        label: groupBySource ? `來源：${article.source}` : formatRocMonth(article.published_at),
         articles: [],
       });
     }
@@ -633,20 +521,18 @@ function renderArticles(articles) {
   }
 
   const fragment = document.createDocumentFragment();
-  const orderedGroupKeys = [...groups.keys()].sort((a, b) => b.localeCompare(a));
 
-  for (const key of orderedGroupKeys) {
-    const group = groups.get(key);
+  for (const group of groups.values()) {
     const section = document.createElement("section");
-    section.className = "month-group";
+    section.className = "result-group";
 
     const heading = document.createElement("h3");
-    heading.className = "month-heading";
+    heading.className = "group-heading";
     heading.textContent = group.label;
     section.append(heading);
 
     const list = document.createElement("ul");
-    list.className = "month-list";
+    list.className = "result-list";
 
     for (const article of group.articles) {
       const item = document.createElement("li");
@@ -697,21 +583,45 @@ function renderArticles(articles) {
 }
 
 
-function renderSummary(articles) {
+function renderSummary(totalArticles, page, totalPages, startIndex, endIndex) {
   const sourceLabel = elements.sourceFilter.value === "all"
     ? "全部來源"
     : elements.sourceFilter.value;
   const tagLabel = state.activeTag === "all" ? "全部標籤" : state.activeTag;
 
+  const resultLabel = totalArticles === 0
+    ? "顯示 0 筆結果"
+    : `顯示第 ${startIndex + 1}–${endIndex} 筆，共 ${totalArticles} 筆`;
   elements.resultsSummary.textContent =
-    `顯示 ${articles.length} 筆結果 · ${sourceLabel} · ${tagLabel}`;
+    `${resultLabel} · 第 ${page}/${totalPages} 頁 · ${sourceLabel} · ${tagLabel}`;
 }
 
 
-function updateView() {
+function renderPagination(page, totalPages, totalArticles) {
+  elements.pagination.hidden = totalArticles === 0;
+  elements.previousPage.disabled = page <= 1;
+  elements.nextPage.disabled = page >= totalPages;
+  elements.pageStatus.textContent = `第 ${page} 頁，共 ${totalPages} 頁`;
+}
+
+
+function updateView({ resetPage = false } = {}) {
+  if (resetPage) {
+    window.clearTimeout(state.searchTimer);
+    state.searchTimer = null;
+    state.currentPage = 1;
+  }
+
   const filtered = filterArticles();
-  renderSummary(filtered);
-  renderArticles(filtered);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / VIEW.pageSize));
+  state.currentPage = Math.min(Math.max(state.currentPage, 1), totalPages);
+  const startIndex = (state.currentPage - 1) * VIEW.pageSize;
+  const endIndex = Math.min(startIndex + VIEW.pageSize, filtered.length);
+  const pageArticles = filtered.slice(startIndex, endIndex);
+
+  renderSummary(filtered.length, state.currentPage, totalPages, startIndex, endIndex);
+  renderArticles(pageArticles, elements.sortSelect.value);
+  renderPagination(state.currentPage, totalPages, filtered.length);
 }
 
 
@@ -720,9 +630,14 @@ function bindEvents() {
     setSearchPanelOpen(!state.searchPanelOpen);
   });
 
-  elements.searchInput.addEventListener("input", updateView);
-  elements.sourceFilter.addEventListener("change", updateView);
-  elements.sortSelect.addEventListener("change", updateView);
+  elements.searchInput.addEventListener("input", () => {
+    window.clearTimeout(state.searchTimer);
+    state.searchTimer = window.setTimeout(() => {
+      updateView({ resetPage: true });
+    }, VIEW.searchDebounceMs);
+  });
+  elements.sourceFilter.addEventListener("change", () => updateView({ resetPage: true }));
+  elements.sortSelect.addEventListener("change", () => updateView({ resetPage: true }));
 
   elements.tagFilters.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-tag]");
@@ -731,9 +646,20 @@ function bindEvents() {
     }
 
     state.activeTag = button.dataset.tag;
-    for (const chip of elements.tagFilters.querySelectorAll(".tag-chip")) {
-      chip.classList.toggle("is-active", chip === button);
+    syncActiveTagChip();
+    updateView({ resetPage: true });
+  });
+
+  elements.previousPage.addEventListener("click", () => {
+    if (state.currentPage <= 1) {
+      return;
     }
+    state.currentPage -= 1;
+    updateView();
+  });
+
+  elements.nextPage.addEventListener("click", () => {
+    state.currentPage += 1;
     updateView();
   });
 }
@@ -787,7 +713,6 @@ async function fetchStoredNews() {
     throw new Error(`Failed to load ${DATA_URL}`);
   }
   const payload = await response.json();
-  persistPayloadCache(payload);
   return payload;
 }
 
@@ -819,154 +744,6 @@ async function requestLocalRefresh(password) {
     }
     throw error;
   }
-}
-
-
-async function githubApiRequest(path, { method = "GET", body = null, token = state.githubToken } = {}) {
-  const headers = {
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": GITHUB.apiVersion,
-  };
-
-  if (token) {
-    headers.Authorization = `Bearer ${token}`;
-  }
-
-  if (body !== null) {
-    headers["Content-Type"] = "application/json";
-  }
-
-  const response = await fetch(`${GITHUB.apiBase}${path}`, {
-    method,
-    headers,
-    body: body === null ? null : JSON.stringify(body),
-    cache: "no-store",
-  });
-
-  if (response.ok) {
-    if (response.status === 204) {
-      return null;
-    }
-    return response.json();
-  }
-
-  const errorPayload = await response.json().catch(() => null);
-  throw new Error(errorPayload?.message ?? `GitHub API failed (${response.status})`);
-}
-
-
-async function dispatchCloudRefresh() {
-  const requestId = `wtpn-${Date.now()}`;
-
-  await githubApiRequest(
-    `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/workflows/${GITHUB.workflow}/dispatches`,
-    {
-      method: "POST",
-      body: {
-        ref: GITHUB.branch,
-        inputs: {
-          request_id: requestId,
-          trigger_source: "browser",
-        },
-      },
-    },
-  );
-
-  return {
-    requestedAt: Date.now(),
-  };
-}
-
-
-async function waitForWorkflowRun(requestedAt) {
-  const deadline = Date.now() + GITHUB.dispatchTimeoutMs;
-
-  while (Date.now() < deadline) {
-    const payload = await githubApiRequest(
-      `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/workflows/${GITHUB.workflow}/runs?event=workflow_dispatch&branch=${GITHUB.branch}&per_page=10`,
-    );
-    const run = (payload?.workflow_runs ?? []).find((item) => {
-      return Date.parse(item.created_at) >= requestedAt - 15000;
-    });
-
-    if (run) {
-      return run;
-    }
-
-    await sleep(GITHUB.dispatchPollMs);
-  }
-
-  throw new Error("GitHub 還沒有開始執行更新工作，請稍後再試。");
-}
-
-
-async function waitForWorkflowCompletion(runId) {
-  const deadline = Date.now() + GITHUB.runTimeoutMs;
-
-  while (Date.now() < deadline) {
-    const run = await githubApiRequest(
-      `/repos/${GITHUB.owner}/${GITHUB.repo}/actions/runs/${runId}`,
-    );
-
-    if (run.status === "completed") {
-      if (run.conclusion === "success") {
-        return run;
-      }
-
-      throw new Error(`GitHub 更新失敗：${run.conclusion ?? "unknown"}`);
-    }
-
-    await sleep(GITHUB.runPollMs);
-  }
-
-  throw new Error("GitHub 更新逾時，請稍後再試。");
-}
-
-
-async function waitForPublishedData(previousGeneratedAt) {
-  const deadline = Date.now() + GITHUB.dataTimeoutMs;
-  let latestPayload = null;
-
-  while (Date.now() < deadline) {
-    latestPayload = await fetchStoredNews();
-    const nextGeneratedAt = latestPayload?.generated_at ?? "";
-
-    if (nextGeneratedAt && nextGeneratedAt !== previousGeneratedAt) {
-      return {
-        payload: latestPayload,
-        updated: true,
-      };
-    }
-
-    await sleep(GITHUB.dataPollMs);
-  }
-
-  return {
-    payload: latestPayload ?? await fetchStoredNews(),
-    updated: false,
-  };
-}
-
-
-async function requestCloudRefresh() {
-  const previousPayload = await fetchStoredNews();
-  const previousGeneratedAt = previousPayload?.generated_at ?? "";
-
-  markCloudRefreshRequested();
-  setRefreshStatus(REFRESH_STATUS.cloudDispatching, "info");
-  const dispatchMeta = await dispatchCloudRefresh();
-  const run = await waitForWorkflowRun(dispatchMeta.requestedAt);
-
-  setRefreshStatus(REFRESH_STATUS.cloudRunning, "info");
-  await waitForWorkflowCompletion(run.id);
-
-  setRefreshStatus(REFRESH_STATUS.cloudPublishing, "info");
-  const published = await waitForPublishedData(previousGeneratedAt);
-
-  return {
-    payload: published.payload,
-    dataUpdated: published.updated,
-  };
 }
 
 
@@ -1024,73 +801,34 @@ function buildBackgroundStoredMessage(payload) {
 }
 
 
-function buildCloudRefreshMessage(payload, dataUpdated) {
-  if (!dataUpdated) {
-    return {
-      tone: "warning",
-      message: "GitHub 已完成更新，但網站新版本還在發佈中，請再等一下重新整理。",
-    };
-  }
-
-  const notice = buildLiveRefreshNotice(payload);
-  return {
-    tone: notice.tone,
-    message: `${REFRESH_STATUS.cloudPublished} ${notice.message}`,
-  };
-}
-
-
 async function hydrateStoredNewsForDisplay() {
-  const cachedPayload = loadCachedPayload();
-  let preferredPayload = cachedPayload;
-
-  if (cachedPayload) {
-    applyPayload(cachedPayload);
-    setRefreshStatus(buildBackgroundStoredMessage(cachedPayload), "info");
-  } else {
-    setRefreshBusy(true);
-    setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
-  }
+  setRefreshBusy(true);
+  setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
 
   try {
     const storedPayload = await fetchStoredNews();
-    preferredPayload = storedPayload;
-
-    if (shouldReplacePayload(storedPayload) || !cachedPayload) {
-      applyPayload(storedPayload);
-    }
-
+    applyPayload(storedPayload);
     setRefreshStatus(buildBackgroundStoredMessage(storedPayload), "info");
-    return preferredPayload;
-  } catch (error) {
-    console.warn("Unable to load stored news payload.", error);
-
-    if (hasRenderablePayload(cachedPayload)) {
-      setRefreshStatus(
-        `已載入前次資料；同步資料讀取失敗：${error.message}。`,
-        "warning",
-      );
-      return preferredPayload;
-    }
-
-    throw error;
+    return storedPayload;
   } finally {
     setRefreshBusy(false);
   }
 }
-
 
 async function runBackgroundRefresh({ password = state.sessionPassword, basePayload = null } = {}) {
   if (!password) {
     return;
   }
 
+  if (isStaticPagesClient()) {
+    if (hasRenderablePayload(basePayload)) {
+      setRefreshStatus(buildStoredMessage(basePayload), "info");
+    }
+    return;
+  }
+
   let payload = null;
   let liveError = null;
-  let localRefreshUnavailable = false;
-  let cloudRefreshUsed = false;
-  let cloudDataUpdated = false;
-  const previousGeneratedAt = basePayload?.generated_at ?? "";
 
   setRefreshBusy(true);
   if (hasRenderablePayload(basePayload)) {
@@ -1102,82 +840,20 @@ async function runBackgroundRefresh({ password = state.sessionPassword, basePayl
   try {
     try {
       payload = await requestLocalRefresh(password);
-      localRefreshUnavailable = payload === null;
     } catch (error) {
       liveError = error;
-      console.warn("Latest refresh failed, falling back to stored news.", error);
-    }
-
-    if (!payload && localRefreshUnavailable && !hasGithubToken()) {
-      try {
-        await ensureGithubToken(password);
-      } catch (error) {
-        liveError = error;
-        console.warn("Unable to prepare cloud refresh credential.", error);
-      }
-    }
-
-    if (!payload && localRefreshUnavailable && hasGithubToken() && canRequestCloudRefresh()) {
-      try {
-        const cloudRefresh = await requestCloudRefresh();
-        payload = cloudRefresh.payload;
-        cloudRefreshUsed = true;
-        cloudDataUpdated = cloudRefresh.dataUpdated;
-        liveError = null;
-      } catch (error) {
-        liveError = error;
-        console.warn("Cloud refresh failed, falling back to stored news.", error);
-      }
-    }
-
-    if (!payload && localRefreshUnavailable && hasGithubToken() && hasRecentCloudRefreshRequest()) {
-      try {
-        setRefreshStatus("最近已送出雲端更新要求，正在背景確認最新資料...", "info");
-        const published = await waitForPublishedData(previousGeneratedAt);
-        payload = published.payload;
-        cloudRefreshUsed = true;
-        cloudDataUpdated = published.updated;
-        liveError = null;
-      } catch (error) {
-        liveError = error;
-        console.warn("Waiting for cloud publish failed, falling back to stored news.", error);
-      }
+      console.warn("Latest local refresh failed, falling back to published news.", error);
     }
 
     if (payload && shouldReplacePayload(payload)) {
       applyPayload(payload);
     }
 
-    if (cloudRefreshUsed) {
-      const notice = buildCloudRefreshMessage(payload ?? basePayload ?? {}, cloudDataUpdated);
-      setRefreshStatus(notice.message, notice.tone);
-      return;
-    }
-
     if (liveError) {
-      if (
-        hasGithubToken() &&
-        /bad credentials|requires authentication|github api failed/i.test(liveError.message)
-      ) {
-        state.githubToken = "";
-        setRefreshStatus("背景更新權限失效，先顯示前次資料。", "warning");
-        return;
-      }
-
       setRefreshStatus(
-        `背景更新失敗：${liveError.message}；先顯示前次資料。`,
+        `本機背景更新失敗：${liveError.message}；先顯示已發布資料。`,
         "warning",
       );
-      return;
-    }
-
-    if (localRefreshUnavailable && !hasGithubToken()) {
-      setRefreshStatus("已載入前次資料；背景更新暫時不可用。", "warning");
-      return;
-    }
-
-    if (localRefreshUnavailable) {
-      setRefreshStatus("已載入前次資料；背景更新仍在處理中。", "warning");
       return;
     }
 
@@ -1197,7 +873,6 @@ async function runBackgroundRefresh({ password = state.sessionPassword, basePayl
     setRefreshBusy(false);
   }
 }
-
 
 function startBackgroundRefresh(options = {}) {
   if (state.backgroundRefreshTask) {
@@ -1230,13 +905,14 @@ function handleLoadFailure(error) {
 
   const errorBox = document.createElement("div");
   errorBox.className = "empty-state card";
-  errorBox.innerHTML = `
-    <h3>讀取失敗</h3>
-    <p>${error.message}</p>
-  `;
+  const heading = document.createElement("h3");
+  heading.textContent = "讀取失敗";
+  const message = document.createElement("p");
+  message.textContent = error instanceof Error ? error.message : String(error);
+  errorBox.append(heading, message);
   elements.results.replaceChildren(errorBox);
   setRefreshBusy(false);
-  setRefreshStatus(`資料載入失敗：${error.message}`, "error");
+  setRefreshStatus(`資料載入失敗：${message.textContent}`, "error");
 }
 
 
@@ -1244,16 +920,10 @@ async function unlockApp(password) {
   state.sessionPassword = password;
   setLocked(false);
   setAuthMessage("");
+  setRefreshBusy(true);
+  setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
 
-  let storedPayload = loadCachedPayload();
-  if (hasRenderablePayload(storedPayload)) {
-    applyPayload(storedPayload);
-    setRefreshStatus(buildBackgroundStoredMessage(storedPayload), "info");
-  } else {
-    setRefreshBusy(true);
-    setRefreshStatus(REFRESH_STATUS.loadingStored, "info");
-  }
-
+  let storedPayload = null;
   try {
     storedPayload = await hydrateStoredNewsForDisplay();
   } catch (error) {
@@ -1263,7 +933,6 @@ async function unlockApp(password) {
 
   void startBackgroundRefresh({ password, basePayload: storedPayload });
 }
-
 
 async function handleAuthSubmit(event) {
   event.preventDefault();
@@ -1397,7 +1066,7 @@ function bindAuthEvents() {
 function bootstrap() {
   protectInteractions();
   bindAuthEvents();
-  state.githubToken = "";
+  removeLegacyPayloadCache();
   setSearchPanelOpen(false);
   setRefreshStatus(REFRESH_STATUS.ready);
   setLocked(true);

@@ -489,12 +489,12 @@ h3 {
   gap: 1.1rem;
 }
 
-.month-group {
+.result-group {
   display: grid;
   gap: 0.55rem;
 }
 
-.month-heading {
+.group-heading {
   font-size: 1.05rem;
   font-weight: 800;
   color: var(--accent);
@@ -502,7 +502,7 @@ h3 {
   border-bottom: 1px solid rgba(35, 77, 115, 0.1);
 }
 
-.month-list {
+.result-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -588,6 +588,51 @@ h3 {
 .empty-state p {
   margin: 0;
   color: var(--ink-soft);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(35, 77, 115, 0.1);
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.page-button {
+  min-height: 2.75rem;
+  border: 1px solid rgba(35, 77, 115, 0.16);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  color: var(--accent);
+  background: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(19, 34, 54, 0.06);
+}
+
+.page-button:hover:not(:disabled) {
+  border-color: rgba(35, 77, 115, 0.3);
+  background: var(--accent-soft);
+}
+
+.page-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.page-status {
+  min-width: 9rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 @media print {

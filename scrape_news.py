@@ -5,12 +5,13 @@ import json
 import os
 import re
 import sys
+import tempfile
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
 from typing import Iterable
-from urllib.parse import quote_plus
+from urllib.parse import parse_qsl, quote_plus, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
@@ -1037,26 +1038,66 @@ def classify_tags(chunks: Iterable[str]) -> list[str]:
     return tags
 
 
-def article_id(source: str, title: str, published_at: str) -> str:
-    seed = f"{source}|{title}|{published_at}"
-    return hashlib.sha1(seed.encode("utf-8")).hexdigest()[:12]
+TRACKING_QUERY_PARAMETERS = {
+    "_ga",
+    "_gl",
+    "ceid",
+    "fbclid",
+    "gclid",
+    "gl",
+    "hl",
+    "mc_cid",
+    "mc_eid",
+    "oc",
+}
+
+
+def normalize_article_url(link: str) -> str:
+    value = (link or "").strip()
+    if not value:
+        return ""
+
+    parsed = urlsplit(value)
+    if not parsed.netloc:
+        return value
+
+    scheme = "https" if parsed.scheme.lower() in {"http", "https"} else parsed.scheme.lower()
+    netloc = parsed.netloc.lower()
+    path = parsed.path or "/"
+    if netloc == "news.google.com":
+        path = re.sub(r"^/rss/articles(?=/|$)", "/articles", path)
+    if path != "/":
+        path = path.rstrip("/")
+
+    query_items = []
+    for name, item_value in parse_qsl(parsed.query, keep_blank_values=True):
+        normalized_name = name.lower()
+        if normalized_name.startswith("utm_"):
+            continue
+        if normalized_name in TRACKING_QUERY_PARAMETERS:
+            continue
+        query_items.append((name, item_value))
+    query = urlencode(sorted(query_items))
+    return urlunsplit((scheme, netloc, path, query, ""))
 
 
 def article_key(article: dict) -> str:
-    return article.get("id") or article.get("link") or ""
+    normalized_link = normalize_article_url(article.get("link") or "")
+    if normalized_link:
+        return f"url:{normalized_link}"
 
-
-def build_search_text(article: dict) -> str:
-    return " ".join(
+    fallback = "|".join(
         [
-            article["title"],
-            article["source"],
-            article["link"],
-            article["summary"],
-            " ".join(article["matched_keywords"]),
-            " ".join(article["tags"]),
+            article.get("source") or "",
+            article.get("title") or "",
+            article.get("published_at") or "",
         ]
-    ).lower()
+    )
+    return f"fallback:{fallback}"
+
+
+def article_id(article: dict) -> str:
+    return hashlib.sha1(article_key(article).encode("utf-8")).hexdigest()[:20]
 
 
 def format_published_label(value: str) -> str:
@@ -1070,7 +1111,6 @@ def build_manual_articles() -> list[dict]:
     for seed in MANUAL_ARTICLE_SEEDS:
         matched_keywords = dedupe_preserve_order(seed.get("matched_keywords") or [])
         article = {
-            "id": article_id(seed["source"], seed["title"], seed["published_at"]),
             "title": seed["title"],
             "source": seed["source"],
             "link": seed["link"],
@@ -1080,6 +1120,7 @@ def build_manual_articles() -> list[dict]:
             "matched_keywords": matched_keywords,
             "tags": content_tags(seed["title"], seed.get("summary", "")),
         }
+        article["id"] = article_id(article)
         if is_relevant_article(article["title"], article["summary"], matched_keywords):
             entries.append(article)
 
@@ -1088,18 +1129,20 @@ def build_manual_articles() -> list[dict]:
 
 def hydrate_article(article: dict, default_seen_at: str | None = None) -> dict:
     item = dict(article)
+    item.pop("search_text", None)
     item["matched_keywords"] = sorted(set(item.get("matched_keywords") or []))
     item["summary"] = item.get("summary") or ""
     item["source"] = item.get("source") or ""
     item["title"] = item.get("title") or ""
     item["link"] = item.get("link") or ""
-    item["tags"] = sorted(set(content_tags(item["title"], item["summary"])))
-    item["published_label"] = item.get("published_label") or format_published_label(
-        item["published_at"]
+    item["tags"] = sorted(
+        set(item.get("tags") or [])
+        | set(content_tags(item["title"], item["summary"]))
     )
+    item["published_label"] = format_published_label(item["published_at"])
     item["first_seen_at"] = item.get("first_seen_at") or default_seen_at or item["published_at"]
     item["last_seen_at"] = item.get("last_seen_at") or item["first_seen_at"]
-    item["search_text"] = build_search_text(item)
+    item["id"] = article_id(item)
     return item
 
 
@@ -1114,7 +1157,7 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
             continue
 
         raw_title = (item.findtext("title") or "").strip()
-        title = clean_title(raw_title, source)
+        title = clean_title(clean_title(raw_title, raw_source), source)
         link = (item.findtext("link") or "").strip()
         description = clean_summary(
             strip_html(item.findtext("description") or ""),
@@ -1124,22 +1167,26 @@ def parse_feed(xml_bytes: bytes, query: str) -> list[dict]:
         if not is_relevant_article(title, description, [query]):
             continue
 
-        published_at, published_label = parse_datetime(item.findtext("pubDate") or "")
+        try:
+            published_at, published_label = parse_datetime(
+                item.findtext("pubDate") or ""
+            )
+        except (TypeError, ValueError, OverflowError):
+            continue
         tags = content_tags(title, description)
 
-        entries.append(
-            {
-                "id": article_id(source, title, published_at),
-                "title": title,
-                "source": source,
-                "link": link,
-                "summary": description,
-                "published_at": published_at,
-                "published_label": published_label,
-                "matched_keywords": [query],
-                "tags": tags,
-            }
-        )
+        article = {
+            "title": title,
+            "source": source,
+            "link": link,
+            "summary": description,
+            "published_at": published_at,
+            "published_label": published_label,
+            "matched_keywords": [query],
+            "tags": tags,
+        }
+        article["id"] = article_id(article)
+        entries.append(article)
 
     return entries
 
@@ -1175,41 +1222,89 @@ def merge_articles(
     refreshed_at: str,
 ) -> list[dict]:
     merged: dict[str, dict] = {}
+    content_recency: dict[str, dict[str, tuple[datetime, datetime]]] = {}
 
-    for article in existing_articles:
-        item = hydrate_article(article, default_seen_at=refreshed_at)
-        merged[article_key(item)] = item
+    def timestamp_value(value: str) -> datetime:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
 
-    for article in fresh_articles:
+    def recency(item: dict) -> tuple[datetime, datetime]:
+        return (
+            timestamp_value(item["last_seen_at"]),
+            timestamp_value(item["published_at"]),
+        )
+
+    def earlier(left: str, right: str) -> str:
+        return left if timestamp_value(left) <= timestamp_value(right) else right
+
+    def later(left: str, right: str) -> str:
+        return left if timestamp_value(left) >= timestamp_value(right) else right
+
+    def add(article: dict, *, fresh: bool) -> None:
         item = hydrate_article(article, default_seen_at=refreshed_at)
-        item["last_seen_at"] = refreshed_at
+        if fresh:
+            item["last_seen_at"] = refreshed_at
         key = article_key(item)
         existing = merged.get(key)
+        item_recency = recency(item)
 
         if existing is None:
-            item["first_seen_at"] = item.get("first_seen_at") or refreshed_at
-            item["search_text"] = build_search_text(item)
+            item["id"] = article_id(item)
             merged[key] = item
-            continue
+            content_recency[key] = {
+                field: item_recency
+                for field in ("title", "summary", "source", "link")
+                if item[field]
+            }
+            return
 
         existing["matched_keywords"] = sorted(
             set(existing["matched_keywords"]) | set(item["matched_keywords"])
         )
         existing["tags"] = sorted(set(existing["tags"]) | set(item["tags"]))
-        existing["summary"] = existing["summary"] or item["summary"]
-        existing["source"] = existing["source"] or item["source"]
-        existing["title"] = existing["title"] or item["title"]
-        existing["link"] = existing["link"] or item["link"]
-        existing["published_label"] = existing["published_label"] or item["published_label"]
-        existing["first_seen_at"] = existing.get("first_seen_at") or item["first_seen_at"]
-        existing["last_seen_at"] = refreshed_at
-        existing["search_text"] = build_search_text(existing)
+        for field in ("title", "summary", "source", "link"):
+            previous_recency = content_recency[key].get(field)
+            if item[field] and (previous_recency is None or item_recency >= previous_recency):
+                existing[field] = item[field]
+                content_recency[key][field] = item_recency
+
+        existing["published_at"] = earlier(
+            existing["published_at"], item["published_at"]
+        )
+        existing["first_seen_at"] = earlier(
+            existing["first_seen_at"], item["first_seen_at"]
+        )
+        existing["last_seen_at"] = later(
+            existing["last_seen_at"], item["last_seen_at"]
+        )
+        existing["published_label"] = format_published_label(existing["published_at"])
+        existing["id"] = article_id(existing)
+        existing["tags"] = sorted(
+            set(existing["tags"])
+            | set(content_tags(existing["title"], existing["summary"]))
+        )
+
+    for article in existing_articles:
+        add(article, fresh=False)
+
+    for article in fresh_articles:
+        add(article, fresh=True)
 
     return sorted(
         merged.values(),
         key=lambda article: article["published_at"],
         reverse=True,
     )
+
+
+def stored_article(article: dict) -> dict:
+    return {
+        key: value
+        for key, value in article.items()
+        if key not in {"published_label", "search_text"}
+    }
 
 
 def build_payload(
@@ -1223,6 +1318,7 @@ def build_payload(
 ) -> dict:
     sources = sorted({article["source"] for article in articles})
     tags = sorted({tag for article in articles for tag in article["tags"]})
+    stored_articles = [stored_article(article) for article in articles]
     return {
         "project": PROJECT_NAME,
         "generated_at": generated_at,
@@ -1236,9 +1332,69 @@ def build_payload(
         "new_articles": new_articles,
         "failed_query_count": len(failed_queries),
         "failed_queries": failed_queries,
-        "total_articles": len(articles),
-        "articles": articles,
+        "total_articles": len(stored_articles),
+        "articles": stored_articles,
     }
+def migrate_existing_payload(payload: dict) -> dict:
+    migrated = dict(payload)
+    migration_time = (
+        payload.get("refresh_attempted_at")
+        or payload.get("generated_at")
+        or iso_utc_now()
+    )
+    articles = merge_articles(
+        payload.get("articles") or [],
+        [],
+        migration_time,
+    )
+    migrated["available_sources"] = sorted(
+        {article["source"] for article in articles}
+    )
+    migrated["available_tags"] = sorted(
+        {tag for article in articles for tag in article["tags"]}
+    )
+    migrated["total_articles"] = len(articles)
+    migrated["articles"] = [stored_article(article) for article in articles]
+    return migrated
+
+
+def write_payload_atomic(payload: dict, output_path: Path = OUTPUT_PATH) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            prefix=f".{output_path.name}.",
+            suffix=".tmp",
+            dir=output_path.parent,
+            delete=False,
+        ) as handle:
+            temporary_path = Path(handle.name)
+            json.dump(
+                payload,
+                handle,
+                ensure_ascii=False,
+                separators=(",", ":"),
+            )
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary_path, output_path)
+        temporary_path = None
+    finally:
+        if temporary_path is not None:
+            temporary_path.unlink(missing_ok=True)
+
+
+def migrate_existing_file(output_path: Path = OUTPUT_PATH) -> dict:
+    payload = load_existing_payload(output_path)
+    if not payload:
+        return {}
+    migrated = migrate_existing_payload(payload)
+    write_payload_atomic(migrated, output_path)
+    return migrated
 
 
 def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
@@ -1261,6 +1417,24 @@ def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
             failed_queries.append({"query": query, "error": str(exc)})
             print(f"[warn] failed to fetch '{query}': {exc}", file=sys.stderr)
 
+    if len(failed_queries) >= len(SEARCH_KEYWORDS):
+        if existing_payload:
+            failed_payload = dict(existing_payload)
+            failed_payload["refresh_attempted_at"] = refreshed_at
+            failed_payload["fetched_articles"] = 0
+            failed_payload["new_articles"] = 0
+            failed_payload["failed_query_count"] = len(failed_queries)
+            failed_payload["failed_queries"] = failed_queries
+            return failed_payload
+        return build_payload(
+            existing_articles,
+            generated_at=existing_generated_at or refreshed_at,
+            refresh_attempted_at=refreshed_at,
+            fetched_articles=0,
+            new_articles=0,
+            failed_queries=failed_queries,
+        )
+
     collected.extend(build_manual_articles())
     fresh_articles = merge_articles([], collected, refreshed_at)
     existing_keys = {article_key(article) for article in existing_articles}
@@ -1268,8 +1442,7 @@ def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
         1 for article in fresh_articles if article_key(article) not in existing_keys
     )
     articles = merge_articles(existing_articles, fresh_articles, refreshed_at)
-    successful_fetch = len(failed_queries) < len(SEARCH_KEYWORDS)
-    generated_at = refreshed_at if successful_fetch or not existing_generated_at else existing_generated_at
+    generated_at = refreshed_at
     payload = build_payload(
         articles,
         generated_at=generated_at,
@@ -1279,25 +1452,25 @@ def refresh_news_index(output_path: Path = OUTPUT_PATH) -> dict:
         failed_queries=failed_queries,
     )
 
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    write_payload_atomic(payload, output_path)
     return payload
 
 
 def main() -> int:
     payload = refresh_news_index()
+    if payload["failed_query_count"] >= len(SEARCH_KEYWORDS):
+        print(
+            f"All queries failed; kept {payload['total_articles']} stored articles unchanged.",
+            file=sys.stderr,
+        )
+        return 1
+
     print(
         "Wrote "
         f"{payload['total_articles']} stored articles "
         f"({payload['new_articles']} new, {payload['fetched_articles']} fetched)"
         f" to {OUTPUT_PATH}"
     )
-    if payload["failed_query_count"] >= len(SEARCH_KEYWORDS):
-        print("All queries failed; dataset freshness was not updated.", file=sys.stderr)
-        return 1
     if payload["failed_query_count"] > 0:
         print(
             f"{payload['failed_query_count']} queries failed during refresh.",
